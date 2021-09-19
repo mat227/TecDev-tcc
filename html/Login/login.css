@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0em;
+  }
+  
+
+
+.Conteiner-login{
+    display: flex;
+    flex-direction: row;
+    font-family: "Rowdies";
+}
+
+
+
+.login-em input , .login-sn input{
+border-top: 1px solid transparent;
+border-left: 1px solid transparent;
+border-right: 1px solid transparent;
+border-bottom: 3px solid white;
+outline: none;
+background-color:#0A0F21 ;
+color: white;
+padding-right: 28em;
+
+
+}
+
+.login-em, .login-sn{
+    padding-left: 3em;
+}
+
+::placeholder{
+font-size: 10px;
+color:gray;
+}
+
+.inputs-login{
+display: flex;
+flex-direction: column;
+background-color: #0A0F21;
+ width: 55%;
+ height: 100vh;
+
+color: white;
+font-family: "Rowdies";
+font-weight: 400;
+}
+.senha_login, .email_login {
+    padding: 1.5em 1.5em 1.5em 2.4em;
+    font-size: 20px;
+}
+.logo{
+    padding: 3em;
+    padding-top: 2em;
+}
+.titulo{
+    font-size: 50px;;
+    padding-left: 0.9em;
+
+}
+
+.pt-baixo{
+    display: flex;
+    flex-direction: row;
+}
+.esqueceu-senha{
+    font-size: 13px;
+    font-weight: 0;
+    padding-left: 3.6em;
+}
+.criar-conta{
+    font-size: 13px;
+    font-weight: 0;
+    padding-left: 27.5em;
+   
+}
+a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  
+.logo2{
+    background-image: url(../Login/assets/images/fundoaz\ 2.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 45%;
+   height: 100vh;
+}
+
+
+.logoLivro {
+    display: flex;
+    justify-content: center;
+    padding-top: 13em;
+    padding-left: 4em;
+
+}
+
+
+
+.botao{
+padding-left: 31.5em;
+padding-top: 60px;
+}
+
+
+
+button {
+    font-weight: 700;
+    
+    color: #fff;
+    background: #50B4BF;
+    
+    border: none;
+    border-radius: 20px;
+    font-family: "Rowdies";
+
+    padding: .5em 1.65em;
+    margin: .3em;
+    font-weight: 400;
+
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #299ca8;
+}
