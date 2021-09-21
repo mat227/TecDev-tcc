@@ -7,3 +7,20 @@
     font-family: "Quicksand";
     src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
 }
+
+
+.reveal-modal     
+  {
+        background:#e1e1e1; 
+        visibility:hidden;
+        display:none;
+        top:100px; 
+        left:50%; 
+        width:820px; 
+        position:absolute; 
+        z-index:41;
+        padding:30px; 
+        -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+        -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+        box-shadow:0 0 10px rgba(0,0,0,0.4)
+  }
