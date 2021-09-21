@@ -11,8 +11,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 2em;
+    padding-left: 8em;
+    padding-top: 2em;
+    padding-right: 6em;
+    padding-bottom: 2em;
    
+}
+.cadastrar{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+
 }
 .cadastrar input{
   border-top: 1px solid #1EA7C3;
@@ -20,11 +30,11 @@
   border-right: 1px solid #1EA7C3;
   border-bottom: 3px solid #1EA7C3;
   outline: none;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color:#1EA7C3 ;
   color: white;
-  width: 25em;
-  height: 1.8em;
+  width: 23em;
+  height: 2em;
   margin-bottom: 1em;
  margin-right: 2em;
   
@@ -51,7 +61,7 @@
 color: white;
 font-family: "Rowdies";
 font-weight: 400;
-font-size: 70px;
+font-size: 50px;
 }
 
 .inputs-criar{
@@ -64,6 +74,13 @@ font-size: 70px;
 .pt-baixo{
   display: flex;
   flex-direction: row;
+  padding-left: 30px;
+}
+
+.vincular-conta{
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
 }
 
 button {
@@ -76,7 +93,7 @@ button {
   border-radius: 20px;
   font-family: "Rowdies";
 
-  padding: .5em 1.65em;
+  padding: .7em 2em;
   margin: .3em;
   font-weight: 400;
 
