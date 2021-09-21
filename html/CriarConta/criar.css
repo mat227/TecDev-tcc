@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0em;
+ 
+  }
+  
+.box1{
+    display: flex;
+    flex-direction: row;
+}
+
+.Conteiner-cadastrar{
+    display: flex;
+    flex-direction:column;
+    background-color: #125375;
+  height: 100vh;
+  width: auto;
+}
+
+.titulo{
+    
+color: white;
+font-family: "Rowdies";
+font-weight: 400;
+}
