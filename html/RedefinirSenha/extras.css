@@ -8,19 +8,66 @@
     src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
 }
 
+  
+#rectangle{
+    width: 70px;
+    height: 70px;
 
-.reveal-modal     
-  {
-        background:#e1e1e1; 
-        visibility:hidden;
-        display:none;
-        top:100px; 
-        left:50%; 
-        width:820px; 
-        position:absolute; 
-        z-index:41;
-        padding:30px; 
-        -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
-        -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
-        box-shadow:0 0 10px rgba(0,0,0,0.4)
-  }
+    background: rgba(0, 73, 131, 0.7);
+
+    margin-top: 1em;
+
+    border-radius: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.679);
+}
+
+button {
+    background: rgba(0, 73, 131, 0.7);
+
+    border: none;
+    border-radius: 0.5em;
+
+    color: white;
+    font-size: 1em;
+    
+    padding: 1em 2em 1em 2em;
+    margin-bottom: 1em;
+
+    cursor: pointer;
+}
+
+button:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+img:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#bg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.box {
+    width: 720px;
+    height: 405px;
+    position: absolute;
+    margin-left: -360px;
+    left: 50%;
+}
+
+.box img {
+    
+}
