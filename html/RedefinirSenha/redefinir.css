@@ -6,8 +6,7 @@
 
 .conteiner {
     max-width: 100vw;   
-    min-height: 99vh;
-    padding-bottom: 0.4em;
+    min-height: 98vh;
 
     background-image: url('../RedefinirSenha/assets/images/aaaaaaaaaaa.png');
     background-repeat: no-repeat;
@@ -17,7 +16,7 @@
 
 .logo img {
     margin-left: 73em;
-    margin-top: 6em;
+    margin-top: 5.3em;
     height: 5em;
 
     cursor: pointer;
@@ -53,9 +52,18 @@
     color: white;
 }
 
-.inputs-1 {
-    margin-bottom: 1em;
+.inputs-1 input {
+    background-color:  rgba(61, 168, 255, 0.7);
+
+    border: none;
+    border-radius: 0.5em;
+
+    padding: 0.8em;
+    margin: 0.5em; 
+
+    color: white;
 }
+
 .inputs-2 {
     text-decoration: underline;
 }
