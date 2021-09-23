@@ -17,7 +17,7 @@
     transition: all 0.3s ease-out;
   }
   .button:hover {
-    background: #06D85F;
+    background: rgba(75, 131, 235, 0.631);
   }
   
   .overlay {
@@ -37,20 +37,34 @@
   }
   
   .popup {
-    margin: 70px auto;
+    margin-top: 18em;
+    margin-left: 27em;
+
     padding: 20px;
-    background: #fff;
+    background: rgba(10, 15, 33, 1);
     border-radius: 5px;
-    width: 30%;
+    width: 400px;
+    
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+
     position: relative;
-    transition: all 5s ease-in-out;
+    /* transition: all 5s ease-in-out; */
   }
   
   .popup h2 {
+    text-align: center;
     margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
+    margin-bottom: 0.8em;
+    color: white;
+    font-family: Rowdies;
+    text-decoration: underline;
   }
+
   .popup .close {
     position: absolute;
     top: 20px;
@@ -59,7 +73,7 @@
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: rgb(255, 255, 255);
   }
   .popup .close:hover {
     color: #06D85F;
@@ -67,4 +81,25 @@
   .popup .content {
     max-height: 30%;
     overflow: auto;
+    
+    width: 300px;
+    
+
+    display: flex;
+    flex-direction: column;
   }
+
+  .content input {
+      margin: 0.3em;
+      height: 1.5em;
+
+      background-color: rgba(0, 73, 131, 0.7);
+      border: none;
+      padding: 0.5em;
+      border-radius: 3px;
+
+      font-family: Quicksand;
+      color: white;
+  }
+
+  
