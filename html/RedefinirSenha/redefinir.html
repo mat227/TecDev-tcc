@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir Senha</title>
     <link rel="stylesheet" href="./redefinir.css" />
-    <link rel="stylesheet" href="./extras.css" />
+    <link rel="stylesheet" href="./popup.css">
 </head>
 <body>
     <div class="conteiner">
@@ -19,13 +19,33 @@
             </div>
         </div>
         <div class="inputs-1">
-            <button>Enviar e-mail para ***@partemail.com</button>
-            <button>Enviar mensagem para *******00</button>
+            <label style="font-size: 1.3em;">Insira seu e-mail:</label>
+                  <input type="email"/>
+                  <button type="submit">Enviar código</button>
         </div>
         <div class="inputs-2">
             Ao receber o código, coloque-o aqui:
-               <div class="squad"><div id="rectangle"></div><div id="rectangle"></div><div id="rectangle"></div><div id="rectangle"></div></div>
+               <div class="row"><input type="text" /><input type="text" /><input type="text" /><input type="text" /></div>
         </div>
+    
+        <div class="box">
+            <a class="button" href="#popup1"><img src="./assets/images/next.svg"></a>
+        </div>
+        
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <h2>NOVA SENHA</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                    <input type="password" placeholder="NOVA SENHA"/>
+                    <input type="password" placeholder="CONFIRMAR SENHA"/>
+                    
+                    <button style="font-family: Rowdies; background-color: rgba(3, 56, 102, 1);color: white; margin-top: 0.8em; padding:0.5em; border-radius: 0px;"><a href="../Login/login.html" style="text-decoration: none; color: white;">LOGIN</a></button>
+                </div>
+            </div>
+        </div>
+
+
         <div class="logo">
             <img src="../RedefinirSenha/assets/images/logo atual.svg">
         </div>

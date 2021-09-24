@@ -24,7 +24,9 @@ border-bottom: 3px solid white;
 outline: none;
 background-color:#0A0F21 ;
 color: white;
-width: 41em;
+width: 34.2em;
+height: 3em;
+font-size: medium;
 
 }
 
@@ -41,7 +43,7 @@ color:gray;
 display: flex;
 flex-direction: column;
 background-color: #0A0F21;
- width: 55%;
+ width: 48em;
  height: 100vh;
 
 color: white;
@@ -85,8 +87,9 @@ a, a:link, a:visited {
 .logo2{
     background-image: url(../Login/assets/images/fundoaz\ 2.svg);
     background-repeat: no-repeat;
+    background-position-y: center;
     background-size: 100%;
-    width: 45%;
+    width: 40em;
    height: 100vh;
 }
 
@@ -98,7 +101,16 @@ a, a:link, a:visited {
     padding-left: 4em;
 
 }
+.logo img:hover{
 
+    
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
 
 
 .botao{
@@ -112,7 +124,7 @@ button {
     font-weight: 700;
     
     color: #fff;
-    background: #50B4BF;
+    background: #0E9FE2;
     
     border: none;
     border-radius: 20px;
@@ -127,5 +139,5 @@ button {
 }
 
 button:hover {
-    background-color: #299ca8;
+    background-color: #0E9FE2;
 }

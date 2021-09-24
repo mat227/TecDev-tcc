@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0em;
+ 
+  }
+  
+  .conteiner-homepage1{
+    background-color: black;
+    font-family: "Rowdies";
+
+}
+
+.hp1-logo{
+    display: flex;
+    padding-left:2em ;
+}
+    
+    .hp1-buscap{
+        display: flex;
+        flex-direction: row;
+        background-color: #12172B;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hp1-seus{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
+
+
+    .divBusca{
+        background-color:#84D1DD;
+        border:solid 1px;
+        border-radius:10px;
+        width:400px;
+        font-family: "Rowdies";
+
+        
+      }
+      .divBusca img{
+          padding-left: 90px;
+
+      }
+      .divBusca input{
+        border-top: 0px solid;
+        border-left: 0px solid;
+        border-right: 0px solid;
+        border-bottom: 0px solid;
+        outline: none;
+        color:white
+
+      }
+      ::placeholder{
+          color: white;
+      }
+     
+      #txtBusca{
+        float:left;
+        background-color:transparent;
+        padding-left:10px;
+        font-style:italic;
+        font-size:14px;
+        border:none;
+        height:32px;
+        font-family: "Rowdies";
+font-weight: 400;
+        width:260px;
+      
+      }
+
+     
