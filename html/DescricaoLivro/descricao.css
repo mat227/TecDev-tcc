@@ -1,0 +1,21 @@
+* {
+    margin:0px;
+}
+
+body {
+    background-color: #135578;
+}
+
+.conteiner {
+    /* background-image: url('./assets/images/fundo-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
+    
+    
+    width: 100vw !important;
+    height: 100vh !important;
+
+
+    background-color: #135578;
+}
