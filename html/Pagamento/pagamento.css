@@ -17,8 +17,9 @@
 .cartoes{
     background-color: #133953;
     height: 20%;
-    width: 30%;
-    margin-bottom: 3.5%;
+    width: 70%;
+    margin-left: 10%;
+
 }
 
 .titulo{
@@ -27,10 +28,7 @@
 
 }
 
-.info{
-    padding:10%;
-    direction: center;
-}
+
 .titulo2{
     color: white;
     height: 70px;
@@ -58,23 +56,35 @@
 .paga{
     background-color: #19506B;
     width: 90px;
-    justify-content: space-between;
     align-items: center;
-    padding: 5%;
     height: 10%;
 
 }
 
 .pix{
-
-   padding: 0%;
+   color:white;
    direction: ltr;
 }
 
-.paga2{
-    direction: rtl;
+.cartao{
+    color:white;
 
 }
+
+.boleto{
+    color:white;
+
+}
+
+.paga2{
+    flex-direction: row;
+
+    direction: center;
+    background-color: #19506B ;
+    align-items: center;
+}
+
+
 
 .informacoes{
    flex-direction: row;
@@ -82,7 +92,36 @@
 
 }
 
-.cadas_cartao{
-    color: #153C56;
+
+
+.Numero_cartao{
+  color: white;
+}
+
+.Nome_titular{
+    color: white;
+
+}
+
+.vescimento{
+    color: white;
+
+}
+
+
+.Sobrenome{
+    color: white;
+}
+
+
+.codigo{
+    color: white;
+
+
+}
+
+.info{
+    direction: center;
+    margin-left: 10%;
 }
 
