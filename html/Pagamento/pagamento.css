@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0px;
   }
   
   .body {
@@ -11,14 +12,15 @@
    display: flex;
    flex-direction: column; 
    background-color:  #12172B;
+   width: 100vw;
+   height: 100vh;
 
 }
 
 .cartoes{
     background-color: #133953;
-    height: 20%;
-    width: 70%;
-    margin-left: 10%;
+    height: 5em;
+    margin-left: 10em;
 
 }
 
@@ -31,21 +33,18 @@
 
 .titulo2{
     color: white;
-    height: 70px;
     direction: rtl;
-   
-
 }
 
 .cabe{
+  display: flex;
   flex-direction: row ;
   direction: center;
-
-
+  justify-content: space-between;
 }
 
 .pagamento{
-
+  
 
 }
 
@@ -56,8 +55,8 @@
 .paga{
     background-color: #19506B;
     width: 90px;
-    align-items: center;
-    height: 10%;
+    height: 10em;
+    justify-content: space-between;
 
 }
 
@@ -68,28 +67,29 @@
 
 .cartao{
     color:white;
-
 }
 
 .boleto{
     color:white;
-
 }
 
 .paga2{
-    flex-direction: row;
-
+    display: flex;
+    flex-direction: column;
     direction: center;
     background-color: #19506B ;
     align-items: center;
+    margin: auto;
+    height: 35em;
+    width: 70em;
 }
 
 
 
 .informacoes{
-   flex-direction: row;
-
-
+    display: flex;
+   flex-direction: row !important; 
+   background-color: white;
 }
 
 
@@ -122,6 +122,10 @@
 
 .info{
     direction: center;
-    margin-left: 10%;
+    margin-left: 10em;
 }
 
+.botoes{
+    display: flex;
+    flex-direction: row;
+}
