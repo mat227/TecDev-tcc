@@ -43,7 +43,7 @@ color:gray;
 display: flex;
 flex-direction: column;
 background-color: #0A0F21;
- width: 55%;
+ width: 48em;
  height: 100vh;
 
 color: white;
@@ -89,7 +89,7 @@ a, a:link, a:visited {
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: 100%;
-    width: 45%;
+    width: 40em;
    height: 100vh;
 }
 
