@@ -12,6 +12,7 @@ padding-top: 0.7em;
       background-color: #12172B;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
   }
   .hp1-seus{
       display: flex;
@@ -35,8 +36,8 @@ padding-top: 0.7em;
   }
  
   .divBusca{
-    display: flex;
-    flex-direction: row;
+      display: flex;
+      flex-direction: row;
       background-color:#84D1DD;
       border:solid 1px;
       border-radius:10px;
@@ -47,10 +48,10 @@ padding-top: 0.7em;
     
     .divBusca button{
       margin-top: 0.2em;
-border: none;
-background-color: #84D1DD;
-border-radius: 20px;
-cursor: pointer;
+      border: none;
+      background-color: #84D1DD;
+      border-radius: 20px;
+      cursor: pointer;
 }
 
    
@@ -63,8 +64,8 @@ cursor: pointer;
       border:none;
       height:32px;
       font-family: "Rowdies";
-font-weight: 400;
-width: 35.5em;
+      font-weight: 400;
+      width: 35.5em;
     
     }
 
@@ -82,3 +83,11 @@ width: 35.5em;
     .hp1-favorito{
       padding-top: 3px;
     }
+
+
+
+
+
+    * { 
+    margin: 0px;
+}

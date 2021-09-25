@@ -1,21 +1,118 @@
-* {
-    margin:0px;
+* { 
+    margin: 0px;
 }
 
 body {
     background-color: #135578;
 }
 
+
+
+footer {
+    background-color: #12172B;
+    display: flex;
+    flex-direction: row;
+
+    height: 12vh;
+    width: 100%;
+
+    align-items: center;
+}
+
+.logowo {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    font-family: Quicksand;
+    color: #73a1b8;
+}
+
+.logowo img {
+    height: 4em;
+}
+
+.redes img {
+    margin: 1em;
+    height: 2em;
+}
+
+.logowo {
+margin: 1em;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: auto;
+}
+
 .conteiner {
-    /* background-image: url('./assets/images/fundo-removebg-preview.png');
-    background-repeat: no-repeat;
-    background-size: cover; */
-    
-    
-    
-    width: 100vw !important;
-    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-mae {
+    display: block;
+
+    background-color: #12172B;
+
+    width: 80em;
+    height: 50em;
+
+    padding: 1.3em;
+
+    align-self: center;
+
+    margin: 2em;
+
+    border-radius: 2em;
+}
+
+.box-filha {
+    border: 1px solid white;
+    border-radius: 2em;
+    width: 80em;
+    height: 50em;
+}
 
 
-    background-color: #135578;
+.livro {
+    display: flex;
+    flex-direction: row;
+
+    margin: 2em;
+
+    color: #1FB5CD;
+    font-size: 1.5em;
+    font-family: Rowdies;
+}
+
+.livro img {
+    height: 20em;
+    margin-right: 2em;
+}
+
+.formas {
+    display: flex;
+    flex-direction: row;
+}
+
+.botoes {
+    margin-left:  50em;
+}
+
+.botoes button {
+    padding: 0.8em;
+    background-color: #1FB5CD;
+    color: white;
+    font-family: Rowdies;
+    text-align: center;
+    border: none;
+    margin: 0.8em;
+
+    width: 200px;
+
+    font-weight: 400;
+    margin-bottom: 1em;
 }
