@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0px;
   }
   
   .body {
@@ -11,14 +12,16 @@
    display: flex;
    flex-direction: column; 
    background-color:  #12172B;
+   width: 100vw;
+   height: 100vh;
 
 }
 
 .cartoes{
     background-color: #133953;
-    height: 20%;
-    width: 30%;
-    margin-bottom: 3.5%;
+    height: 5em;
+    margin-left: 10em;
+
 }
 
 .titulo{
@@ -27,27 +30,21 @@
 
 }
 
-.info{
-    padding:10%;
-    direction: center;
-}
+
 .titulo2{
     color: white;
-    height: 70px;
     direction: rtl;
-   
-
 }
 
 .cabe{
+  display: flex;
   flex-direction: row ;
   direction: center;
-
-
+  justify-content: space-between;
 }
 
 .pagamento{
-
+  
 
 }
 
@@ -58,31 +55,77 @@
 .paga{
     background-color: #19506B;
     width: 90px;
+    height: 10em;
     justify-content: space-between;
-    align-items: center;
-    padding: 5%;
-    height: 10%;
 
 }
 
 .pix{
-
-   padding: 0%;
+   color:white;
    direction: ltr;
 }
 
-.paga2{
-    direction: rtl;
-
+.cartao{
+    color:white;
 }
+
+.boleto{
+    color:white;
+}
+
+.paga2{
+    display: flex;
+    flex-direction: column;
+    direction: center;
+    background-color: #19506B ;
+    align-items: center;
+    margin: auto;
+    height: 35em;
+    width: 70em;
+}
+
+
 
 .informacoes{
-   flex-direction: row;
+    display: flex;
+   flex-direction: row !important; 
+   background-color: white;
+}
+
+
+
+.Numero_cartao{
+  color: white;
+}
+
+.Nome_titular{
+    color: white;
+
+}
+
+.vescimento{
+    color: white;
+
+}
+
+
+.Sobrenome{
+    color: white;
+}
+
+
+.codigo{
+    color: white;
 
 
 }
 
-.cadas_cartao{
-    color: #153C56;
+.info{
+    direction: center;
+    margin-left: 10em;
 }
 
+.botoes{
+    display: flex;
+    flex-direction: row;
+}
