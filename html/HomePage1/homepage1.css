@@ -4,18 +4,23 @@
   
   body {
     margin: 0em;
- 
+    text-align: center;
+
   }
   
   .conteiner-homepage1{
-    background-color: black;
+    display: flex;
+    flex-direction: column;
     font-family: "Rowdies";
 
 }
 
 .hp1-logo{
     display: flex;
-    padding-left:2em ;
+    padding-left:3em ;
+}
+.hp1-nome{
+  padding-top: 0.7em;
 }
     
     .hp1-buscap{
@@ -28,36 +33,43 @@
     .hp1-seus{
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
     
     
 
-
+    .divBusca input{
+      border-top: 0px solid;
+      border-left: 0px solid;
+      border-right: 0px solid;
+      border-bottom: 0px solid;
+      outline: none;
+      color:white;
+    }
+    ::placeholder{
+        color: white;
+        opacity: 50%;
+    }
+   
     .divBusca{
+      display: flex;
+      flex-direction: row;
         background-color:#84D1DD;
         border:solid 1px;
         border-radius:10px;
-        width:400px;
+        width:500px;
         font-family: "Rowdies";
+        justify-content: space-between;
+      }
+      
+      .divBusca button{
+        margin-top: 0.2em;
+border: none;
+background-color: #84D1DD;
+border-radius: 20px;
+cursor: pointer;
+}
 
-        
-      }
-      .divBusca img{
-          padding-left: 90px;
-
-      }
-      .divBusca input{
-        border-top: 0px solid;
-        border-left: 0px solid;
-        border-right: 0px solid;
-        border-bottom: 0px solid;
-        outline: none;
-        color:white
-
-      }
-      ::placeholder{
-          color: white;
-      }
      
       #txtBusca{
         float:left;
@@ -69,8 +81,264 @@
         height:32px;
         font-family: "Rowdies";
 font-weight: 400;
-        width:260px;
+width: 35.5em;
       
       }
 
+    
+
+      .hp1-bolsa, .hp1-favorito,.hp1-entre-cadastre{
+        padding-left: 1em;
+      }
+
+      .hp1-entre-cadastre{
+        padding-right: 3em;
+        padding-top: 3px;
+      }
+
+      .hp1-favorito{
+        padding-top: 3px;
+      }
      
+
+
+
+
+      
+
+
+
+
+     
+.oferta-da-semana{
+  display: flex;
+  flex-direction: column;
+  background-color: #125375 ;
+  background-image: url("../HomePage1/assets/images/fundo.png");
+  background-repeat: no-repeat;
+  background-size: 210vh;
+  height: 100vh;
+  opacity: 100%;
+}
+
+
+.trio button {
+  font-weight: 700;
+    background: white;
+  
+  border: none;
+  border-radius: 150px;
+  font-family: "Rowdies";
+align-self: center;
+  padding: 1.2em;
+  margin: 3em 3em 0.5em 3em;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.desc{
+  padding: 0.2em;
+}
+
+
+.trio2{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-family: "Rowdies";
+  font-weight: 550;
+  padding-left: 25em;
+}
+
+.titilo-trio1, .titilo-trio2,.titilo-trio3{
+  display: flex;
+  padding-left: 4.5em;
+}
+
+.hp1-titulo{
+display: flex;
+justify-content: center;
+color: white;
+font-size: 30px;
+-webkit-text-stroke-width: 1.5px;
+-webkit-text-stroke-color: #00B6FF;
+text-decoration: underline white;
+padding-top: 1em;
+
+}
+
+
+
+
+.slide-controller:nth-child(1):checked ~ .slide-show .slides-list{--selected-item: 0;}
+.slide-controller:nth-child(2):checked ~ .slide-show .slides-list{--selected-item: 1;}
+.slide-controller:nth-child(3):checked ~ .slide-show .slides-list{--selected-item: 2;}
+.slide-controller:nth-child(4):checked ~ .slide-show .slides-list{--selected-item: 3;}
+      
+.slide-show{
+  overflow: hidden;
+}
+
+.slides-list{
+  --selected-item: 0;
+  --total-items: 4;
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+  left: calc(var(--selected-item) * -100%);
+  width: calc(var(--total-items) * 100%);
+  transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.slide{
+  width: 100%;
+}
+.selecao-livro, .selecao-especial{
+  display: flex;
+  flex-direction: row;
+  background-color: #0A0F21;
+}
+
+.box-livros{
+  display: flex;
+  font-family: "Rowdies";
+  color: white;
+  padding-left: 11em;
+height: 50vh;
+padding-top: 3.5em;
+}
+
+.imgt{
+  display: flex;
+  flex-direction: column;
+  font-family: "Rowdies";
+
+}
+
+.imgt img{
+  border: 1px dotted;
+}
+
+.box-precos{
+  display: flex;
+  flex-direction: column;
+  font-family: "Rowdies";
+}
+
+.preco-de, .por{
+  padding-top: 1.5em;
+}
+
+.botao-preco{
+  padding-top: 2em;
+}
+
+.tllivro{
+  font-size: 12px;
+  font-weight: 200;
+}
+
+
+.botao-preco button {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  background: #00EAFF;
+  
+  border: none;
+  border-radius: 10px;
+  font-family: "Rowdies";
+
+  padding: 0.5em;
+  margin: .3em;
+
+  cursor: pointer;
+}
+
+.botao-preco2 button {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  background: #00EAFF;
+  
+  border: none;
+  border-radius: 10px;
+  font-family: "Rowdies";
+
+  padding: 0.5em;
+  margin: .3em;
+
+  cursor: pointer;
+}
+
+
+.botao-preco2 {
+padding: 2em;
+}
+.selecao-especial{
+  height: 50vh;
+
+  padding-left: 10em;
+}
+
+.slide-titulos{
+display: flex;
+color: white;
+font-family: "Rowdies";
+flex-direction: column;
+
+
+}
+
+
+.til1{
+  display: flex;
+color: white;
+font-size: 30px;
+-webkit-text-stroke-width: 1.5px;
+-webkit-text-stroke-color: #00B6FF;
+text-decoration: underline white;
+padding-top: 1em;
+}
+
+.til2{
+  display: flex;
+color: white;
+font-size: 25px;
+-webkit-text-stroke-width: 1.5px;
+-webkit-text-stroke-color: #00B6FF;
+text-decoration: underline white;
+padding-top: 1em;
+}
+
+.botao-slide2 button {
+  font-weight: 600;
+  font-size: 25px;
+  color: #fff;
+  background: #00EAFF;
+  -webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #00B6FF;
+  border: none;
+  border-radius: 10px;
+  font-family: "Rowdies";
+
+  padding: 0.4em;
+  margin: 1em;
+
+  cursor: pointer;
+}
+
+.botao-slide2{
+  display: flex;
+  padding-right: 2px;
+}
+
+.img-combo{
+  padding-left: 8em;
+}
