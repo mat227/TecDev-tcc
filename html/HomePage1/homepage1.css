@@ -117,7 +117,7 @@ width: 35.5em;
   background-image: url("../HomePage1/assets/images/fundo.png");
   background-repeat: no-repeat;
   background-size: 210vh;
-  height: 100vh;
+  height: 230vh;
   opacity: 100%;
 }
 
@@ -186,7 +186,7 @@ padding-top: 1em;
   list-style-type: none;
   margin: 10px 0;
   padding: 0;
-  position: relative;
+position: relative;
   left: calc(var(--selected-item) * -100%);
   width: calc(var(--total-items) * 100%);
   transition: left 0.4s cubic-bezier(0.680, -0.550, 0.265, 1.550);
@@ -204,6 +204,8 @@ padding-top: 1em;
   flex-direction: row;
   background-color: #0A0F21;
 }
+
+
 
 .box-livros{
   display: flex;
@@ -283,8 +285,9 @@ padding: 2em;
 }
 .selecao-especial{
   height: 50vh;
-
-  padding-left: 10em;
+width: 130vh;
+  padding-left: 5em;
+  margin-left: 15em;
 }
 
 .slide-titulos{
@@ -304,7 +307,7 @@ font-size: 30px;
 -webkit-text-stroke-width: 1.5px;
 -webkit-text-stroke-color: #00B6FF;
 text-decoration: underline white;
-padding-top: 1em;
+padding-top: 2em;
 }
 
 .til2{
@@ -340,5 +343,142 @@ padding-top: 1em;
 }
 
 .img-combo{
-  padding-left: 8em;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+
+.img-combo img{
+  height: 250px;
+  width: 350px;
+}
+
+
+
+
+
+
+.tlqueridinhas1{
+  display: flex;
+  color: white;
+  font-size: 30px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #00B6FF;
+  padding-top: 1em;
+  justify-content: center;
+}
+
+.tlqueridinhas2{
+  display: flex;
+  color: white;
+  font-size: 20px;
+ 
+  justify-content: center;
+}
+
+
+
+
+.livros-queridinhas{
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+
+}
+
+.livros-queridinhas2{
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  padding-top:4em ;
+
+}
+
+
+.box-livro{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(97, 169, 212, 0.5);	
+  height: 16.5vw;
+  width: 15vw;
+  border-radius: 5px;
+margin-top: 5em;
+}
+
+.img-livro-queridinha{
+  padding-top: 15px;
+}
+
+
+
+.box-informacoes-livros{
+  padding: 0.5em;
+  border-radius: 5px;
+
+  background-color: rgba(132,209,222, 0.8);	
+}
+
+.nome-livro-queridinhas{
+  font-size: 12px;
+  padding-bottom: 7px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:black;
+}
+.autor-queridinhas{
+  font-size: 12px;
+  padding-bottom: 7px;
+
+}
+
+
+.preco-queridinhas{
+  font-size: 25px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:black;
+  text-decoration: underline black;
+
+}
+
+
+
+
+
+
+
+footer {
+  background-color: #12172B;
+  display: flex;
+  flex-direction: row;
+
+  height: 12vh;
+  width: 100%;
+
+  align-items: center;
+}
+
+.logowo {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+  font-family: Quicksand;
+  color: #73a1b8;
+}
+
+.logowo img {
+  height: 4em;
+}
+
+.redes img {
+  margin: 1em;
+  height: 2em;
+}
+
+.logowo {
+margin: 1em;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: auto;
 }
