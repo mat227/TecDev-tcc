@@ -4,6 +4,19 @@
     margin: 0px;
 }
 
+@font-face {
+    font-family: "Rowdies-bold";
+    src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+
+
+
 .conteiner {
     max-width: 100vw;   
     min-height: 98vh;
@@ -68,16 +81,6 @@
     text-decoration: underline;
 }
 
-
-@font-face {
-    font-family: "Rowdies-bold";
-    src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
-}
-
-@font-face {
-    font-family: "Quicksand";
-    src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
-}
 
   
 
