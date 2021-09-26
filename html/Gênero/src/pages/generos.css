@@ -47,21 +47,19 @@
 
   .livros {
       margin-top: 5em;
-
       display: flex;
       flex-direction: row !important;
       flex-wrap: wrap;
       
       align-content: center;
-      justify-content: center;
+      justify-content: space-evenly;
   }
 
   .livros img {
       padding-bottom: 0.5em;
   }
   .livro {
-      width:20vw;
-
+      width: 400px;
       font-family: Rowdies;
       color: white;
   }
@@ -70,6 +68,7 @@
       padding-top: 1em;
 
       background-color: #61A9D4;
+
   }
 
   .boxinfo {
