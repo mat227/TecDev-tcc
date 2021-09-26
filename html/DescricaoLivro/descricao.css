@@ -4,6 +4,7 @@
 
 body {
     background-color: #135578;
+
 }
 
 footer {
@@ -50,12 +51,15 @@ margin: 1em;
 .conteiner {
     display: flex;
     flex-direction: column;
+    background-image: url('./assets/images/fundo-removebg-preview.png');
+    opacity: inherit;
 }
 
 .box-mae {
     display: block;
 
     background-color: #12172B;
+    
 
     width: 80em;
     height: 53em;
