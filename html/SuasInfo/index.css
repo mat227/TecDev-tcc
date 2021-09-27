@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #135578;
+    background-image: url('../SuaSacola/fundo.svg');
+    padding: 8em 2em 3em 2em;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background-color: #102A45;
+    border-radius: 2em;
+}
+.titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+.th1{
+    color: white;
+}
+.trilhaM{
+    color: white;
+    font-size: 0.7em;
+}
+.labels{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    
+    
+}
+.test{
+    color: white;
+    align-items: center;
+    border-bottom: 1px solid white;
+    width: 25vw;
+    padding: 1.3em;
+    height: 1em;
+    margin: 1em;
+}
+.contato{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+.tell{
+
+    margin-left: 1em ;
+    background-color: #227591;
+    border-radius: 0.3em;
+    padding: 0.2em;
+    color: white;
+}
+.auxi{
+    display: flex;
+    flex-direction: row;
+}
