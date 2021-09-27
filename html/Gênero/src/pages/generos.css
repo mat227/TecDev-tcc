@@ -1,23 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-      background-color: #135578;
-  }
+* { 
+    margin: 0px;
+}
+
+body {
+    background-color: #135578;
+
+}
 
 
-  .conteiner {
-    max-width: 100vw;   
-    min-height: 100vh;
-  
-    /* background-image: url('../../../DescricaoLivro/assets/images/fundo-removebg-preview.png');
-    background-repeat: no-repeat;
-    background-size: 100vw; */
-  }
-  
-  .titulo {
+.titulo {
     display: flex;
     flex-direction: row !important;
   
@@ -29,7 +20,7 @@
   .titulo p {
     color:white;
     font-family: Rowdies;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: 300;
     text-shadow: 2px 3px black;
   
@@ -38,74 +29,65 @@
   }
   
   .quadrado {
-    width: 40px;
-    height: 1px;
+    width: 80px;
+    height: 2px;
     background: #6ECAEF ;
-    margin-top: 1.2em;
+    margin-top: 2.5em;
   }
 
 
-  .livros {
-      margin-top: 5em;
-      display: flex;
-      flex-direction: row !important;
-      flex-wrap: wrap;
+  .box {
+      background-color: #61aad49c;
       
-      align-content: center;
-      justify-content: space-evenly;
-  }
 
-  .livros img {
-      padding-bottom: 0.5em;
-  }
-  .livro {
-      width: 400px;
-      font-family: Rowdies;
-      color: white;
-  }
-  .back {
-      text-align: center;
-      padding-top: 1em;
-
-      background-color: #61A9D4;
-
-  }
-
-  .boxinfo {
-      background-color: #84D1DD;
+      padding: 1em;
+      width: 17vw;
+      margin: 1em;
 
       display: flex;
       flex-direction: column;
-
-      line-height: 2em;
-      padding-top:0.5em;
-      padding-bottom: 0.5em;
+      align-items: center;
 
       font-family: Rowdies;
+      text-align: center;
+      color: white;
+      line-height: 1.8em;
 
-      color:rgb(24, 68, 110);
-      letter-spacing: 0.1em;
+      border-radius: 5px;
   }
 
-  .boxinfo p, h3 {
-      color: #D3EEFD;
-      font-family: Rowdies;
-      font-size: 1.5em;
-      -webkit-text-stroke-width: 1px; /* largura da borda */
-      -webkit-text-stroke-color: black; 
-      text-decoration: underline;
+.infobox {
+    width: 16.5em;
+    background-color: #84d1ddaa;
+
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-top: 1em;
+    margin-bottom: -1em;
+    
+    border-radius: 5px;
+}
+
+  h3, h2 {
+    -webkit-text-stroke: black;
+    -webkit-text-stroke-width: 1px;
   }
 
-.boxinfo h3 {
-    color :white;
-}
+  h2 {
+      text-decoration: underline black; 
+  }
 
-@font-face {
-    font-family: "Rowdies";
-    src: url("../../assets/fonts/Rowdies-Bold.ttf");
-}
+  .boxes {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
 
-@font-face {
-    font-family: "Quicksand";
-    src: url("../../assets/fonts/Quicksand-VariableFont_wght.ttf");
+      margin-top: 2em;
+      margin-bottom: 4em;
+  }
+
+a:hover {
+    cursor:pointer;
 }
