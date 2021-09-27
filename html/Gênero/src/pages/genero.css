@@ -7,3 +7,114 @@
     font-family: "Quicksand";
     src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
 }
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.slide-container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75,43));
+}
+
+.image-slider {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s;
+}
+
+.slides-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+}
+
+.img {
+    position: relative;
+    width: 240px;
+    height: 370px;
+    transition: .5;
+    filter: saturate(10%);
+}
+
+.button {
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+#slider-span1:target ~ .image-slider #img1,
+#slider-span1:target ~ .image-slider #button-1 {
+    width: 380px;
+    height: 585px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-span2:target ~ .image-slider #img2,
+#slider-span2:target ~ .image-slider #button-2 {
+    width: 380px;
+    height: 585px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-span3:target ~ .image-slider #img3,
+#slider-span3:target ~ .image-slider #button-3 {
+    width: 380px;
+    height: 585px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-span4:target ~ .image-slider #img4,
+#slider-span4:target ~ .image-slider #button-4 {
+    width: 380px;
+    height: 585px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-span5:target ~ .image-slider #img5,
+#slider-span5:target ~ .image-slider #button-5 {
+    width: 380px;
+    height: 585px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+
+/* img position */
+
+
+#slide-span1:target ~ .image-slider {left: 70%;}
+#slide-span2:target ~ .image-slider {left: 50%;}
+
+#slide-span3:target ~ .image-slider {left: 25%;}
+
+#slide-span4:target ~ .image-slider {left: -50%;}
+#slide-span5:target ~ .image-slider {left: -70%;}
