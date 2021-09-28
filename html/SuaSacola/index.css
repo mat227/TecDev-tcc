@@ -27,7 +27,7 @@ a, a:link, a:visited {
     .hp1-buscap{
         display: flex;
         flex-direction: row;
-        background-color: #12172B;
+        background-color: #12172B;  
         align-items: center;
         justify-content: space-between;
     }

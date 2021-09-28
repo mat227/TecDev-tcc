@@ -140,3 +140,7 @@ a, a:link, a:visited {
     height: 3em;
     justify-content: space-between;
 }
+.redesocial button{
+    border: none;
+    background: none;
+}
