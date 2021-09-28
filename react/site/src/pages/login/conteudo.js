@@ -1,4 +1,4 @@
-import { ContainerLogin } from "./styled"
+import { ContainerLogin } from "./sty+led"
 
 export default function Conteudo() {
     return (
