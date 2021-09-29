@@ -10,22 +10,22 @@ export default function Homepage() {
 
 <div class="hp1-buscap">
   <div class="hp1-logo">
-        <img src="../HomePage1/assets/images/nice library png 1.svg" />
-        <img class="hp1-nome" src="../HomePage1/assets/images/Bookly.svg" />
+        <img src="/assets/images/nice library png 1.svg" alt=""/>
+        <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
 
     </div>
 
     <div class="hp1-busca">
         <div class="divBusca">
             <input type="text" id="txtBusca" placeholder="Buscar..." />
-            <button><img src="../HomePage1/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
+            <button><img src="/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
         </div>
     </div>
 
     <div class="hp1-seus">
     <a href="../SuaSacola/index.html"><div class="hp1-bolsa"><img src="../HomePage1/assets/images/sua bolsa.svg" /></div> </a> 
-        <div class="hp1-favorito"><img src="../HomePage1/assets/images/seus favoritos.svg" /></div>
-    <a href="../Login/login.html"><div class="hp1-entre-cadastre"><img src="../HomePage1/assets/images/seu perfil.svg" /></div></a>    
+        <div class="hp1-favorito"><img src="/assets/images/seus favoritos.svg" alt=""/></div>
+    <a href="../Login/login.html"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" alt=""/></div></a>    
 
     </div>
 </div>
@@ -36,8 +36,8 @@ export default function Homepage() {
 <div class="oferta-da-semana">
     <div class="trio">
       <a href="../Gênero/src/pages/genero.html">  <button><img src="../HomePage1/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </a>
-        <button><img src="../HomePage1/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button>
-        <button><img src="../HomePage1/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button>
+        <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button>
+        <button><img src="/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button>
 
 
     </div>
@@ -73,7 +73,7 @@ export default function Homepage() {
                 </div>
 
                 <div class="img-combo">
-                    <img src="../HomePage1/assets/images/selecao.png" />
+                    <img src="/assets/images/selecao.png" alt=""/>
                 </div>
 
 
@@ -83,7 +83,7 @@ export default function Homepage() {
                 <div class="box-livros">
                     <div class="imgt">
                         <div class="imgl">
-                            <img src="../HomePage1/assets/images/COMÉDIA 1.svg" />
+                            <img src="/assets/images/COMÉDIA 1.svg" alt=""/>
                         </div>
                         <div class="tllivro">
                             A Divina Comédia Inferno - Dante Alighieri
@@ -110,7 +110,7 @@ export default function Homepage() {
                 <div class="box-livros">
                     <div class="imgt">
                         <div class="imgl">
-                            <img src="../HomePage1/assets/images/SUSPENSE1 1.svg" />
+                            <img src="/assets/images/SUSPENSE1 1.svg"  alt=""/>
                         </div>
                         <div class="tllivro">
                             Caixa de Pássaros - Josh Malerman </div>
@@ -164,7 +164,7 @@ export default function Homepage() {
         <div class="livros-queridinhas">
            <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
                 <div class="img-livro-queridinha">
-                    <img src="../HomePage1/assets/images/vermelho, branco e sangue azul.svg" />
+                    <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
                 </div>
                 <div class="box-informacoes-livros">
                     <div class="nome-livro-queridinhas">
@@ -183,7 +183,7 @@ export default function Homepage() {
         </a>
         <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
             <div class="img-livro-queridinha">
-                <img src="../HomePage1/assets/images/vermelho, branco e sangue azul.svg" />
+                <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
             </div>
             <div class="box-informacoes-livros">
                 <div class="nome-livro-queridinhas">
@@ -202,7 +202,7 @@ export default function Homepage() {
     </a>
     <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
         <div class="img-livro-queridinha">
-            <img src="../HomePage1/assets/images/vermelho, branco e sangue azul.svg" />
+            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
         </div>
         <div class="box-informacoes-livros">
             <div class="nome-livro-queridinhas">
@@ -223,7 +223,7 @@ export default function Homepage() {
         <div class="livros-queridinhas2">
             <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
                  <div class="img-livro-queridinha">
-                     <img src="../HomePage1/assets/images/vermelho, branco e sangue azul.svg" />
+                     <img src="/assets/images/vermelho, branco e sangue azul.svg"  alt=""/>
                  </div>
                  <div class="box-informacoes-livros">
                      <div class="nome-livro-queridinhas">
@@ -242,7 +242,7 @@ export default function Homepage() {
          </a>
          <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
              <div class="img-livro-queridinha">
-                 <img src="../HomePage1/assets/images/vermelho, branco e sangue azul.svg" />
+                 <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
              </div>
              <div class="box-informacoes-livros">
                  <div class="nome-livro-queridinhas">
@@ -261,7 +261,7 @@ export default function Homepage() {
      </a>
      <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
          <div class="img-livro-queridinha">
-             <img src="../HomePage1/assets/images/vermelho, branco e sangue azul.svg" />
+             <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
          </div>
          <div class="box-informacoes-livros">
              <div class="nome-livro-queridinhas">
@@ -284,9 +284,9 @@ export default function Homepage() {
 </div>
 
 <footer>
-    <div class="logowo"><img src="../DescricaoLivro/assets/images/logo atual.svg" />by: TecDev</div>
-    <div class="redes"> <img src="../DescricaoLivro/assets/images/insta.svg"/>
-        <img src="../DescricaoLivro/assets/images/facebook.svg" /></div>
+    <div class="logowo"><img src="/assets/images/logo atual.svg" alt="" />by: TecDev</div>
+    <div class="redes"> <img src="/assets/images/insta.svg" alt="" />
+        <img src="/assets/images/facebook.svg" alt="" /></div>
 </footer>
 
 
