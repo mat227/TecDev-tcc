@@ -2,6 +2,9 @@ import { ContainerCadastro } from "./cadas.styled"
 
 import { ContainerPartecima } from "../../components/parteCima/componente"
 
+import { ContainerRodape } from "../../components/rodape/redape"
+
+
 
 
 export default function Cadastro() {
@@ -62,6 +65,8 @@ export default function Cadastro() {
                 </div>
 
             </div>
+
+            <ContainerRodape/>
 
         </ContainerCadastro>
 

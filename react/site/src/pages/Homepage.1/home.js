@@ -2,6 +2,7 @@ import { ContainerHome } from "./home.styled"
 
 import { ContainerPartecima } from "../../components/parteCima/componente"
 
+import { ContainerRodape } from "../../components/rodape/redape"
 
 
 export default function Homepage() {
@@ -295,7 +296,7 @@ export default function Homepage() {
 
 
         </div>
-
+        <ContainerRodape />
 
     </ContainerHome>
     )  
