@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Login from './pages/login/conteudo'
-import Redefinir from './pages/redefinir/esqueceu'
+import Redefinir from './pages/redefinir/esq.conteudo'
 
 
 export default function Routes() {
