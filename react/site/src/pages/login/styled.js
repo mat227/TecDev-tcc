@@ -89,7 +89,7 @@ a, a:link, a:visited {
   }
   
 .logo2{
-    background-image: url(../Login/assets/images/fundoaz\ 2.svg);
+    background-image: url("/assets/images/lo-fundo.svg");
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: 100%;

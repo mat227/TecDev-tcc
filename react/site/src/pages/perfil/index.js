@@ -1,12 +1,13 @@
 import { Container } from  './indexSyled.js';
 import Nav from './nav.js';
-
+import { ContainerPartecima } from '../../components/parteCima/styled.js';
 export default function Login(){
 
     return(
         <div>
             <Nav />
             <Container >
+                <ContainerPartecima/>
                 <div class="faixaUm">
                     <div class="colunas especial"><label>Suas informaçoes</label></div>
                     <div class="colunas"><label>Seus favoritos</label></div>

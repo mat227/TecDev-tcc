@@ -1,4 +1,4 @@
-import { ContainerLogin } from "./sty+led"
+import { ContainerLogin } from "./styled";
 
 export default function Conteudo() {
     return (
@@ -6,7 +6,7 @@ export default function Conteudo() {
 <ContainerLogin>
     <div class="inputs-login">
        
-        <div class="logo"><img src="" alt="" /></div>
+        <div class="logo"><img src="/assets/images/lo-logo.svg" alt="" /></div>
         <div class="titulo">Login:</div>
         <div class="login">
             <div class="email_login">E-mail</div>
@@ -36,7 +36,7 @@ export default function Conteudo() {
 
 
     <div class="logo2">
-        <div class="logoLivro"><img src="" alt=""/></div>
+        <div class="logoLivro"><img src="/assets/images/logo2.svg" alt=""/></div>
 
     </div>
     </ContainerLogin>   
