@@ -2,7 +2,6 @@ import { ContainerDesc } from "./descon.styled"
 
 import { ContainerPartecima } from "../../components/parteCima/componente"
 
-import { ContainerRodape } from "../../components/rodape/redape"
 
 
 
@@ -10,7 +9,7 @@ import { ContainerRodape } from "../../components/rodape/redape"
 export default function Desconto() {
     return (
     <ContainerDesc>
-         
+         <ContainerPartecima/>
 
         <div class="conteiner-homepage1">
 

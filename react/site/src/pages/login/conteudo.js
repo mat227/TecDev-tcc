@@ -1,10 +1,15 @@
 import { ContainerLogin } from "./styled"
 
+import { ContainerPartecima } from "../../components/parteCima/componente"
+
+
 export default function Conteudo() {
     return (
 
 <ContainerLogin>
+    <ContainerPartecima/>
     <div class="inputs-login">
+
        
         <div class="logo"><img src="/assets/images/lo-logo.svg" alt="" /></div>
         <div class="titulo">Login:</div>

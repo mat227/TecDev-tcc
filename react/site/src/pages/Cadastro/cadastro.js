@@ -1,9 +1,14 @@
 import { ContainerCadastro } from "./cadas.styled"
 
+import { ContainerPartecima } from "../../components/parteCima/componente"
+
+
 
 export default function Cadastro() {
     return (
         <ContainerCadastro>
+
+                <ContainerPartecima/>
                     <div class="Conteiner-cadastrar">
 
             <div class="box1">

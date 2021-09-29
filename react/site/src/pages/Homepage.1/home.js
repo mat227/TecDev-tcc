@@ -1,9 +1,13 @@
 import { ContainerHome } from "./home.styled"
 
+import { ContainerPartecima } from "../../components/parteCima/componente"
+
+
 
 export default function Homepage() {
     return (
     <ContainerHome>
+          <ContainerPartecima/>
    
         <div class="conteiner-homepage1">
 
