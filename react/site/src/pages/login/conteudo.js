@@ -39,7 +39,7 @@ export default function Conteudo() {
         <div class="logoLivro"><img src="/assets/images/logo2.svg" alt=""/></div>
 
     </div>
-    </ContainerLogin>   
+</ContainerLogin>   
      )
   };
   
