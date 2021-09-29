@@ -1,4 +1,4 @@
-import { ContainerCadastro } from "./styled"
+import { ContainerCadastro } from "./cadas.styled"
 
 
 export default function Cadastro() {
