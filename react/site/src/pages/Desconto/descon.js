@@ -1,7 +1,7 @@
 import { ContainerDesc } from "./descon.styled"
 
 
-export default function Homepage() {
+export default function Desconto() {
     return (
     <ContainerDesc>
 
@@ -286,7 +286,7 @@ export default function Homepage() {
         <footer>
             <div class="logowo"><img src="/assets/images/logo atual.svg" alt="" />by: TecDev</div>
             <div class="redes"><img src="/assets/images/insta.svg" alt="" /><img
-                    src="../DescricaoLivro/assets/images/facebook.svg" /></div>
+                    src="/assets/images/facebook.svg" alt="" /></div>
         </footer>
 
 
