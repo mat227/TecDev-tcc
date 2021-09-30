@@ -11,7 +11,10 @@
 * { 
     margin: 0px;
 }
-
+a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
 body {
     background-color: #135578;
     background-image: url('../telas2/assets/images/bacckground.svg');
