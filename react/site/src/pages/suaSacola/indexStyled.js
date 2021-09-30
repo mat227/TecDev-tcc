@@ -1,21 +1,22 @@
-import styled  from "styled-components";
+import styled from "styled-components";
 
-const Container = styled.div`   
-        background-color: #135578;
-        background-image: url('./assets/imagens/fundo.svg');
-        padding: 6.4em 2em 3em 2em;
-        //height: 100%;
+
+const Container = styled.div`
+            height: 100vh;
+            background-color: #125476;
+            background-image: url('./assets/imagens/fundo.svg');
+            background-repeat: no-repeat;
         *{
             box-sizing: border-box;
             margin: 0;
-            padding: 0;
+            
         }
-        .boxMud{
-            display: flex;
-            flex-direction: column;
-            padding: 2em;
-            background-color: #102A45;
+        .conteudo{
+   
+            background-color:  rgba(18, 23, 43, 0.6);
             border-radius: 2em;
+            height: 80vh;
+            padding: 2em;
         }
         .titulo{
             display: flex;
@@ -31,56 +32,119 @@ const Container = styled.div`
             color: white;
             font-size: 0.7em;
         }
-        .labels{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 70vw;
-             
-        }
-        .test{
-            color: white;
-            align-items: center;
-            border-bottom: 1px solid white;
-            width: 25vw;
-            padding: 1.3em;
-            height: 1em;
-            margin: 1em 0em 0.6em 1em;
-        }
-        .contato{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            color: white;
-            margin: 0.8em 0em 0.5em 1em;
-        }
-        .tell{
-
-            margin-left: 1em ;
-            background-color: #227591;
-            border-radius: 0.3em;
-            padding: 0.2em;
-            color: white;
-        }
-        .auxi{
+        .container-cont{
             display: flex;
             flex-direction: row;
         }
-        .box2{
-            color: white ;
-            margin-top: 1.5em;
-        }
-        .lbl{
-            margin: 0.8em 0em 1em 0em;
-            width: 20vw;
-        }
-        .btns{
-            display: flex;
-            align-items: center;
-            justify-content: end;
+        .tabela{
+            width: 75vw;
             
         }
-       
-`
+        .cupom{
+              width: 25vw;
+              text-align: center;
+            
+        }
+        .inputC{
+            margin-top: 20em;
+        }
+        .input input{
+            height: 2em;
+            width: 15em;
+            border-radius: 0.5em;
+            background: #7CC3DF;
+            border: none;
+            margin-right: 8em;
+        
+        }
+        .bimg{
+            width: 1.5em;
+            height: 1.5em;
+            margin: 1em;
+            border-radius: 50vh;
+            background: turquoise;
+            border: none;
+        }
+        .brem{
+            width: 1.5em;
+            height: 1.5em;
+            
+            border-radius: 50vh;
+            background: white;
+            border: none;
+            padding: 0.5em;
+        }
+        .inputC{
+            color: white;
+            
+        }
+        
+        .quadc{
+            margin-bottom: 3em;
+        }
+        .btns{
+                margin-top: 1em;
+                display: flex;
+                flex-direction: row;
+        }
+        .btnss{
+            border: #1FB5CD;
+            background: #1FB5CD;
+            padding: 0.5em;
+            color: white;
+            border-radius: 0.3em;
+            width: 5vw;
+            margin-right: 1em;
+        }
+        .th2{
+            color: white;
+            text-align: center;
+            margin-bottom: 1em;
+            width: 15vw;
+        }
+        .th2 h2{
+            font-size: 2em;
+            border-bottom:1px solid white ;
+        }
+        .quadb{
+            display: flex;
+            flex-direction: column;
+            margin-top: 9em;
+        }
+        .btnf{
+            border: #1FB5CD;
+            background: #1FB5CD;
+            padding: 0.5em;
+            color: white;
+            width: 15vw;
+            text-align: center; 
+            margin-top: 1em;     
+            border-radius: 0.3em;
+        }
+        table{
+            width: 50vw;
+            border-collapse: collapse;
+            border-spacing: 2em;
+            justify-content: center;
+            color: white;
+        
+        }
+        thead{
+            border-bottom:  2px solid white;
+        
+            color: white;
+            margin: 1em;
+        
+        }
+        tbody{
+            border-top:  1px solid white;
+            border-right: 1px solid white;
+        }
+        td{
+           height: 1em;
+           text-align: center;
+        }
 
-export {Container}
+
+
+`
