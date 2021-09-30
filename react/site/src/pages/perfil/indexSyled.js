@@ -1,6 +1,13 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                margin: 0em;
+            }
         display: flex;
         flex-direction: row;
         background-color: #135578;
