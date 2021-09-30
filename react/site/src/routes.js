@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Login from './pages/login/conteudo'
+import Login from './pages/Cadastro/cadastro.js'
 import Redefinir from './pages/redefinir/esq.conteudo'
 
 

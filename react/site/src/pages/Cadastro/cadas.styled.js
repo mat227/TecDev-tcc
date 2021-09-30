@@ -48,7 +48,7 @@ const ContainerCadastro = styled.div`
     display: flex;
     flex-direction:column;
     background-color: #103D55;
-    background-image: url("../CriarConta/assets/images/Polygon\ 5.svg");
+    background-image: url("/assets/images/Polygon\ 5.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 50em;
@@ -85,8 +85,9 @@ font-size: 50px;
 .vincular-conta{
   display: flex;
   flex-direction: row;
-  padding-left: 20px;
 }
+
+
 
 button {
   font-weight: 700;

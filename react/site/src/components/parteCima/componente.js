@@ -1,7 +1,7 @@
 import { ContainerPartecima } from "./styled"
 
 
-export default function Conteudo() {
+export default function ParteCima() {
     return (
 <ContainerPartecima>
 <div class="hp1-buscap">

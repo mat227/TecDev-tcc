@@ -1,6 +1,6 @@
 import { ContainerRodape } from "./styled"
 
-export default function Conteudo() {
+export default function Rodape() {
     return (
 <ContainerRodape>
     <div className="logopt1">

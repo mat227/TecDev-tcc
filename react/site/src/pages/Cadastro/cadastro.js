@@ -1,8 +1,5 @@
 import { ContainerCadastro } from "./cadas.styled"
 
-import { ContainerPartecima } from "../../components/parteCima/componente"
-
-import { ContainerRodape } from "../../components/rodape/redape"
 
 
 
@@ -11,12 +8,11 @@ export default function Cadastro() {
     return (
         <ContainerCadastro>
 
-                <ContainerPartecima/>
                     <div class="Conteiner-cadastrar">
 
             <div class="box1">
                 <div class="titulo">Cadastro</div>
-                <div class="img-logo"><img src="/assets/images/logo atual.svg"  alt=""/></div>
+                <div class="img-logo"><img src="/assets/images/logo-cadas.svg"  alt=""/></div>
 
             </div>
             <div class="inputs-criar">
@@ -28,7 +24,7 @@ export default function Cadastro() {
                     </div>
                     <div class="cpf_cadastrar">C.P.F</div>
                     <div class="cadastrar-sn">
-                        <input id="cpf_cadastrar" name="cpf_cadastrar" required="required" type="text" value="000.000.000-00"/>
+                        <input id="cpf_cadastrar" name="cpf_cadastrar" required="required" type="text" placeholder="000.000.000-00"/>
                     </div>
                     <div class="email_cadastrar">E-mail</div>
                     <div class="cadastrar-sn">
@@ -51,7 +47,7 @@ export default function Cadastro() {
                     <div class="pt-baixo">
                         
                         <div class="vincular-conta">
-                            <img src="/assets/images/facebook.svg" alt="" />
+                            <img src="/assets/images/facebook-cadas.svg" alt="" />
                         </div>
                         <div class="vincular-conta">
                             <img src="/assets/images/google.svg" alt="" />
@@ -66,7 +62,6 @@ export default function Cadastro() {
 
             </div>
 
-            <ContainerRodape/>
 
         </ContainerCadastro>
 

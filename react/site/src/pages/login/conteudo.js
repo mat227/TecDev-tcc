@@ -1,13 +1,11 @@
 import { ContainerLogin } from "./styled"
 
-import { ContainerPartecima } from "../../components/parteCima/componente"
 
 
 export default function Conteudo() {
     return (
 
 <ContainerLogin>
-    <ContainerPartecima/>
     <div class="inputs-login">
 
        
