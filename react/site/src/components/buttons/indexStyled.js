@@ -6,6 +6,7 @@ const Bottom = styled.button`
     margin-left: 1em;
     border: 1px solid #1fb5cd;
     border-radius: 0.5em;
+    color: white;
 
 `
 export {Bottom}
