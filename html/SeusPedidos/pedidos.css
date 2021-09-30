@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Rowdies";
+    src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+* { 
+    margin: 0px;
+}
+
+body {
+    background-color: #135578;
+    background-image: url('../SeusPedidos/assets/images/bacckground.svg');
+}
