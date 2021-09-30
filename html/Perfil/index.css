@@ -14,20 +14,20 @@ a, a:link, a:visited {
     flex-direction: row;
     align-items: center;
     padding: 1em;
-    height: 9em;
+    height: 7.5em;
 }
 .alt_img{
     position: absolute;
     top: 4.5em;
-    left: 2em;
+    font-size: 0.9em;
     color: rgb(255, 255, 255);
     border: 1px solid skyblue;
 }
 .imgP img {
     
     border-radius: 50%;
-    width: 8em;
-    height: 8em;
+    width: 6em;
+    height: 6em;
 }
 .nomeP{
     color: white;

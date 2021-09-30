@@ -163,7 +163,7 @@ a, a:link, a:visited {
     width: 1.5em;
     height: 1.5em;
     margin: 1em;
-    border-radius: 50%;
+    border-radius: 50vh;
     background: turquoise;
     border: none;
 }
@@ -171,7 +171,7 @@ a, a:link, a:visited {
     width: 1.5em;
     height: 1.5em;
     
-    border-radius: 50%;
+    border-radius: 50vh;
     background: white;
     border: none;
     padding: 0.5em;

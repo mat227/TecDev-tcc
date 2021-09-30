@@ -1,0 +1,116 @@
+import styled from 'styled-components'
+
+
+const ContainerCadastro = styled.div`
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0em;
+ 
+  }
+  
+.box1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 8em;
+    padding-top: 2em;
+    padding-right: 6em;
+    padding-bottom: 2em;
+   
+}
+.cadastrar{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+.cadastrar input{
+  border-top: 1px solid #1EA7C3;
+  border-left: 1px solid #1EA7C3;
+  border-right: 1px solid #1EA7C3;
+  border-bottom: 3px solid #1EA7C3;
+  outline: none;
+  border-radius: 20px;
+  background-color:#1EA7C3 ;
+  color: white;
+  width: 23em;
+  height: 2em;
+  margin-bottom: 1em;
+ margin-right: 2em;
+  
+}
+.Conteiner-cadastrar{
+    display: flex;
+    flex-direction:column;
+    background-color: #103D55;
+    background-image: url("/assets/images/Polygon\ 5.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 50em;
+  background-position-y: center;
+  position: relative;
+    background-position-x: right;
+  height: 100vh;
+  width: auto;
+  color: white;
+  font-family: "Rowdies";
+}
+
+.titulo {
+    
+color: white;
+font-family: "Rowdies";
+font-weight: 400;
+font-size: 50px;
+}
+
+.inputs-criar{
+  display: flex;
+  justify-content: flex-end;
+ 
+  height: 100%;
+}
+
+.pt-baixo{
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+}
+
+.vincular-conta{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+button {
+  font-weight: 700;
+  
+  color: #fff;
+  background: #2FAEC8;
+  
+  border: none;
+  border-radius: 20px;
+  font-family: "Rowdies";
+
+  padding: .7em 2em;
+  margin: .3em;
+  font-weight: 400;
+
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2FAEC8;
+}
+`
+
+
+export { ContainerCadastro }

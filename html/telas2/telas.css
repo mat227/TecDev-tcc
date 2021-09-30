@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "Rowdies";
+    src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+* { 
+    margin: 0px;
+}
+a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
+body {
+    background-color: #135578;
+    background-image: url('../telas2/assets/images/bacckground.svg');
+}
+
+
+
+.telas-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.telas-box {
+    display: flex;
+    flex-direction: column;
+
+    width: 25vw;
+
+    background: #135578b4;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    text-align: center;
+    align-self: center;
+
+
+    margin-top: 2em;
+}   
+
+.telas-itens {
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+
+    padding: 1em;
+
+    line-height: 2.4em;
+
+    
+    font-family: Rowdies;
+
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    color: white;
+}
+
+
+a:hover {
+    text-decoration: underline double black;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+a:visited {
+    text-decoration: underline double black;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+

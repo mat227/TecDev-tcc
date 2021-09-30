@@ -1,131 +1,123 @@
-* {
+*{
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
+      
+  }
+  a, a:link, a:visited {
+      text-decoration: none;
+      color: white;
+    }
+    
+    .conteiner-homepage1{
+      display: flex;
+      flex-direction: column;
+      font-family: "Rowdies";
+  
+  
   }
   
-  .body {
-    margin: 0em;
+  .hp1-logo{
+      display: flex;
+      padding-left:3em ;
   }
+  .hp1-nome{
+    padding-top: 0.7em;
+  }
+      
+      .hp1-buscap{
+          display: flex;
+          flex-direction: row;
+          background-color: #12172B;  
+          align-items: center;
+          justify-content: space-between;
+      }
+      .hp1-seus{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+      }
   
-
-.conteiner{
-   display: flex;
-   flex-direction: column; 
-   background-color:  #12172B;
-   width: 100vw;
-   height: 100vh;
-
-}
-
-.cartoes{
-    background-color: #133953;
-    height: 5em;
-    margin-left: 10em;
-
-}
-
-.titulo{
-    height: 70px;
-    color: white;
-
-}
-
-
-.titulo2{
-    color: white;
-    direction: rtl;
-}
-
-.cabe{
-  display: flex;
-  flex-direction: row ;
-  direction: center;
-  justify-content: space-between;
-}
-
-.pagamento{
   
-
-}
-
-.span{
-     color: #00EAFF;
-}
-
-.paga{
-    background-color: #19506B;
-    width: 90px;
-    height: 10em;
-    justify-content: space-between;
-
-}
-
-.pix{
-   color:white;
-   direction: ltr;
-}
-
-.cartao{
-    color:white;
-}
-
-.boleto{
-    color:white;
-}
-
-.paga2{
-    display: flex;
-    flex-direction: column;
-    direction: center;
-    background-color: #19506B ;
-    align-items: center;
-    margin: auto;
-    height: 35em;
-    width: 70em;
-}
-
-
-
-.informacoes{
-    display: flex;
-   flex-direction: row !important; 
-   background-color: white;
-}
-
-
-
-.Numero_cartao{
-  color: white;
-}
-
-.Nome_titular{
-    color: white;
-
-}
-
-.vescimento{
-    color: white;
-
-}
-
-
-.Sobrenome{
-    color: white;
-}
-
-
-.codigo{
-    color: white;
-
-
-}
-
-.info{
-    direction: center;
-    margin-left: 10em;
-}
-
-.botoes{
-    display: flex;
-    flex-direction: row;
-}
+      
+      .divBusca input{
+          border-top: 0px solid;
+          border-left: 0px solid;
+          border-right: 0px solid;
+          border-bottom: 0px solid;
+          outline: none;
+          color:white;
+        }
+        ::placeholder{
+            color: white;
+            opacity: 50%;
+        }
+       
+        .divBusca{
+          display: flex;
+          flex-direction: row;
+            background-color:#84D1DD;
+            border:solid 1px;
+            border-radius:10px;
+            width:500px;
+            font-family: "Rowdies";
+            justify-content: space-between;
+          }
+          
+          .divBusca button{
+            margin-top: 0.2em;
+    border: none;
+    background-color: #84D1DD;
+    border-radius: 20px;
+    cursor: pointer;
+    }
+    
+         
+          #txtBusca{
+            float:left;
+            background-color:transparent;
+            padding-left:10px;
+            font-style:italic;
+            font-size:14px;
+            border:none;
+            height:32px;
+            font-family: "Rowdies";
+    font-weight: 400;
+    width: 35.5em;
+          
+          }
+    
+        
+    
+          .hp1-bolsa, .hp1-favorito,.hp1-perfil{
+            padding-left: 1em;
+          }
+    
+          .hp1-perfil{
+            padding-right: 3em;
+            padding-top: 3px;
+          }
+    
+          .hp1-favorito{
+            padding-top: 3px;
+          }
+         
+    
+    
+    
+      
+  .container{
+      height: 100vh;
+      background-color: #125476;
+      background-image: url('./fundo.svg');
+      background-repeat: no-repeat;
+      
+     
+  }
+  .conteudo{
+     
+      background-color:  rgba(18, 23, 43, 0.5);
+      border-radius: 2em;
+      height: 80vh;
+      margin: 2em;
+  }
+ 

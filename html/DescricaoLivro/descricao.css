@@ -19,7 +19,7 @@ footer {
 }
 
 @font-face {
-    font-family: "Rowdies-bold";
+    font-family: "Rowdies";
     src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
 }
 
@@ -62,7 +62,7 @@ margin: 1em;
 .conteiner {
     display: flex;
     flex-direction: column;
-    background-image: url('./assets/images/fundo-removebg-preview.png');
+    background-image: url('./assets/images/bacckground.svg');
     opacity: inherit;
 }
 
@@ -144,7 +144,7 @@ margin: 1em;
 }
 
 .titulo {
-    font-size: 1.5em;
+    font-size: 1.52em;
     color:#1FB5CD;
     font-family: Rowdies;
 
