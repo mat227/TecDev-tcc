@@ -6,7 +6,7 @@ import Test from './pages/suaSacola'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Test />
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
