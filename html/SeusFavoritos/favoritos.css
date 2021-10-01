@@ -16,3 +16,201 @@ body {
     background-color: #135578;
     background-image: url('../SeusFavoritos/assets/images/bacckground.svg');
 }
+
+footer {
+    background-color: #12172B;
+    display: flex;
+    flex-direction: row;
+
+    height: 12vh;
+    width: 100%;
+
+    align-items: center;
+}
+
+@font-face {
+    font-family: "Rowdies";
+    src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+.hp1-logo{
+    display: flex;
+    padding-left:3em ;
+  }
+  .hp1-nome{
+  padding-top: 0.7em;
+  }
+    
+    .hp1-buscap{
+        display: flex;
+        flex-direction: row;
+        background-color: #12172B;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .hp1-seus{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    
+  
+    .divBusca input{
+      border-top: 0px solid;
+      border-left: 0px solid;
+      border-right: 0px solid;
+      border-bottom: 0px solid;
+      outline: none;
+      color:white;
+    }
+    ::placeholder{
+        color: white;
+        opacity: 50%;
+    }
+   
+    .divBusca{
+        display: flex;
+        flex-direction: row;
+        background-color:#84D1DD;
+        border:solid 1px;
+        border-radius:10px;
+        width:500px;
+        font-family: "Rowdies";
+        justify-content: space-between;
+      }
+      
+      .divBusca button{
+        margin-top: 0.2em;
+        border: none;
+        background-color: #84D1DD;
+        border-radius: 20px;
+        cursor: pointer;
+  }
+  
+     
+      #txtBusca{
+        float:left;
+        background-color:transparent;
+        padding-left:10px;
+        font-style:italic;
+        font-size:14px;
+        border:none;
+        height:32px;
+        font-family: "Rowdies";
+        font-weight: 400;
+        width: 35.5em;
+      
+      }
+  
+    
+  
+      .hp1-bolsa, .hp1-favorito,.hp1-perfil{
+        padding-left: 1em;
+      }
+  
+      .hp1-perfil{
+        padding-right: 3em;
+        padding-top: 3px;
+      }
+  
+      .hp1-favorito{
+        padding-top: 3px;
+      }
+  
+  
+
+
+.logowo {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    font-family: Quicksand;
+    color: #73a1b8;
+}
+
+.logowo img {
+    height: 4em;
+}
+
+.redes img {
+    margin: 1em;
+    height: 2em;
+}
+
+.logowo {
+margin: 1em;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: auto;
+}
+
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    background-image: url('./assets/images/bacckground.svg');
+    opacity: inherit;
+}
+
+.box-mae {
+    display: flex;
+flex-direction: row;
+    background-color: #12172B;
+    
+
+    width: 70em;
+    height: 50em;
+
+    padding: 1.3em;
+
+    align-self: center;
+
+    margin: 2em;
+
+    border-radius: 2em;
+}
+
+.box-filha {
+    border: 1px solid white;
+    border-radius: 2em;
+    width: 70em;
+    height: 50em;
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.conteudo{
+    display: flex;
+    flex-direction: row ;
+    white-space:nowrap;
+}
+.selecao-livro{
+    display: flex;
+    flex-direction: row ;
+  }
+  
+  
+#campo-checkbox {
+    float:left;
+        margin-left:10px;
+        height:5em;
+        margin-top: 5em;
+width: 10em;
+      }
+    
+
+    
