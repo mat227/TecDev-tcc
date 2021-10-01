@@ -6,7 +6,7 @@ import Test from './pages/suaInformacoes/'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Test/>
+    <Test />
   </React.StrictMode>,
   document.getElementById('root')
 );

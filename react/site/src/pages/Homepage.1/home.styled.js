@@ -4,15 +4,7 @@ import styled from 'styled-components'
 
 const ContainerHome = styled.div`
 
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0em;
-    text-align: center;
 
-  }
   a, a:link, a:visited {
     text-decoration: none;
     color: white;
@@ -26,111 +18,21 @@ const ContainerHome = styled.div`
 
 }
 
-.hp1-logo{
-    display: flex;
-    padding-left:3em ;
-}
-.hp1-nome{
-  padding-top: 0.7em;
-}
-    
-    .hp1-buscap{
-        display: flex;
-        flex-direction: row;
-        background-color: #12172B;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .hp1-seus{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    
-
-    .divBusca input{
-      border-top: 0px solid;
-      border-left: 0px solid;
-      border-right: 0px solid;
-      border-bottom: 0px solid;
-      outline: none;
-      color:white;
-    }
-    ::placeholder{
-        color: white;
-        opacity: 50%;
-    }
-   
-    .divBusca{
-      display: flex;
-      flex-direction: row;
-        background-color:#84D1DD;
-        border:solid 1px;
-        border-radius:10px;
-        width:500px;
-        font-family: "Rowdies";
-        justify-content: space-between;
-      }
-      
-      .divBusca button{
-        margin-top: 0.2em;
-border: none;
-background-color: #84D1DD;
-border-radius: 20px;
-cursor: pointer;
-}
-
-     
-      #txtBusca{
-        float:left;
-        background-color:transparent;
-        padding-left:10px;
-        font-style:italic;
-        font-size:14px;
-        border:none;
-        height:32px;
-        font-family: "Rowdies";
-font-weight: 400;
-width: 35.5em;
-      
-      }
-
-    
-
-      .hp1-bolsa, .hp1-favorito,.hp1-entre-cadastre{
-        padding-left: 1em;
-      }
-
-      .hp1-entre-cadastre{
-        padding-right: 3em;
-        padding-top: 3px;
-      }
-
-      .hp1-favorito{
-        padding-top: 3px;
-      }
-     
-
-
-
-
-      
-
-
 
 
      
 .oferta-da-semana{
   display: flex;
   flex-direction: column;
-  background-color: #125375 ;
+  background-color: #125375;
   background-size: 210vh;
   height: 250vh;
   opacity: 100%;
 }
 
-
+.trio{
+  padding-left:27em;
+}
 .trio button {
   font-weight: 700;
     background: white;
@@ -439,46 +341,6 @@ margin-top: 5em;
 
 
 
-footer {
-  background-color: #12172B;
-  display: flex;
-  flex-direction: row;
-
-  height: 12vh;
-  width: 100%;
-
-  align-items: center;
-}
-
-.logowo {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8em;
-  font-family: Quicksand;
-  color: #73a1b8;
-}
-
-.logowo img {
-  height: 4em;
-}
-
-.redes img {
-  margin: 1em;
-  height: 2em;
-}
-
-.logowo {
-margin: 1em;
-}
-
-.redes {
-  display: flex;
-  flex-direction: row;
-
-  margin-left: auto;
-}
-
-
 
 
 
@@ -577,8 +439,8 @@ margin: 1em;
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 
-#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
-#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s1:target ~ .slider {transform: translateX(   100%); -webkit-transform: translateX(   -17.5%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-134%);}
 
 
 
