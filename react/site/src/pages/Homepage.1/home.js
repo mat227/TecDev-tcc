@@ -1,46 +1,24 @@
 import { ContainerHome } from "./home.styled"
 
-import { ContainerPartecima } from "../../components/parteCima/componente"
+import Partecima  from "../../components/parteCima/componente"
 
-import { ContainerRodape } from "../../components/rodape/redape"
+import Rodape  from "../../components/rodape/redape"
 
 
 export default function Homepage() {
     return (
     <ContainerHome>
-          <ContainerPartecima/>
+          <Partecima/>
    
         <div class="conteiner-homepage1">
 
 
-        <div class="hp1-buscap">
-        <div class="hp1-logo">
-                <img src="/assets/images/nice library png 1.svg" alt=""/>
-                <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
-
-            </div>
-
-            <div class="hp1-busca">
-                <div class="divBusca">
-                    <input type="text" id="txtBusca" placeholder="Buscar..." />
-                    <button><img src="/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
-                </div>
-            </div>
-
-            <div class="hp1-seus">
-            <a href="../SuaSacola/index.html"><div class="hp1-bolsa"><img src="../HomePage1/assets/images/sua bolsa.svg" /></div> </a> 
-                <div class="hp1-favorito"><img src="/assets/images/seus favoritos.svg" alt=""/></div>
-            <a href="../Login/login.html"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" alt=""/></div></a>    
-
-            </div>
-        </div>
-
-
+        
 
 
         <div class="oferta-da-semana">
             <div class="trio">
-            <a href="../Gênero/src/pages/genero.html">  <button><img src="../HomePage1/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </a>
+            <a href="./pages/login/conteudo.js">  <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </a>
                 <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button>
                 <button><img src="/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button>
 
@@ -72,7 +50,7 @@ export default function Homepage() {
                                 com ate 50% de desconto
                             </div>
                             <div class="botao-slide2">
-                                <a href="../Desconto/desconto.html"><button>Confira</button></a>
+                                <a href="/desconto"><button>Confira</button></a>
                             </div>
 
                         </div>
@@ -104,7 +82,7 @@ export default function Homepage() {
                                         R$ 43,00
                                     </div>
                                     <div class="botao-preco">
-                                        <a href="../DescricaoLivro/descricao.html"><button>Saiba Mais</button></a>
+                                        <a href="/desconto"><button>Saiba Mais</button></a>
                                     </div>
 
                                 </div>
@@ -130,7 +108,7 @@ export default function Homepage() {
                                         R$ 19,80
                                     </div>
                                     <div class="botao-preco2">
-                                        <a href="../DescricaoLivro/descricao.html"><button>Saiba Mais</button></a>
+                                        <a href="/descricao"><button>Saiba Mais</button></a>
                                     </div>
 
                                 </div>
@@ -167,7 +145,7 @@ export default function Homepage() {
                 </div>
 
                 <div class="livros-queridinhas">
-                <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
                         </div>
@@ -186,7 +164,7 @@ export default function Homepage() {
                         </div>
                     </div>
                 </a>
-                <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                <a href="/descricao"> <div class="box-livro">
                     <div class="img-livro-queridinha">
                         <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                     </div>
@@ -205,7 +183,7 @@ export default function Homepage() {
                     </div>
                 </div>
             </a>
-            <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+            <a href="/descricao"> <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                 </div>
@@ -226,7 +204,7 @@ export default function Homepage() {
         </a>
                 </div>
                 <div class="livros-queridinhas2">
-                    <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                    <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg"  alt=""/>
                         </div>
@@ -245,7 +223,7 @@ export default function Homepage() {
                         </div>
                     </div>
                 </a>
-                <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                <a href="/descricao"> <div class="box-livro">
                     <div class="img-livro-queridinha">
                         <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                     </div>
@@ -264,7 +242,7 @@ export default function Homepage() {
                     </div>
                 </div>
             </a>
-            <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+            <a href="/descricao"> <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                 </div>
@@ -288,15 +266,10 @@ export default function Homepage() {
             </div>
         </div>
 
-        <footer>
-            <div class="logowo"><img src="/assets/images/logo atual.svg" alt="" />by: TecDev</div>
-            <div class="redes"> <img src="/assets/images/insta.svg" alt="" />
-                <img src="/assets/images/facebook.svg" alt="" /></div>
-        </footer>
 
 
         </div>
-        <ContainerRodape />
+        <Rodape />
 
     </ContainerHome>
     )  

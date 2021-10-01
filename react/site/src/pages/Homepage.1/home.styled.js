@@ -130,6 +130,9 @@ width: 35.5em;
   opacity: 100%;
 }
 
+.trio{
+  padding-left: 27.5em;
+}
 
 .trio button {
   font-weight: 700;
