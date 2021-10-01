@@ -27,8 +27,8 @@ export default function Conteudo() {
 
         </div>
         <div class="pt-baixo">
-        <div class="esqueceu-senha">Esqueceu a senha?
-        </div>
+      <a href="/redefinir">  <div class="esqueceu-senha">Esqueceu a senha?        </div>
+</a>
         <div class="criar-conta">
            Criar conta
         </div>
