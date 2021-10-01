@@ -1,10 +1,8 @@
 import {Bottom} from './indexStyled.js'
 
-export default function Button(props){
+export default function Button(){
     return (
-        <div>
-            <Bottom></Bottom>
-        </div>
+            <Bottom> </Bottom>
     );
 }
 

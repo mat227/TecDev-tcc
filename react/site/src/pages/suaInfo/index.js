@@ -1,5 +1,6 @@
 import {Container } from './indexStyled.js'
-import Button from '../../components/buttons'
+//import Button from '../../components/buttons'
+import {Bottom} from '../../components/buttons/indexStyled.js'
 
 export default function suaSacola (){
 
@@ -48,12 +49,8 @@ export default function suaSacola (){
                         </div>
                     </div> 
                     <div class="btns">
-                        <div>
-                            <Button> Voltar </Button>
-                        </div>
-                        <div>
-                            <Button>Proximo Passo</Button>
-                        </div>
+                            <Bottom> Voltar </Bottom>
+                            <Bottom>Proximo Passo</Bottom>
                     </div>
                 </div>
             </Container>  

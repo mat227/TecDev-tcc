@@ -72,11 +72,12 @@ const Container = styled.div`
         }
         .lbl{
             margin: 0.8em 0em 1em 0em;
-            width: 15vw;
+            width: 20vw;
         }
         .btns{
             display: flex;
             align-items: center;
+            justify-content: end;
             
         }
        
