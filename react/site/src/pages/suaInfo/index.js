@@ -34,7 +34,7 @@ export default function suaSacola(){
                             </tbody>
                         </table>
                         <div class="inputC">
-                            <input type="checkbox" id='studo' class="imputcheck" >
+                            <input type="checkbox" id='studo' class="imputcheck" />
                             <label for="studo" style="margin-right: 1em;"> Seleciona tudo</label>
                             <input type="checkbox" id='dtudo' class="imputcheck" >
                             <label for="dtudo"> Desmarca tudo</label>
