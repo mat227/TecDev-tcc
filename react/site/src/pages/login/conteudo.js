@@ -33,7 +33,7 @@ export default function Conteudo() {
            Criar conta
         </div>
     </div>
-        <div class="botao"><button>Entrar</button></div>
+       <a href="/homepage"> <div class="botao"><button>Entrar</button></div></a>
     </div>
 
 

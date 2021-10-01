@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import Conteudo from './pages/login/conteudo';
-import Test from './pages/suaInformacoes/'
+import Routes from './routes'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,5 +9,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
