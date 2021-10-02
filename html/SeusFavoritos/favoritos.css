@@ -165,7 +165,7 @@ margin: 1em;
 
 .box-mae {
     display: flex;
-flex-direction: row;
+flex-direction: column;
     background-color: #12172B;
     
 
@@ -193,24 +193,65 @@ flex-direction: row;
 
 
 
-.conteudo{
-    display: flex;
-    flex-direction: row ;
-    white-space:nowrap;
-}
 .selecao-livro{
     display: flex;
-    flex-direction: row ;
+    flex-direction: column ;
   }
   
   
 #campo-checkbox {
     float:left;
-        margin-left:10px;
+        margin-left:5em;
+        margin-right:2em;
+
         height:5em;
         margin-top: 5em;
-width: 10em;
+width: 4em;
       }
     
 
+    .tllivro{
+        font-family: 'Rowdies';
+color: white;
+font-size: 20px;
+margin-left: 16em;
+margin-top: -8em;
+    }
+    .preco{
+        font-family: 'Rowdies';
+color: white;
+font-size: 20px;
+margin-left: 16em;
+margin-top: 3em;
+text-decoration: underline;
+    }
     
+.botao-preco button {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    background: #00EAFF;
+    
+    border: none;
+    border-radius: 10px;
+    font-family: "Rowdies";
+  
+    padding: 0.5em;
+    margin: .3em;
+  
+    cursor: pointer;
+  }
+  
+  .botao-preco{
+      padding-left: 50em;
+      margin-top: -8em;
+
+  }
+
+  .box-livros2{
+      padding-top: 8em;
+  }
+  hr{
+      color: black;
+      margin-top: 10em;
+  }
