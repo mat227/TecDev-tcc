@@ -6,8 +6,8 @@ export default function ParteCima() {
 <ContainerPartecima>
 <div class="hp1-buscap">
 <div class="hp1-logo">
-      <img src="/assets/images/nice library png 1.svg" />
-      <img class="hp1-nome" src="/assets/images/Bookly.svg" />
+      <img src="/assets/images/nice library png 1.svg" alt=""/>
+      <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
 
   </div>
 
@@ -19,9 +19,9 @@ export default function ParteCima() {
   </div>
 
   <div class="hp1-seus">
-  <a href="../SuaSacola/index.html"><div class="hp1-bolsa"><img src="/assets/images/sua bolsa.svg" /></div> </a> 
-      <div class="hp1-favorito"><img src="/assets/images/seus favoritos.svg" /></div>
-  <a href="../Login/login.html"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" /></div></a>    
+  <a href="../SuaSacola/index.html"><div class="hp1-bolsa"><img src="/assets/images/sua bolsa.svg" alt=""/></div> </a> 
+      <div class="hp1-favorito"><img src="/assets/images/seus favoritos.svg" alt=""/></div>
+  <a href="../Login/login.html"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" alt=""/></div></a>    
 
   </div>
 </div>
