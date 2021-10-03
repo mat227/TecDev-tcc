@@ -470,3 +470,49 @@
     margin-left: 1em;
     margin-right: 1em; 
 }
+
+
+
+.redes {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 2em;
+    background-color: #12172b;
+
+    width: 79em;
+    height: 4.5em;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.img_logo img {
+  width: 6em;
+  
+}
+
+.redes_sociais {
+    display: flex;
+    flex-direction: row;
+    
+    margin-left: 65em;
+    margin-top: 1.5em;
+}
+
+.tecdev {
+    color:#9FD4EF;
+}
+
+.instagram img, .facebook img {
+    width: 1.5em;
+    height: 1.5em;
+    
+    margin-left: 1em;
+}
+
