@@ -285,3 +285,23 @@ text-decoration: underline;
     background: #6ECAEF ;
     margin-top: 2.5em;
   }
+
+
+
+  .tllivro2{
+      display: flex;
+      flex-direction: row;
+    font-family: 'Rowdies';
+color: white;
+font-size: 20px;
+margin-left: 2em;
+margin-top: 3.5em;
+}
+
+
+.tllivro3{
+    font-family: 'Rowdies';
+color: white;
+font-size: 20px;
+margin-left: 25em;
+}
