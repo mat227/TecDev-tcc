@@ -8,6 +8,9 @@ import Homepage from './pages/Homepage1/home.js'
 import Generos from './pages/Genero/genre.conteudo'
 import Terror from './pages/Genero/GenreType/1terror.conteudo'
 import Humor from './pages/Genero/GenreType/2humor.conteudo'
+import Romance from './pages/Genero/GenreType/3romance.conteudo'
+import Biografia from './pages/Genero/GenreType/4biografia.conteudo'
+import Poesia from './pages/Genero/GenreType/5poesia.conteudo'
 
 
 export default function Routes() {
@@ -22,6 +25,9 @@ export default function Routes() {
                 <Route path="/genero" exact={true} component={Generos} />
                 <Route path="/genero/terror" exact={true} component={Terror} />
                 <Route path="/genero/humor" exact={true} component={Humor} />
+                <Route path="/genero/romance" exact={true} component={Romance} />
+                <Route path="/genero/biografia" exact={true} component={Biografia} />
+                <Route path="/genero/poesia" exact={true} component={Poesia} />
             </Switch>
         </BrowserRouter>
     )

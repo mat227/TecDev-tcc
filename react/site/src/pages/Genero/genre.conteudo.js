@@ -44,7 +44,7 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="romance.html" class="">ROMANCE</a>
+                  <a href="/genero/romance" class="">ROMANCE</a>
               </button>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="biografia.html" class="">BIOGRAFIA</a>
+                  <a href="/genero/biografia" class="">BIOGRAFIA</a>
               </button>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="poesia.html" class="">POESIA</a>
+                  <a href="/genero/poesia" class="">POESIA</a>
               </button>
             </div>
           </div>
