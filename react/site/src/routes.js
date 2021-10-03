@@ -16,7 +16,7 @@ export default function Routes() {
                 <Route path="/desconto" exact={true} component={Descontos} />
                 <Route path="/descricao" exact={true} component={Descricoes} />
                 <Route path="/homepage" exact={true} component={Homepage} />
-
+                
             </Switch>
         </BrowserRouter>
     )

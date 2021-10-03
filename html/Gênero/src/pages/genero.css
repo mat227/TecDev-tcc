@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Rowdies-bold";
+    font-family: "Rowdies";
     src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
 }
 
@@ -53,13 +53,61 @@ body {
 
       margin-top: 3em;
       margin-bottom: 3em;
+
+      
   }
 
+  
+.boxes {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .box-genero {
+    background-color: #12314e;
+  
+    width: 17vw;
+    height: 75vh;
+  
+    padding: 0.8em;
+  
+    align-items: center;
+    align-content: center;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .botao {
+    display: flex;
+    flex-direction: column;
+  
+    justify-self: center;
+  
+    width: 96%;
+    margin-top: 1em;
+  }
+  
+  .botao button {
+    font-size: 2em;
+    font-family: "Rowdies";
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+    text-align: center;
+  
+    color: white;
+    background-color: #1fb5cd;
+    border: none;
+  
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  
+    cursor: pointer;
+  }
+  
 
-.generos .itens {
-    margin: 1em;
+a, a:visited {
+    color: white;
+    text-decoration: none;
 }
 
-.itens img{
-    height: 60vh;
-}

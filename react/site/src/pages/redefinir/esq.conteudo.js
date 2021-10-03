@@ -1,10 +1,8 @@
 import { ContainerEsqueceu } from "./esq.styled";
 
 // import { Popup } from './esq.styled';
-
-
 // import { confirmAlert } from 'react-confirm-alert'; // Import
-    //import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css 
+//import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css 
 
 export default function EsqConteudo() { 
     return (        
