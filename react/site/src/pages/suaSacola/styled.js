@@ -1,11 +1,11 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
-            height: 100vh;
+            height: 100%;
             background-color: #125476;
             background-image: url('./assets/imagens/fundo.svg');
             background-repeat: no-repeat;
-            padding: 5em 1em;
+            padding: 2em 1em;
         *{
             box-sizing: border-box;
             margin: 0;
@@ -14,7 +14,7 @@ const Container = styled.div`
         .conteudo{
             background-color:  rgba(18, 23, 43, 0.5);
             border-radius: 2em;
-            height: 70vh;
+            
             padding: 2.5em;
             
         }
@@ -36,7 +36,8 @@ const Container = styled.div`
         .container-cont{
             display: flex;
             flex-direction: row;
-            margin: 1em;
+            //margin: 1em;
+            
         }
         .tabela{
             width: 75vw;
@@ -68,13 +69,12 @@ const Container = styled.div`
             border: none;
         }
         .brem{
-            width: 1.5em;
-            height: 1.5em;
-            
+            width: 2.2em;
+            height: 2em;
             border-radius: 50vh;
             background: white;
             border: none;
-            padding: 0.5em;
+            
         }
         .inputC{
             color: white;

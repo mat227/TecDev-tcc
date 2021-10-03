@@ -29,7 +29,7 @@ export default function SuaSacola (){
                                     <td><label>R$ 25,00</label></td>   
                                     <td><button className="bimg">+</button>5<button className="bimg">-</button></td>  
                                     <td><label>R$125,00</label></td>  
-                                    <td><button className="brem"><img src='./assets/images/removce.svg' alt=' ' /></button></td>  
+                                    <td><button className="brem"><img src='./assets/images/remove.svg' alt=' ' /></button></td>  
                                 </tr>
                                 </tbody>
                             </table>
