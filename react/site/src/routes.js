@@ -5,6 +5,7 @@ import Redefinir from './pages/redefinir/esq.conteudo'
 import Descontos from './pages/Desconto/desconto'
 import Descricoes from './pages/descricao/desc.conteudo'
 import Homepage from './pages/Homepage1/home.js'
+import Generos from './pages/Genero/genre.conteudo'
 
 
 export default function Routes() {
@@ -16,7 +17,7 @@ export default function Routes() {
                 <Route path="/desconto" exact={true} component={Descontos} />
                 <Route path="/descricao" exact={true} component={Descricoes} />
                 <Route path="/homepage" exact={true} component={Homepage} />
-                
+                <Route path="/genero" exact={true} component={Generos} />
             </Switch>
         </BrowserRouter>
     )

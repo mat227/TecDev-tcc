@@ -17,7 +17,7 @@ export default function Homepage() {
 
         <div class="oferta-da-semana">
             <div class="trio">
-            <a href="../Gênero/src/pages/genero.html">  <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </a>
+            <a href="/genero">  <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </a>
                 <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button>
                 <button><img src="/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button>
 
@@ -81,7 +81,7 @@ export default function Homepage() {
                                         R$ 43,00
                                     </div>
                                     <div class="botao-preco">
-                                        <a href="../DescricaoLivro/descricao.html"><button>Saiba Mais</button></a>
+                                        <a href="/descricao"><button>Saiba Mais</button></a>
                                     </div>
 
                                 </div>
@@ -107,7 +107,7 @@ export default function Homepage() {
                                         R$ 19,80
                                     </div>
                                     <div class="botao-preco2">
-                                        <a href="../DescricaoLivro/descricao.html"><button>Saiba Mais</button></a>
+                                        <a href="/descricao"><button>Saiba Mais</button></a>
                                     </div>
 
                                 </div>
@@ -144,7 +144,7 @@ export default function Homepage() {
                 </div>
 
                 <div class="livros-queridinhas">
-                <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
                         </div>
@@ -182,7 +182,7 @@ export default function Homepage() {
                     </div>
                 </div>
             </a>
-            <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+            <a href="/descricao"> <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                 </div>
