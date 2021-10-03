@@ -251,7 +251,37 @@ text-decoration: underline;
   .box-livros2{
       padding-top: 8em;
   }
-  hr{
-      color: black;
-      margin-top: 10em;
+
+  hr {
+    color: #123455;
+    margin-top: 10em;
+
+}
+
+
+  .titulo {
+    display: flex;
+    flex-direction: row !important;
+  
+    justify-content: center;
+  
+    margin: 1em;
+  }
+  
+  .titulo p {
+    color:white;
+    font-family: Rowdies;
+    font-size: 4em;
+    font-weight: 300;
+    text-shadow: 2px 3px black;
+  
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: #00B6FF; 
+  }
+  
+  .quadrado {
+    width: 80px;
+    height: 2px;
+    background: #6ECAEF ;
+    margin-top: 2.5em;
   }
