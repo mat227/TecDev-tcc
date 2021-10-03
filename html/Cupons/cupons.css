@@ -336,7 +336,7 @@ flex-direction: column;
 
 
 #s1:target ~ .slider {transform: translateX(   -100vh); -webkit-transform: translateX(   -5vh);}
-#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-215vh);}
+#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-227vh);}
 
 
 
@@ -368,7 +368,7 @@ flex-direction: column;
     flex-direction: column;
     background-color: #0A0F21;
     margin-top: 6em;
-  margin-left: 8em;
+  margin-left: 8.5em;
   }
   
   
@@ -381,7 +381,21 @@ flex-direction: column;
   height: 50vh;
   width: 40vw;
   padding-top: 3.5em;
+  padding-left: -10em;
+  }
+
+  
+  
+  .box-livros2{
+    display: flex;
+    font-family: "Rowdies";
+    color: white;
+    display: table-cell;
+  height: 50vh;
+  width: 40vw;
+  padding-top: 3.5em;
   padding-left: none;
+  margin-left: -5em;
   }
   
   .imgt{
@@ -403,12 +417,26 @@ flex-direction: column;
     margin-right: 2em;
   }
   
-  .preco-de, .por{
-    padding-top: 1.5em;
+   .por{
+    padding-left: 10em;
+    font-size: 40px;
+  }
+
+  .por1{
+    padding-left: 32em;
+    padding-top: 1em;
+    font-size: 12px;
+  }
+  .por2{
+    padding-left: 26em;
+    padding-top: 1em;
+    font-size: 15px;
+    text-decoration: underline;
   }
   
   .botao-preco{
     padding-top: 2em;
+    padding-left: 24.5em;
   }
   
   .tllivro{
