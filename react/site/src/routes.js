@@ -7,6 +7,7 @@ import Descricoes from './pages/descricao/desc.conteudo'
 import Homepage from './pages/Homepage1/home.js'
 import Generos from './pages/Genero/genre.conteudo'
 import Terror from './pages/Genero/GenreType/1terror.conteudo'
+import Humor from './pages/Genero/GenreType/2humor.conteudo'
 
 
 export default function Routes() {
@@ -20,6 +21,7 @@ export default function Routes() {
                 <Route path="/homepage" exact={true} component={Homepage} />
                 <Route path="/genero" exact={true} component={Generos} />
                 <Route path="/genero/terror" exact={true} component={Terror} />
+                <Route path="/genero/humor" exact={true} component={Humor} />
             </Switch>
         </BrowserRouter>
     )

@@ -33,7 +33,7 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="humor.html" class="">HUMOR</a>
+                  <a href="/genero/humor" class="">HUMOR</a>
               </button>
             </div>
           </div>
