@@ -22,7 +22,7 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="terror.html" class="">TERROR</a>
+                  <a href="/genero/terror" class="">TERROR</a>
               </button>
             </div>
           </div>
