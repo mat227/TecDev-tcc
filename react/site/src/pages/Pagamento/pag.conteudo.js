@@ -15,7 +15,7 @@ export default function Pagamentos() {
                         <div className="formas">
                           <img src="/assets/images/pixpix.svg" alt=""/> Pix
                         </div>
-                        <div className="formas" style={{ width:"94%", marginLeft:"0em", backgroundColor:"rgba(26, 82, 107, 0.4)", paddingLeft:"1em"}}>
+                        <div className="formas" style={{ width:"94%", marginLeft:"0em", backgroundColor:"rgba(22, 118, 120, 0.4)", paddingLeft:"1em", margin:"0", height:"4.4em"}}>
                           <img src="/assets/images/cartaocreditocartao.svg" alt=""/> Cartão de Crédito
                         </div>
                         <div className="formas">
