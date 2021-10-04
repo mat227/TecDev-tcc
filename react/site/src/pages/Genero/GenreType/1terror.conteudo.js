@@ -1,6 +1,6 @@
-import ParteCima from "../../../components/parteCima/componente"
+import ParteCima from "../../../components/Common/parteCima/componente"
 import { ContainerGeneros } from "./type.styled"
-import Rodape from "../../../components/rodape/redape"
+import Rodape from "../../../components/Common/rodape/redape"
 
 export default function GenerosTerror() { 
     return (        

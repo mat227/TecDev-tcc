@@ -37,6 +37,7 @@ const Container = styled.div`
                 background-color: #183C53;//#298EEB;
                 margin: 1em;
                 padding: 2em 1em 1em 1em;
+                border-radius: 1em;
             
             }
             .aux{

@@ -1,6 +1,6 @@
 import { ContainerGeneroP } from "./genre.styled";
-import ParteCima from "../../components/parteCima/componente";
-import Rodape from "../../components/rodape/redape";
+import ParteCima from "../../components/Common/parteCima/componente";
+import Rodape from "../../components/Common/rodape/redape";
 
 export default function GeneroPrincipal() { 
     return (        

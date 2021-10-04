@@ -1,8 +1,8 @@
 import { ContainerDesc } from "./desc.styled"
 
-import Partecima  from "../../components/parteCima/componente"
+import Partecima  from "../../components/Common/parteCima/componente"
 
-import Rodape  from "../../components/rodape/redape"
+import Rodape  from "../../components/Common/rodape/redape"
 
 
 export default function DescConteudo() {

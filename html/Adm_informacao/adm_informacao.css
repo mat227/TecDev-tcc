@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    margin: 0em;
   }
   
   body {
-    margin: 0em;
+    
     background-color: #1e4f63;
     background-image: url("../Perfil_ADM/assets/images/fundo.svg");
   }
