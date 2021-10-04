@@ -15,6 +15,7 @@ import favoritos from './pages/seusFavoritos/fav'
 import SuaSacola from './pages/suaSacola'
 import Cadastro from './pages/Cadastro/cadastro'
 import Cupons from './pages/Cupons/cup'
+import Pagamentos from './pages/Pagamento/pag.conteudo'
 
 export default function Routes() {
     return (
@@ -35,9 +36,7 @@ export default function Routes() {
                 <Route path="/suasacola" exact={true} component={SuaSacola} />
                 <Route path="/cadastro" exact={true} component={Cadastro} />
                 <Route path="/cupons" exact={true} component={Cupons} />
-
-
-
+                <Route path="/pagamento" exact={true} component={Pagamentos} />
             </Switch>
         </BrowserRouter>
     )

@@ -7,19 +7,17 @@ const ContainerRodape= styled.div`
   display: flex;
   flex-direction: row;
 
-  height: 14%.5vh;
-  width: 100%;
+  height: 10vh;
+  width: 100vw;
 
   align-items: center;
 
 
 .logowo {
- 
   font-size: 0.8em;
- 
 }
 .logonm {
-    font-size: 0.9em;
+  font-size: 0.9em;
   font-family: Quicksand;
   color: #73a1b8;
   margin-left: 2.8em;
@@ -31,7 +29,7 @@ const ContainerRodape= styled.div`
 
 
 .logowo img {
-  height: 4em;
+  height: 3em;
 }
 
 .redes img {
