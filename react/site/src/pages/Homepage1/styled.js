@@ -439,7 +439,7 @@ margin-top: 5em;
 
 
 #s1:target ~ .slider {transform: translateX(   100%); -webkit-transform: translateX(   -17.5%);}
-#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-134%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-105%);}
 
 
 
