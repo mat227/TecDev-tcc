@@ -7,6 +7,11 @@ body {
 
 }
 
+a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
+
 footer {
     background-color: #12172B;
     display: flex;
@@ -137,12 +142,10 @@ margin: 1em;
     display: flex;
     flex-direction: column;
     
-    width: 20em;
-    margin-top: 1em;
+    margin-top: 0.77em;
 
     font-family: Rowdies;
 }
-
 .titulo {
     font-size: 1.52em;
     color:#1FB5CD;
