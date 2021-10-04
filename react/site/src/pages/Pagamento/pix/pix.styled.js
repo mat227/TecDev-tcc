@@ -19,6 +19,10 @@ background-image: url('/assets/images/bacckground.svg');
     src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
 }
 
+a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
 
 .conteudos{
         background-color:  rgba(18, 23, 43, 0.5);
@@ -63,7 +67,7 @@ background-image: url('/assets/images/bacckground.svg');
         margin-left: 2em;
         background-color: rgba(12, 100, 145, 0.4);
         margin-right: 3em;
-        width: 40vw;
+        width: 45vw;
         height: 70vh;
 
         display: flex;

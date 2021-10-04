@@ -17,7 +17,7 @@ const ContainerPag = styled.div`
     background-image: url('/assets/images/bacckground.svg');
     
 
-    font-family: Rowdies;
+    font-family: "Rowdies";
     .conteudos{
         background-color:  rgba(18, 23, 43, 0.5);
         border-radius: 2em;

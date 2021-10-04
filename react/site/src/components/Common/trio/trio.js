@@ -1,12 +1,13 @@
 import { ContainerTrio } from "./styled"
+import { Link } from "react-router-dom"
 
 export default function Trio() {
     return (
         <ContainerTrio>
            <div class="trio">
-            <a href="/genero">  <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </a>
-             <a href="/desconto">   <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button></a>
-              <a href="/cupons">  <button><img src="/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button></a>
+            <Link to="/genero">  <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </Link>
+             <Link to="/desconto">   <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button></Link>
+              <Link to="/cupons">  <button><img src="/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button></Link>
 
 
             </div>

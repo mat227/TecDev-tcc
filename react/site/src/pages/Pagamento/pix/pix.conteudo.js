@@ -1,6 +1,7 @@
 import ParteCima from "../../../components/Common/parteCima/componente";
 import Rodape from "../../../components/Common/rodape/redape";
 import { Bottom } from "../../../components/buttons/indexStyled";
+import { Link } from "react-router-dom";
 
 import { ContainerPix } from "./pix.styled";
 
@@ -35,13 +36,15 @@ export default function Pagamentos() {
             >
               <img src="/assets/images/pixpix.svg" alt="" /> Pix
             </div>
-            <div className="formas">
+          <Link to="/pagamento">  <div className="formas">
               <img src="/assets/images/cartaocreditocartao.svg" alt="" /> Cartão
               de Crédito
             </div>
-            <div className="formas">
+            </Link>
+          <Link to="/pagamento_boleto">  <div className="formas">
               <img src="/assets/images/boleto(1).svg" alt="" /> Boleto Bancário
             </div>
+            </Link>
           </aside>
 
           <div className="info-pagamento">
@@ -58,7 +61,7 @@ export default function Pagamentos() {
             </div>
           </div>
           <div className="botoespix">
-           <div className="bt1"> <Bottom>Voltar</Bottom></div>
+         <Link to="/info">  <div className="bt1"> <Bottom>Voltar</Bottom></div></Link>
            <div className="bt2"> <Bottom>Próximo passo</Bottom></div>
 
         </div>

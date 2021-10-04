@@ -20,6 +20,7 @@ import CompraRealizada from './pages/CompraRealizada/comp.conteudo'
 import Boleto from './pages/Pagamento/boleto/boleto.conteudo'
 import Pix from './pages/Pagamento/pix/pix.conteudo'
 import PerfilADM from './pages/perfil_adm'
+import SuaInfo from './pages/suaInfo/index'
 
 export default function Routes() {
     return (
@@ -45,6 +46,8 @@ export default function Routes() {
                 <Route path="/pagamento_pix" exact={true} component={Pix} />
                 <Route path="/compra_realizada" exact={true} component={CompraRealizada} /> 
                 <Route path="/perfil_adm" exact={true} component={PerfilADM} /> 
+                <Route path="/info" exact={true} component={SuaInfo} /> 
+
             </Switch>
         </BrowserRouter>
     )
