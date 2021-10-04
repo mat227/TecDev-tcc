@@ -12,9 +12,9 @@ export default function DescConteudo() {
      <div className="conteiner">
         <div class="box-mae">
             <div class="box-filha">
-                <div class="livro"><img src="/assets/images/o que o sol faz com as flores (1).svg"/></div>
+                <div class="livro"><img src="/assets/images/o que o sol faz com as flores (1).svg"alt=""/></div>
                 <div class="box1">
-                    <div class="titulo">O QUE O SOL FAZ COM AS FLORES<img src="./assets/images/favorito.svg"  style={{height: "2em"}}/></div>
+                    <div class="titulo">O QUE O SOL FAZ COM AS FLORES<img src="./assets/images/favorito.svg"  alt="" style={{height: "2em"}}/></div>
                     <div class="pagamentos">
                         <div class="preco">R$ 42,90</div>
                         <div class="item"><img src="/assets/images/boleto.svg" alt="boleto" class="boleto"/> <p><u>Boleto Bancário:</u> R$ 42,90 <br/> Em até 3x de R$ 14,30</p></div>

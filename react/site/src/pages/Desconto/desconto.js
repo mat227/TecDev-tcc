@@ -35,8 +35,8 @@ export default function Homepage() {
                 <div class="livros-desconto">
                    <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
+                            <img class="descontolivro"src="/assets/images/Frame 1.svg" alt=""/>
                         </div>
                         <div class="box-informacoes-livros">
                             <div class="nome-livro-desconto">
@@ -58,8 +58,8 @@ export default function Homepage() {
                 </a>
                   <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
+                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -82,8 +82,8 @@ export default function Homepage() {
                 </a>
                   <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
+                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -109,8 +109,8 @@ export default function Homepage() {
                 <div class="livros-desconto2">
                   <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
+                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
                         </div>
                         <div class="box-informacoes-livros">
                             <div class="nome-livro-desconto">
@@ -132,8 +132,8 @@ export default function Homepage() {
                 </a>
                       <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
+                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
                         </div>
                         <div class="box-informacoes-livros">
                             <div class="nome-livro-desconto">
@@ -155,8 +155,8 @@ export default function Homepage() {
                 </a>
                   <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
+                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -181,8 +181,8 @@ export default function Homepage() {
                 <div class="livros-desconto2">
                     <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
+                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -205,8 +205,8 @@ export default function Homepage() {
                 </a>
                 <a href="/descricao">  <div class="box-livro">
                     <div class="img-livro-queridinha">
-                        <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                        <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                        <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
+                        <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
 
                     </div>
                     <div class="box-informacoes-livros">
@@ -229,8 +229,8 @@ export default function Homepage() {
             </a>
             <a href="/descricao">  <div class="box-livro">
                 <div class="img-livro-queridinha">
-                    <img src="/assets/images/vermelho, branco e sangue azul.svg" />
-                    <img class="descontolivro"src="/assets/images/Frame 1.svg"/>
+                    <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
+                    <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
 
                 </div>
                 <div class="box-informacoes-livros">
