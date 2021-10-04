@@ -6,7 +6,7 @@
   body {
     
     background-color: #1e4f63;
-    background-image: url("../Perfil_ADM/assets/images/fundo.svg");
+    background-image: url("../Adm_informacao/assets/images/bacckground.svg");
   }
 
 .container {
@@ -20,7 +20,7 @@
     flex-direction: row;
    
    
-    height: 7em;
+    height: 8em;
 }
 
 
@@ -73,13 +73,13 @@
 
     padding-top: 10px;
     padding-left: 20px;
+    justify-content: center;
 }
 
 .conteudo_esquerdo {
     background-color: #183c53;
     width: 10em;
     height: 30em;
-
     border-radius: 10px;
 }
 
@@ -105,6 +105,7 @@
     margin-top: 1em;
     margin-left: 0em;
     width: 10em;
+    padding-bottom: 1em;
   }
 
 .botao1 button {
@@ -118,7 +119,7 @@
     cursor: pointer;
 
     margin-top: 5em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     
     margin-left: 0em;
     width: 10em;
@@ -135,7 +136,7 @@
     cursor: pointer;
 
     margin-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     
     margin-left: 0em;
     width: 10em;
@@ -152,7 +153,7 @@
     cursor: pointer;
 
     margin-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     
     margin-left: 0em;
     width: 10em;
@@ -205,6 +206,7 @@
     font-family: 'Baloo Thambi 2';
     font-size: 16px;
     margin-left: 40em; 
+    text-align: center;
 }
 
 .contato{
@@ -233,7 +235,7 @@
     margin-top: 2em;
     background-color: #12172b;
 
-    width: 79em;
+    width: 100%;
     height: 4.5em;
 }
 
@@ -296,7 +298,7 @@
     display: flex;
     flex-direction: row;
     
-    margin-left: 65em;
+    margin-left: 70em;
     margin-top: 1.5em;
 }
 
