@@ -1,6 +1,5 @@
+import { Link } from "react-router-dom";
 import { ContainerCadastro } from "./cadas.styled"
-
-
 
 
 
@@ -53,7 +52,7 @@ export default function Cadastro() {
                             <img src="/assets/images/google.svg" alt="" />
                         </div>
                 
-                        <div class="botao"><a href="/login"><button>Cadastrar</button></a></div>
+                        <div class="botao"><Link to="/login"><button>Cadastrar</button></Link></div>
                     </div>
                 </div>
                 
