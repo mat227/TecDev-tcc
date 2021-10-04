@@ -79,8 +79,8 @@ export default function Pagamentos() {
                         </div>
                     </div>
                     <div className="botoes">
-                        <button type="button" href="/suasacola" class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button>
-                        <button type="submit" class="btn btn-primary">Próximo passo</button>
+                        <a href="/suasacola"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></a>
+                        <a href="/compra_realizada"><button type="submit" class="btn btn-primary">Próximo passo</button></a>
                     </div>
                 </div>
              <Rodape />

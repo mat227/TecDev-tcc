@@ -211,8 +211,13 @@ const ContainerPag = styled.div`
         padding-bottom: 0.6em;
 
         text-align:center;
+
+        cursor: pointer;
     }
 
-
+   .formas a {
+        color:white;
+        text-decoration:none;
+    }
 `
 export {ContainerPag}
