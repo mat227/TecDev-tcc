@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ParteCima from "../../components/Common/parteCima/componente";
 import Rodape from "../../components/Common/rodape/redape";
 import { ContainerPag } from "./pag.styled";
@@ -14,13 +15,13 @@ export default function Pagamentos() {
                     <div className="box-big">
                         <aside>
                             <div className="formas">
-                            <img src="/assets/images/pixpix.svg" alt=""/> Pix
+                            <img src="/assets/images/pixpix.svg" alt=""/> <a href="/pagamento_pix">Pix</a>
                             </div>
                             <div className="formas" style={{ width:"94%", marginLeft:"0em", backgroundColor:"rgba(22, 118, 120, 0.4)", paddingLeft:"1em", margin:"0", height:"4.4em"}}>
-                            <img src="/assets/images/cartaocreditocartao.svg" alt=""/> Cartão de Crédito
+                            <img src="/assets/images/cartaocreditocartao.svg" alt=""/> <Link to="/pagamento">Cartão de Crédito</Link>
                             </div>
                             <div className="formas">
-                            <img src="/assets/images/boleto(1).svg" alt=""/> Boleto Bancário
+                            <img src="/assets/images/boleto(1).svg" alt=""/> <Link to="/pagamento_boleto">Boleto Bancário</Link>
                             </div>
                         </aside>
                         <div className="box-info">
