@@ -1,3 +1,8 @@
+import styled from 'styled-components'
+
+
+const ConteinerCupom = styled.div`
+
 @font-face {
     font-family: "Rowdies";
     src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
@@ -12,9 +17,9 @@
     margin: 0px;
 }
 
-body {
+.cup-container {
     background-color: #135578;
-    background-image: url('../Cupons/assets/images/bacckground.svg');
+    background-image: url('/assets/images/bacckground.svg');
 }
 
 
@@ -295,8 +300,8 @@ flex-direction: column;
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 
-#s1:target ~ .slider {transform: translateX(   -100vh); -webkit-transform: translateX(   -5vh);}
-#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-227vh);}
+#s1:target ~ .slider {transform: translateX(   -100vh); -webkit-transform: translateX(   -11vh);}
+#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-217vh);}
 
 
 
@@ -518,3 +523,7 @@ flex-direction: column;
   }
   
   
+`
+
+
+export { ConteinerCupom }

@@ -53,7 +53,7 @@ export default function Cadastro() {
                             <img src="/assets/images/google.svg" alt="" />
                         </div>
                 
-                        <div class="botao"><a href="../Login/login.html"><button>Cadastrar</button></a></div>
+                        <div class="botao"><a href="/login"><button>Cadastrar</button></a></div>
                     </div>
                 </div>
                 

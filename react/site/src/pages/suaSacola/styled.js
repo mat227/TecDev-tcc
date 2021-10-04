@@ -1,11 +1,10 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
-            height: 100%;
+            height: 43em;
             background-color: #125476;
             background-image: url('./assets/imagens/fundo.svg');
             background-repeat: no-repeat;
-            padding: 2em 1em;
         *{
             box-sizing: border-box;
             margin: 0;
@@ -15,7 +14,7 @@ const Container = styled.div`
             background-color:  rgba(18, 23, 43, 0.5);
             border-radius: 2em;
             
-            padding: 2.5em;
+            margin-top:2em;
             
         }
         .titulo{

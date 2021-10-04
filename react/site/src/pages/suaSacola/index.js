@@ -1,9 +1,10 @@
 import {Container} from './styled'
-
+import ParteCima from '../../components/Common/parteCima/componente'
 
 export default function SuaSacola (){
     return(
         <Container>
+            <ParteCima/>
                 <div className='conteudo'>
                     <div className="titulo">
                         <div className="th1"><h1>Sua Sacola</h1></div>

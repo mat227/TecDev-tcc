@@ -29,11 +29,11 @@ export default function Conteudo() {
         <div class="pt-baixo">
       <a href="/redefinir">  <div class="esqueceu-senha">Esqueceu a senha?        </div>
 </a>
-        <div class="criar-conta">
+        <a href="/cadastro"><div class="criar-conta">
            Criar conta
-        </div>
+        </div></a>
     </div>
-       <a href="/homepage"> <div class="botao"><button>Entrar</button></div></a>
+       <a href="/"> <div class="botao"><button>Entrar</button></div></a>
     </div>
 
 

@@ -1,6 +1,6 @@
 import { ContainerDesconto } from "./styled"
 import Partecima  from "../../components/Common/parteCima/componente"
-
+import Trio from "../../components/Common/trio/trio"
 import Rodape  from "../../components/Common/rodape/redape"
 
 
@@ -10,18 +10,7 @@ export default function Homepage() {
           <Partecima/>
 
           <div class="oferta-da-semana">
-            <div class="trio">
-                <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button>
-                <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button>
-                <button><img src="/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button>
-
-
-            </div>
-            <div class="trio2">
-                <div class="titilo-trio1">GÊNEROS</div>
-                <div class="titilo-trio2">PROMOÇÕES</div>
-                <div class="titilo-trio3">CUPONS</div>
-            </div>
+            <Trio/>
 
             <div class="desconto">
                 <div class="tldescontoori">

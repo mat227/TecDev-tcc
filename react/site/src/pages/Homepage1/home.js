@@ -3,6 +3,7 @@ import { ContainerHome } from "./styled"
 import Partecima  from "../../components/Common/parteCima/componente"
 
 import Rodape  from "../../components/Common/rodape/redape"
+import Trio from "../../components/Common/trio/trio"
 
 
 export default function Homepage() {
@@ -16,18 +17,7 @@ export default function Homepage() {
       
 
         <div class="oferta-da-semana">
-            <div class="trio">
-            <a href="/genero">  <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </a>
-                <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button>
-                <button><img src="/assets/images/desconto.svg" id="btnBusca" alt="Buscar" /></button>
-
-
-            </div>
-            <div class="trio2">
-                <div class="titilo-trio1">GÊNEROS</div>
-                <div class="titilo-trio2">PROMOÇÕES</div>
-                <div class="titilo-trio3">CUPONS</div>
-            </div>
+<Trio/>
 
             <div class="hp1-titulo">OFERTAS DA SEMANA!</div>
 
@@ -49,7 +39,7 @@ export default function Homepage() {
                                 com ate 50% de desconto
                             </div>
                             <div class="botao-slide2">
-                                <a href="../Desconto/desconto.html"><button>Confira</button></a>
+                                <a href="/desconto"><button>Confira</button></a>
                             </div>
 
                         </div>
@@ -163,7 +153,7 @@ export default function Homepage() {
                         </div>
                     </div>
                 </a>
-                <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                <a href="/descricao"> <div class="box-livro">
                     <div class="img-livro-queridinha">
                         <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                     </div>
@@ -204,7 +194,7 @@ export default function Homepage() {
                 </div>
                 </div>
                 <div class="livros-queridinhas2">
-                    <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                    <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg"  alt=""/>
                         </div>
@@ -223,7 +213,7 @@ export default function Homepage() {
                         </div>
                     </div>
                 </a>
-                <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+                <a href="/descricao"> <div class="box-livro">
                     <div class="img-livro-queridinha">
                         <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                     </div>
@@ -242,7 +232,7 @@ export default function Homepage() {
                     </div>
                 </div>
             </a>
-            <a href="../DescricaoLivro/descricao.html"> <div class="box-livro">
+            <a href="/descricao"> <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                 </div>
