@@ -1,5 +1,6 @@
 import {Container} from './styled'
 import ParteCima from '../../components/Common/parteCima/componente'
+import Rodape from '../../components/Common/rodape/redape'
 
 export default function SuaSacola (){
     return(
@@ -57,6 +58,7 @@ export default function SuaSacola (){
                         </div>
                     </div>
                 </div>
+                <Rodape/>
         </Container>
     )
 }
