@@ -6,7 +6,7 @@ const ContainerPag = styled.div`
  
     margin: 0;
 
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     background-color: #135578;

@@ -8,7 +8,7 @@ const ContainerRodape= styled.div`
   flex-direction: row;
 
   height: 10vh;
-  width: 100vw;
+  width: 100%;
 
   align-items: center;
 
@@ -33,7 +33,7 @@ const ContainerRodape= styled.div`
 }
 
 .redes img {
-  margin: 1em;
+  margin: 0.8em;
   height: 2em;
 }
 
