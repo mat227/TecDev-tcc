@@ -15,7 +15,7 @@ import favoritos from './pages/seusFavoritos/fav'
 import SuaSacola from './pages/suaSacola'
 import Cadastro from './pages/Cadastro/cadastro'
 import Cupons from './pages/Cupons/cup'
-import Pagamentos from './pages/Pagamento/pag.conteudo'
+import Pagamentos from './pages/Pagamento/pix/pix.conteudo'
 
 export default function Routes() {
     return (
