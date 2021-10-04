@@ -1,6 +1,7 @@
 import {ContainerFav} from './styled';
 import ParteCima from '../../components/Common/parteCima/componente';
 import Rodape from '../../components/Common/rodape/redape'
+import { Link } from 'react-router-dom';
 
 export default function favoritos(){
    return(
@@ -33,7 +34,7 @@ export default function favoritos(){
                                             R$ 49,90
                                         </div>
                                         <div class="botao-preco">
-                                            <a href="../DescricaoLivro/descricao.html"><button>Ver produto</button></a>
+                                            <Link to="/descricao"><button>Ver produto</button></Link>
                                         </div>
                                     </div>
                                     <hr/> 
@@ -54,7 +55,7 @@ export default function favoritos(){
                                             R$ 49,90
                                         </div>
                                         <div class="botao-preco">
-                                            <a href="../DescricaoLivro/descricao.html"><button>Ver produto</button></a>
+                                            <Link to="descricao"><button>Ver produto</button></Link>
                                         </div>
                                     </div>
                                     <hr/> 
