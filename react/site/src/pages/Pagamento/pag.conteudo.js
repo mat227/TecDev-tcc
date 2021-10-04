@@ -6,7 +6,7 @@ export default function Pagamentos() {
     return (    
         <ContainerPag>
             <ParteCima/>
-                    <h1></h1>
+                    <h1>d</h1>
             <Rodape />
         </ContainerPag>
     );
