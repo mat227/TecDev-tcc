@@ -15,7 +15,10 @@ import favoritos from './pages/seusFavoritos/fav'
 import SuaSacola from './pages/suaSacola'
 import Cadastro from './pages/Cadastro/cadastro'
 import Cupons from './pages/Cupons/cup'
-import Pagamentos from './pages/Pagamento/pix/pix.conteudo'
+import Pagamentos from './pages/Pagamento/pag.conteudo'
+import CompraRealizada from './pages/CompraRealizada/comp.conteudo'
+import Boleto from './pages/Pagamento/boleto/boleto.conteudo'
+import Pix from './pages/Pagamento/pix/pix.conteudo'
 
 export default function Routes() {
     return (
@@ -37,6 +40,9 @@ export default function Routes() {
                 <Route path="/cadastro" exact={true} component={Cadastro} />
                 <Route path="/cupons" exact={true} component={Cupons} />
                 <Route path="/pagamento" exact={true} component={Pagamentos} />
+                <Route path="/pagamento_boleto" exact={true} component={Boleto} />
+                <Route path="/pagamento_pix" exact={true} component={Pix} />
+                <Route path="/compra_realizada" exact={true} component={CompraRealizada} />
             </Switch>
         </BrowserRouter>
     )
