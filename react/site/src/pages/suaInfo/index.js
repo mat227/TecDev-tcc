@@ -1,5 +1,6 @@
 import { Container  } from "./indexStyled.js";
 import {Bottom} from '../../components/buttons/indexStyled.js'
+
 export default function suaInfo(){
     return(
         <Container>
