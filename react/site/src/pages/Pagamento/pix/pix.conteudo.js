@@ -1,6 +1,6 @@
 import ParteCima from "../../../components/Common/parteCima/componente";
 import Rodape from "../../../components/Common/rodape/redape";
-import { Bottom } from "../../../components/buttons/indexStyled";
+import { Buttom } from "../../../components/buttons/indexStyled";
 
 import { ContainerPix } from "./pix.styled";
 
@@ -58,8 +58,8 @@ export default function Pagamentos() {
             </div>
           </div>
           <div className="botoespix">
-           <div className="bt1"> <Bottom>Voltar</Bottom></div>
-           <div className="bt2"> <Bottom>Próximo passo</Bottom></div>
+           <div className="bt1"> <Buttom>Voltar</Buttom></div>
+           <div className="bt2"> <Buttom>Próximo passo</Buttom></div>
 
         </div>
         </div>

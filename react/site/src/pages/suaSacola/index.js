@@ -1,5 +1,7 @@
 import {Container} from './styled'
 import ParteCima from '../../components/Common/parteCima/componente'
+import { Buttom } from '../../components/buttons/indexStyled'
+import { Link } from 'react-router-dom'
 
 export default function SuaSacola (){
     return(
@@ -51,8 +53,8 @@ export default function SuaSacola (){
                                 </div>
                             </div>
                             <div className="quadb">
-                                <button className="btnf">Proximo Passo</button>
-                                <button className="btnf">Continuar Comprando</button>
+                                <Buttom className="btnf"><Link to='/suas_infomacoes'>Proximo passo</Link></Buttom>
+                                <Buttom className="btnf">Continuar Comprando</Buttom>
                             </div>   
                         </div>
                     </div>

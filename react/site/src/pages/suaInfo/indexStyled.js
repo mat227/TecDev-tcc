@@ -53,7 +53,7 @@ const Container = styled.div`
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            width: 70vw;
+            width: 60vw;
              
         }
         .test{

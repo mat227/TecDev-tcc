@@ -1,8 +1,8 @@
-import {Bottom} from './indexStyled.js'
+import {Buttom} from './indexStyled.js'
 
 export default function Button(){
     return (
-            <Bottom> </Bottom>
+            <Buttom> </Buttom>
     );
 }
 

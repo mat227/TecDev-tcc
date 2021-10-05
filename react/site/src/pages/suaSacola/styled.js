@@ -5,6 +5,7 @@ const Container = styled.div`
             background-color: #125476;
             background-image: url('./assets/imagens/fundo.svg');
             background-repeat: no-repeat;
+            
         *{
             box-sizing: border-box;
             margin: 0;
@@ -13,8 +14,8 @@ const Container = styled.div`
         .conteudo{
             background-color:  rgba(18, 23, 43, 0.5);
             border-radius: 2em;
-            
-            margin-top:2em;
+            padding: 1.5em;
+            margin:2em;
             
         }
         .titulo{
@@ -123,7 +124,7 @@ const Container = styled.div`
             border-radius: 0.3em;
         }
         table{
-            width: 50vw;
+            width: 60vw;
             border-collapse: collapse;
             border-spacing: 2em;
             justify-content: center;
