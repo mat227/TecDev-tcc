@@ -21,6 +21,7 @@ import Boleto from './pages/Pagamento/boleto/boleto.conteudo'
 import Pix from './pages/Pagamento/pix/pix.conteudo'
 import PerfilADM from './pages/perfil_adm'
 import SuaInfo from './pages/suaInfo'
+import SeusPedidos from './pages/SeusPedidos/pedi.conteudo'
 
 export default function Routes() {
     return (
@@ -47,6 +48,7 @@ export default function Routes() {
                 <Route path="/compra_realizada" exact={true} component={CompraRealizada} /> 
                 <Route path="/perfil_adm" exact={true} component={PerfilADM} /> 
                 <Route path="/suas_infomacoes" exact={true} component={SuaInfo} /> 
+                <Route path="/seus_pedidos" exact={true} component={SeusPedidos} /> 
             </Switch>
         </BrowserRouter>
     )

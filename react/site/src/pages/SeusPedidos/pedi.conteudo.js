@@ -11,7 +11,7 @@ export default function SeusPedidos() {
                 <div className="titulo"><h1>SEUS PEDIDOS</h1></div>
                 <div className="box">
                     <div className="item">
-                        <div className="livro"><img src="/assets/images/o que o sol faz com as florescomprar.svg" alt=""/></div>
+                        <div className="livro"><img src="/assets/images/o que o sol faz com as florescomprar(1).svg" alt=""/></div>
                         <div className="descricao">O QUE O SOL FAZ COM AS FLORES</div>
                         <div className="menu">
                             <div className="menu-item">
