@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { ContainerPartecima } from "./styled"
 
 
@@ -5,11 +6,11 @@ export default function ParteCima() {
     return (
             <ContainerPartecima>
             <div class="hp1-buscap">
-           <a href="/"> <div class="hp1-logo">
+           <Link to="/"> <div class="hp1-logo">
                 <img src="/assets/images/nice library png 1.svg" alt=""/>
                 <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
 
-            </div></a>
+            </div></Link>
 
             <div class="hp1-busca">
                 <div class="divBusca">
@@ -19,9 +20,9 @@ export default function ParteCima() {
             </div>
 
             <div class="hp1-seus">
-            <a href="/suasacola"><div class="hp1-bolsa"><img src="/assets/images/sua bolsa.svg" alt=""/></div> </a> 
-             <a href="/favoritos">   <div class="hp1-favorito"><img src="/assets/images/seus favoritos.svg" alt=""/></div></a>
-            <a href="/login"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" alt=""/></div></a>    
+            <Link to="/suasacola"><div class="hp1-bolsa"><img src="/assets/images/sua bolsa.svg" alt=""/></div> </Link> 
+             <Link to="/favoritos">   <div class="hp1-favorito"><img src="/assets/images/seus favoritos.svg" alt=""/></div></Link>
+            <Link to="/login"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" alt=""/></div></Link>    
 
             </div>
             </div>

@@ -1,7 +1,11 @@
 import {Container} from './styled'
 import ParteCima from '../../components/Common/parteCima/componente'
+<<<<<<< HEAD
 import { Buttom } from '../../components/buttons/indexStyled'
 import { Link } from 'react-router-dom'
+=======
+import Rodape from '../../components/Common/rodape/redape'
+>>>>>>> e55a3fb585e3b0506153279e249b640911ec5951
 
 export default function SuaSacola (){
     return(
@@ -59,6 +63,7 @@ export default function SuaSacola (){
                         </div>
                     </div>
                 </div>
+                <Rodape/>
         </Container>
     )
 }

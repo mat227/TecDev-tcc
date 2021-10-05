@@ -20,7 +20,11 @@ import CompraRealizada from './pages/CompraRealizada/comp.conteudo'
 import Boleto from './pages/Pagamento/boleto/boleto.conteudo'
 import Pix from './pages/Pagamento/pix/pix.conteudo'
 import PerfilADM from './pages/perfil_adm'
+<<<<<<< HEAD
 import SuaInfo from './pages/suaInfo'
+=======
+import SuaInfo from './pages/suaInfo/index'
+>>>>>>> e55a3fb585e3b0506153279e249b640911ec5951
 
 export default function Routes() {
     return (
@@ -46,7 +50,12 @@ export default function Routes() {
                 <Route path="/pagamento_pix" exact={true} component={Pix} />
                 <Route path="/compra_realizada" exact={true} component={CompraRealizada} /> 
                 <Route path="/perfil_adm" exact={true} component={PerfilADM} /> 
+<<<<<<< HEAD
                 <Route path="/suas_infomacoes" exact={true} component={SuaInfo} /> 
+=======
+                <Route path="/info" exact={true} component={SuaInfo} /> 
+
+>>>>>>> e55a3fb585e3b0506153279e249b640911ec5951
             </Switch>
         </BrowserRouter>
     )

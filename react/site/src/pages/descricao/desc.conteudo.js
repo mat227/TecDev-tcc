@@ -3,6 +3,7 @@ import { ContainerDesc } from "./desc.styled"
 import Partecima  from "../../components/Common/parteCima/componente"
 
 import Rodape  from "../../components/Common/rodape/redape"
+import { Link } from "react-router-dom"
 
 
 export default function DescConteudo() {
@@ -21,7 +22,7 @@ export default function DescConteudo() {
                         <div class="item"><img src="/assets/images/cartao.svg" alt="cartao" class="cartao"/> <p><u>Cartão de Crédito</u> R$ 42,90 <br/> Em até 3x de R$ 14,30</p></div>
                     </div>
                     <div class="botoes">
-                        <div class="um"><button>COMPRAR</button></div>
+                      <Link to="/pagamento">  <div class="um"><button>COMPRAR</button></div></Link>
                         <div class="dois"><button>ADICIONAR NA SACOLA</button></div>
                     </div>
                     <hr/>

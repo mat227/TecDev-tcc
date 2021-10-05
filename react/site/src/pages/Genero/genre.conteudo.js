@@ -1,7 +1,7 @@
 import { ContainerGeneroP } from "./genre.styled";
 import ParteCima from "../../components/Common/parteCima/componente";
 import Rodape from "../../components/Common/rodape/redape";
-
+import { Link } from "react-router-dom";
 export default function GeneroPrincipal() { 
     return (        
         
@@ -22,7 +22,8 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="/genero/terror" class="">TERROR</a>
+                  <Link to="/genero/terror" class="">TERROR                        </Link>
+
               </button>
             </div>
           </div>
@@ -33,7 +34,8 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="/genero/humor" class="">HUMOR</a>
+                  <Link to="/genero/humor" class="">HUMOR                        </Link>
+
               </button>
             </div>
           </div>
@@ -44,7 +46,8 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="/genero/romance" class="">ROMANCE</a>
+                  <Link to="/genero/romance" class="">ROMANCE                        </Link>
+
               </button>
             </div>
           </div>
@@ -55,7 +58,8 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="/genero/biografia" class="">BIOGRAFIA</a>
+                  <Link to="/genero/biografia" class="">BIOGRAFIA                        </Link>
+
               </button>
             </div>
           </div>
@@ -66,7 +70,8 @@ export default function GeneroPrincipal() {
             </div>
             <div className="botao">
               <button>
-                  <a href="/genero/poesia" class="">POESIA</a>
+                  <Link to="/genero/poesia" class="">POESIA                        </Link>
+
               </button>
             </div>
           </div>

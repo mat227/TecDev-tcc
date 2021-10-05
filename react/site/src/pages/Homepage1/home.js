@@ -1,7 +1,7 @@
 import { ContainerHome } from "./styled"
 
 import Partecima  from "../../components/Common/parteCima/componente"
-
+import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
 import Trio from "../../components/Common/trio/trio"
 
@@ -39,7 +39,7 @@ export default function Homepage() {
                                 com ate 50% de desconto
                             </div>
                             <div class="botao-slide2">
-                                <a href="/desconto"><button>Confira</button></a>
+                                <Link to="/desconto"><button>Confira</button></Link>
                             </div>
 
                         </div>
@@ -71,7 +71,7 @@ export default function Homepage() {
                                         R$ 43,00
                                     </div>
                                     <div class="botao-preco">
-                                        <a href="/descricao"><button>Saiba Mais</button></a>
+                                        <Link to="/descricao"><button>Saiba Mais</button></Link>
                                     </div>
 
                                 </div>
@@ -97,7 +97,7 @@ export default function Homepage() {
                                         R$ 19,80
                                     </div>
                                     <div class="botao-preco2">
-                                        <a href="/descricao"><button>Saiba Mais</button></a>
+                                        <Link to="/descricao"><button>Saiba Mais</button></Link>
                                     </div>
 
                                 </div>
@@ -110,15 +110,15 @@ export default function Homepage() {
                 </div>
                 
                 <div class="prevNext">
-                <div><a href="#s1"></a><a href="#s2"></a></div>
-                <div><a href="#s1"></a><a href="#s2"></a></div>
+                  <div><a href="#s4"></a><a href="#s2"></a></div>
+                  <div><a href="#s1"></a><a href="#s3"></a></div>
                 
                 </div>
-            
+              
                 <div class="bullets">
-                <a href="#s1">1</a>
-                <a href="#s2">2</a>
-                
+                  <a href="#s1">1</a>
+                  <a href="#s2">2</a>
+                  
                 </div>
             
             </div>
@@ -134,7 +134,7 @@ export default function Homepage() {
                 </div>
 
                 <div class="livros-queridinhas">
-                <a href="/descricao"> <div class="box-livro">
+                <Link to="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
                         </div>
@@ -152,8 +152,8 @@ export default function Homepage() {
 
                         </div>
                     </div>
-                </a>
-                <a href="/descricao"> <div class="box-livro">
+                </Link>
+                <Link to="/descricao"> <div class="box-livro">
                     <div class="img-livro-queridinha">
                         <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                     </div>
@@ -171,8 +171,8 @@ export default function Homepage() {
 
                     </div>
                 </div>
-            </a>
-            <a href="/descricao"> <div class="box-livro">
+            </Link>
+            <Link to="/descricao"> <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                 </div>
@@ -190,11 +190,11 @@ export default function Homepage() {
 
                 </div>
             </div>
-        </a>
+        </Link>
                 </div>
                 </div>
                 <div class="livros-queridinhas2">
-                    <a href="/descricao"> <div class="box-livro">
+                    <Link to="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg"  alt=""/>
                         </div>
@@ -212,8 +212,8 @@ export default function Homepage() {
 
                         </div>
                     </div>
-                </a>
-                <a href="/descricao"> <div class="box-livro">
+                </Link>
+                <Link to="/descricao"> <div class="box-livro">
                     <div class="img-livro-queridinha">
                         <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                     </div>
@@ -231,8 +231,8 @@ export default function Homepage() {
 
                     </div>
                 </div>
-            </a>
-            <a href="/descricao"> <div class="box-livro">
+            </Link>
+            <Link to="/descricao"> <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
                 </div>
@@ -250,7 +250,7 @@ export default function Homepage() {
 
                 </div>
             </div>
-        </a>
+        </Link>
                 </div>
             </div>
          

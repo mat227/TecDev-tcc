@@ -33,7 +33,7 @@ export default function Cupons() {
                             <div class="box-livros">
                                 <div class="imgt">
                                     <div class="imgl">
-                                        <img src="/assets/images/kit_de_livro-removebg-preview 1.svg" />
+                                        <img src="/assets/images/kit_de_livro-removebg-preview 1.svg" alt=""/>
                                     </div>
                                   
     
@@ -63,7 +63,7 @@ export default function Cupons() {
                             <div class="box-livros2">
                                 <div class="imgt">
                                     <div class="imgl">
-                                        <img src="/assets/images/kit_de_livro-removebg-preview 1.svg" />
+                                        <img src="/assets/images/kit_de_livro-removebg-preview 1.svg"alt=""/>
                                     </div>
                                   
     
@@ -95,7 +95,7 @@ export default function Cupons() {
     <div class="box-livros">
         <div class="imgt">
             <div class="imgl">
-                <img src="/assets/images/kit_de_livro-removebg-preview 1.svg" />
+                <img src="/assets/images/kit_de_livro-removebg-preview 1.svg" alt=""/>
             </div>
           
 
@@ -125,7 +125,7 @@ export default function Cupons() {
     <div class="box-livros2">
         <div class="imgt">
             <div class="imgl">
-                <img src="/assets/images/kit_de_livro-removebg-preview 1.svg" />
+                <img src="/assets/images/kit_de_livro-removebg-preview 1.svg" alt=""/>
             </div>
           
 
@@ -157,7 +157,7 @@ export default function Cupons() {
                     
                     <div class="prevNext">
                       <div><a href="#s1"></a><a href="#s2"></a></div>
-                      <div><a href="#s1"></a><a href="#s3"></a></div>
+                      <div><a href="#s1"></a><a href="#s2"></a></div>
                     
                     </div>
                   

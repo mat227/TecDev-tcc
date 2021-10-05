@@ -438,7 +438,7 @@ margin-top: 5em;
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 
-#s1:target ~ .slider {transform: translateX(   100%); -webkit-transform: translateX(   -17.5%);}
+#s1:target ~ .slider {transform: translateX(   -0%); -webkit-transform: translateX(   -4%);}
 #s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-105%);}
 
 
