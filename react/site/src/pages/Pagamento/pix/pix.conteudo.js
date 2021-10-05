@@ -3,6 +3,7 @@ import Rodape from "../../../components/Common/rodape/redape";
 import { Buttom } from "../../../components/buttons/indexStyled";
 
 import { ContainerPix } from "./pix.styled";
+import { Link } from "react-router-dom";
 
 export default function Pagamentos() {
   return (
@@ -66,9 +67,9 @@ export default function Pagamentos() {
         </div>
         </div>
         <div className="botoes">
-                        <a href="/suasacola"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></a>
-                        <a href="/compra_realizada"><button type="submit" class="btn btn-primary">Próximo passo</button></a>
-                    </div>
+              <a href="/suasacola"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></a>
+              <a href="/compra_realizada"><button type="submit" class="btn btn-primary">Próximo passo</button></a>
+            </div>
       </div>
       <Rodape />
     </ContainerPix>
