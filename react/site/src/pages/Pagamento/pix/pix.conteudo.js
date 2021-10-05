@@ -1,6 +1,5 @@
 import ParteCima from "../../../components/Common/parteCima/componente";
 import Rodape from "../../../components/Common/rodape/redape";
-import { Bottom } from "../../../components/buttons/indexStyled";
 import { Link } from "react-router-dom";
 
 import { ContainerPix } from "./pix.styled";
@@ -60,13 +59,12 @@ export default function Pagamentos() {
               realizar o pagamento, caso o tempo esgote a compra será cancelada!
             </div>
           </div>
-          <div className="botoespix">
-         <Link to="/info">  <div className="bt1"> <Bottom>Voltar</Bottom></div></Link>
-           <div className="bt2"> <Bottom>Próximo passo</Bottom></div>
-
+        
         </div>
-        </div>
-      
+        <div className="botoes">
+                        <a href="/suasacola"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></a>
+                        <a href="/compra_realizada"><button type="submit" class="btn btn-primary">Próximo passo</button></a>
+                    </div>
       </div>
       <Rodape />
     </ContainerPix>

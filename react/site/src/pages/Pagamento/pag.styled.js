@@ -11,7 +11,7 @@ const ContainerPag = styled.div`
     margin: 0;
 
     width: 100%;
-    height: 100%;
+    height: 115vh;
 
     background-color: #135578;
     background-image: url('/assets/images/bacckground.svg');
@@ -21,7 +21,7 @@ const ContainerPag = styled.div`
     .conteudos{
         background-color:  rgba(18, 23, 43, 0.5);
         border-radius: 2em;
-        height: 85vh;
+        height: 95vh;
         margin: 1em;
         width: 80vw;
         padding: 1em 3em;
@@ -65,7 +65,6 @@ const ContainerPag = styled.div`
         background-color: rgba(12, 100, 145, 0.4);
         
         width: 20vw;
-        height: 66vh;
 
         display: flex;
         flex-direction: column;
@@ -90,7 +89,6 @@ const ContainerPag = styled.div`
         background-color: rgba(26, 82, 109, 1);
 
         width: 75%;
-        height: 66vh;
         border-radius: 10px;
         padding-left: 1em;
         margin-left: 1em;
@@ -192,7 +190,7 @@ const ContainerPag = styled.div`
         display: flex;
         flex-direction: row;
         margin-left: auto;
-        margin-top: 1.5em;
+        margin-top: 0.5em;
         margin-bottom: 1em;
     }
 

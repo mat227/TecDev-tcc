@@ -110,15 +110,15 @@ export default function Homepage() {
                 </div>
                 
                 <div class="prevNext">
-                <div><Link to="#s1"></Link><Link to="#s2"></Link></div>
-                <div><Link to="#s1"></Link><Link to="#s2"></Link></div>
+                  <div><a href="#s4"></a><a href="#s2"></a></div>
+                  <div><a href="#s1"></a><a href="#s3"></a></div>
                 
                 </div>
-            
+              
                 <div class="bullets">
-                <Link to="#s1">1</Link>
-                <Link to="#s2">2</Link>
-                
+                  <a href="#s1">1</a>
+                  <a href="#s2">2</a>
+                  
                 </div>
             
             </div>
