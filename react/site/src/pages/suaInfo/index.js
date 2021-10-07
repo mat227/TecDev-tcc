@@ -33,7 +33,7 @@ export default function suaInfo(){
                                 <div class="box2">
                                     <h4>Confirme se as informaçoes estão correta</h4>
                                     <div class="lbl">
-                                        <label for="">Enderço :</label>
+                                        <label for="">Endereço :</label>
                                         <label for=""> _____________</label>
                                     </div>
                                     <div class="lbl">
@@ -52,7 +52,7 @@ export default function suaInfo(){
                             </div> 
                             <div class="btns">
                                     <Buttom><Link to='./suasacola' >Voltar </Link></Buttom>
-                                    <Buttom> Proximo Passo </Buttom>
+                                    <Buttom><Link to="./pagamento"> Proximo Passo </Link></Buttom>
                             </div>
                         </div>
                 </Container>
