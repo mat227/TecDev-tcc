@@ -60,11 +60,7 @@ export default function Pagamentos() {
               realizar o pagamento, caso o tempo esgote a compra será cancelada!
             </div>
           </div>
-          <div className="botoespix">
-           <div className="bt1"> <Buttom>Voltar</Buttom></div>
-           <div className="bt2"> <Buttom>Próximo passo</Buttom></div>
-
-        </div>
+        
         </div>
         <div className="botoes">
               <a href="/suasacola"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></a>

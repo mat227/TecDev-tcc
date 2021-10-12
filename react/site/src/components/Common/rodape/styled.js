@@ -7,7 +7,7 @@ const ContainerRodape= styled.div`
   display: flex;
   flex-direction: row;
 
-  height: 10vh;
+  height: 15vh;
   width: 100%;
 
   align-items: center;
