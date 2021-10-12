@@ -22,6 +22,7 @@ import Pix from './pages/Pagamento/pix/pix.conteudo'
 import PerfilADM from './pages/perfil_adm'
 import SuaInfo from './pages/suaInfo'
 import SeusPedidos from './pages/SeusPedidos/pedi.conteudo'
+import Perfilusu from './pages/perfil/index'
 
 export default function Routes() {
     return (
@@ -49,6 +50,8 @@ export default function Routes() {
                 <Route path="/perfil_adm" exact={true} component={PerfilADM} /> 
                 <Route path="/suas_infomacoes" exact={true} component={SuaInfo} /> 
                 <Route path="/seus_pedidos" exact={true} component={SeusPedidos} /> 
+                <Route path="/perfil" exact={true} component={Perfilusu} /> 
+
             </Switch>
         </BrowserRouter>
     )
