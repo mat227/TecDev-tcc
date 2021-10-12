@@ -6,17 +6,6 @@ const ContainerDesc = styled.div`
 }
 
 
-footer {
-    background-color: #12172B;
-    display: flex;
-    flex-direction: row;
-
-    height: 12vh;
-    width: 100%;
-
-    align-items: center;
-}
-
 @font-face {
     font-family: "Rowdies";
     src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
@@ -28,43 +17,14 @@ footer {
 }
 
 
-.logowo {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8em;
-    font-family: Quicksand;
-    color: #73a1b8;
-}
-
-.logowo img {
-    height: 4em;
-}
-
-.redes img {
-    margin: 1em;
-    height: 2em;
-}
-
-.logowo {
-margin: 1em;
-}
-
-.redes {
-    display: flex;
-    flex-direction: row;
-
-    margin-left: auto;
-}
 
 
-.conteiner {
     display: flex;
     flex-direction: column;
     background-image: url("./assets/images/bacckground.svg");
-    opacity: inherit;
     background-color: #135578;
 
-}
+
 
 .box-mae {
     display: block;
@@ -88,7 +48,7 @@ margin: 1em;
     border: 1px solid white;
     border-radius: 2em;
     width: 80em;
-    height: 53em;
+    height: 52em;
 
     display: flex;
     flex-direction: row;
@@ -126,11 +86,13 @@ margin: 1em;
     text-align: center;
     border: none;
     margin: 0.8em;
+    
 
     width: 200px;
-
     font-weight: 400;
     margin-bottom: 1em;
+
+    cursor: pointer;
 }
 
 .box1 div {
@@ -178,21 +140,12 @@ margin: 1em;
     font-family: Rowdies;
 }
 
-.item img {
-    height: 2.5em;
-}
-
 .botoes {
     display: flex;
     flex-direction: row !important;
 
     margin-left: 20em;
     margin-bottom: 1em;
-}
-
-.botoes button {
-    padding: 0.5em;
-    cursor: pointer;
 }
 
 
@@ -214,7 +167,6 @@ margin: 1em;
     flex-direction: column;
     margin-left: -27.5em;
     padding-right: 16em;
-    padding-bottom: 3.5em;
     border-right: 0.5px solid white;
 }
 
@@ -222,6 +174,7 @@ margin: 1em;
     width: 35em;
     font-family: QuickSand;
     color: white;
+    line-height: 1.5em;
 }
 .titulodesc {
     margin-bottom: 0.8em;
@@ -244,7 +197,8 @@ margin: 1em;
 
 .menu {
     margin-top: -1em !important;
-    line-height: 2em;
+    line-height: 1.5em;
+    margin-bottom: 4.2em;
 }
 
 .itemc {
@@ -255,6 +209,7 @@ margin: 1em;
 
 .itemc p {
     font-family: Quicksand;
+    margin-bottom: -1em;
 }
     
 `

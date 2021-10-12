@@ -10,7 +10,6 @@ export default function DescConteudo() {
     return (
         <ContainerDesc>
      <Partecima/>
-     <div className="conteiner">
         <div class="box-mae">
             <div class="box-filha">
                 <div class="livro"><img src="/assets/images/o que o sol faz com as flores (1).svg"alt=""/></div>
@@ -22,8 +21,8 @@ export default function DescConteudo() {
                         <div class="item"><img src="/assets/images/cartao.svg" alt="cartao" class="cartao"/> <p><u>Cartão de Crédito</u> R$ 42,90 <br/> Em até 3x de R$ 14,30</p></div>
                     </div>
                     <div class="botoes">
-                      <Link to="/pagamento">  <div class="um"><button>COMPRAR</button></div></Link>
-                        <div class="dois"><button>ADICIONAR NA SACOLA</button></div>
+                      <Link to="/pagamento"><button>COMPRAR</button></Link>
+                      <Link to="/suasacola"><button>ADICIONAR NA SACOLA</button></Link>
                     </div>
                     <hr/>
                     <div class="box2">
@@ -48,7 +47,6 @@ export default function DescConteudo() {
 
             </div>
 
-        </div>
         </div>
 
         <Rodape/>
