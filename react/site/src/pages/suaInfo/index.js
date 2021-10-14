@@ -11,7 +11,7 @@ export default function suaInfo(){
                     <div className='conteudo'>
                             <div class="titulo">
                                 <div class="th1"><h1>Suas informações</h1></div>
-                                <div class="trilhaM"><label>SUA SACOLA -  SUAS INFORMAÇÕES - PAGAMENTO -  FINALIZAÇÃO</label></div>
+                                <div class="trilhaM"><label >SUA SACOLA - </label>  <label style={{color : "#00EAFF"}}> SUAS INFORMAÇÕES </label> - <label>PAGAMENTO - </label> <label>  FINALIZAÇÃO</label></div>
                             </div>
                             <div class="auxi">
                                 <div class="box1">
@@ -24,6 +24,7 @@ export default function suaInfo(){
                                         <label class="test" for="">Complemento</label>
                                         <label class="test" for="">Bairro</label>
                                     </div>
+                                    <div style={{"color":"white" ,"text-decoretion":"none" , 'margin-left':'1em' }}><a href='google.com'> Alterar endereço</a></div>
                                     <div class="contato">
                                         <h2>Telefone</h2>
                                         <label for="" class="tell">__</label>

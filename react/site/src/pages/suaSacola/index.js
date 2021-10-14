@@ -11,7 +11,7 @@ export default function SuaSacola (){
                 <div className='conteudo'>
                     <div className="titulo">
                         <div className="th1"><h1>Sua Sacola</h1></div>
-                        <div className="trilhaM"><label>SUA SACOLA -  SUAS INFORMAÇÕES - PAGAMENTO -  FINALIZAÇÃO</label></div>
+                        <div class="trilhaM"><label style={{color : "#00EAFF"}} >SUA SACOLA  </label> - <label > SUAS INFORMAÇÕES - </label> <label>PAGAMENTO - </label> <label>  FINALIZAÇÃO</label></div>
                     </div>
                     <div className="container-cont">
                         <div className="tabela">

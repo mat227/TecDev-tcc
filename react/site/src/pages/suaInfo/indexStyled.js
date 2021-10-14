@@ -48,6 +48,11 @@ const Container = styled.div`
         .trilhaM{
             color: white;
             font-size: 0.7em;
+            
+        }
+        .azul{
+            display: flex;
+            flex-direction: row;
         }
         .labels{
             display: flex;

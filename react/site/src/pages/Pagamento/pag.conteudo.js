@@ -80,7 +80,7 @@ export default function Pagamentos() {
                         </div>
                     </div>
                     <div className="botoes">
-                        <Link to="/suasacola"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></Link>
+                        <Link to="/suas_infomacoes"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></Link>
                         <Link to="/compra_realizada"><button type="submit" class="btn btn-primary">Próximo passo</button></Link>
                     </div>
                 </div>
