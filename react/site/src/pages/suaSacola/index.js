@@ -55,7 +55,7 @@ export default function SuaSacola (){
                             </div>
                             <div className="quadb">
                                 <Buttom className="btnf"><Link to='/suas_infomacoes'>Proximo passo</Link></Buttom>
-                                <Buttom className="btnf">Continuar Comprando</Buttom>
+                                <Buttom className="btnf"><Link to='/' >Continuar Comprando</Link></Buttom>
                             </div>   
                         </div>
                     </div>
