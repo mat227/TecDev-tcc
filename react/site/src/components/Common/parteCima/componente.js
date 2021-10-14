@@ -22,7 +22,7 @@ export default function ParteCima() {
             <div class="hp1-seus">
             <Link to="/suasacola"><div class="hp1-bolsa"><img src="/assets/images/sua bolsa.svg" alt=""/></div> </Link> 
              <Link to="/favoritos">   <div class="hp1-favorito"><img src="/assets/images/seus favoritos.svg" alt=""/></div></Link>
-            <Link to="/perfil"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" alt=""/></div></Link>    
+            <Link to="/login"><div class="hp1-entre-cadastre"><img src="/assets/images/seu perfil.svg" alt=""/></div></Link>    
 
             </div>
             </div>
