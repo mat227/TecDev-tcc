@@ -3,6 +3,24 @@ import styled from 'styled-components'
 
 const ContainerAdm_pedidos = styled.div`
 
+@font-face {
+    font-family: 'Baloo Thambi 2';
+    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
+}
+
+
+@font-face {
+    font-family:  'Roboto', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+}
+
+
+@font-face {
+    font-family: 'Quicksand', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Quicksand:wght@300&display=swap');
+
+}
+
 * {
     box-sizing: border-box;
   }
