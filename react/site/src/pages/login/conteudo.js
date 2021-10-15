@@ -1,8 +1,20 @@
 import { ContainerLogin } from "./styled"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState, useRef } from 'react'
 
-
+import LoadingBar from 'react-top-loading-bar'
+import Cookies from 'js-cookie';
+import Api from '../../service/api'
+import { useHistory } from 'react-router-dom';
+const api = new Api();
 
 export default function Conteudo() {
+
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+
+
     return (
 
 <ContainerLogin>
