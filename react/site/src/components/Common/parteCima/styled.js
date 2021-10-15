@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 const ContainerPartecima= styled.div`
 
-.hp1-logo{
-    display: flex;
-    padding-left:3em ;
-}
-.hp1-nome{
-  padding-top: 0.7em;
-}
+    .hp1-logo{
+        display: flex;
+        padding-left:3em ;
+    }
+    .hp1-nome{
+      padding-top: 0.7em;
+    }
     
     .hp1-buscap{
         display: flex;
@@ -22,6 +22,9 @@ const ContainerPartecima= styled.div`
         display: flex;
         flex-direction: row;
         justify-content: center;
+
+        margin-right: 1em;
+        margin-top: 0.2em;;
     }
     
     
@@ -69,25 +72,25 @@ cursor: pointer;
         border:none;
         height:32px;
         font-family: "Rowdies";
-font-weight: 400;
-width: 35.5em;
-      
+    font-weight: 400;
+    width: 35.5em;
       }
 
-    
 
-      .hp1-bolsa, .hp1-favorito,.hp1-entre-cadastre{
-        padding-left: 1em;
-      }
+.menu-item {
+  display: flex;
+  flex-direction: column;
 
-      .hp1-entre-cadastre{
-        padding-right: 3em;
-        padding-top: 3px;
-      }
+  text-align: center;
 
-      .hp1-favorito{
-        padding-top: 3px;
-      }
-     
+  margin: 1em 0.5em;
+}
+
+.descricao {
+  font-family: "Quicksand";
+  color: white;
+  font-size: 0.8em;
+  margin-top: -1em;
+}
 `
  export { ContainerPartecima }
