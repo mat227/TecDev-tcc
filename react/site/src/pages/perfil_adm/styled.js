@@ -1,6 +1,25 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
+
+@font-face {
+    font-family: 'Baloo Thambi 2';
+    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
+}
+
+
+@font-face {
+    font-family:  'Roboto', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+}
+
+
+@font-face {
+    font-family: 'Quicksand', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Quicksand:wght@300&display=swap');
+
+}
+
      background-color: #1e4f63;
      background-image: url("../Perfil_ADM/assets/images/fundo.svg");
      height: 100%;

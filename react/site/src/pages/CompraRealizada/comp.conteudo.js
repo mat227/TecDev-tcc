@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
-import ParteCima from "../../components/Common/parteCima/componente";
-import Rodape from "../../components/Common/rodape/redape";
-
+import ParteCimaLogado from "../../components/Common/logado-parteCima";
 import { ContainerCompra } from "./comp.styled";
 
-
+import Rodape from "../../components/Common/rodape/redape";
 
 
 export default function CompraRealizada() {
     return (   
         <ContainerCompra>
-            <ParteCima/>
+            <ParteCimaLogado/>
                 <div className="conteudo">
                     <div className="box-texto">
                             <div className="titulo"><h1>COMPRA REALIZADA!</h1></div>
