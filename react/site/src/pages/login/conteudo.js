@@ -4,9 +4,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState, useRef } from 'react'
 
 import LoadingBar from 'react-top-loading-bar'
-import Cookies from 'js-cookie';
+
 import Api from '../../service/api'
 import { useHistory } from 'react-router-dom';
+
+// import Cookies from 'js-cookie';
+
 const api = new Api();
 
 export default function Conteudo() {

@@ -7,6 +7,7 @@ export default function GeneroPrincipal() {
         
         <ContainerGeneroP>
             <ParteCima />
+            
                         <div className="titulo">
         <div className="quadrado" style={{marginRight: 0.5 + "em"}}></div>
             <p>GÊNEROS</p>
@@ -23,7 +24,6 @@ export default function GeneroPrincipal() {
             <div className="botao">
               <button>
                   <Link to="/genero/terror" class="">TERROR                        </Link>
-
               </button>
             </div>
           </div>

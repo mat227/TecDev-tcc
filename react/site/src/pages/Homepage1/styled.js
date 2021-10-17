@@ -2,19 +2,21 @@ import styled from 'styled-components'
 
 
 const ContainerHome = styled.div`
-
+  
 
   a, a:link, a:visited {
     text-decoration: none;
     color: white;
   }
   
+  
+
   .conteiner-homepage1{
     display: flex;
     flex-direction: column;
     font-family: "Rowdies";
 
-
+    
 }
 
 
@@ -100,6 +102,7 @@ height: 50vh;
 width: 40vw;
 padding-top: 3.5em;
 padding-left: none;
+text-align: center;
 }
 
 .imgt{

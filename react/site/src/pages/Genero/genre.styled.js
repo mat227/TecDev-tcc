@@ -34,7 +34,7 @@ const ContainerGeneroP = styled.div`
     font-weight: 300;
     text-shadow: 2px 3px black;
   
-      -webkit-text-stroke-width: 0.5px; /* largura da borda */
+      -webkit-text-stroke-width: 0.5px; 
       -webkit-text-stroke-color: #00B6FF; 
   }
   

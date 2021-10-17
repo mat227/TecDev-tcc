@@ -92,5 +92,9 @@ cursor: pointer;
   font-size: 0.8em;
   margin-top: -1em;
 }
+
+a:Link, a:visited {
+  text-decoration: none;
+}
 `
  export { ContainerPartecima }
