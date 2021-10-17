@@ -19,6 +19,20 @@ app.get ('/generos', async (req, resp) => {
               resp.send({ erro:e.toString() })
     }
     })
+app.post ('/generos', async (req, resp) => {
+    try {
+        const descricao = req.body.descricao;
+
+        let x = await db.infoc_tdv_genero.findAll({
+            where: {
+                ds_genero: descricao
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
+    }
+})
 
 app.post('/login', async (req, resp) => {
     const email = req.body.email;
@@ -39,3 +53,5 @@ app.post('/login', async (req, resp) => {
     delete u.ds_senha;
     resp.send(u);
 });
+
+app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))

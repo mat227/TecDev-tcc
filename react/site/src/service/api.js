@@ -6,7 +6,7 @@ const api = axios.create({
 
 
 export default class Api {
-
+    
 
     async login(email, senha) {
         let r = await api.post(`/login/`, { email, senha });
