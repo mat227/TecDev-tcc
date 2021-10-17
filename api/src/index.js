@@ -34,24 +34,27 @@ app.post ('/generos', async (req, resp) => {
     }
 })
 
-app.post('/login', async (req, resp) => {
-    const email = req.body.email;
-    const senha = req.body.senha;
-    const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
 
-    let u = await db.infoc_tdv_cliente.findOne({
-        where: {
-            ds_email: email,
-            ds_senha: cryptoSenha
-        },
-        raw: true
-    });
 
-    if (u == null)
-        return resp.send({ erro: 'Credenciais inválidas!' });
+app.post('/cadastro', async (req, resp) => {
+    try {
+        let usuParam = req.body;
 
-    delete u.ds_senha;
-    resp.send(u);
-});
+        let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: usuParam.email, ds_senha: usuParam.senha } });
+        if (u != null)
+            return resp.send({ erro: 'Conta já existe!' });
+
+        let r = await db.infoc_tdv_cliente.create({
+            ds_email: usuParam.email,
+            ds_senha: crypto.SHA256(usuParam.senha).toString(crypto.enc.Base64)
+        })
+        resp.send(r);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
+
+
+
 
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))
