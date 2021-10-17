@@ -11,7 +11,7 @@ const ContainerPag = styled.div`
     margin: 0;
 
     width: 100%;
-    height: 115vh;
+    height: 100%;
 
     background-color: #135578;
     background-image: url('/assets/images/bacckground.svg');
@@ -24,13 +24,13 @@ const ContainerPag = styled.div`
         height: 95vh;
         margin: 1em;
         width: 80vw;
-        padding: 1em 3em;
+        padding: 1em 3em ;
         
         display:flex;
         flex-direction: column;
 
         margin: 1em auto;
-
+        
         color: white;
     }
 
@@ -92,6 +92,7 @@ const ContainerPag = styled.div`
         border-radius: 10px;
         padding-left: 1em;
         margin-left: 1em;
+        
     }
 
     .bandeiras {
@@ -191,7 +192,7 @@ const ContainerPag = styled.div`
         flex-direction: row;
         margin-left: auto;
         margin-top: 0.5em;
-        margin-bottom: 1em;
+        margin-bottom: -10em;
     }
 
     .botoes button {
