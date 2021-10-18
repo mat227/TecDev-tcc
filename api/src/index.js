@@ -40,13 +40,17 @@ app.post('/cadastro', async (req, resp) => {
     try {
         let usuParam = req.body;
 
-        let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: usuParam.email, ds_senha: usuParam.senha } });
+        let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: usuParam.email, ds_senha: usuParam.senha, nm_cliente: usuParam.nome ,ds_cpf:usuParam.cpf , dt_nascimento:usuParam.datanas} });
         if (u != null)
-            return resp.send({ erro: 'Conta já existe!' });
+            return resp.send({ erro: 'Todos os campos são obrigatorios' });
 
         let r = await db.infoc_tdv_cliente.create({
             ds_email: usuParam.email,
-            ds_senha: crypto.SHA256(usuParam.senha).toString(crypto.enc.Base64)
+            ds_senha: crypto.SHA256(usuParam.senha).toString(crypto.enc.Base64),
+            nm_cliente: usuParam.nome,
+            ds_cpf: usuParam.cpf,
+            dt_nascimento:usuParam.datanas
+          
         })
         resp.send(r);
     } catch (e) {
@@ -55,6 +59,35 @@ app.post('/cadastro', async (req, resp) => {
 })
 
 
+app.get('/cadastro', async (req, resp) => {
+    try {
+        let cliente = await db.infoc_tdv_cliente.findAll();
+        resp.send(cliente);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
 
+
+
+app.post('/login', async (req, resp) => {
+    const email = req.body.email;
+    const senha = req.body.senha;
+    const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
+
+    let u = await db.infoc_tdv_cliente.findOne({
+        where: {
+            ds_email: email,
+            ds_senha: senha
+        },
+        raw: true
+    });
+
+    if (u == null)
+        return resp.send({ erro: 'Credenciais inválidas!' });
+
+    delete u.ds_senha;
+    resp.send(u);
+});
 
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))
