@@ -12,11 +12,19 @@ export default class infoc_tdv_favorito extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_cliente',
+        key: 'id_cliente'
+      }
     },
     id_livro: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_livro',
+        key: 'id_livro'
+      }
     }
   }, {
     sequelize,

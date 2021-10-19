@@ -12,7 +12,11 @@ export default class infoc_tdv_forma_pagamento extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_cliente',
+        key: 'id_cliente'
+      }
     },
     nr_cartao: {
       type: DataTypes.STRING(255),

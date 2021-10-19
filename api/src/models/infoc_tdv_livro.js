@@ -40,7 +40,11 @@ export default class infoc_tdv_livro extends Model {
     },
     id_genero: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_genero',
+        key: 'id_genero'
+      }
     },
     bt_disponivel: {
       type: DataTypes.BOOLEAN,

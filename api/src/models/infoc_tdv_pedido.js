@@ -12,11 +12,19 @@ export default class infoc_tdv_pedido extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_cliente',
+        key: 'id_cliente'
+      }
     },
     id_cupom: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_cupom',
+        key: 'id_cupom'
+      }
     },
     nr_pedido: {
       type: DataTypes.INTEGER,

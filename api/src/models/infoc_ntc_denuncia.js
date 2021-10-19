@@ -12,7 +12,11 @@ export default class infoc_ntc_denuncia extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_ntc_usuario',
+        key: 'id_usuario'
+      }
     },
     ds_depoimento: {
       type: DataTypes.STRING(255),
@@ -20,7 +24,11 @@ export default class infoc_ntc_denuncia extends Model {
     },
     id_local: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_ntc_local',
+        key: 'id_local'
+      }
     },
     bt_ativo: {
       type: DataTypes.BOOLEAN,
@@ -28,11 +36,19 @@ export default class infoc_ntc_denuncia extends Model {
     },
     id_fisico: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_ntc_caracteristica_fisica',
+        key: 'id_fisico'
+      }
     },
     id_vestimento: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_ntc_vestimento',
+        key: 'id_vestimento'
+      }
     }
   }, {
     sequelize,

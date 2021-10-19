@@ -1,38 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_tdv_endereco extends Model {
+export default class insf_tb_usuario_endereco extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_endereco: {
+    id_usuario_endereco: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_cliente: {
+    id_usuario: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoc_tdv_cliente',
-        key: 'id_cliente'
+        model: 'insf_tb_usuario',
+        key: 'id_usuario'
       }
     },
-    nm_rua: {
-      type: DataTypes.STRING(255),
+    ds_endereco: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_cidade: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_bairro: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_cep: {
-      type: DataTypes.STRING(16),
-      allowNull: true
-    },
-    ds_numero: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_tdv_endereco',
+    tableName: 'insf_tb_usuario_endereco',
     timestamps: false,
     indexes: [
       {
@@ -40,18 +44,18 @@ export default class infoc_tdv_endereco extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_endereco" },
+          { name: "id_usuario_endereco" },
         ]
       },
       {
-        name: "id_cliente",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
-          { name: "id_cliente" },
+          { name: "id_usuario" },
         ]
       },
     ]
   });
-  return infoc_tdv_endereco;
+  return insf_tb_usuario_endereco;
   }
 }

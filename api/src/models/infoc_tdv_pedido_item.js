@@ -12,7 +12,11 @@ export default class infoc_tdv_pedido_item extends Model {
     },
     id_pedido: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_pedido',
+        key: 'id_pedido'
+      }
     },
     qtd_itens: {
       type: DataTypes.INTEGER,
@@ -20,7 +24,11 @@ export default class infoc_tdv_pedido_item extends Model {
     },
     id_livro: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tdv_livro',
+        key: 'id_livro'
+      }
     }
   }, {
     sequelize,
