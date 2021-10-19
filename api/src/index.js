@@ -70,7 +70,7 @@ app.get('/cadastro', async (req, resp) => {
 
 
 
-app.get('/login', async (req, resp) => {
+app.post('/login', async (req, resp) => {
     const email = req.body.email;
     const senha = req.body.senha;
 
