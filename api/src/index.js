@@ -87,6 +87,15 @@ app.get('/login', async (req, resp) => {
     resp.send(u);
 });
 
+app.get('/suaInfo', async (req, resp)=>{
+    try{
+        let cont = await db.infoc_tdv_cliente.findAll();
+        resp.send(cont);
+    }catch(e){
+        resp.send({erro: e.toString()});
+    }
+
+});
 
 
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))
