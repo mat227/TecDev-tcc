@@ -1,6 +1,7 @@
 import {Container} from './styled';
 import Cabecalho  from '../../components/Common/parteCima/componente'
 import Rodape from '../../components/Common/rodape/redape'
+import { Link } from 'react-router-dom';
 
 export default function perfilAdm(){
    return(
@@ -11,7 +12,7 @@ export default function perfilAdm(){
                 <div class="conteudo_esquerdo">
                     <div class="informacao">
 
-                        <div class="botao1"><button>Livros</button></div>
+                        <div class="botao1"><button><Link to=''>Livros</Link></button></div>
                         <div class="botao2"> <button>Cupons e <br />promoções</button> </div> 
                         <div class="botao_e"><button>Suas informações</button></div>
                         <div class="botao3"><button>Pedidos</button></div>
@@ -22,7 +23,7 @@ export default function perfilAdm(){
                 <div class="conteudo_direito">
                     <div class="box">
                         <div class="titulo">
-                            <div class="perfil_img"><img src="../Adm_informacao/assets/images/profile.svg" alt='' /></div>
+                            <div class="perfil_img"><img src="./assets/images/profilee (1).svg" alt='' /></div>
                             <div class="perfil"> Suas Informações </div>
 
                             <div class="ed_info"> Editar <br /> informações </div>

@@ -52,8 +52,8 @@ export default function suaInfo(){
                                 </div>
                             </div> 
                             <div class="btns">
-                                    <Buttom><Link to='./suasacola' >Voltar </Link></Buttom>
-                                    <Buttom><Link to="./pagamento"> Proximo Passo </Link></Buttom>
+                                    <Buttom className="teste"><Link to='./suasacola' >Voltar </Link></Buttom>
+                                    <Buttom className='teste'><Link to="./pagamento"> Proximo Passo </Link></Buttom>
                             </div>
                         </div>
                 </Container>

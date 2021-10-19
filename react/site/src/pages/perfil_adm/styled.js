@@ -53,6 +53,13 @@ const Container = styled.div`
                 flex-direction: column;
                 
             }
+            
+            .informacao a  {
+                text-decoration: none;
+                color: white;
+                
+            }
+
 
             .botao_e button {
                 color: #fff;

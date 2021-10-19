@@ -100,6 +100,19 @@ const Container = styled.div`
             display: flex;
             align-items: center;
             justify-content: end;
+           
+        }
+        .teste{
+            background-color: #1fb5cd;
+            padding: 0.6em 1.5em 0.6em 1.5em;
+            margin-left: 1em;
+            border: 1px solid #1fb5cd;
+            border-radius: 0.5em;
+
+        }
+        .btns a{            
+            text-decoration: none;
+            color: white;
             
         }
        

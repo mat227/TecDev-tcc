@@ -15,7 +15,7 @@ const Container = styled.div`
             background-color:  rgba(18, 23, 43, 0.5);
             border-radius: 2em;
             padding: 1.5em;
-            margin:2em;
+            margin: 1.5em;
             
         }
         .titulo{
@@ -112,7 +112,9 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             margin-top: 9em;
+            
         }
+
         .btnf{
             border: #1FB5CD;
             background: #1FB5CD;
@@ -122,6 +124,10 @@ const Container = styled.div`
             text-align: center; 
             margin-top: 1em;     
             border-radius: 0.3em;
+        }
+        .quadb a{
+            color:white;
+            text-decoration:none;
         }
         table{
             width: 60vw;
