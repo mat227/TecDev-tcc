@@ -12,11 +12,19 @@ export default class infoa_enl_pedido_compra_e_venda extends Model {
     },
     id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_produto',
+        key: 'id_produto'
+      }
     },
     id_pedido: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_pedido',
+        key: 'id_pedido'
+      }
     },
     qtd_produto: {
       type: DataTypes.INTEGER,

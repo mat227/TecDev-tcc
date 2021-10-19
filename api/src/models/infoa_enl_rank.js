@@ -12,7 +12,11 @@ export default class infoa_enl_rank extends Model {
     },
     id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_produto',
+        key: 'id_produto'
+      }
     },
     qtd_clique: {
       type: DataTypes.DECIMAL(6,2),

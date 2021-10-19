@@ -12,7 +12,11 @@ export default class infoa_enl_usuario extends Model {
     },
     id_login: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_login',
+        key: 'id_login'
+      }
     },
     nm_nome: {
       type: DataTypes.STRING(100),

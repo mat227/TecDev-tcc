@@ -12,11 +12,19 @@ export default class infoa_enl_reg_plano extends Model {
     },
     id_plano: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_plano',
+        key: 'id_plano'
+      }
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
+      }
     },
     dt_aquisicao: {
       type: DataTypes.DATE,

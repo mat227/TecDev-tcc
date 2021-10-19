@@ -1,46 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoc_atn_tb_empresa extends Model {
+export default class insf_tb_produto extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_empresa: {
+    id_produto: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_nome: {
+    nm_produto: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
-    nr_cnpj: {
-      type: DataTypes.DOUBLE,
+    ds_produto: {
+      type: DataTypes.STRING(800),
       allowNull: true
     },
-    nm_ramo: {
-      type: DataTypes.STRING(100),
+    vl_preco: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: true
     },
-    nr_telefone: {
-      type: DataTypes.DOUBLE,
+    img_produto: {
+      type: DataTypes.STRING(400),
       allowNull: true
     },
-    ds_estado_cidade: {
-      type: DataTypes.STRING(100),
+    dt_lancamento: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     },
-    ds_email: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
-    ds_senha: {
-      type: DataTypes.DOUBLE,
+    bt_ativo: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoc_atn_tb_empresa',
+    tableName: 'insf_tb_produto',
     timestamps: false,
     indexes: [
       {
@@ -48,11 +44,11 @@ export default class infoc_atn_tb_empresa extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_empresa" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infoc_atn_tb_empresa;
+  return insf_tb_produto;
   }
 }

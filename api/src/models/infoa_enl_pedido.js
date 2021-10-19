@@ -12,11 +12,19 @@ export default class infoa_enl_pedido extends Model {
     },
     id_usuario_comprador: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
+      }
     },
     id_usuario_vendedor: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_enl_usuario',
+        key: 'id_usuario'
+      }
     },
     dt_pedido: {
       type: DataTypes.DATE,

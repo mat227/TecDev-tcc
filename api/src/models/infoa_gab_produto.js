@@ -57,6 +57,10 @@ export default class infoa_gab_produto extends Model {
     qtd_parcelas: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    ds_plataforma: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
   }, {
     sequelize,

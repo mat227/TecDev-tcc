@@ -22,6 +22,10 @@ export default class infoc_tdv_cliente extends Model {
       type: DataTypes.STRING(250),
       allowNull: true
     },
+    nr_contato: {
+      type: DataTypes.STRING(15),
+      allowNull: true
+    },
     ds_senha: {
       type: DataTypes.STRING(50),
       allowNull: true

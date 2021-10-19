@@ -101,6 +101,7 @@ import _infod_tif_comunidade from  "./infod_tif_comunidade.js";
 import _infod_tif_like from  "./infod_tif_like.js";
 import _infod_tif_post from  "./infod_tif_post.js";
 import _infod_tif_usuario from  "./infod_tif_usuario.js";
+import _insf_tb_produto from  "./insf_tb_produto.js";
 import _insf_tb_usuario from  "./insf_tb_usuario.js";
 import _insf_tb_usuario_endereco from  "./insf_tb_usuario_endereco.js";
 
@@ -206,9 +207,40 @@ export default function initModels(sequelize) {
   var infod_tif_like = _infod_tif_like.init(sequelize, DataTypes);
   var infod_tif_post = _infod_tif_post.init(sequelize, DataTypes);
   var infod_tif_usuario = _infod_tif_usuario.init(sequelize, DataTypes);
+  var insf_tb_produto = _insf_tb_produto.init(sequelize, DataTypes);
   var insf_tb_usuario = _insf_tb_usuario.init(sequelize, DataTypes);
   var insf_tb_usuario_endereco = _insf_tb_usuario_endereco.init(sequelize, DataTypes);
 
+  infoa_enl_produto.belongsTo(infoa_enl_categoria, { as: "id_categoria_infoa_enl_categorium", foreignKey: "id_categoria"});
+  infoa_enl_categoria.hasMany(infoa_enl_produto, { as: "infoa_enl_produtos", foreignKey: "id_categoria"});
+  infoa_enl_chat.belongsTo(infoa_enl_chat_usuario, { as: "id_chat_usuario_infoa_enl_chat_usuario", foreignKey: "id_chat_usuario"});
+  infoa_enl_chat_usuario.hasMany(infoa_enl_chat, { as: "infoa_enl_chats", foreignKey: "id_chat_usuario"});
+  infoa_enl_usuario.belongsTo(infoa_enl_login, { as: "id_login_infoa_enl_login", foreignKey: "id_login"});
+  infoa_enl_login.hasMany(infoa_enl_usuario, { as: "infoa_enl_usuarios", foreignKey: "id_login"});
+  infoa_enl_pedido_compra_e_venda.belongsTo(infoa_enl_pedido, { as: "id_pedido_infoa_enl_pedido", foreignKey: "id_pedido"});
+  infoa_enl_pedido.hasMany(infoa_enl_pedido_compra_e_venda, { as: "infoa_enl_pedido_compra_e_vendas", foreignKey: "id_pedido"});
+  infoa_enl_reg_plano.belongsTo(infoa_enl_plano, { as: "id_plano_infoa_enl_plano", foreignKey: "id_plano"});
+  infoa_enl_plano.hasMany(infoa_enl_reg_plano, { as: "infoa_enl_reg_planos", foreignKey: "id_plano"});
+  infoa_enl_pedido_compra_e_venda.belongsTo(infoa_enl_produto, { as: "id_produto_infoa_enl_produto", foreignKey: "id_produto"});
+  infoa_enl_produto.hasMany(infoa_enl_pedido_compra_e_venda, { as: "infoa_enl_pedido_compra_e_vendas", foreignKey: "id_produto"});
+  infoa_enl_rank.belongsTo(infoa_enl_produto, { as: "id_produto_infoa_enl_produto", foreignKey: "id_produto"});
+  infoa_enl_produto.hasMany(infoa_enl_rank, { as: "infoa_enl_ranks", foreignKey: "id_produto"});
+  infoa_enl_cartao_credito.belongsTo(infoa_enl_usuario, { as: "id_usuario_infoa_enl_usuario", foreignKey: "id_usuario"});
+  infoa_enl_usuario.hasMany(infoa_enl_cartao_credito, { as: "infoa_enl_cartao_creditos", foreignKey: "id_usuario"});
+  infoa_enl_chat.belongsTo(infoa_enl_usuario, { as: "id_usuario_infoa_enl_usuario", foreignKey: "id_usuario"});
+  infoa_enl_usuario.hasMany(infoa_enl_chat, { as: "infoa_enl_chats", foreignKey: "id_usuario"});
+  infoa_enl_chat_usuario.belongsTo(infoa_enl_usuario, { as: "id_usuario_comprador_infoa_enl_usuario", foreignKey: "id_usuario_comprador"});
+  infoa_enl_usuario.hasMany(infoa_enl_chat_usuario, { as: "infoa_enl_chat_usuarios", foreignKey: "id_usuario_comprador"});
+  infoa_enl_chat_usuario.belongsTo(infoa_enl_usuario, { as: "id_usuario_vendedor_infoa_enl_usuario", foreignKey: "id_usuario_vendedor"});
+  infoa_enl_usuario.hasMany(infoa_enl_chat_usuario, { as: "id_usuario_vendedor_infoa_enl_chat_usuarios", foreignKey: "id_usuario_vendedor"});
+  infoa_enl_pedido.belongsTo(infoa_enl_usuario, { as: "id_usuario_comprador_infoa_enl_usuario", foreignKey: "id_usuario_comprador"});
+  infoa_enl_usuario.hasMany(infoa_enl_pedido, { as: "infoa_enl_pedidos", foreignKey: "id_usuario_comprador"});
+  infoa_enl_pedido.belongsTo(infoa_enl_usuario, { as: "id_usuario_vendedor_infoa_enl_usuario", foreignKey: "id_usuario_vendedor"});
+  infoa_enl_usuario.hasMany(infoa_enl_pedido, { as: "id_usuario_vendedor_infoa_enl_pedidos", foreignKey: "id_usuario_vendedor"});
+  infoa_enl_produto.belongsTo(infoa_enl_usuario, { as: "id_usuario_infoa_enl_usuario", foreignKey: "id_usuario"});
+  infoa_enl_usuario.hasMany(infoa_enl_produto, { as: "infoa_enl_produtos", foreignKey: "id_usuario"});
+  infoa_enl_reg_plano.belongsTo(infoa_enl_usuario, { as: "id_usuario_infoa_enl_usuario", foreignKey: "id_usuario"});
+  infoa_enl_usuario.hasMany(infoa_enl_reg_plano, { as: "infoa_enl_reg_planos", foreignKey: "id_usuario"});
   infoc_ntc_denuncia.belongsTo(infoc_ntc_caracteristica_fisica, { as: "id_fisico_infoc_ntc_caracteristica_fisica", foreignKey: "id_fisico"});
   infoc_ntc_caracteristica_fisica.hasMany(infoc_ntc_denuncia, { as: "infoc_ntc_denuncia", foreignKey: "id_fisico"});
   infoc_ntc_denuncia.belongsTo(infoc_ntc_local, { as: "id_local_infoc_ntc_local", foreignKey: "id_local"});
@@ -340,6 +372,7 @@ export default function initModels(sequelize) {
     infod_tif_like,
     infod_tif_post,
     infod_tif_usuario,
+    insf_tb_produto,
     insf_tb_usuario,
     insf_tb_usuario_endereco,
   };
