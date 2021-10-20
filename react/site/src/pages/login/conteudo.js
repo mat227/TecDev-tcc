@@ -22,8 +22,8 @@ export default function Conteudo() {
     const logar = async () => {
         
         let resp = await api.login(email, senha);
-        if (resp = "erro") {
-            toast.error(`${resp="erro"}`);
+        if (resp.erro) {
+            toast.error(`${resp.erro}`);
             loading.current.complete();
         } else {
             Cookies.set('usuario-logado', JSON.stringify(resp));

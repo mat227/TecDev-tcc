@@ -6,7 +6,7 @@ margin: 0;
 
 width: 100%;
 font-family: "Rowdies";
-height: 110vh;
+height: 100%;
 color: white;
 background-color: #135578;
 background-image: url('/assets/images/bacckground.svg');
