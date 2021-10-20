@@ -74,16 +74,17 @@ app.post('/login', async (req, resp) => {
     const email = req.body.email;
     const senha = req.body.senha;
 
+    
+
     let u = await db.infoc_tdv_cliente.findOne({
         where: {
             ds_email: email,
             ds_senha: senha
         },
     });
-
     if (u == null)
-        return resp.send({ erro: 'Credenciais inválidas!' });
-
+    return resp.send({ erro: 'Credenciais inválidas!' });
+    
     resp.send(u);
 });
 
