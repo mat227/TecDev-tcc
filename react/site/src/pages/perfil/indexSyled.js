@@ -81,6 +81,7 @@ const Container = styled.div`
             }
             .btn{
                 text-align: center;
+                margin: 1em 0em 0 2em ;
             }
             .btnE button{
                 border: none;

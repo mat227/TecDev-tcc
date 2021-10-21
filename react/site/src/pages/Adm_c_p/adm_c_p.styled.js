@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 
 const ContainerAdm_c_p = styled.div`
-
+        margin: 0;
+        background-color: #1e4f63;
+        background-image: url("./assets/images/fundo.svg");
 @font-face {
     font-family: 'Baloo Thambi 2';
     src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
@@ -24,92 +26,26 @@ const ContainerAdm_c_p = styled.div`
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  
-  body {
-    margin: 0em;
-    background-color: #1e4f63;
-    background-image: url("../Perfil_ADM/assets/images/fundo.svg");
-  }
-
-.container {
-    color: #fff;
-}
-
-
-.cabecalho {
-    background-color: #12172b;
-    display: flex;
-    flex-direction: row;
-   
-   
-    height: 7em;
-}
-
-
-.adicionar img {
-    position: absolute;
-    top: 1.5em;
-    left: 3em;
-
-    width: 35px;
-
-}
-
-.bola img {
-    position: relative;
-
-    top: 0.4em;
-    left: 1em;
-    width: 100px;
-}
-
-.adicionar_foto {
-    position: absolute;
-    top: 5.3em;
-    left: 2.5em;
-    font-family: 'Baloo Thambi 2';
-
-    font-size: 12px;
-    color: #fff;
-}
-
-.nome_adm {
-    display: flex;
-    flex-direction: column;
-
-    margin-left: 2em;
-
-    color: #fff;
-    font-family: 'Baloo Thambi 2';
-}
-
-.nome {
-    font-family: 'Baloo Thambi 2';
-    font-size: 40px;
-    margin-top: 0.5em;
-}
-
+ 
 
 .box_g {
     display: flex;
     flex-direction: row;
-
-    padding-top: 10px;
-    padding-left: 20px;
+    padding: 1em ;
+    
 }
-
 .conteudo_esquerdo {
     background-color: #183c53;
     width: 10em;
     height: 30em;
-
     border-radius: 10px;
 }
 
 .informacao {
     font-family: 'Baloo Thambi 2';
-
     display: flex;
     flex-direction: column;
 }
@@ -312,49 +248,25 @@ const ContainerAdm_c_p = styled.div`
 .adc_c {
     display: flex;
     flex-direction: row;
-    background-color: #183c53;
-    font-size: 12px;
-
-    width: 13em;
-    height: 1.5em;
-    margin-left: .4em;
-    margin-top: 1em;
-
+    margin-left: 4em;
     align-items: center;
     border-radius: 5px;
 }
 
-.adicionar_cupom {
+.adicionar_cupom button {
     margin-left: 1.3em;
+    padding: 0.5em;
 }
 
 .lixo {
     display: flex;
     flex-direction: row;
-    
-
-    background-color: #183c53;
-    align-items: center;
-
-    width: 13em;
-    height: 1.4em;
     margin-left: 8em;
-    margin-top: 1em;
-       
-    border-radius: 5px;
-
 }
 
-.nome_lixo button {
-    border: none;
-    align-items: center;
-    cursor: pointer;
-    color: #fff;
-
-    background-color: #183c53;;
-    font-size: 12px;
+.aux button{
+    padding: 0.5em;
 }
-
 .img_lixo img {
     width: 0.8em;
     height: 0.8em;
@@ -497,48 +409,6 @@ const ContainerAdm_c_p = styled.div`
 
 
 
-.redes {
-    display: flex;
-    flex-direction: row;
-
-    margin-top: 2em;
-    background-color: #12172b;
-
-    width: 79em;
-    height: 4.5em;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-
-  margin-left: 2em;
-  margin-top: 1em;
-}
-
-.img_logo img {
-  width: 6em;
-  
-}
-
-.redes_sociais {
-    display: flex;
-    flex-direction: row;
-    
-    margin-left: 65em;
-    margin-top: 1.5em;
-}
-
-.tecdev {
-    color:#9FD4EF;
-}
-
-.instagram img, .facebook img {
-    width: 1.5em;
-    height: 1.5em;
-    
-    margin-left: 1em;
-}
 `
 
 export { ContainerAdm_c_p }

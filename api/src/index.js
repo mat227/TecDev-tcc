@@ -93,7 +93,8 @@ app.post('/login', async (req, resp) => {
 
 app.get('/suaInfo', async (req, resp)=>{
     try{
-        let cont = await db.infoc_tdv_cliente.findAll();
+        
+        let cont = await db.infoc_tdv_cliente.findAll({where : {id_endereco : 1}},{include: db.infoc_tdv_endereco });
         resp.send(cont);
     }catch(e){
         resp.send({erro: e.toString()});
@@ -101,6 +102,16 @@ app.get('/suaInfo', async (req, resp)=>{
 
 });
 
+app.post('/addEndereco', async (req, resp) =>{
+     let info = req.body;
+    try{
+        let r = await db.infoc_tdv_endereco.create({id_cliente : info.id, nm_rua : info.rua, ds_cep:info.cep, ds_numero : info.numero});
+        resp.send(r);
+    }
+    catch(e){
+        resp.send(e.toString());
+    }
+})
 
 app.get('/home1', async (req,resp)=>{
     try{

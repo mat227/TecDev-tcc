@@ -7,19 +7,9 @@ const  Nav = styled.div`
     flex-direction: row;
     align-items: center;
     padding: 1em;
-    height: 7em;
-    .alt_img{
-        position: absolute;
-        top: 4.5em;
-        font-size: 0.9em;
-        color: rgb(255, 255, 255);
-        border: 1px solid skyblue;
-    }
-    .imgP img {
-        border-radius: 50%;
-        width: 6em;
-        height: 6em;
-    }
+    height: 5em;
+    justify-content: space-between;
+    
     .nomeP{
         color: white;
         margin-left: 2em;
@@ -27,6 +17,14 @@ const  Nav = styled.div`
     }
     .nomeP h1{
         margin-bottom: -0.2em;
+    }
+    button{
+        border: none;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        background-color: #1fb5cd;
+        color : white;
+
     }
 `
 export {Nav}
