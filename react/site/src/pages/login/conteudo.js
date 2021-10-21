@@ -28,8 +28,7 @@ export default function Conteudo() {
             Cookies.set('usuario-logado', JSON.stringify(resp));
             navig.push('/');
         }
-console.log(senha);
-console.log(email);
+
     }
 
     return (
