@@ -116,8 +116,7 @@ app.post('/addEndereco', async (req, resp) =>{
         resp.send(e.toString());
     }
 })
-<<<<<<< HEAD
-//Presente para nicoly
+
 app.post('/addlivro', async (req, resp) =>{
     let info = req.body;
     try{
@@ -129,17 +128,16 @@ app.post('/addlivro', async (req, resp) =>{
         })
         resp.send(r);
     }
-<<<<<<< HEAD
+    catch(e){
+        resp.send(e.toString());
+    }
 })
 
 
 
 
-=======
-    catch(e){
-        resp.send(e.toString());
-    }
-});
-''
->>>>>>> 24756dd8cec27e81538bd8ee93900f6c02db6330
+    
+
+
+
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))
