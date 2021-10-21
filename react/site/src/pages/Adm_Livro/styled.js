@@ -291,7 +291,11 @@ const Container = styled.div`
         border: none;
         background-color: #21659f;
     }
-
+    button button {
+        cursor: pointer;
+        border: none;
+        background-color: #21659f;
+    }
     button img {
         height: 1.5em;
     }

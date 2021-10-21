@@ -3,6 +3,7 @@ import Nav from '../../components/Common/cabecalho perfil/nav.js';
 import { ContainerPartecima } from '../../components/Common/parteCima/styled.js';
 import Api  from '../../service/api.js';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 const api = new Api();
 export default function Login(){
 
@@ -24,9 +25,9 @@ export default function Login(){
             <Container >
                 <ContainerPartecima/>
                 <div class="faixaUm">
-                    <div class="colunas especial"><label>Suas informaçoes</label></div>
-                    <div class="colunas"><label>Seus favoritos</label></div>
-                <a href="../SuaSacola/index.html"> <div class="colunas"><label>Sua sacola</label></div></a> 
+                    <div class="colunas especial"><Link to='/suas_infomacoes' ><label>Suas informaçoes</label></Link></div>
+                    <div class="colunas"><Link to='/favoritos' ><label>Seus favoritos</label></Link></div>
+                    <div class="colunas"><Link to='/suasacola' ><label>Sua sacola</label></Link></div>
                 </div>
                 <div class="faixaDois">
                     <div class="aux2">                      
