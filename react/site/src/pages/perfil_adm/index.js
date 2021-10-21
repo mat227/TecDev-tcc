@@ -1,6 +1,7 @@
 import {Container} from './styled';
 import Cabecalho  from '../../components/Common/parteCima/componente'
 import Rodape from '../../components/Common/rodape/redape'
+import Barralat from '../../components/Common/barra_lateal_perfi';
 import { Link } from 'react-router-dom';
 
 export default function perfilAdm(){
@@ -9,17 +10,7 @@ export default function perfilAdm(){
           <Cabecalho />
           <Container> 
             <div class="box_g">
-                <div class="conteudo_esquerdo">
-                    <div class="informacao">
-
-                        <div class="botao1"><button><Link to=''>Livros</Link></button></div>
-                        <div class="botao2"> <button>Cupons e <br />promoções</button> </div> 
-                        <div class="botao_e"><button>Suas informações</button></div>
-                        <div class="botao3"><button>Pedidos</button></div>
-
-                    </div>
-                </div>
-
+                <Barralat />
                 <div class="conteudo_direito">
                     <div class="box">
                         <div class="titulo">

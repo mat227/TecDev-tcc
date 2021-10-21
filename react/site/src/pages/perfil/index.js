@@ -1,7 +1,22 @@
 import { Container } from  './indexSyled.js';
 import Nav from '../../components/Common/cabecalho perfil/nav.js';
 import { ContainerPartecima } from '../../components/Common/parteCima/styled.js';
+import Api  from '../../service/api.js';
+import { useEffect, useState } from 'react';
+const api = new Api();
 export default function Login(){
+
+    useEffect(()=>{
+        console.log('Just one time');
+        ListInfo();
+    },[])
+
+    const [infoc,setInfoC] = useState([]);
+
+    const ListInfo = async ()  => {
+        let r = await api.infoC();
+        setInfoC(r);
+    }
 
     return(
         <div>
@@ -18,8 +33,7 @@ export default function Login(){
                             <div class="titulo">
                                 <h1>Suas informações</h1>
                                 <div class="btn">
-                                    <div class="btnE"><button>Editar</button></div>
-                                    <div class="btninfo"><button>informações</button></div>
+                                    <div class="btnE"><button>Editar <br/>informações</button></div>
                                 </div>
                             </div>
                             <div class="labels">

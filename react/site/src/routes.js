@@ -19,11 +19,13 @@ import Pagamentos from './pages/Pagamento/pag.conteudo'
 import CompraRealizada from './pages/CompraRealizada/comp.conteudo'
 import Boleto from './pages/Pagamento/boleto/boleto.conteudo'
 import Pix from './pages/Pagamento/pix/pix.conteudo'
-import PerfilADM from './pages/perfil_adm'
 import SuaInfo from './pages/suaInfo'
 import SeusPedidos from './pages/SeusPedidos/pedi.conteudo'
 import Perfilusu from './pages/perfil/index'
-
+import Adm_c from './pages/Adm_c_p/Adm_c_p.js'
+import Adm_pedido from './pages/Adm_pedidos/Adm_pedidos.js'
+import PerfilADM from './pages/perfil_adm'
+import Adm_livro from './pages/Adm_Livro'
 export default function Routes() {
     return (
         <BrowserRouter>
@@ -48,6 +50,9 @@ export default function Routes() {
                 <Route path="/pagamento_pix" exact={true} component={Pix} />
                 <Route path="/compra_realizada" exact={true} component={CompraRealizada} /> 
                 <Route path="/perfil_adm" exact={true} component={PerfilADM} /> 
+                <Route path="/perfil_adm_c" exact={true} component={Adm_c} />
+                <Route path="/adm_pedido" exact={true} component={Adm_pedido} />
+                <Route path="/adm_livro" exact={true} component={Adm_livro} />
                 <Route path="/suas_infomacoes" exact={true} component={SuaInfo} /> 
                 <Route path="/seus_pedidos" exact={true} component={SeusPedidos} /> 
                 <Route path="/perfil" exact={true} component={Perfilusu} /> 
