@@ -28,7 +28,8 @@ export default function Conteudo() {
             Cookies.set('usuario-logado', JSON.stringify(resp));
             navig.push('/');
         }
-
+console.log(senha);
+console.log(email);
     }
 
     return (
@@ -43,22 +44,24 @@ export default function Conteudo() {
         <div class="titulo">Login:</div>
         <div class="login">
             <div class="email_login">E-mail</div>
-            <email_login
-              value={email}
-              onChange={e => setEmail(e.target.value)} />
+         
             <div class="login-em">
-            <input id="email_login" name="email_login" required="required" type="text"
+            <input
+                 value={email}
+                 onChange={e => setEmail(e.target.value)} 
+            id="email_login" name="email_login" required="required" type="text"
               />
                 </div>
 
         </div>
         <div class="login">
             <div class="senha_login">Senha</div>
-            <senha_login
-              value={senha}
-              onChange={e => setSenha(e.target.value)} />
+
         <div class="login-sn">
-            <input id="senha_login" name="senha_login" required="required" type="password" />
+            <input 
+             value={senha}
+             onChange={e => setSenha(e.target.value)}
+            id="senha_login" name="senha_login" required="required" type="password" />
         </div>
 
         </div>

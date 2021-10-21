@@ -134,104 +134,7 @@ export default function Homepage() {
                 </div>
 
                 <div class="livros-queridinhas">
-                <Link to="/descricao"> <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-queridinhas">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-queridinhas">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-queridinhas">
-                                R$ 49,90
-                            </div>
-
-                        </div>
-                    </div>
-                </Link>
-                <Link to="/descricao"> <div class="box-livro">
-                    <div class="img-livro-queridinha">
-                        <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                    </div>
-                    <div class="box-informacoes-livros">
-                        <div class="nome-livro-queridinhas">
-                            VERMELHO, BRANCO E SANGUE AZUL
-
-                        </div>
-                        <div class="autor-queridinhas">
-                            Casey Mcquiston
-                        </div>
-                        <div class="preco-queridinhas">
-                            R$ 49,90
-                        </div>
-
-                    </div>
-                </div>
-            </Link>
-            <Link to="/descricao"> <div class="box-livro">
-                <div class="img-livro-queridinha">
-                    <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                </div>
-                <div class="box-informacoes-livros">
-                    <div class="nome-livro-queridinhas">
-                        VERMELHO, BRANCO E SANGUE AZUL
-
-                    </div>
-                    <div class="autor-queridinhas">
-                        Casey Mcquiston
-                    </div>
-                    <div class="preco-queridinhas">
-                        R$ 49,90
-                    </div>
-
-                </div>
-            </div>
-        </Link>
-                </div>
-                </div>
-                <div class="livros-queridinhas2">
-                    <Link to="/descricao"> <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg"  alt=""/>
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-queridinhas">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-queridinhas">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-queridinhas">
-                                R$ 49,90
-                            </div>
-
-                        </div>
-                    </div>
-                </Link>
-                <Link to="/descricao"> <div class="box-livro">
-                    <div class="img-livro-queridinha">
-                        <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                    </div>
-                    <div class="box-informacoes-livros">
-                        <div class="nome-livro-queridinhas">
-                            VERMELHO, BRANCO E SANGUE AZUL
-
-                        </div>
-                        <div class="autor-queridinhas">
-                            Casey Mcquiston
-                        </div>
-                        <div class="preco-queridinhas">
-                            R$ 49,90
-                        </div>
-
-                    </div>
-                </div>
-            </Link>
+             
             <Link to="/descricao"> <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
@@ -253,7 +156,7 @@ export default function Homepage() {
         </Link>
                 </div>
             </div>
-         
+         </div>
       
 
 

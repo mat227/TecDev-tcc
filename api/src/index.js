@@ -71,19 +71,22 @@ app.get('/cadastro', async (req, resp) => {
 
 
 app.post('/login', async (req, resp) => {
-    const email = req.body.email;
+    let email = req.body;
     const senha = req.body.senha;
+    const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
 
     
 
     let u = await db.infoc_tdv_cliente.findOne({
         where: {
-            ds_email: email,
-            ds_senha: senha
+            ds_email: email.email,
+            ds_senha: cryptoSenha
         },
+        raw: true
+
     });
-    if (u == null)
-    return resp.send({ erro: 'Credenciais inválidas!' });
+    if (u === null)
+     return resp.send({ erro: 'Credenciais inválidas!' });
     
     resp.send(u);
 });
@@ -114,6 +117,7 @@ app.post('/addEndereco', async (req, resp) =>{
         resp.send(e.toString());
     }
 })
+<<<<<<< HEAD
 //Presente para nicoly
 app.post('/addlivro', async (req, resp) =>{
     let info = req.body;
@@ -130,4 +134,5 @@ app.post('/addlivro', async (req, resp) =>{
         resp.send(e.toString());
     }
 });
+''
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))

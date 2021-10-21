@@ -9,7 +9,8 @@ export default class Api {
     
 
     async login(email, senha) {
-        let r = await api.post(`/login/`, { email, senha });
+        let a = {email,senha}
+        let r = await api.post(`/login`, a);
         return r.data;
     }
     //Função de informaçoes do Cliente
