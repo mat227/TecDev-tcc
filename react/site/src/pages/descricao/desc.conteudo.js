@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 export default function DescConteudo() {
     return (
         <ContainerDesc>
-     <Partecima/>
+            <Partecima/>
         <div class="box-mae">
             <div class="box-filha">
                 <div class="livro"><img src="/assets/images/o que o sol faz com as flores (1).svg"alt=""/></div>

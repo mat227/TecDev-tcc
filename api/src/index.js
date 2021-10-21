@@ -70,9 +70,11 @@ app.get('/cadastro', async (req, resp) => {
 
 
 
-app.get('/login', async (req, resp) => {
+app.post('/login', async (req, resp) => {
     const email = req.body.email;
     const senha = req.body.senha;
+
+    
 
     let u = await db.infoc_tdv_cliente.findOne({
         where: {
@@ -80,10 +82,9 @@ app.get('/login', async (req, resp) => {
             ds_senha: senha
         },
     });
-
     if (u == null)
-        return resp.send({ erro: 'Credenciais inválidas!' });
-
+    return resp.send({ erro: 'Credenciais inválidas!' });
+    
     resp.send(u);
 });
 
