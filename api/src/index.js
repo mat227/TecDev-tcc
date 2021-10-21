@@ -87,11 +87,16 @@ app.post('/login', async (req, resp) => {
     
     resp.send(u);
 });
+// aqui voce vai fazer a referencia a outra tabela
+db.infoc_tdv_cliente.belongsTo(db.infoc_tdv_endereco, {
+    as: 'test',
+    foreignKey : 'id_cliente'
+});
 
 app.get('/suaInfo', async (req, resp)=>{
     try{
         
-        let cont = await db.infoc_tdv_cliente.findAll({where : {id_endereco : 1}},{include: db.infoc_tdv_endereco });
+        let cont = await db.infoc_tdv_cliente.findAll({include: {model: db.infoc_tdv_endereco, as :'test'}});
         resp.send(cont);
     }catch(e){
         resp.send({erro: e.toString()});
@@ -109,5 +114,20 @@ app.post('/addEndereco', async (req, resp) =>{
         resp.send(e.toString());
     }
 })
-
+//Presente para nicoly
+app.post('/addlivro', async (req, resp) =>{
+    let info = req.body;
+    try{
+        let r = await db.infoc_tdv_livro.create({
+            nm_livro : info.livro, ds_descricao : info.descricao, vl_para : info.vpara,
+            vl_de : info.vde, dt_lancamento : new Date() , ds_autora : info.autor , ds_editora : info.editora,
+            id_genero : info.genero,  bt_disponivel : info.disponivel, qtd_disponivel : info.qtd,
+            ds_imagem : info.imagem, ds_brochura : info.brochura, ds_promocao : info.promocao
+        })
+        resp.send(r);
+    }
+    catch(e){
+        resp.send(e.toString());
+    }
+});
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))

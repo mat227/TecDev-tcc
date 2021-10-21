@@ -24,6 +24,11 @@ const Container = styled.div`
             color: white;
             margin: 1.5em;
         }
+        .colunas a, a:visited{
+            color: white;
+            text-decoration:none;
+            
+        }
         .especial{
             background-color: #298EEB;
             padding: 0.5em;

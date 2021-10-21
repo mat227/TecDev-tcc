@@ -3,10 +3,33 @@ import { Container } from "./styled"
 import ParteCima from "../../components/Common/parteCima/componente";
 import Rodape from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi"; 
+import Api from "../../service/api";
+import { useState } from "react";
 
+const api = new Api();
 
 
 export default function Adm_livro() {
+    const [livro, setLivro] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [vpara, setVpara] = useState(0);
+    const [vde, setVde] = useState(0);
+    const [autor, setAutor] = useState('');
+    const [editora, setEditora] = useState('');
+    const [genero, setGenero] = useState();
+    const [disponivel, setDisponivel] = useState(0);
+    const [qtd, setQtd] = useState(0);
+    const [imagem, setImagem] = useState('');
+    const [brochura, setBrocura] = useState(0);
+    const [promocao, setPromocao] = useState(0);
+
+    const inserirLivro = async () =>{
+        let r = await api.addLivro( livro, descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,brochura,promocao);
+        console.log(r);
+        console.log("ta indo");
+        return;
+    }
+
     return (
         <Container>
             <ParteCima />
@@ -29,28 +52,28 @@ export default function Adm_livro() {
                                         <div class="obra">
                                             <div class="n_obra"> Digite o nome da obra </div>
                                             <div class="nome_obra">
-                                            <input id="n_obra" name="n_obra" required="required" type="text"/>
+                                            <input id="n_obra" name="n_obra" required="required" type="text" onChange={e => setLivro(e.target.value) }/>
                                             </div>
                                         </div>
 
                                         <div class="autor">
                                             <div class="n_autor"> Digite o Autor </div>
                                             <div class="nome_autor">
-                                            <input id="n_autor" name="n_autor" required="required" type="text"/>
+                                            <input id="n_autor" name="n_autor" required="required" type="text" onChange={e => setAutor(e.target.value) }/>
                                             </div>
                                         </div>
                                     
                                         <div class="dsc">
                                             <div class="n_dsc">  Digite a Descrição </div>
                                             <div class="nome_dsc">
-                                            <input id="n_dsc" name="n_dsc" required="required" type="text"/>
+                                            <input id="n_dsc" name="n_dsc" required="required" type="text" onChange={e => setDescricao(e.target.value) }/>
                                             </div>
                                         </div>
                                 
                                         <div class="genero">
                                             <div class="n_genero">  Digite o Gênero </div>
                                             <div class="nome_genero">
-                                            <input id="n_genero" name="n_genero" required="required" type="text"/>
+                                            <input id="n_genero" name="n_genero" required="required" type="number" max={5} onChange={e => setGenero(e.target.value) } />
                                             </div>
                                         </div>
                                     </div>
@@ -61,28 +84,29 @@ export default function Adm_livro() {
                                         <div class="acabamento">
                                             <div class="n_acabamento">  Tem Acabamento</div>
                                             <div class="nome_acabamento">
-                                            <input id="n_acabamento" name="n_acabamento" required="required" type="text"/>
+                                            <input id="n_acabamento" name="n_acabamento" required="required" type="number" max='1' min='0' onChange={e => setBrocura(e.target.value) }/>
                                             </div>
                                         </div>
                                        
                                         <div class="edicao">
                                             <div class="n_edicao">  Digite o Ano de Edição</div>
                                             <div class="nome_edicao">
-                                            <input id="n_edicao" name="n_edicao" required="required" type="text"/>
+                                            <input id="n_edicao" name="n_edicao" required="required" type="text" 
+                                            />
                                             </div>
                                         </div>
                                 
                                         <div class="editora">
                                             <div class="n_editora"> Digite a Editora </div>
                                             <div class="nome_editora">
-                                            <input id="n_editora" name="n_editora" required="required" type="text"/>
+                                            <input id="n_editora" name="n_editora" required="required" type="text" onChange={e => setEditora(e.target.value) }/>
                                             </div>
                                         </div>
                                     
                                         <div class="valor">
                                             <div class="n_valor"> Digite o Valor </div>
                                             <div class="nome_valor">
-                                            <input id="n_valor" name="n_valor" required="required" type="number"/>
+                                            <input id="n_valor" name="n_valor" required="required" type="number" onChange={e => setVpara(e.target.value) } />
                                             </div>
                                         </div> 
                                     </div>
@@ -92,28 +116,28 @@ export default function Adm_livro() {
                                         <div class="promocao2">
                                             <div class="n_promocao">  Está em promoção? </div>
                                             <div class="nome_promocao">
-                                            <input id="n_promocao" name="n_promocao" required="required" type="text"/>
+                                            <input id="n_promocao" name="n_promocao" required="required" type="number" max='1' min='0' onChange={e => setPromocao(e.target.value) } />
                                             </div>
                                         </div>
 
                                         <div class="de">
                                             <div class="n_de"> Valor de: </div>
                                             <div class="nome_de">
-                                            <input id="n_de" name="n_de" required="required" type="number"/>
+                                            <input id="n_de" name="n_de" required="required" type="number" onChange={e => setVde(e.target.value) }/>
                                             </div>
                                         </div>
                                 
                                         <div class="para">
                                             <div class="n_para"> Valor para: </div>
                                             <div class="nome_para">
-                                            <input id="n_para" name="n_para" required="required" type="number"/>
+                                            <input id="n_para" name="n_para" required="required" type="number" onChange={e => setVpara(e.target.value) }/>
                                             </div>
                                         </div>
                                         
                                         <div className="qtd_disp">
                                              <div class="disponivel">  Quantidade disponivel</div>
                                             <div class="nome_acabamento">
-                                            <input id="disponivel" name="qtd_disponivel" required="required" type="number"/>
+                                            <input id="disponivel" name="qtd_disponivel" required="required" type="number"  onChange={e => setDisponivel(e.target.value) }/>
                                             </div>
                                         </div>
 
@@ -121,7 +145,7 @@ export default function Adm_livro() {
                                     </div>
                                     <div class="sub_titulo2">
                                             <div class="img2"> <img src="./assets/images/adic_livro.svg" alt="" /></div>
-                                            <div class="botao2"> Adicinar livro </div>
+                                            <div class="botao2"><button onClick={inserirLivro}> Adicinar livro</button> </div>
                                         </div>
                                 </div>
                             </div>
@@ -150,8 +174,8 @@ export default function Adm_livro() {
                                         <td> </td>
                                         <td> </td>
                                         <td> </td>
-                                        <td> <button> <img src="../Perfil_adm/assets/images/editar.svg"  /> </button> </td>
-                                        <td class = "aa"> <button> <img src="../Perfil_adm/assets/images/lixo.svg" /> </button> </td>
+                                        <td> <button> <img src="./assets/images/editar.svg" alt='' /> </button> </td>
+                                        <td class = "aa"> <button> <img src="./assets/images/lixo.svg" alt=''/> </button> </td>
                                     </tr>
                                     
                                 </tbody> 
