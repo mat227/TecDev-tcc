@@ -21,6 +21,10 @@ export default function Cadastro() {
                     <div class="cadastrar-sn">
                         <input id="nome_cadastrar" name="nome_cadastrar" required="required" type="text" />
                     </div>
+                    <div class="Nome_cadastrar">Sobrenome</div>
+                    <div class="cadastrar-sn">
+                        <input id="nome_cadastrar" name="nome_cadastrar" required="required" type="text" />
+                    </div>
                     <div class="cpf_cadastrar">C.P.F</div>
                     <div class="cadastrar-sn">
                         <input id="cpf_cadastrar" name="cpf_cadastrar" required="required" type="text" placeholder="000.000.000-00"/>
@@ -42,6 +46,23 @@ export default function Cadastro() {
                     <div class="cadastrar-sn">
                         <input id="data_cadastrar" name="data_cadastrar" type="date" required="required"  />
                     </div>
+                    <div class="data_cadastrar">Telefone</div>
+                    <div class="cadastrar-sn">
+                        <input id="telefone" name="telefone"  required="required"  />
+                    </div>
+                    <div class="data_cadastrar">Endereço</div>
+                    <div class="cadastrar-sn">
+                        <input id="rua" name="rua" type="text" required="required"  />
+                    </div>
+                    <div class="data_cadastrar">Complemento</div>
+                    <div class="cadastrar-sn">
+                        <input id="cl_casa" name="cl_casa"  required="required"  />
+                    </div>
+                    <div class="data_cadastrar">Bairro</div>
+                    <div class="cadastrar-sn">
+                        <input id="br_casa" name="br_casa"  required="required"  />
+                    </div>
+                    
 
                     <div class="pt-baixo">
                         

@@ -17,9 +17,9 @@ const ContainerCadastro = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding-left: 8em;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-right: 6em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
    
 }
 .cadastrar{
@@ -72,9 +72,28 @@ font-size: 50px;
 .inputs-criar{
   display: flex;
   justify-content: flex-end;
- 
+  overflow-y: auto;
+
   height: 100%;
 }
+
+.inputs-criar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(16,61,85);
+    border-radius: 18px;
+    background-color: rgb(30,167,195);
+  }
+
+  .inputs-criar::-webkit-scrollbar {
+    width: 8px;
+    background-color: #3e006f;
+    border-radius: 10px;
+  }
+
+  .inputs-criar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(16,61,85);
+  }
 
 .pt-baixo{
   display: flex;

@@ -91,13 +91,8 @@ app.post('/login', async (req, resp) => {
     
     resp.send(u);
 });
-// aqui voce vai fazer a referencia a outra tabela
-/*
-db.infoc_tdv_cliente.belongsTo(db.infoc_tdv_endereco, {
-    as: 'test',
-    foreignKey : 'id_cliente'
-});
-*/
+
+
 app.get('/suaInfo/', async (req, resp)=>{
     try{
         let usu = await db.infoc_tdv_endereco.findOne({where:{id_cliente :req.body.id}});
@@ -124,7 +119,8 @@ app.post('/addEndereco', async (req, resp) =>{
     }
 })
 
-//Presente para nicoly
+
+
 app.post('/addlivro', async (req, resp) =>{
     let info = req.body;
     try{
@@ -139,6 +135,13 @@ app.post('/addlivro', async (req, resp) =>{
     catch(e){
         resp.send(e.toString());
     }
-});
-''
+})
+
+
+
+
+    
+
+
+
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))

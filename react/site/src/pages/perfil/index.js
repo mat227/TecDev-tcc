@@ -45,6 +45,9 @@ export default function Login(){
                                 <label class="test" for="">Endereço</label>
                                 <label class="test" for="">Complemento</label>
                                 <label class="test" for="">Bairro</label>
+                                <label class="test" for="">Data de nascimento</label>
+                                <label class="test" for="">CPF</label>
+
                             </div>
                             <div class="contato">
                                 <h2>Telefone</h2>
