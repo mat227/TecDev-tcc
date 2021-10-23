@@ -23,10 +23,12 @@ const Container = styled.div`
         .colunas{
             color: white;
             margin: 1.5em;
+            cursor : pointe;
         }
         .colunas a, a:visited{
             color: white;
             text-decoration:none;
+            cursor : pointer;
             
         }
         .especial{

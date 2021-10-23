@@ -3,6 +3,7 @@ import cors from 'cors';
 import crypto from 'crypto-js';
 import db from '../src/db.js';
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -91,16 +92,21 @@ app.post('/login', async (req, resp) => {
     resp.send(u);
 });
 // aqui voce vai fazer a referencia a outra tabela
+/*
 db.infoc_tdv_cliente.belongsTo(db.infoc_tdv_endereco, {
     as: 'test',
     foreignKey : 'id_cliente'
 });
-
-app.get('/suaInfo', async (req, resp)=>{
+*/
+app.get('/suaInfo/', async (req, resp)=>{
     try{
-        
-        let cont = await db.infoc_tdv_cliente.findAll({include: {model: db.infoc_tdv_endereco, as :'test'}});
-        resp.send(cont);
+        let usu = await db.infoc_tdv_endereco.findOne({where:{id_cliente :req.body.id}});
+        let test = await db.infoc_tdv_cliente.findAll({
+            where: {id_cliente: usu.id_cliente}, 
+            include:['infoc_tdv_endereco','infoc_tdv_cliente'],
+        });
+        //let cont = await db.infoc_tdv_cliente.findAll({include: {model: db.infoc_tdv_endereco, as :'test'}});
+        resp.send(test);
     }catch(e){
         resp.send({erro: e.toString()});
     }
@@ -117,7 +123,7 @@ app.post('/addEndereco', async (req, resp) =>{
         resp.send(e.toString());
     }
 })
-<<<<<<< HEAD
+
 //Presente para nicoly
 app.post('/addlivro', async (req, resp) =>{
     let info = req.body;

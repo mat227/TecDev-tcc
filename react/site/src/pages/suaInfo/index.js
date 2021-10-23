@@ -15,9 +15,10 @@ export default function SuaInfo(){
 
     //test zone up
     const [infoc,setInfoC] = useState([]);
-
+    console.log(infoc);
     const ListInfoC = async ()  => {
         let r = await api.infoC();
+        console.log(infoc);
         setInfoC(r);
     }
 

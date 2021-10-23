@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Nav}  from './navStyled.js';
 
 export default function Cabecalho(Props){
@@ -7,7 +8,7 @@ export default function Cabecalho(Props){
                 <h1>Olá, Fulano Siclano</h1>
                 <label>{Props.nome}</label>
             </div>
-            <div classNam="sair"><button>Sair</button></div>
+            <div classNam="sair"><button><Link to='/'>Sair</Link></button></div>
         </Nav>
     )
 }

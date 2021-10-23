@@ -26,5 +26,9 @@ const  Nav = styled.div`
         color : white;
 
     }
+    sair a, a:visited {
+        text-decoration: none;
+        color: white;
+    }
 `
 export {Nav}
