@@ -41,13 +41,14 @@ app.post('/cadastro', async (req, resp) => {
     try {
         let usuParam = req.body;
 
-        let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: usuParam.email, ds_senha: usuParam.senha, nm_cliente: usuParam.nome ,ds_cpf:usuParam.cpf , dt_nascimento:usuParam.datanas} });
+        let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: usuParam.email, ds_senha: usuParam.senha,nr_contato:usuParam.telefone ,nm_cliente: usuParam.nome ,ds_cpf:usuParam.cpf , dt_nascimento:usuParam.datanas} });
         if (u != null)
             return resp.send({ erro: 'Todos os campos são obrigatorios' });
 
         let r = await db.infoc_tdv_cliente.create({
             ds_email: usuParam.email,
             ds_senha: crypto.SHA256(usuParam.senha).toString(crypto.enc.Base64),
+            nr_contato: usuParam.telefone,
             nm_cliente: usuParam.nome,
             ds_cpf: usuParam.cpf,
             dt_nascimento:usuParam.datanas
@@ -69,6 +70,39 @@ app.get('/cadastro', async (req, resp) => {
     }
 })
 
+
+
+app.get('/pagamento', async (req, resp) => {
+    try {
+        let pagamento = await db.infoc_tdv_forma_pagamento.findAll();
+        resp.send(pagamento);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
+
+app.post('/pagamento', async (req, resp) => {
+    try {
+        let usuParam = req.body;
+
+        let u = await db.infoc_tdv_forma_pagamento.findOne({ where: {  nr_cartao: usuParam.nrcartao, nm_titular_cartao: usuParam.titular ,nm_sobrenome_cartao:usuParam.sobrenome , dt_vencimento:usuParam.vencimento, nr_parcelas: usuParam.parcelas, ds_cvv: usuParam.cvv} });
+        if (u != null)
+            return resp.send({ erro: 'Todos os campos são obrigatorios' });
+
+        let r = await db.infoc_tdv_forma_pagamento.create({
+            nr_cartao: crypto.SHA256(usuParam.nrcartao).toString(crypto.enc.Base64),
+            nm_titular_cartao: usuParam.titular,
+            nm_sobrenome_cartao: usuParam.sobrenome,
+            dt_vencimento:usuParam.vencimento,
+            nr_parcelas:usuParam.parcelas,
+            ds_cvv:usuParam.cvv
+          
+        })
+        resp.send(r);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
 
 
 app.post('/login', async (req, resp) => {

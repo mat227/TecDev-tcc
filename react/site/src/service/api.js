@@ -18,10 +18,10 @@ export default class Api {
         let r = await api.get(`/suaInfo`);
         return r.data;
     }
-    async addLivro(livro,descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,brochura,promocao){
+    async addLivro(livro,cvv,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,brochura,promocao){
         let info = {
             livro : livro,
-            descricao : descricao,
+            cvv : cvv,
             vpara : vpara,
             vde : vde,
             autor : autor,
@@ -35,5 +35,36 @@ export default class Api {
         }
         let r = await api.post(`/addlivro`,info)
         return r.data;
+    }
+
+
+    async cadastrarCartao(nrcartao, titular, sobrenome, vencimento, parcelas, cvv) {
+        let cadastroJson = {
+            nrcartao: nrcartao,
+            titular: titular,
+            sobrenome: sobrenome,
+            vencimento: vencimento,
+            parcelas: parcelas,
+            cvv: cvv
+            
+        }
+
+        let r = await api.post(`/pagamento`, cadastroJson );
+        return r.data
+    }
+
+    async cadastro(email, senha,telefone, nome, cpf, datanas) {
+        let cadastroJson = {
+            email: email,
+            senha: senha,
+            telefone:telefone,
+            nome: nome,
+            cpf: cpf,
+            datanas: datanas
+            
+        }
+
+        let r = await api.post(`/cadastro`, cadastroJson );
+        return r.data
     }
 }
