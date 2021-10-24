@@ -172,6 +172,17 @@ app.post('/addlivro', async (req, resp) =>{
 })
 
 
+app.get('/cupom', async (req,resp ) =>{
+    
+    try{
+      let a  =  await db.infoc_tdv_cupom.findAll( );
+      resp.send(a);
+   }
+
+   catch(e){
+      resp.send ( { erro : e.toString( ) } );
+   }
+})
 
 
     
