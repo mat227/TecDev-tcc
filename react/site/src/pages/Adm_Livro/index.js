@@ -20,11 +20,10 @@ export default function Adm_livro() {
     const [disponivel, setDisponivel] = useState(0);
     const [qtd, setQtd] = useState(0);
     const [imagem, setImagem] = useState('');
-    const [brochura, setBrocura] = useState(0);
     const [promocao, setPromocao] = useState(0);
 
     const inserirLivro = async () =>{
-        let r = await api.addLivro( livro, descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,brochura,promocao);
+        let r = await api.addLivro( livro, descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,promocao);
         console.log(r);
         console.log("ta indo");
         return;
@@ -44,7 +43,10 @@ export default function Adm_livro() {
                             </div>
                             <div class="sub_titulo">
                                 <div class="img"> <img src="./assets/images/image(2).svg" alt='' /></div>
-                                <div class="botao"> Adicinar capa </div>
+                                <div class="n_obra"> Adicionar uma capa </div>
+                                            <div class="nome_obra">
+                                            <input id="n_obra" name="n_obra" required="required" type="text" onChange={e => setImagem(e.target.value) }/>
+                                            </div>
                             </div>
                             <div class="input_g">
                                 <div class="agp_input">
@@ -81,12 +83,7 @@ export default function Adm_livro() {
 
                                     <div class="agrp_input2">
 
-                                        <div class="acabamento">
-                                            <div class="n_acabamento">  Tem Acabamento</div>
-                                            <div class="nome_acabamento">
-                                            <input id="n_acabamento" name="n_acabamento" required="required" type="number" max='1' min='0' onChange={e => setBrocura(e.target.value) }/>
-                                            </div>
-                                        </div>
+                                        
                                        
                                         <div class="edicao">
                                             <div class="n_edicao">  Digite o Ano de Edição</div>

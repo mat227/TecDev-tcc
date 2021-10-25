@@ -22,7 +22,7 @@ export default function Homepage() {
 
       useEffect(() => {
         listar();
-      }, []);
+      }, [[]]);
     return (
     <ContainerHome>
           <Partecima/>
