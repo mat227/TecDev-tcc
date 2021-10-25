@@ -1,10 +1,8 @@
+
 import express from 'express';
 import cors from 'cors';
 import crypto from 'crypto-js';
 import db from '../src/db.js';
-
-import Sequelize from 'sequelize';
-const { Op, col, fn } = Sequelize;
 
 
 const app = express();
@@ -47,7 +45,6 @@ app.post('/cadastro', async (req, resp) => {
         let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: usuParam.email, ds_senha: usuParam.senha,nr_contato:usuParam.telefone ,nm_cliente: usuParam.nome ,ds_cpf:usuParam.cpf , dt_nascimento:usuParam.datanas} });
         if (u != null)
             return resp.send({ erro: 'Todos os campos são obrigatorios' });
-            
 
         let r = await db.infoc_tdv_cliente.create({
             ds_email: usuParam.email,
@@ -55,7 +52,7 @@ app.post('/cadastro', async (req, resp) => {
             nr_contato: usuParam.telefone,
             nm_cliente: usuParam.nome,
             ds_cpf: usuParam.cpf,
-            dt_nascimento:new Date()
+            dt_nascimento:usuParam.datanas
           
         })
         resp.send(r);
@@ -97,7 +94,7 @@ app.post('/pagamento', async (req, resp) => {
             nr_cartao: crypto.SHA256(usuParam.nrcartao).toString(crypto.enc.Base64),
             nm_titular_cartao: usuParam.titular,
             nm_sobrenome_cartao: usuParam.sobrenome,
-            dt_vencimento:new Date(),
+            dt_vencimento:usuParam.vencimento,
             nr_parcelas:usuParam.parcelas,
             ds_cvv:usuParam.cvv
           
@@ -131,15 +128,11 @@ app.post('/login', async (req, resp) => {
 });
 
 
-app.get('/suaInfo/', async (req, resp)=>{
+app.get('/suaInfo', async (req, resp)=>{
     try{
-        let usu = await db.infoc_tdv_endereco.findOne({where:{id_cliente :req.body.id}});
-        let test = await db.infoc_tdv_cliente.findAll({
-            where: {id_cliente: usu.id_cliente}, 
-            include:['infoc_tdv_endereco','infoc_tdv_cliente'],
-        });
-        //let cont = await db.infoc_tdv_cliente.findAll({include: {model: db.infoc_tdv_endereco, as :'test'}});
-        resp.send(test);
+        
+        let cont = await db.infoc_tdv_cliente.findAll({where : {id_cliente : 1}, include: {model: db.infoc_tdv_endereco, as :'infoc_tdv_enderecos'}});
+        resp.send(cont);
     }catch(e){
         resp.send({erro: e.toString()});
     }
@@ -189,30 +182,4 @@ app.get('/cupom', async (req,resp ) =>{
 })
 
 
-app.get('/addlivro', async (req,resp ) =>{
-    
-    try{
-      let a  =  await db.infoc_tdv_livro.findAll({include:[{
-
-        model: db.infoc_tdv_genero,
-        as: "id_genero_infoc_tdv_genero",   
-        required: true
-      }
-
-      ]} );
-
-      resp.send(a);
-   }
-
-   catch(e){
-      resp.send ( { erro : e.toString( ) } );
-   }
-})
-
-
-    
-    
-
-
-
-app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`))
+app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`));

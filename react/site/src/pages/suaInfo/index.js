@@ -36,19 +36,21 @@ export default function SuaInfo(){
                                         {infoc.map(x =>
                                                  <div class="labels">
                                                     <label class="test">Nome: {x.nm_cliente.substring(0,10)}</label>
-                                                    <label class="test">Sobrenome:{x.nm_cliente.substring(10, 50)}</label>
+                                                    <label class="test">Sobrenome:{x.nm_cliente}</label>
                                                     <label class="test" >Email: {x.ds_email}</label>                                        
-                                                    <label class="test" for="">Endereço:</label>
-                                                    <label class="test" for="">Complemento:</label>
+                                                    <label class="test" for="">Endereço: {x.infoc_tdv_enderecos[0].nm_rua}</label>
+                                                    <label class="test" for="">Complemento: }</label>
                                                     <label class="test" for="">Bairro:</label>
                                                 </div>
                                             )}
-                                    <div style={{"color":"white" ,"text-decoretion":"none" , 'margin-left':'1em' }}><a href='google.com'> Alterar endereço</a></div>
-                                    <div class="contato">
-                                        <h2>Telefone</h2>
-                                        <label for="" class="tell">__</label>
-                                        <label for="" class="tell">___ - ____</label>
-                                    </div>
+                                            <div style={{"color":"white" ,"text-decoretion":"none" , 'margin-left':'1em' }}><a href='google.com'> Alterar endereço</a></div>
+                                        {infoc.map(x =>
+                                                <div class="contato">
+                                                    <h2>Telefone</h2>
+                                                    <label for="" class="tell">{x.nr_contato/*.substring(0,2)*/}</label>
+                                                    <label for="" class="tell">{x.nr_contato/*.substring(2,4)*/} - {x.nr_contato/*.substring(4,)*/}</label>
+                                                </div>
+                                            )}
                                 </div>
                                 
                             </div> 
