@@ -3,7 +3,6 @@ import { ContainerCadastro } from "./cadas.styled"
 import { useState, useRef } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import LoadingBar from 'react-top-loading-bar'
 
 import Api from '../../service/api'
 import { useHistory } from 'react-router-dom';

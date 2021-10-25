@@ -1,12 +1,28 @@
 import { ContainerHome } from "./styled"
-
+import { useState ,useEffect} from 'react'
 import Partecima  from "../../components/Common/parteCima/componente"
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
 import Trio from "../../components/Common/trio/trio"
+import Api from '../../service/api'
+const api = new Api();
 
 
 export default function Homepage() {
+    const [livro, setLivro] = useState([]);
+
+
+    async function listar() {
+        let a = await api.listarLivro();
+        setLivro(a);
+        console.log(livro)
+
+      }
+
+
+      useEffect(() => {
+        listar();
+      }, []);
     return (
     <ContainerHome>
           <Partecima/>
@@ -134,26 +150,32 @@ export default function Homepage() {
                 </div>
 
                 <div class="livros-queridinhas">
-             
-            <Link to="/descricao"> <div class="box-livro">
+
+                    
+             {livro.map ((item)=>(
+<Link to={{pathname:"/descricao",state:item}}>
+      <div class="box-livro">
                 <div class="img-livro-queridinha">
-                    <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
+                    <img        
+                      src={item.ds_imagen}
+                       alt=""/>
                 </div>
                 <div class="box-informacoes-livros">
                     <div class="nome-livro-queridinhas">
-                        VERMELHO, BRANCO E SANGUE AZUL
-
+                      {item.nm_livro}
                     </div>
                     <div class="autor-queridinhas">
-                        Casey Mcquiston
-                    </div>
+{ item.ds_autora}   
+                 </div>
                     <div class="preco-queridinhas">
-                        R$ 49,90
+                        {item.vl_para}
                     </div>
 
                 </div>
+
             </div>
-        </Link>
+            </Link>
+              ))}
                 </div>
             </div>
          </div>

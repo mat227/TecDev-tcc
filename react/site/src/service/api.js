@@ -53,7 +53,7 @@ export default class Api {
         return r.data
     }
 
-    async cadastro(email, senha,telefone, nome, cpf, datanas) {
+    async cadastro(nmrua,numerorua,email, senha,telefone, nome, cpf, datanas) {
         let cadastroJson = {
             email: email,
             senha: senha,
@@ -66,5 +66,30 @@ export default class Api {
 
         let r = await api.post(`/cadastro`, cadastroJson );
         return r.data
+    }
+
+    async cadastrarLivro(livro, descricao, vpara, vde, autor, editora, genero, disponivel,qtd,imagem,brochura,promocao) {
+        let cadastroJson = {
+            livro: livro,
+            descricao: descricao,
+            vpara: vpara,
+            vde: vde,
+            autor: autor,
+            editora: editora,
+            genero: genero,
+            disponivel:disponivel,
+            qtd:qtd,
+            imagem: imagem,
+            brochura:brochura,
+            promocao:promocao
+        }
+
+        let r = await api.post(`/addlivro`, cadastroJson );
+        return r.data
+    }
+
+    async listarLivro() {
+        let r = await api.get(`/addlivro/`);
+        return r.data;
     }
 }
