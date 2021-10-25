@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 const ContainerPartecima= styled.div`
 
-
-
     .hp1-logo{
         display: flex;
         padding-left:3em ;
@@ -18,8 +16,6 @@ const ContainerPartecima= styled.div`
         flex-direction: row;
         background-color: #12172B;
         align-items: center;
-        height:15vh;
-
         justify-content: space-between;
     }
     .hp1-seus{

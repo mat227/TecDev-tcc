@@ -26,11 +26,13 @@ import Adm_c from './pages/Adm_c_p/Adm_c_p.js'
 import Adm_pedido from './pages/Adm_pedidos/Adm_pedidos.js'
 import PerfilADM from './pages/perfil_adm'
 import Adm_livro from './pages/Adm_Livro'
+import Homepageslogin from  './pages/homepageslogin/homepages'
 export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact={true} component={Homepage} />
+                <Route path="/" exact={true} component={Homepageslogin} />
+                <Route path="/homepage" exact={true} component={Homepage} />
                 <Route path="/redefinir" exact={true} component={Redefinir} />
                 <Route path="/desconto" exact={true} component={Descontos} />
                 <Route path="/descricao" exact={true} component={Descricoes} />
