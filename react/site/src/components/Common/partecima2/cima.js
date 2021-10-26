@@ -20,7 +20,7 @@ export default function ParteCima2() {
             </div>
 
             <div class="hp1-seus"> 
-            <Link to="/suasacola">
+            <Link to="/login">
               <div class="menu-item">
                     <div class="imagem">
                     <img src="/assets/images/bag.svg" alt="" />
@@ -30,7 +30,7 @@ export default function ParteCima2() {
                     </div>
                 </div>
                 </Link>
-                <Link to="/favoritos">
+                <Link to="/login">
                 <div class="menu-item">
                     <div class="imagem">
                     <img src="/assets/images/coracaoo.svg" alt="" />
@@ -50,7 +50,7 @@ export default function ParteCima2() {
                     />
                     </div>
                     <div class="descricao">
-                    <p>Minha Conta</p>
+                    <p>Login</p>
                     </div>
                 </div>
                 </Link>

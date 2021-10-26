@@ -28,7 +28,10 @@ export default function Login(){
                     <div class="colunas especial"><Link to='/suas_infomacoes' ><label>Suas informaçoes</label></Link></div>
                     <div class="colunas"><Link to='/favoritos' ><label>Seus favoritos</label></Link></div>
                     <div class="colunas"><Link to='/suasacola' ><label>Sua sacola</label></Link></div>
+                    <div class="colunas"><Link to='/seus_pedidos' ><label>Seus pedidos</label></Link></div>
+
                 </div>
+
                 <div class="faixaDois">
                     <div class="aux2">                      
                             <div class="titulo">

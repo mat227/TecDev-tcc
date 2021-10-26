@@ -26,7 +26,7 @@ export default function Conteudo() {
             toast.error(`${resp.erro}`);
         } else {
             Cookies.set('usuario-logado', JSON.stringify(resp));
-            navig.push('/');
+            navig.push('/homepage');
         }
 
     }

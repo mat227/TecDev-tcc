@@ -6,7 +6,7 @@ export default function ParteCima() {
     return (
             <ContainerPartecima>
             <div class="hp1-buscap">
-           <Link to="/"> <div class="hp1-logo">
+           <Link to="/homepage"> <div class="hp1-logo">
                 <img src="/assets/images/nice library png 1.svg" alt=""/>
                 <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
 
