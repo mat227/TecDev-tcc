@@ -385,15 +385,14 @@ margin-top: 5em;
 .CSSgal .prevNext a {
 	background: #fff;
 	position: absolute;
-	width:       60px;
-	height:      60px;
-	line-height: 60px; 
+	width:       10vh;
+	height:      10vh;
 	text-align: center;
 	opacity: 0.7;
 	-webkit-transition: 0.3s;
 					transition: 0.3s;
-	-webkit-transform: translateY(-50%);
-					transform: translateY(-50%);
+	-webkit-transform: translateY(-1vh);
+					transform: translateY(-1vh);
 	left: 0;
 }
 .CSSgal .prevNext a:hover {
@@ -441,8 +440,8 @@ margin-top: 5em;
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 
-#s1:target ~ .slider {transform: translateX(   -0%); -webkit-transform: translateX(   -4%);}
-#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-105%);}
+#s1:target ~ .slider {transform: translateX(   -0vh); -webkit-transform: translateX(   -4vh);}
+#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-215vh);}
 
 
 

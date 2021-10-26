@@ -22,7 +22,7 @@ export default function Homepageslogin() {
 
       useEffect(() => {
         listar();
-      }, [[]]);
+      }, []);
     return (
     <ContainerHome>
           <ParteCima2/>

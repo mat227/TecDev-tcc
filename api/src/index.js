@@ -169,6 +169,28 @@ app.post('/addlivro', async (req, resp) =>{
 })
 
 
+app.get('/addlivro', async (req,resp ) =>{
+    
+    try{
+      let a  =  await db.infoc_tdv_livro.findAll( );
+      resp.send(a);
+   }
+
+   catch(e){
+      resp.send ( { erro : e.toString( ) } );
+   }
+})
+
+
+app.delete('/addlivro/:id', async (req, resp) => {
+    try {
+        let r = await db.infoc_tdv_livro.destroy({ where: { id_livro: req.params.id} });
+        resp.sendStatus(200);
+    } catch (e) {
+        resp.send({ erro: e.toString() });
+    }
+})
+
 app.get('/cupom', async (req,resp ) =>{
     
     try{

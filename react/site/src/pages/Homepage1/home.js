@@ -1,6 +1,10 @@
 import { ContainerHome } from "./styled"
 import { useState ,useEffect} from 'react'
 import Partecima  from "../../components/Common/parteCima/componente"
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
 import Trio from "../../components/Common/trio/trio"
@@ -22,7 +26,7 @@ export default function Homepage() {
 
       useEffect(() => {
         listar();
-      }, [[]]);
+      }, []);
     return (
     <ContainerHome>
           <Partecima/>
@@ -132,8 +136,8 @@ export default function Homepage() {
                 </div>
               
                 <div class="bullets">
-                  <a href="#s1">1</a>
-                  <a href="#s2">2</a>
+                  <a href="#s1">1 </a>
+                  <a href="#s2">2 </a>
                   
                 </div>
             
