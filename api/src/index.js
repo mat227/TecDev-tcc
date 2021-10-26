@@ -155,11 +155,13 @@ app.post('/addEndereco', async (req, resp) =>{
 app.post('/addlivro', async (req, resp) =>{
     let info = req.body;
     try{
+        if(info.livro == null || info.livro == undefined || info.livro == '' )
+            resp.send("AH um campo vazio");
         let r = await db.infoc_tdv_livro.create({
             nm_livro : info.livro, ds_descricao : info.descricao, vl_para : info.vpara,
-            vl_de : info.vde, dt_lancamento : new Date() , ds_autora : info.autor , ds_editora : info.editora,
+            vl_de : info.vde, dt_lancamento : info.data , ds_autora : info.autor , ds_editora : info.editora,
             id_genero : info.genero,  bt_disponivel : info.disponivel, qtd_disponivel : info.qtd,
-            ds_imagem : info.imagem, ds_brochura : info.brochura, ds_promocao : info.promocao
+            ds_imagem : info.imagem, ds_brochura : info.brochura, ds_promocao : info.promocao, 
         })
         resp.send(r);
     }

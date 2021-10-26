@@ -14,9 +14,10 @@ export default function Adm_livro() {
     const [descricao, setDescricao] = useState('');
     const [vpara, setVpara] = useState(0);
     const [vde, setVde] = useState(0);
+    const [data, setDate] =  useState(0);
     const [autor, setAutor] = useState('');
     const [editora, setEditora] = useState('');
-    const [genero, setGenero] = useState();
+    const [genero, setGenero] = useState('');
     const [disponivel, setDisponivel] = useState(0);
     const [qtd, setQtd] = useState(0);
     const [imagem, setImagem] = useState('');
@@ -26,6 +27,7 @@ export default function Adm_livro() {
         let r = await api.addLivro( livro, descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,promocao);
         console.log(r);
         console.log("ta indo");
+        alert('Livro inserido');
         return;
     }
 
@@ -75,7 +77,7 @@ export default function Adm_livro() {
                                         <div class="genero">
                                             <div class="n_genero">  Digite o Gênero </div>
                                             <div class="nome_genero">
-                                            <input id="n_genero" name="n_genero" required="required" type="number" max={5} onChange={e => setGenero(e.target.value) } />
+                                            <input id="n_genero" name="n_genero" required="required" type="text" onChange={e => setGenero(e.target.value) } />
                                             </div>
                                         </div>
                                     </div>
@@ -88,7 +90,7 @@ export default function Adm_livro() {
                                         <div class="edicao">
                                             <div class="n_edicao">  Digite o Ano de Edição</div>
                                             <div class="nome_edicao">
-                                            <input id="n_edicao" name="n_edicao" required="required" type="text" 
+                                            <input id="n_edicao" name="n_edicao" required="required" type="Date"  onChange={e => setDate(e)}
                                             />
                                             </div>
                                         </div>
