@@ -278,18 +278,12 @@ padding-top: 1em;
 
 .livros-queridinhas{
   display: flex;
-  justify-content: space-evenly;
+flex-wrap: wrap;
   color: white;
-
+  height: 20vh;
+  max-width:10em ;
 }
 
-.livros-queridinhas2{
-  display: flex;
-  justify-content: space-evenly;
-  color: white;
-  padding-top:4em ;
-
-}
 
 
 .box-livro{
