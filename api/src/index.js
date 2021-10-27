@@ -156,7 +156,31 @@ app.post('/addlivro', async (req, resp) =>{
     let info = req.body;
     try{
         if(info.livro == null || info.livro == undefined || info.livro == '' )
-            resp.send("AH um campo vazio");
+            resp.send("o campo livro esta vazio");
+        if(info.descricao== null || info.descricao == undefined || info.descricao == '' )
+            resp.send("o campo descrição esta vazio");
+        if(info.vpara == null || info.vpara == undefined || info.vpara <=  0 )
+            resp.send("o campo valor para esta com uma valor igual a zero ou menor que zero, coloque o valor");
+        if( info.vde == null ||  info.vde == undefined ||  info.vde <= 0 )
+            resp.send("o campo valor de esta com uma valor igual a zero ou menor que zero, coloque o valor");
+        if( info.data == null ||  info.data == undefined ||  info.data == '' )
+            resp.send("o campo da data esta vazio");
+        if( info.autor == null ||  info.autor == undefined ||  info.autor == '' )
+            resp.send("o campo autor esta vazio");
+        if(  info.editora == null ||  info.editora == undefined ||   info.editora == '' )
+            resp.send("o campo  editora esta vazio");
+        if( info.genero == null ||  info.genero == undefined ||  info.genero == '' )
+            resp.send("o campo genero esta vazio");
+        if( info.disponivel == null ||  info.disponivel == undefined ||  info.disponivel < 0)
+            resp.send("o campo disponivel esta errado só é permitido sim(1) ou nao(0)");
+        if( info.qtd == null ||  info.qtd == undefined ||  info.qtd <=  0)
+            resp.send("o campo quantidade colocou um numero abaixo de zero ");
+        if(info.imagem == null ||  info.imagem== undefined || info.imagem == '' )
+            resp.send("o campo da imagem está vazio, por favor insira uma imagem");
+        if( info.brochura == null ||  info.brochura == undefined ||  info.brochura < 0 )
+            resp.send("o campo sobre acabamento esta errado, só é permitido sim(1) ou nao(0)");
+        if( info.promocao == null ||  info.promocao == undefined ||  info.promocao <  0)
+            resp.send("o campo promoção esta errado, só é permitido sim(1) ou nao(0)");
         let r = await db.infoc_tdv_livro.create({
             nm_livro : info.livro, ds_descricao : info.descricao, vl_para : info.vpara,
             vl_de : info.vde, dt_lancamento : info.data , ds_autora : info.autor , ds_editora : info.editora,

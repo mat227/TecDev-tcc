@@ -24,7 +24,7 @@ export default function Adm_livro() {
     const [promocao, setPromocao] = useState(0);
 
     const inserirLivro = async () =>{
-        let r = await api.addLivro( livro, descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,promocao);
+        let r = await api.cadastrarLivro( livro, descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,promocao);
         console.log(r);
         console.log("ta indo");
         alert('Livro inserido');
