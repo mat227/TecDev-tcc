@@ -11,7 +11,8 @@ export default function GenerosTerror() {
                 <ParteCima />
                 <div className="titulo">
                     <div className="quadrado" style={{marginRight: 0.5 + "em"}}></div>
-                        <p>TERROR</p>
+                        <p>TERROR <br /><Link to="/genero"><div className="back"><img src="/assets/images/nicoseta.svg" alt=""/>voltar</div></Link></p>
+                        
                     <div className="quadrado" style={{marginLeft: 0.5 + "em"}}></div>
                 </div>
 

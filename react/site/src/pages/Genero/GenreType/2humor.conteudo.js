@@ -11,7 +11,7 @@ export default function GenerosHumor() {
                 
                 <div className="titulo">
                     <div className="quadrado" style={{marginRight: 0.5 + "em"}}></div>
-                        <p>HUMOR</p>
+                        <p>HUMOR <br /><Link to="/genero"><div className="back"><img src="/assets/images/nicoseta.svg" alt=""/>voltar</div></Link></p>
                     <div className="quadrado" style={{marginLeft: 0.5 + "em"}}></div>
                 </div>
 

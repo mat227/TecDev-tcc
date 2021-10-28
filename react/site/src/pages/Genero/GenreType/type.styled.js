@@ -10,13 +10,15 @@ const ContainerGeneros = styled.div`
  
 
 
-.titulo {
+ .titulo {
     display: flex;
     flex-direction: row !important;
   
     justify-content: center;
   
     margin-bottom: -2em;
+
+    text-align: center;
   }
   
   .titulo p {
@@ -26,10 +28,31 @@ const ContainerGeneros = styled.div`
     font-weight: 300;
     text-shadow: 2px 3px black;
   
-      -webkit-text-stroke-width: 0.5px; /* largura da borda */
-      -webkit-text-stroke-color: #00B6FF; 
-  }
+      -webkit-text-stroke-width: 0.5px; 
+      -webkit-text-stroke-color: #00B6FF;
+    } 
   
+.back {
+  color: white;
+  font-family: "Quicksand";
+  font-size: 20px !important;
+
+  -webkit-text-stroke: none;
+}
+
+.back:hover {
+  text-decoration: underline aquamarine;
+}
+
+.back img {
+  height: 0.6em;
+  margin-right: 0.2em;
+
+      -webkit-text-stroke-width: 0.5px; 
+      -webkit-text-stroke-color: #00B6FF;
+}
+
+
   .quadrado {
     width: 80px;
     height: 2px;
@@ -92,6 +115,10 @@ const ContainerGeneros = styled.div`
 
 a:hover {
     cursor:pointer;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 `
