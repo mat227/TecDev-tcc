@@ -159,29 +159,9 @@ const Container = styled.div`
         border-radius: 10px;
     }
 
-    .informacao {
-        font-family: 'Baloo Thambi 2';
+   
 
-        display: flex;
-        flex-direction: column;
-    }
-
-    .botao_e button {
-        color: #fff;
-        background: #226dae;
-        font-family: 'Baloo Thambi 2';
-        font-size: 16px;
-        
-        border: none;
-        align-items: center;
-        cursor: pointer;
-    
-        padding: .5em;
-        margin-top: 5em;
-        margin-left: 0em;
-        width: 10em;
-    }
-
+   
 
     .botao1 button {
         background-color: #183c53;
@@ -286,20 +266,23 @@ const Container = styled.div`
     width: .1em;
     }
 
-    button {
+    .botao2  button{
         cursor: pointer;
         border: none;
         background-color: #21659f;
     }
-    button button {
+    .aa button {
         cursor: pointer;
         border: none;
         background-color: #21659f;
     }
+  
     button img {
         height: 1.5em;
     }
-
+    .table-corpo{
+        overflow: hidden;
+    }
 
 
 

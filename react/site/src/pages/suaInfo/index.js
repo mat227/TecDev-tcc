@@ -39,8 +39,8 @@ export default function SuaInfo(){
                                                     <label class="test">Sobrenome:{x.nm_cliente}</label>
                                                     <label class="test" >Email: {x.ds_email}</label>                                        
                                                     <label class="test" for="">Endereço: {x.infoc_tdv_enderecos[0].nm_rua}</label>
-                                                    <label class="test" for="">Complemento: </label>
-                                                    <label class="test" for="">Bairro:</label>
+                                                    <label class="test" for="">Complemento:{x.infoc_tdv_enderecos[0].ds_complemento}</label>
+                                                    <label class="test" for="">Bairro:{x.infoc_tdv_enderecos[0].ds_bairro}</label>
                                                 </div>
                                             )}
                                             <div style={{"color":"white" ,"text-decoretion":"none" , 'margin-left':'1em' }}><a href='google.com'> Alterar endereço</a></div>

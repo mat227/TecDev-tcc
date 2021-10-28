@@ -52,7 +52,7 @@ export default function Routes() {
                 <Route path="/pagamento_pix" exact={true} component={Pix} />
                 <Route path="/compra_realizada" exact={true} component={CompraRealizada} /> 
                 <Route path="/perfil_adm" exact={true} component={PerfilADM} /> 
-                <Route path="/c" exact={true} component={Adm_c} />
+                <Route path="/perfil_adm_c" exact={true} component={Adm_c} />
                 <Route path="/adm_pedido" exact={true} component={Adm_pedido} />
                 <Route path="/adm_livro" exact={true} component={Adm_livro} />
                 <Route path="/suas_infomacoes" exact={true} component={SuaInfo} /> 

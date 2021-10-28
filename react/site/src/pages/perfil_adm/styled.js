@@ -60,23 +60,6 @@ const Container = styled.div`
                 
             }
 
-
-            .botao_e button {
-                color: #fff;
-                background: #226dae;
-                font-family: 'Baloo Thambi 2';
-                font-size: 16px;
-                
-                border: none;
-                align-items: center;
-                cursor: pointer;
-            
-                padding: .5em;
-                margin-top: 1em;
-                margin-left: 0em;
-                width: 10em;
-            }
-
             .botao1 button {
                 background-color: #183c53;
                 font-family: 'Baloo Thambi 2';

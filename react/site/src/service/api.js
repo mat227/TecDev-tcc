@@ -18,25 +18,11 @@ export default class Api {
         let r = await api.get(`/suaInfo`);
         return r.data;
     }
-    async addLivro(livro,cvv,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,brochura,promocao){
-        let info = {
-            livro : livro,
-            cvv : cvv,
-            vpara : vpara,
-            vde : vde,
-            autor : autor,
-            editora : editora,
-            genero : genero,
-            disponivel : disponivel,
-            qtd : qtd,
-            imagem : imagem,
-            brochura : brochura,
-            promocao : promocao
-        }
-        let r = await api.post(`/addlivro`,info)
+    // lista livros pagina do adm
+    async listaLivroAdm(){
+        let r = await api.get(`/listaLivro`);
         return r.data;
     }
-
 
     async cadastrarCartao(nrcartao, titular, sobrenome, vencimento, parcelas, cvv) {
         let cadastroJson = {
