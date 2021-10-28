@@ -10,7 +10,7 @@ export default class infod_leo_cliente extends Model {
       allowNull: false,
       primaryKey: true
     },
-    nm_nome: {
+    nm_cliente: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
@@ -28,6 +28,10 @@ export default class infod_leo_cliente extends Model {
     },
     img_cliente: {
       type: DataTypes.STRING(1000),
+      allowNull: true
+    },
+    ds_codigo_rec: {
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {

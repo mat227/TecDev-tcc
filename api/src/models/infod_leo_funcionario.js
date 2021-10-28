@@ -10,7 +10,7 @@ export default class infod_leo_funcionario extends Model {
       allowNull: false,
       primaryKey: true
     },
-    nm_nome: {
+    nm_funcionario: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
@@ -28,6 +28,14 @@ export default class infod_leo_funcionario extends Model {
     },
     ds_telefone: {
       type: DataTypes.STRING(11),
+      allowNull: true
+    },
+    img_funcionario: {
+      type: DataTypes.STRING(1000),
+      allowNull: true
+    },
+    ds_codigo_rec: {
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {

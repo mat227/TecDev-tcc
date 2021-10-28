@@ -13,10 +13,6 @@ export default class infoa_enl_categoria extends Model {
     nm_categoria: {
       type: DataTypes.STRING(100),
       allowNull: false
-    },
-    foto: {
-      type: DataTypes.BLOB,
-      allowNull: true
     }
   }, {
     sequelize,

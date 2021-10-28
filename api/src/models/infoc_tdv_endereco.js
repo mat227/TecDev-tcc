@@ -29,6 +29,14 @@ export default class infoc_tdv_endereco extends Model {
     ds_numero: {
       type: DataTypes.INTEGER,
       allowNull: true
+    },
+    ds_bairro: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    ds_complemento: {
+      type: DataTypes.STRING(200),
+      allowNull: true
     }
   }, {
     sequelize,

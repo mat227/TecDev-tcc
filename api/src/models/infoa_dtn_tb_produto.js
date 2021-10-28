@@ -12,31 +12,35 @@ export default class infoa_dtn_tb_produto extends Model {
     },
     ds_titulo: {
       type: DataTypes.STRING(250),
-      allowNull: false
+      allowNull: true
     },
     nm_produto: {
-      type: DataTypes.STRING(200),
-      allowNull: false
+      type: DataTypes.STRING(300),
+      allowNull: true
     },
     ds_descricao: {
-      type: DataTypes.STRING(800),
+      type: DataTypes.STRING(500),
       allowNull: true
     },
     ds_categoria: {
       type: DataTypes.STRING(150),
-      allowNull: false
+      allowNull: true
     },
     vl_preco: {
       type: DataTypes.DECIMAL(15,2),
-      allowNull: false
+      allowNull: true
     },
     id_tamanho: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infoa_dtn_tb_tamanhos',
+        key: 'id_tamanho'
+      }
     },
     img_imagem: {
-      type: DataTypes.STRING(500),
-      allowNull: false
+      type: DataTypes.STRING(800),
+      allowNull: true
     }
   }, {
     sequelize,

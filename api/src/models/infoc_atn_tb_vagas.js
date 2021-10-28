@@ -12,7 +12,11 @@ export default class infoc_atn_tb_vagas extends Model {
     },
     id_empresa: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_atn_tb_empresa',
+        key: 'id_empresa'
+      }
     },
     ds_profissao: {
       type: DataTypes.STRING(100),
@@ -31,11 +35,11 @@ export default class infoc_atn_tb_vagas extends Model {
       allowNull: true
     },
     ds_salario_de: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10,2),
       allowNull: true
     },
     ds_salario_a: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL(10,2),
       allowNull: true
     },
     ds_tipo_contratacao: {

@@ -12,11 +12,19 @@ export default class infod_ssc_venda extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_cliente',
+        key: 'id_cliente'
+      }
     },
     id_endereco_entrega: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_endereco',
+        key: 'id_endereco'
+      }
     },
     ds_entrega: {
       type: DataTypes.STRING(100),
@@ -34,16 +42,12 @@ export default class infod_ssc_venda extends Model {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    dt_venda: {
-      type: DataTypes.DATEONLY,
-      allowNull: true
-    },
     ds_pagamento: {
       type: DataTypes.STRING(500),
       allowNull: true
     },
     nr_cartao: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(16),
       allowNull: true
     },
     qtd_parcelas: {

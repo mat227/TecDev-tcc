@@ -1,26 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_item_venda extends Model {
+export default class infoc_nws_tb_venda extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_item_venda: {
+    id_venda: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
+    id_usuario: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_nws_tb_usuario',
+        key: 'id_usuario'
+      }
+    },
+    ds_situacao: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    id_venda: {
-      type: DataTypes.INTEGER,
+    tp_pagamento: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_item_venda',
+    tableName: 'infoc_nws_tb_venda',
     timestamps: false,
     indexes: [
       {
@@ -28,25 +36,18 @@ export default class infod_ssc_item_venda extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_item_venda" },
-        ]
-      },
-      {
-        name: "id_produto",
-        using: "BTREE",
-        fields: [
-          { name: "id_produto" },
-        ]
-      },
-      {
-        name: "id_venda",
-        using: "BTREE",
-        fields: [
           { name: "id_venda" },
+        ]
+      },
+      {
+        name: "id_usuario",
+        using: "BTREE",
+        fields: [
+          { name: "id_usuario" },
         ]
       },
     ]
   });
-  return infod_ssc_item_venda;
+  return infoc_nws_tb_venda;
   }
 }

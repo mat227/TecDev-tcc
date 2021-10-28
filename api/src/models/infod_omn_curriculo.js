@@ -1,42 +1,38 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_gab_empresa extends Model {
+export default class infod_omn_curriculo extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_empresa: {
+    id_curriculo: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_empresa: {
+    ds_objetivo: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
-    ds_cnpj: {
+    ds_formacao_academica: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
-    ds_email: {
+    ds_experiencia_profissional: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
-    ds_senha: {
+    ds_idioma: {
       type: DataTypes.STRING(255),
-      allowNull: false
+      allowNull: true
     },
-    img_empresa: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    ds_codigo: {
+    ds_atividade_complementar: {
       type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_gab_empresa',
+    tableName: 'infod_omn_curriculo',
     timestamps: false,
     indexes: [
       {
@@ -44,11 +40,11 @@ export default class infoa_gab_empresa extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_empresa" },
+          { name: "id_curriculo" },
         ]
       },
     ]
   });
-  return infoa_gab_empresa;
+  return infod_omn_curriculo;
   }
 }

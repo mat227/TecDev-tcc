@@ -7,6 +7,7 @@ const ContainerHome = styled.div`
   a, a:link, a:visited {
     text-decoration: none;
     color: white;
+    
   }
   
   
@@ -15,6 +16,8 @@ const ContainerHome = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Rowdies";
+    background-image: url('/assets/images/bacckground.svg');
+    background-color: #125375;
 
     
 }
@@ -25,8 +28,6 @@ const ContainerHome = styled.div`
 .oferta-da-semana{
   display: flex;
   flex-direction: column;
-  background-color: #125375;
-  background-size: 210vh;
   height: 250vh;
   opacity: 100%;
 }
@@ -179,7 +180,7 @@ padding: 2em;
   flex-direction: row;
   background-color: #215F7B;
   height: 50vh;
-width: 130vh;
+width: 100vh;
   padding-left: 5em;
   margin-right: 15.46em;
   margin-left: 15em;
@@ -258,6 +259,8 @@ padding-top: 1em;
 .tlqueridinhas1{
   display: flex;
   color: white;
+  flex-direction:row;
+
   font-size: 30px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #00B6FF;
@@ -269,7 +272,7 @@ padding-top: 1em;
   display: flex;
   color: white;
   font-size: 20px;
- 
+
   justify-content: center;
 }
 
@@ -279,9 +282,11 @@ padding-top: 1em;
 .livros-queridinhas{
   display: flex;
 flex-wrap: wrap;
+flex-direction:row;
   color: white;
   height: 20vh;
-  max-width:10em ;
+  max-width:100% ;
+  margin-left:6em
 }
 
 
@@ -295,6 +300,8 @@ flex-wrap: wrap;
 
   border-radius: 5px;
 margin-top: 5em;
+margin-right:6em
+
 }
 
 .img-livro-queridinha{
@@ -435,8 +442,8 @@ margin-top: 5em;
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 
-#s1:target ~ .slider {transform: translateX(   -0%); -webkit-transform: translateX(   -4%);}
-#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-105%);}
+#s1:target ~ .slider {transform: translateX(   -0vh); -webkit-transform: translateX(   -9vh);}
+#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-164vh);}
 
 
 

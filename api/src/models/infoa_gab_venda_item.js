@@ -12,11 +12,19 @@ export default class infoa_gab_venda_item extends Model {
     },
     id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_produto',
+        key: 'id_produto'
+      }
     },
     id_venda: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_venda',
+        key: 'id_venda'
+      }
     },
     qtd_produtos: {
       type: DataTypes.INTEGER,
@@ -40,14 +48,14 @@ export default class infoa_gab_venda_item extends Model {
         ]
       },
       {
-        name: "infoa_gab_venda_item_fk0",
+        name: "id_produto",
         using: "BTREE",
         fields: [
           { name: "id_produto" },
         ]
       },
       {
-        name: "infoa_gab_venda_item_fk1",
+        name: "id_venda",
         using: "BTREE",
         fields: [
           { name: "id_venda" },

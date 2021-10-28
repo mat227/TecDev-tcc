@@ -60,7 +60,7 @@ export default function SuaSacola (){
                         </div>
                     </div>
                 </div>
-                <Rodape     />
+                <Rodape/>
         </Container>
     )
 }

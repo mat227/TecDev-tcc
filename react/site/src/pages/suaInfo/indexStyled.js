@@ -2,11 +2,23 @@ import styled from "styled-components";
 
 
 const Container = styled.div`
-          /*  background-color: #135578;
-            background-image: url('./assets/images/fundo.svg');
+background-image: url('/assets/images/bacckground.svg');
+background-color: #125375;
             padding: 8em 2em 3em 2em;
             height: 100%;
+            
            
+@font-face {
+    font-family: "Rowdies";
+    src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('../RedefinirSenha/assets/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+
          *{
             box-sizing: border-box;
             margin: 0;

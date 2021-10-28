@@ -26,7 +26,7 @@ export default class infod_ssc_endereco extends Model {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_complemeno: {
+    ds_complemento: {
       type: DataTypes.STRING(255),
       allowNull: true
     }

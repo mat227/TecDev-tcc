@@ -1,10 +1,10 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
-            height: 43em;
-            background-color: #125476;
-            background-image: url('./assets/imagens/fundo.svg');
-            background-repeat: no-repeat;
+            height: 100vh;
+            background-image: url('/assets/images/bacckground.svg');
+            background-color: #125375;
+            padding-bruno
             
         *{
             box-sizing: border-box;

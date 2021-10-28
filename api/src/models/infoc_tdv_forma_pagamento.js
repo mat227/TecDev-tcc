@@ -31,7 +31,7 @@ export default class infoc_tdv_forma_pagamento extends Model {
       allowNull: true
     },
     dt_vencimento: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.DATE,
       allowNull: true
     },
     nr_parcelas: {

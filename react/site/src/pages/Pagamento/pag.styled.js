@@ -64,7 +64,7 @@ const ContainerPag = styled.div`
         
         background-color: rgba(12, 100, 145, 0.4);
         
-        width: 20vw;
+        width: 25vw;
 
         display: flex;
         flex-direction: column;

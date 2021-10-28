@@ -12,7 +12,11 @@ export default class infoa_gab_venda extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_usuario',
+        key: 'id_usuario'
+      }
     },
     dt_venda: {
       type: DataTypes.DATE,
@@ -29,6 +33,14 @@ export default class infoa_gab_venda extends Model {
     ds_pagamento: {
       type: DataTypes.STRING(255),
       allowNull: false
+    },
+    vl_total: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    qtd_itens: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     sequelize,
@@ -44,7 +56,7 @@ export default class infoa_gab_venda extends Model {
         ]
       },
       {
-        name: "infoa_gab_venda_fk0",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
           { name: "id_usuario" },

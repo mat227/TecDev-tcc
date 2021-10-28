@@ -7,6 +7,7 @@ const ContainerHome = styled.div`
   a, a:link, a:visited {
     text-decoration: none;
     color: white;
+    
   }
   
   
@@ -15,6 +16,8 @@ const ContainerHome = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Rowdies";
+    background-image: url('/assets/images/bacckground.svg');
+    background-color: #125375;
 
     
 }
@@ -25,8 +28,6 @@ const ContainerHome = styled.div`
 .oferta-da-semana{
   display: flex;
   flex-direction: column;
-  background-color: #125375;
-  background-size: 210vh;
   height: 250vh;
   opacity: 100%;
 }
@@ -179,7 +180,7 @@ padding: 2em;
   flex-direction: row;
   background-color: #215F7B;
   height: 50vh;
-width: 130vh;
+width: 100vh;
   padding-left: 5em;
   margin-right: 15.46em;
   margin-left: 15em;
@@ -258,6 +259,8 @@ padding-top: 1em;
 .tlqueridinhas1{
   display: flex;
   color: white;
+  flex-direction:row;
+
   font-size: 30px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #00B6FF;
@@ -269,7 +272,7 @@ padding-top: 1em;
   display: flex;
   color: white;
   font-size: 20px;
- 
+
   justify-content: center;
 }
 
@@ -278,18 +281,14 @@ padding-top: 1em;
 
 .livros-queridinhas{
   display: flex;
-  justify-content: space-evenly;
+flex-wrap: wrap;
+flex-direction:row;
   color: white;
-
+  height: 20vh;
+  max-width:100% ;
+  margin-left:6em
 }
 
-.livros-queridinhas2{
-  display: flex;
-  justify-content: space-evenly;
-  color: white;
-  padding-top:4em ;
-
-}
 
 
 .box-livro{
@@ -301,6 +300,8 @@ padding-top: 1em;
 
   border-radius: 5px;
 margin-top: 5em;
+margin-right:6em
+
 }
 
 .img-livro-queridinha{
@@ -385,14 +386,15 @@ margin-top: 5em;
 .CSSgal .prevNext a {
 	background: #fff;
 	position: absolute;
-	width:       10vh;
-	height:      10vh;
+	width:       60px;
+	height:      60px;
+	line-height: 60px; 
 	text-align: center;
 	opacity: 0.7;
 	-webkit-transition: 0.3s;
 					transition: 0.3s;
-	-webkit-transform: translateY(-1vh);
-					transform: translateY(-1vh);
+	-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
 	left: 0;
 }
 .CSSgal .prevNext a:hover {
@@ -440,8 +442,8 @@ margin-top: 5em;
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 
-#s1:target ~ .slider {transform: translateX(   -0vh); -webkit-transform: translateX(   -4vh);}
-#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-215vh);}
+#s1:target ~ .slider {transform: translateX(   -0vh); -webkit-transform: translateX(   -9vh);}
+#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-164vh);}
 
 
 
