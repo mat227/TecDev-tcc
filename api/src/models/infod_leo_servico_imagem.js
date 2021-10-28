@@ -12,10 +12,14 @@ export default class infod_leo_servico_imagem extends Model {
     },
     id_servico: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_leo_servico',
+        key: 'id_servico'
+      }
     },
     img_servico: {
-      type: DataTypes.STRING(500),
+      type: DataTypes.STRING(1000),
       allowNull: true
     }
   }, {

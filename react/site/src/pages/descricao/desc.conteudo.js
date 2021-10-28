@@ -30,7 +30,7 @@ export default function DescConteudo(props) {
                     </div>
                     <hr/>
                     <div class="box2">
-                        <div class="descricao">
+                        <div class="descricaoa">
                             <div class="titulodesc">DESCRIÇÃO:</div>
                             <p> {livro.ds_descricao}</p>
                         </div>
@@ -38,7 +38,7 @@ export default function DescConteudo(props) {
                             <div class="titulocarac">CARACTERÍSTICAS:</div>
                             <div class="menu">
                                 <div class="itemc">Autor:<p>&nbsp;{livro.vl_para}</p></div>
-                                <div class="itemc">Gêneros:<p>&nbsp;{livro.id_genero_infoc_tdv_genero.ds_genero}</p></div>
+                                <div class="itemc">Gêneros:<p>&nbsp;{livro.ds_genero}</p></div>
                                 <div class="itemc">Editora:<p>&nbsp;{livro.vl_para}</p></div>
                                 <div class="itemc">Ano da edição:<p>&nbsp;{livro.vl_para}</p></div>
                             </div>

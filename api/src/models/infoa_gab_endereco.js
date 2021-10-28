@@ -12,7 +12,11 @@ export default class infoa_gab_endereco extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_usuario',
+        key: 'id_usuario'
+      }
     },
     nm_bairro: {
       type: DataTypes.STRING(255),
@@ -48,7 +52,7 @@ export default class infoa_gab_endereco extends Model {
         ]
       },
       {
-        name: "infoa_gab_endereco_fk0",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
           { name: "id_usuario" },

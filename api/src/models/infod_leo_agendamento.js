@@ -12,15 +12,27 @@ export default class infod_leo_agendamento extends Model {
     },
     id_funcionario: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_leo_funcionario',
+        key: 'id_funcionario'
+      }
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_leo_cliente',
+        key: 'id_cliente'
+      }
     },
     id_servico: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_leo_servico',
+        key: 'id_servico'
+      }
     },
     dt_agendamento: {
       type: DataTypes.DATE,

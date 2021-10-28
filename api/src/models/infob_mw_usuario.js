@@ -49,6 +49,10 @@ export default class infob_mw_usuario extends Model {
     ds_foto: {
       type: DataTypes.STRING(1000),
       allowNull: true
+    },
+    ds_codigo_rec: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,

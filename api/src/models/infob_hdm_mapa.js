@@ -1,26 +1,26 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_ssc_estoque extends Model {
+export default class infob_hdm_mapa extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_estoque: {
+    id_HDM_mapa: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_produto: {
-      type: DataTypes.INTEGER,
+    nm_HDM_endereco: {
+      type: DataTypes.STRING(500),
       allowNull: true
     },
-    qtd_disponivel: {
-      type: DataTypes.INTEGER,
+    nr_HDM_cep: {
+      type: DataTypes.DECIMAL(10,0),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_ssc_estoque',
+    tableName: 'infob_hdm_mapa',
     timestamps: false,
     indexes: [
       {
@@ -28,18 +28,11 @@ export default class infod_ssc_estoque extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_estoque" },
-        ]
-      },
-      {
-        name: "id_produto",
-        using: "BTREE",
-        fields: [
-          { name: "id_produto" },
+          { name: "id_HDM_mapa" },
         ]
       },
     ]
   });
-  return infod_ssc_estoque;
+  return infob_hdm_mapa;
   }
 }

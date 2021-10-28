@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
 const ContainerDesc = styled.div`
+display: flex;
+flex-direction: column;
+background-image: url("./assets/images/bacckground.svg");
+background-color: #135578;
+
+
 * { 
     margin: 0px;
 }
@@ -19,27 +25,23 @@ const ContainerDesc = styled.div`
 
 
 
-    display: flex;
-    flex-direction: column;
-    background-image: url("./assets/images/bacckground.svg");
-    background-color: #135578;
+   
 
 
 
 .box-mae {
-    display: block;
 
     background-color: #12172B;
     
 
-    width: 80em;
-    height: 53em;
+    width: 75em;
+    height: 50em;
 
     padding: 1.3em;
 
     align-self: center;
 
-    margin: 2em;
+    margin: 5em;
 
     border-radius: 2em;
 }
@@ -47,8 +49,8 @@ const ContainerDesc = styled.div`
 .box-filha {
     border: 1px solid white;
     border-radius: 2em;
-    width: 80em;
-    height: 52em;
+    width: 75em;
+    height: 50em;
 
     display: flex;
     flex-direction: row;
@@ -101,9 +103,11 @@ const ContainerDesc = styled.div`
     
     width: 20em;
     margin-top: 1em;
-
+margin-right:1em;
     font-family: Rowdies;
 }
+
+
 
 .titulo {
     font-size: 1.52em;
@@ -143,14 +147,12 @@ const ContainerDesc = styled.div`
 .botoes {
     display: flex;
     flex-direction: row !important;
-
-    margin-left: 20em;
     margin-bottom: 1em;
 }
 
 
 .box-filha hr {
-    width: 80em;
+    width: 75em;
     color: white;
     margin-left: -28.4em;
     margin-top: 2em;
@@ -162,16 +164,13 @@ const ContainerDesc = styled.div`
  flex-direction: row !important;
 }
 
-.descricao {
+.descricaoa {
     display: flex;
     flex-direction: column;
-    margin-left: -27.5em;
-    padding-right: 16em;
     border-right: 0.5px solid white;
 }
 
-.descricao p {
-    width: 35em;
+.descricaoa p {
     font-family: QuickSand;
     color: white;
     line-height: 1.5em;

@@ -12,27 +12,31 @@ export default class infoa_dtn_tb_endereco extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_dtn_tb_cliente',
+        key: 'id_cliente'
+      }
     },
     nm_cidade: {
       type: DataTypes.STRING(200),
-      allowNull: false
+      allowNull: true
     },
     ds_uf: {
       type: DataTypes.STRING(5),
-      allowNull: false
+      allowNull: true
     },
     ds_cep: {
       type: DataTypes.STRING(10),
-      allowNull: false
+      allowNull: true
     },
     ds_logradouro: {
-      type: DataTypes.STRING(200),
-      allowNull: false
+      type: DataTypes.STRING(300),
+      allowNull: true
     },
-    nr_numero: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    ds_numero: {
+      type: DataTypes.STRING(10),
+      allowNull: true
     },
     ds_complemento: {
       type: DataTypes.STRING(100),

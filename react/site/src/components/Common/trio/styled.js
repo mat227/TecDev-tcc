@@ -5,8 +5,9 @@ const ContainerTrio= styled.div`
 
   
 .trio{
-  padding-left:27em;
+  padding-left:24.5em;
 }
+
 .trio button {
   font-weight: 700;
     background: white;
@@ -15,6 +16,7 @@ const ContainerTrio= styled.div`
   border-radius: 150px;
   font-family: "Rowdies";
 align-self: center;
+
   padding: 1.2em;
   margin: 3em 3em 0.5em 3em;
   font-weight: 400;
@@ -33,13 +35,18 @@ align-self: center;
   color: white;
   font-family: "Rowdies";
   font-weight: 550;
-  padding-left: 25em;
+  padding-left: 22.5em;
 }
 
 .titilo-trio1, .titilo-trio2,.titilo-trio3{
   display: flex;
-  padding-left: 4.5em;
+  justify-content: space-evenly;
 }
      
+  a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+    
+  }
 `
  export { ContainerTrio }

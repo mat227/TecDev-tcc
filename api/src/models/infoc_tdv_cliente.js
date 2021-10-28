@@ -33,6 +33,10 @@ export default class infoc_tdv_cliente extends Model {
     dt_nascimento: {
       type: DataTypes.DATE,
       allowNull: true
+    },
+    ds_codigo_rec: {
+      type: DataTypes.STRING(200),
+      allowNull: true
     }
   }, {
     sequelize,

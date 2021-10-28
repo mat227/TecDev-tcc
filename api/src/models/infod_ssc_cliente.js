@@ -12,7 +12,11 @@ export default class infod_ssc_cliente extends Model {
     },
     id_endereco: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_endereco',
+        key: 'id_endereco'
+      }
     },
     nm_cliente: {
       type: DataTypes.STRING(255),

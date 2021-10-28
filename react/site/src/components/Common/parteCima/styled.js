@@ -77,7 +77,7 @@ cursor: pointer;
         height:32px;
         font-family: "Rowdies";
     font-weight: 400;
-    width: 35.5em;
+    width: 10em;
       }
 
 
@@ -94,7 +94,6 @@ cursor: pointer;
   font-family: "Quicksand";
   color: white;
   font-size: 0.8em;
-  margin-top: -1em;
 }
 
 a:Link, a:visited {

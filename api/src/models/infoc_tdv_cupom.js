@@ -17,6 +17,14 @@ export default class infoc_tdv_cupom extends Model {
     vl_porcentagem: {
       type: DataTypes.DECIMAL(10,0),
       allowNull: true
+    },
+    ds_regra: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    ds_nome: {
+      type: DataTypes.STRING(200),
+      allowNull: true
     }
   }, {
     sequelize,

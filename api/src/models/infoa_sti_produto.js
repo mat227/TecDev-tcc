@@ -10,21 +10,25 @@ export default class infoa_sti_produto extends Model {
       allowNull: false,
       primaryKey: true
     },
-    ds_imagem_produto: {
+    img_produto: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
     nm_produto: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_codigo_interno: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     id_categoria: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_categoria',
+        key: 'id_categoria'
+      }
     },
     ds_descricao: {
       type: DataTypes.STRING(255),
