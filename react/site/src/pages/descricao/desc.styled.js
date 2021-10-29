@@ -174,11 +174,14 @@ margin-right:1em;
     font-family: QuickSand;
     color: white;
     line-height: 1.5em;
+    margin-left: -27em;
 }
 .titulodesc {
     margin-bottom: 0.8em;
     text-decoration: underline;
     color: #1FB5CD;
+    margin-left: -27em;
+
 }
 
 .caracteristicas {
