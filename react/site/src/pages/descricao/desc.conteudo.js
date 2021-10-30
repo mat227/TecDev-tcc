@@ -34,6 +34,24 @@ export default function DescConteudo(props) {
         navigation.push('/suasacola');
       }
     
+      function favorito() {
+        
+        let favorito = Cookie.get('favorito');
+        favorito = favorito !== undefined 
+                    ? JSON.parse(favorito) 
+                    : [];
+    
+        
+       
+        if (favorito.some(item => item.id === livro.id) === false)
+        favorito.push({...livro, qtd: 1 });
+     
+        
+        Cookie.set('favorito', JSON.stringify(favorito));
+        
+        
+        navigation.push('/favoritos');
+      }
 
     return (
         <ContainerDesc>
@@ -42,7 +60,7 @@ export default function DescConteudo(props) {
             <div class="box-filha">
                 <div class="livro"><img src="/assets/images/o que o sol faz com as flores (1).svg"alt=""/></div>
                 <div class="box1">
-                    <div class="titulo">{livro.nm_livro}<img src="./assets/images/favorito.svg"  alt="" style={{height: "2em"}}/></div>
+                    <div class="titulo">{livro.nm_livro}<img onClick={favorito} src="./assets/images/favorito.svg"  alt="" style={{height: "2em"}}/></div>
                     <div class="pagamentos">
                         <div class="preco">{livro.vl_para}</div>
                         <div class="item"><img src="/assets/images/boleto.svg" alt="boleto" class="boleto"/> <p><u>Boleto Bancário:</u>{livro.vl_para} <br/> Em até 3x de R$ 14,30</p></div>

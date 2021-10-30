@@ -6,7 +6,6 @@ flex-direction: column;
 background-image: url("./assets/images/bacckground.svg");
 background-color: #135578;
 
-
 * { 
     margin: 0px;
 }
@@ -182,6 +181,10 @@ margin-right:1em;
     color: #1FB5CD;
     margin-left: -27em;
 
+}
+
+.titulo img{
+    margin-left: 10vh;
 }
 
 .caracteristicas {
