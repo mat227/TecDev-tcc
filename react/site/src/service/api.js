@@ -23,7 +23,31 @@ export default class Api {
         let r = await api.get(`/listaLivro`);
         return r.data;
     }
-
+    //deletar livro 
+    async deletaLivro(id){
+        let r = await api.delete(`/dellivro/${id}`)
+        return r.data;
+    }
+    async atualizarLivro(id, nome, descricao, vpara,vde,data, autor, editora, genero, disponivel, qtd, imagem, brochura, promocao){
+        let pack ={
+            livro : nome,
+            descricao : descricao,
+            para : vpara,
+            de : vde,
+            lancamento : data,
+            autora : autor,
+            editora : editora,
+            genero : genero,
+            disponivel : disponivel,
+            qtd : qtd,
+            imagem : imagem,
+            brochura : brochura,
+            promocao : promocao
+        }
+        let r = await api.put(`/alterandoLivro/${id}`, pack);
+        return r.data;
+    }
+    //parte adm 
     async cadastrarCartao(nrcartao, titular, sobrenome, vencimento, parcelas, cvv) {
         let cadastroJson = {
             nrcartao: nrcartao,
@@ -60,6 +84,7 @@ export default class Api {
             descricao: descricao,
             vpara: vpara,
             vde: vde,
+            data : data,
             autor: autor,
             editora: editora,
             genero: genero,
@@ -67,11 +92,11 @@ export default class Api {
             qtd:qtd,
             imagem: imagem,
             brochura:brochura,
-            promocao:promocao,
-            data : data
+            promocao:promocao
+            
         }
 
-        let r = await api.post(`/addlivro`, naomexa );
+        let r = await api.post(`/addlivro`,naomexa);
         return r.data
     }
 

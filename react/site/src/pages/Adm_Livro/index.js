@@ -19,7 +19,7 @@ export default function Adm_livro() {
     const [descricao, setDescricao] = useState('');
     const [vpara, setVpara] = useState(0);
     const [vde, setVde] = useState(0);
-    const [data, setDate] =  useState(0);
+    const [data, setDate] =  useState(new Date());
     const [autor, setAutor] = useState('');
     const [editora, setEditora] = useState('');
     const [genero, setGenero] = useState('');
@@ -27,22 +27,45 @@ export default function Adm_livro() {
     const [qtd, setQtd] = useState(0);
     const [imagem, setImagem] = useState('');
     const [promocao, setPromocao] = useState(0);
-
+    const [idalt, setIdalt] = useState(0);
+    let titulo = "Livro";
         
     const inserirLivro = async () =>{
-        let r = await api.cadastrarLivro( livro, descricao,vpara,vde,autor,editora,genero,disponivel,qtd,imagem,promocao);
+        let r = await api.cadastrarLivro( livro, descricao,vpara,vde,data,autor,editora,genero,disponivel,qtd,imagem,promocao);
+        console.log(r);
         if (r.erro) {
             alert(r.erro);
           } else {
             alert('Livro inserido');
+
           }
-        
         return;
     }
     const listaLivro = async () =>{
-        var r =  await api.listaLivroAdm();
+        var r =  await api.listaLivroAdm(); 
         console.log(r);
         setProduto(r);
+    }
+    const removelivro =  async (id_l) => {
+        console.log(id_l)
+        var r = await api.deletaLivro(id_l);
+        alert('Livro removido')
+        listaLivro();
+        return ;
+    }
+    function LimpaCampos(){
+        setLivro('');
+        setDescricao('')
+        setVpara(0)
+        setVde(0)
+        setDate('')
+        setAutor('')
+        setEditora('')
+        setGenero('')
+        setQtd(0)
+        setImagem('')
+        setPromocao(0);
+
     }
     return (
         <Container>
@@ -54,7 +77,7 @@ export default function Adm_livro() {
                         <div class="box">
                             <div class="titulo">
                                 <div class="livro_img"><img src="./assets/images/livro.svg" alt='' /></div>
-                                <div class="livro">Livros</div>
+                                <div class="livro">{titulo}</div>
                             </div>
                             <div class="sub_titulo">
                                 <div class="img"> <img src="./assets/images/image(2).svg" alt='' /></div>
@@ -134,17 +157,18 @@ export default function Adm_livro() {
                                         <div className="qtd_disp">
                                              <div class="disponivel">  Quantidade disponivel</div>
                                             <div class="nome_acabamento">
-                                            <input id="disponivel" name="qtd_disponivel" required="required" type="number"  onChange={e => setDisponivel(e.target.value) }/>
+                                            <input id="disponivel" name="qtd_disponivel" required="required" type="number"  onChange={e => setQtd(e.target.value) }/>
                                             </div>
                                         </div>                                    
                                     </div>
                                     <div class="sub_titulo2">
                                             <div class="img2"> <img src="./assets/images/adic_livro.svg" alt="" /></div>
-                                            <div class="botao2"><button onClick={inserirLivro}> Adicinar livro</button> </div>
+                                            <div class="botao2"><button onClick={inserirLivro}>{idalt ===0 ? "Adicinar livro" : "alterar livro"}</button> </div>
                                         </div>
                                 </div>
-                            </div>        
-                            <table class ="table-user">
+                            </div>  
+                            <div className="tabela"> 
+                            <table className="table-user">
                                 <thead>
                                     <tr>
                                         <th> ID </th>
@@ -158,22 +182,23 @@ export default function Adm_livro() {
                                         <th class="a"> </th>
                                     </tr>
                                 </thead>
-                                <tbody  className="table-corpo">
+                                <tbody  className="tabela" >
                                     {produto.map(x =>
-                                        <tr >
+                                        <tr>
                                         <td>{x.id_livro}</td>
-                                        <td>{x.nm_livro} </td>
+                                        <td>{x.nm_livro}</td>
                                         <td>{x.ds_autora}</td>
                                         <td>{x.id_genero}</td>
                                         <td>{x.bt_disponivel}</td>
                                         <td>{x.vl_de}</td>
                                         <td>{x.vl_para}</td>
-                                        <td class = "aa"> <button> <img src="./assets/images/editar.svg" alt='' /> </button> </td>
-                                        <td class = "aa"> <button> <img src="./assets/images/lixo.svg" alt=''/> </button> </td>
+                                        <td class = "aa">< img  src="./assets/images/editar.svg" alt=''  /></td>
+                                        <td class = "aa"> <img onClick={()=> removelivro(x.id_livro)} src="./assets/images/lixo.svg" alt=''/> </td>
                                     </tr>     
-                                    )}                               
+                                    )}       
                                 </tbody>             
                             </table>
+                            </div>     
                         </div>
                     </div>
                 </div> 

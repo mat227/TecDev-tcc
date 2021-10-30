@@ -5,6 +5,7 @@ import crypto from 'crypto-js';
 import db from '../src/db.js';
 
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -193,6 +194,59 @@ app.post('/addlivro', async (req, resp) =>{
         resp.send(e.toString());
     }
 })
+app.put('/alterandoLivro/:id', async (req,resp)=> {
+    try{
+        if(info.livro == null || info.livro == undefined || info.livro == '' )
+            resp.send({erro :"o campo livro esta vazio"});
+        if(info.descricao== null || info.descricao == undefined || info.descricao == '' )
+            resp.send({erro :"o campo descrição esta vazio"});
+        if(info.vpara == null || info.vpara == undefined || info.vpara <=  0 )
+            resp.send({erro :"o campo valor não deve esta com uma valor igual a zero ou menor que zero, coloque o valor"});
+        if( info.vde == null ||  info.vde == undefined ||  info.vde <= 0 )
+            resp.send({erro :"o campo valor não deve esta com uma valor igual a zero ou menor que zero, coloque o valor"});
+        if( info.data == null ||  info.data == undefined ||  info.data == '' )
+            resp.send({erro :"o campo da data esta vazio"});
+        if( info.autor == null ||  info.autor == undefined ||  info.autor == '' )
+            resp.send({erro :"o campo autor esta vazio"});
+        if(  info.editora == null ||  info.editora == undefined ||   info.editora == '' )
+            resp.send({erro :"o campo  editora esta vazio"});
+        if( info.genero == null ||  info.genero == undefined ||  info.genero == '' )
+            resp.send({erro :"o campo genero esta vazio"});
+        if( info.disponivel == null ||  info.disponivel == undefined ||  info.disponivel < 0)
+            resp.send({erro :"o campo disponivel esta errado só é permitido sim(1) ou nao(0)"});
+        if( info.qtd == null ||  info.qtd == undefined ||  info.qtd <=  0)
+            resp.send({erro :"o campo quantidade colocou um numero abaixo de zero "});
+        if(info.imagem == null ||  info.imagem== undefined || info.imagem == '' )
+            resp.send({erro :"o campo da imagem está vazio, por favor insira uma imagem"});
+        if( info.brochura == null ||  info.brochura == undefined ||  info.brochura < 0 )
+            resp.send({erro :"o campo sobre acabamento esta errado, só é permitido sim(1) ou nao(0)"});
+        if( info.promocao == null ||  info.promocao == undefined ||  info.promocao <  0)
+            resp.send({erro :"o campo promoção esta errado, só é permitido sim(1) ou nao(0)"});
+        let {nome, descricao, vpara,vde,data, autor, editora, genero, disponivel, qtd, imagem, brochura, promocao} = req.body;
+        let a = await db.infoc_tdv_livro.update(
+        {
+            nm_livro : nome,
+            ds_descricao : descricao,
+            vl_para : vpara,
+            vl_de : vde,
+            dt_lancamento : data,
+            ds_autora : autor,
+            ds_editora : editora,
+            ds_genero : genero,
+            bt_disponivel : disponivel,
+            qtd_disponivel : qtd,
+            ds_imagem : imagem,
+            ds_brochura : brochura,
+            ds_promocao : promocao
+        },{
+            where :{ id_livro : req.params.id}
+        })
+        resp.send(a);
+    }
+    catch(e){
+        resp.send(e.toString());
+    }
+})
 // Lista livros na tela do adm
 
 app.get('/listaLivro', async (req, resp)=> {
@@ -217,7 +271,7 @@ app.get('/addlivro', async (req,resp ) =>{
 })
 
 
-app.delete('/addlivro/:id', async (req, resp) => {
+app.delete('/dellivro/:id', async (req, resp) => {
     try {
         let r = await db.infoc_tdv_livro.destroy({ where: { id_livro: req.params.id} });
         resp.sendStatus(200);

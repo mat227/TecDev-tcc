@@ -35,9 +35,9 @@ const Container = styled.div`
         margin-top: 1em;
         width: 63em;
         height: 28em;
-
+        
         background-color: #21659f;
-
+        
         border-radius: 10px;
     }
 
@@ -253,9 +253,22 @@ const Container = styled.div`
     color: #ffff;
     font-family:  'Roboto', sans-serif;
     } 
-
+    .tabela{
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .reload{
+        display: flex;
+        justify-content: right;   
+        margin: 0 0.5em 0 0 ;  
+    }
+    thead {
+                   
+    }
     .table-user {
     border-collapse: collapse;
+    width: 100%;
+  
     }
 
     .int {
@@ -281,9 +294,11 @@ const Container = styled.div`
         height: 1.5em;
     }
     .table-corpo{
-        overflow: hidden;
+        overflow-y: visible;    
     }
-
+    tbody td{
+        color: white;
+    }
 
 
 
