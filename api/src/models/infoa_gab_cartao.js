@@ -12,7 +12,11 @@ export default class infoa_gab_cartao extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'infoa_gab_usuario',
+        key: 'id_usuario'
+      }
     },
     ds_cv: {
       type: DataTypes.INTEGER,
@@ -52,7 +56,7 @@ export default class infoa_gab_cartao extends Model {
         ]
       },
       {
-        name: "infoa_gab_cartao_fk0",
+        name: "id_usuario",
         using: "BTREE",
         fields: [
           { name: "id_usuario" },

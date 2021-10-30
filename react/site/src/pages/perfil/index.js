@@ -4,6 +4,8 @@ import { ContainerPartecima } from '../../components/Common/parteCima/styled.js'
 import Api  from '../../service/api.js';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Rodape from '../../components/Common/rodape/redape.js';
+import ParteCima from '../../components/Common/parteCima/componente.js';
 const api = new Api();
 export default function Login(){
 
@@ -21,9 +23,13 @@ export default function Login(){
 
     return(
         <div>
+                            <ParteCima/>
+
             <Nav nome='Usuario' />
+
             <Container >
                 <ContainerPartecima/>
+                
                 <div class="faixaUm">
                     <div class="colunas especial"><Link to='/suas_infomacoes' ><label>Suas informaçoes</label></Link></div>
                     <div class="colunas"><Link to='/favoritos' ><label>Seus favoritos</label></Link></div>
@@ -60,6 +66,7 @@ export default function Login(){
                         </div>         
                 </div>
             </Container>
+            <Rodape/>
         </div>
     )
 

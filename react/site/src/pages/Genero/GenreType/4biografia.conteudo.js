@@ -9,7 +9,7 @@ export default function GenerosBiografia() {
             <ParteCima />
             <div class="titulo">
             <div class="quadrado" style={{marginRight: 0.5 + "em"}}></div>
-                <p>BIOGRAFIA</p>
+                <p>BIOGRAFIA <br /><Link to="/genero"><div className="back"><img src="/assets/images/nicoseta.svg" alt=""/>voltar</div></Link></p>
             <div class="quadrado" style={{marginLeft: 0.5 + "em"}}></div>
         </div>
 

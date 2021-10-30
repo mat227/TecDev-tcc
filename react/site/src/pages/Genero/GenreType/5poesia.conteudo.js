@@ -3,12 +3,15 @@ import ParteCima from "../../../components/Common/parteCima/componente"
 import Rodape from "../../../components/Common/rodape/redape"
 import { Link } from "react-router-dom"
 export default function GenerosPoesia() { 
+
+
+    
     return (        
         <ContainerGeneros>
             <ParteCima/>
             <div className="titulo">
             <div className="quadrado" style={{marginRight: 0.5+ "em"}}></div>
-                <p>POESIA</p>
+                <p>POESIA <br /><Link to="/genero"><div className="back"><img src="/assets/images/nicoseta.svg" alt=""/>voltar</div></Link></p>
             <div className="quadrado" style={{marginLeft: 0.5 + "em"}}></div>
         </div>
 

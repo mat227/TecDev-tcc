@@ -21,6 +21,10 @@ export default class infoc_ntc_local extends Model {
     ds_bairro: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    ds_cidade: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
   }, {
     sequelize,

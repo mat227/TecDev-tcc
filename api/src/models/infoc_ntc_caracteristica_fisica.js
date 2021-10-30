@@ -10,12 +10,16 @@ export default class infoc_ntc_caracteristica_fisica extends Model {
       allowNull: false,
       primaryKey: true
     },
-    tp_fisido: {
+    ds_pele: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_valor: {
-      type: DataTypes.BOOLEAN,
+    ds_cabelo: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    ds_cor_cabelo: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_complemento: {

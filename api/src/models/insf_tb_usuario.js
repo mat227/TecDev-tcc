@@ -25,6 +25,10 @@ export default class insf_tb_usuario extends Model {
     ds_senha: {
       type: DataTypes.STRING(100),
       allowNull: true
+    },
+    dt_inclusao: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
     }
   }, {
     sequelize,

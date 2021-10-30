@@ -5,11 +5,35 @@ import { useState } from 'react'
 
 import Rodape  from "../../components/Common/rodape/redape"
 import { Link } from "react-router-dom"
+import { useHistory } from 'react-router-dom';
+
+import Cookie from 'js-cookie';
 
 export default function DescConteudo(props) {
 
     const [livro, setLivro] = useState(props.location.state);
+    const navigation = useHistory();
 
+
+    function comprar() {
+        
+        let carrinho = Cookie.get('carrinho');
+        carrinho = carrinho !== undefined 
+                    ? JSON.parse(carrinho) 
+                    : [];
+    
+        
+       
+        if (carrinho.some(item => item.id === livro.id) === false)
+            carrinho.push({...livro, qtd: 1 });
+     
+        
+        Cookie.set('carrinho', JSON.stringify(carrinho));
+        
+        
+        navigation.push('/suasacola');
+      }
+    
 
     return (
         <ContainerDesc>
@@ -26,11 +50,11 @@ export default function DescConteudo(props) {
                     </div>
                     <div class="botoes">
                       <Link to="/pagamento"><button>COMPRAR</button></Link>
-                      <Link to="/suasacola"><button>ADICIONAR NA SACOLA</button></Link>
+                      <Link to="/suasacola"><button onClick={comprar}>ADICIONAR NA SACOLA</button></Link>
                     </div>
                     <hr/>
                     <div class="box2">
-                        <div class="descricao">
+                        <div class="descricaoa">
                             <div class="titulodesc">DESCRIÇÃO:</div>
                             <p> {livro.ds_descricao}</p>
                         </div>
@@ -38,7 +62,7 @@ export default function DescConteudo(props) {
                             <div class="titulocarac">CARACTERÍSTICAS:</div>
                             <div class="menu">
                                 <div class="itemc">Autor:<p>&nbsp;{livro.vl_para}</p></div>
-                                <div class="itemc">Gêneros:<p>&nbsp;{livro.id_genero_infoc_tdv_genero.ds_genero}</p></div>
+                                <div class="itemc">Gêneros:<p>&nbsp;{livro.ds_genero}</p></div>
                                 <div class="itemc">Editora:<p>&nbsp;{livro.vl_para}</p></div>
                                 <div class="itemc">Ano da edição:<p>&nbsp;{livro.vl_para}</p></div>
                             </div>

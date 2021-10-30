@@ -5,16 +5,17 @@ export default class infoa_sti_endereco extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_endereco: {
+      autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     ds_cep: {
-      type: DataTypes.STRING(8),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_endereco: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     nr_endereco: {
@@ -22,11 +23,11 @@ export default class infoa_sti_endereco extends Model {
       allowNull: true
     },
     ds_complemento: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_cidade: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {

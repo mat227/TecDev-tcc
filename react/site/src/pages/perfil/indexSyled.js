@@ -10,8 +10,8 @@ const Container = styled.div`
             }
         display: flex;
         flex-direction: row;
-        background-color: #135578;
-        background-image: url('./assets/imagens/fundo.svg');
+        background-image: url('/assets/images/bacckground.svg');
+        background-color: #125375;
         padding: 2em;
         .faixaUm{
             background-color: #183C53;

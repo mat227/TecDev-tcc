@@ -12,18 +12,26 @@ export default class infoa_sti_vendas extends Model {
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_cliente',
+        key: 'id_cliente'
+      }
     },
     id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_produto',
+        key: 'id_produto'
+      }
     },
     ds_codigo: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(10),
       allowNull: true
     },
-    dt_venda: {
-      type: DataTypes.DATE,
+    dt_vendas: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     }
   }, {

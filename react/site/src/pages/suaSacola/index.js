@@ -3,8 +3,22 @@ import ParteCima from '../../components/Common/parteCima/componente'
 import { Buttom } from '../../components/buttons/indexStyled'
 import { Link } from 'react-router-dom'
 import Rodape from '../../components/Common/rodape/redape'
+import { useState } from 'react'
 
-export default function SuaSacola (){
+import Cookie from 'js-cookie';
+
+export default function SuaSacola (props){
+    const [livro, setLivro] = useState(props.location.state);
+
+  function carregarCarrinho() {
+    
+    let carrinho = Cookie.get('carrinho');
+    carrinho = carrinho !== undefined 
+                  ? JSON.parse(carrinho) 
+                  : [];
+
+    setLivro(carrinho);
+  }
     return(
         <Container>
             <ParteCima/>
@@ -60,7 +74,7 @@ export default function SuaSacola (){
                         </div>
                     </div>
                 </div>
-                <Rodape     />
+                <Rodape/>
         </Container>
     )
 }

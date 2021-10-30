@@ -12,11 +12,19 @@ export default class infoa_dtn_tb_favoritos extends Model {
     },
     id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_dtn_tb_produto',
+        key: 'id_produto'
+      }
     },
     id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_dtn_tb_cliente',
+        key: 'id_cliente'
+      }
     }
   }, {
     sequelize,

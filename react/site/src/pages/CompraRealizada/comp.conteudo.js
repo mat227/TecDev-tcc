@@ -61,7 +61,7 @@ export default function CompraRealizada() {
                                     <Link to="/seus_pedidos">Seus pedidos</Link>
                                 </button>
                                 <button>
-                                    <Link to="/">Realizar nova compra</Link>
+                                    <Link to="/homepage">Realizar nova compra</Link>
                                 </button>
                             </div>
                         </div>

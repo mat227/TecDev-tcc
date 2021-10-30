@@ -22,6 +22,10 @@ export default class infoc_ntc_denuncia extends Model {
       type: DataTypes.STRING(255),
       allowNull: true
     },
+    dt_cadastro: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
     id_local: {
       type: DataTypes.INTEGER,
       allowNull: true,

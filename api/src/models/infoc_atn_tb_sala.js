@@ -20,11 +20,19 @@ export default class infoc_atn_tb_sala extends Model {
     },
     id_empresa: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_atn_tb_empresa',
+        key: 'id_empresa'
+      }
     },
     id_pessoal: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_atn_tb_pessoal',
+        key: 'id_pessoal'
+      }
     }
   }, {
     sequelize,

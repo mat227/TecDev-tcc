@@ -27,7 +27,11 @@ export default class infod_ssc_produto extends Model {
       allowNull: true
     },
     ds_avaliacao: {
-      type: DataTypes.STRING(500),
+      type: DataTypes.DECIMAL(10,0),
+      allowNull: true
+    },
+    qtd_disponivel_estoque: {
+      type: DataTypes.INTEGER,
       allowNull: true
     },
     ds_imagem: {

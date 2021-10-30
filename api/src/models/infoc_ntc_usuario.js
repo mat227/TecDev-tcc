@@ -29,6 +29,10 @@ export default class infoc_ntc_usuario extends Model {
     ds_telefone: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    ds_senha_rec: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     sequelize,

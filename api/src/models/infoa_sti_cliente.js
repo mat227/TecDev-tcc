@@ -5,29 +5,46 @@ export default class infoa_sti_cliente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_cliente: {
+      autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_cliente: {
-      type: DataTypes.STRING(200),
+    nm_nome: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    nm_sobrenome: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_sexo: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_cpf: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
-    ds_celular: {
-      type: DataTypes.STRING(200),
+    dt_nascimento: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    ds_email: {
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_senha: {
-      type: DataTypes.STRING(200),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     id_endereco: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_endereco',
+        key: 'id_endereco'
+      }
     }
   }, {
     sequelize,
