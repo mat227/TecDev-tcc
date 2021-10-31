@@ -65,7 +65,7 @@ export default class Api {
         return r.data
     }
 
-    async cadastro(nmrua,numerorua,email, senha,telefone, nome, cpf, datanas) {
+    async cadastro(email, senha,telefone, nome, cpf, datanas) {
         let cadastroJson = {
             email: email,
             senha: senha,

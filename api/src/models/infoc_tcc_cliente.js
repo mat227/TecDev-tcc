@@ -23,7 +23,7 @@ export default class infoc_tcc_cliente extends Model {
       allowNull: true
     },
     dt_nascimento: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     nr_celular: {

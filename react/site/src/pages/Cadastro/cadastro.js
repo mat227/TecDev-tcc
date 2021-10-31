@@ -37,7 +37,7 @@ export default function Cadastro() {
           } else {
             toast.success("✔️ Cadastro feito com sucesso!");
           }
-          
+          console.log(r)
         }
     
        

@@ -47,7 +47,12 @@ app.post('/cadastro', async (req, resp) => {
         if (u != null)
             return resp.send({ erro: 'Todos os campos são obrigatorios' });
 
-        let r = await db.infoc_tdv_cliente.create({
+        
+        let b = await db.infoc_tdv_endereco.findOne({ where: { nm_rua: usuParam.nomerua, ds_cep: usuParam.cep,ds_numero:usuParam.numerocasa ,ds_bairro: usuParam.bairro ,ds_complemento:usuParam.complemento} });
+        if (b != null)
+         return resp.send({ erro: 'Todos os campos são obrigatorios' });
+
+        const informacoes = await db.infoc_tdv_cliente.create({
             ds_email: usuParam.email,
             ds_senha: crypto.SHA256(usuParam.senha).toString(crypto.enc.Base64),
             nr_contato: usuParam.telefone,
@@ -56,7 +61,17 @@ app.post('/cadastro', async (req, resp) => {
             dt_nascimento:usuParam.datanas
           
         })
-        resp.send(r);
+        const endereco = await db.infoc_tdv_endereco.create({
+            id_cliente: informacoes.id_cliente,
+            nm_rua:usuParam.nomerua,
+            ds_cep: usuParam.cep,
+            ds_numero: usuParam.numerocasa,
+            ds_bairro: usuParam.bairro,
+            ds_complemento:usuParam.complemento
+          
+        })
+        resp.send({mensagem:"Cadastrado com sucesso"});
+
     } catch (e) {
         resp.send({ erro: 'Ocorreu um erro!' })
     }
@@ -67,6 +82,16 @@ app.get('/cadastro', async (req, resp) => {
     try {
         let cliente = await db.infoc_tdv_cliente.findAll();
         resp.send(cliente);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
+
+
+app.get('/endereco', async (req, resp) => {
+    try {
+        let endereco = await db.infoc_tdv_endereco.findAll();
+        resp.send(endereco);
     } catch (e) {
         resp.send({ erro: 'Ocorreu um erro!' })
     }

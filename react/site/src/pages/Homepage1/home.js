@@ -4,6 +4,7 @@ import Partecima  from "../../components/Common/parteCima/componente"
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { useHistory } from 'react-router-dom';
 
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
@@ -15,8 +16,10 @@ const api = new Api();
 export default function Homepage() {
     const [livro, setLivro] = useState([]);
 
+    const navig = useHistory();
 
     async function listar() {
+
         let a = await api.listarLivro();
         setLivro(a);
         console.log(livro)

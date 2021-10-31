@@ -6,7 +6,6 @@ flex-direction: column;
 background-image: url("./assets/images/bacckground.svg");
 background-color: #135578;
 
-
 * { 
     margin: 0px;
 }
@@ -84,7 +83,7 @@ background-color: #135578;
     padding: 0.8em;
     background-color: #1FB5CD;
     color: white;
-    font-family: Rowdies;
+    font-family: "Rowdies";
     text-align: center;
     border: none;
     margin: 0.8em;
@@ -182,6 +181,10 @@ margin-right:1em;
     color: #1FB5CD;
     margin-left: -27em;
 
+}
+
+.titulo img{
+    margin-left: 10vh;
 }
 
 .caracteristicas {
