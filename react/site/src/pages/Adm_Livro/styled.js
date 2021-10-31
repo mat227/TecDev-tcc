@@ -57,23 +57,19 @@ const Container = styled.div`
 
     .livro {
         font-family: 'Baloo Thambi 2';
-        font-size: 18px;
+        font-size: 1em;
         margin-left: 2em;
     }
 
     .sub_titulo {
         display: flex;
-        flex-direction: row;
-        background-color: #183c53;
-        font-size: 12px;
+        flex-direction: column;
+        font-size: 1em;
 
         width: 15em;
         height: 2em;
-        margin-left: 4em;
-        margin-top: 1.5em;
-
-        align-items: center;
-        border-radius: 5px;
+       
+        margin-bottom: 1em;
     }
 
     .img img {
@@ -106,7 +102,7 @@ const Container = styled.div`
     }
 
     .agrp_input1 {
-        margin-top: 1em;
+        margin-top: 2em;
         margin-left: 4em;
 
     }
@@ -120,7 +116,9 @@ const Container = styled.div`
         margin-top: 0.5em;
         margin-left: 4em;
     }
-
+    .editor{
+        margin-left: 3.8em;
+    }
 
     .nome_obra, .nome_autor, .nome_dsc, .nome_genero, .nome_acabamento, .nome_edicao, .nome_editora, .nome_valor, .nome_promocao, .nome_de, .nome_para {
         margin-right: 4em;
@@ -282,7 +280,7 @@ const Container = styled.div`
     .botao2  button{
         cursor: pointer;
         border: none;
-        background-color: #21659f;
+        background : #183c53;
     }
     .aa button {
         cursor: pointer;

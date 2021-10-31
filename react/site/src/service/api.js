@@ -28,14 +28,15 @@ export default class Api {
         let r = await api.delete(`/dellivro/${id}`)
         return r.data;
     }
-    async atualizarLivro(id, nome, descricao, vpara,vde,data, autor, editora, genero, disponivel, qtd, imagem, brochura, promocao){
+    //put do livro
+    async atualizarLivro(id, livro, descricao, vpara,vde,datac, autor, editora, genero, disponivel, qtd, imagem, brochura, promocao){
         let pack ={
-            livro : nome,
+            livro : livro,
             descricao : descricao,
-            para : vpara,
-            de : vde,
-            lancamento : data,
-            autora : autor,
+            vpara : vpara,
+            vde : vde,
+            datac : datac,
+            autor : autor,
             editora : editora,
             genero : genero,
             disponivel : disponivel,
@@ -43,8 +44,9 @@ export default class Api {
             imagem : imagem,
             brochura : brochura,
             promocao : promocao
+            
         }
-        let r = await api.put(`/alterandoLivro/${id}`, pack);
+        let r = await api.put('/alterandoLivro/'+ id, pack);
         return r.data;
     }
     //parte adm 
@@ -78,13 +80,13 @@ export default class Api {
         return r.data
     }
 
-    async cadastrarLivro(livro, descricao, vpara, vde, autor, editora, genero, disponivel,qtd,imagem,brochura,promocao,data) {
+    async cadastrarLivro(livro, descricao, vpara, vde,datac, autor, editora, genero, disponivel,qtd,imagem,brochura,promocao) {
         let naomexa = {
             livro: livro,
             descricao: descricao,
             vpara: vpara,
             vde: vde,
-            data : data,
+            datac : datac,
             autor: autor,
             editora: editora,
             genero: genero,
@@ -102,6 +104,21 @@ export default class Api {
 
     async listarLivro() {
         let r = await api.get(`/addlivro/`);
+        return r.data;
+    }
+    // cupom
+    async listaCupom(){
+        let r  = await api.get(`cupom`);
+        return r.data;
+    }
+    async addCupom(nome, datac, porce ,regra){
+        let cont = {
+            nome:nome,
+            dataduracao : datac,
+            porce : porce,
+            regra : regra
+        }
+        var r = await api.post(`/addCupom`, cont);
         return r.data;
     }
 }

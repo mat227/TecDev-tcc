@@ -35,7 +35,7 @@ export default function Adm_pedidos() {
                                                 <th> Livro </th>
                                                 <th> Endereço </th>
                                                 <th> Valor </th>
-                                                <th> Frente </th>
+                                                <th> Frete </th>
                                                 <th> Total </th>
                                                 <th> Pagamento </th>
                                                 <th className="a"> </th>
