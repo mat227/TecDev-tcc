@@ -83,7 +83,7 @@ background-color: #135578;
     padding: 0.8em;
     background-color: #1FB5CD;
     color: white;
-    font-family: Rowdies;
+    font-family: "Rowdies";
     text-align: center;
     border: none;
     margin: 0.8em;
