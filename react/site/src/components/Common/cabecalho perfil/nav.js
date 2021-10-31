@@ -8,7 +8,7 @@ export default function Cabecalho(Props){
                 <h1>Olá, Fulano Siclano</h1>
                 <label>{Props.nome}</label>
             </div>
-            <div classNam="sair"><button><Link to='/'>Sair</Link></button></div>
+            <div classNam="sair"><button><Link to='/login'>Sair</Link></button></div>
         </Nav>
     )
 }

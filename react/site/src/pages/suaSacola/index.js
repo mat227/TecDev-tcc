@@ -4,7 +4,7 @@ import { Buttom } from '../../components/buttons/indexStyled'
 import { Link } from 'react-router-dom'
 import Rodape from '../../components/Common/rodape/redape'
 import { useState } from 'react'
-
+import Carrinho from './carrinhoItem/carrinho'
 import Cookie from 'js-cookie';
 
 export default function SuaSacola (props){
@@ -28,36 +28,13 @@ export default function SuaSacola (props){
                         <div class="trilhaM"><label style={{color : "#00EAFF"}} >SUA SACOLA  </label> - <label > SUAS INFORMAÇÕES - </label> <label>PAGAMENTO - </label> <label>  FINALIZAÇÃO</label></div>
                     </div>
                     <div className="container-cont">
-                        <div className="tabela">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Produto</th>
-                                        <th>Preço</th>
-                                        <th>Quantidade</th>
-                                        <th>Total</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <tr> 
-                                    <td><input type="checkbox" className="imputcheck" /></td>
-                                    <td><img src="" alt="" /> <label>Descrição</label></td>   
-                                    <td><label>R$ 25,00</label></td>   
-                                    <td><button className="bimg">+</button>5<button className="bimg">-</button></td>  
-                                    <td><label>R$125,00</label></td>  
-                                    <td><button className="brem"><img src='./assets/images/remove.svg' alt=' ' /></button></td>  
-                                </tr>
-                                </tbody>
-                            </table>
-                            <div className="inputC">
-                                <input type="checkbox" id='studo' className="imputcheck" />
-                                <label for="studo" style={{'margin-right': '1em'}}> Seleciona tudo</label>
-                                <input type="checkbox" id='dtudo' className="imputcheck" />
-                                <label for="dtudo"> Desmarca tudo</label>
-                            </div>
-                        </div>
+
+                    <div className="itens">
+        {livro.map((item) => 
+            <Carrinho key={item.id} 
+                info={item} />
+        )}
+      </div>
                         <div className="cupom">
                             <div className="quadc">
                                 <div className="th2"><h2>cupom</h2></div>
