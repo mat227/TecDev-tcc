@@ -6,9 +6,13 @@ import Rodape from '../../components/Common/rodape/redape'
 import { useState } from 'react'
 import Carrinho from './carrinhoItem/carrinho'
 import Cookie from 'js-cookie';
+import { useEffect } from 'react'
 
 export default function SuaSacola (props){
-    const [livro, setLivro] = useState(props.location.state);
+    const [livro, setLivro] = useState([]);
+    console.log(livro);
+
+    useEffect(carregarCarrinho, []);
 
   function carregarCarrinho() {
     
@@ -16,7 +20,6 @@ export default function SuaSacola (props){
     carrinho = carrinho !== undefined 
                   ? JSON.parse(carrinho) 
                   : [];
-
     setLivro(carrinho);
   }
     return(
@@ -30,10 +33,25 @@ export default function SuaSacola (props){
                     <div className="container-cont">
 
                     <div className="itens">
+                    <thead>
+                                    <tr>
+                                        <th className="1"></th>
+                                        <th className="2">Produto</th>
+                                        <th className="3">Preço</th>
+                                        <th className="4">Quantidade</th>
+                                        <th className="5">Total</th>
+                                    </tr>
+                                </thead>
         {livro.map((item) => 
-            <Carrinho key={item.id} 
+            <Carrinho key={item.id_livro} 
                 info={item} />
         )}
+         <div className="inputC">
+                                <input type="checkbox" id='studo' className="imputcheck" />
+                                <label for="studo" style={{'margin-right': '1em'}}> Seleciona tudo</label>
+                                <input type="checkbox" id='dtudo' className="imputcheck" />
+                                <label for="dtudo"> Desmarca tudo</label>
+                            </div>
       </div>
                         <div className="cupom">
                             <div className="quadc">

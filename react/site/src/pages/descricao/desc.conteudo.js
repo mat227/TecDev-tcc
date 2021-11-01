@@ -24,7 +24,7 @@ export default function DescConteudo(props) {
     
         
        
-        if (carrinho.some(item => item.id === livro.id) === false)
+        if (carrinho.some(item => item.id_livro === livro.id_livro) === false)
             carrinho.push({...livro, qtd: 1 });
      
         

@@ -20,6 +20,11 @@ export default function Cadastro() {
   const [telefone, setTelefone] = useState("");
   const [cpf, setCpf] = useState("");
   const [datanas, setDatanas] = useState("");
+  const [nomerua, setNomerua] = useState("");
+  const [cep, setCep] = useState("");
+  const [numerocasa, setNumerocasa] = useState("");
+  const [bairro, setBairro] = useState("");
+  const [complemento, setComplemento] = useState("");
 
 
     async function cadastroCliente() {    
@@ -29,7 +34,12 @@ export default function Cadastro() {
             telefone,
             nome,
             cpf,
-            datanas           
+            datanas,
+            nomerua,
+            cep,
+            numerocasa,
+            bairro,
+            complemento      
           );
     
           if (r.erro) {
@@ -107,17 +117,37 @@ export default function Cadastro() {
                         onChange={(r) => setTelefone(r.target.value)}
                         id="telefone" name="telefone"  required="required"  />
                     </div>
+                    <div class="data_cadastrar">CEP</div>
+                    <div class="cadastrar-sn">
+                        <input  value={cep}
+                         onChange={(r) => setCep(r.target.value)}
+                         id="rua" name="rua" type="text" required="required"  />
+                    </div>
                     <div class="data_cadastrar">Endereço</div>
                     <div class="cadastrar-sn">
-                        <input id="rua" name="rua" type="text" required="required"  />
+                        <input  value={nomerua}
+                         onChange={(r) => setNomerua(r.target.value)}
+                         id="rua" name="rua" type="text" required="required"  />
+                    </div>
+                    <div class="data_cadastrar">Número</div>
+                    <div class="cadastrar-sn">
+                        <input  value={numerocasa}
+                         onChange={(r) => setNumerocasa(r.target.value)}
+                         id="numero" name="numero" type="text" required="required"  />
                     </div>
                     <div class="data_cadastrar">Complemento</div>
                     <div class="cadastrar-sn">
-                        <input id="cl_casa" name="cl_casa"  required="required"  />
+                        <input 
+                         value={complemento}
+                         onChange={(r) => setComplemento(r.target.value)}
+                        id="cl_casa" name="cl_casa"  required="required"  />
                     </div>
                     <div class="data_cadastrar">Bairro</div>
                     <div class="cadastrar-sn">
-                        <input id="br_casa" name="br_casa"  required="required"  />
+                        <input 
+                         value={bairro}
+                         onChange={(r) => setBairro(r.target.value)}
+                        id="br_casa" name="br_casa"  required="required"  />
                     </div>
                     
 

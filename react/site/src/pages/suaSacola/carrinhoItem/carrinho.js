@@ -1,21 +1,12 @@
 import { useState } from 'react';
 
 export default function Carrinho (props){
-    const [livro, setProduto] = useState(props.livros);
-
+    const [livro, setProduto] = useState(props.info);
+console.log(livro)
     return(
                         <div className="tabela">
                             <table>
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Produto</th>
-                                        <th>Preço</th>
-                                        <th>Quantidade</th>
-                                        <th>Total</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
+                               
                                 <tbody>
                                 <tr> 
                                     <td><input type="checkbox" className="imputcheck" /></td>
@@ -28,12 +19,7 @@ export default function Carrinho (props){
 
                                 </tbody>
                             </table>
-                            <div className="inputC">
-                                <input type="checkbox" id='studo' className="imputcheck" />
-                                <label for="studo" style={{'margin-right': '1em'}}> Seleciona tudo</label>
-                                <input type="checkbox" id='dtudo' className="imputcheck" />
-                                <label for="dtudo"> Desmarca tudo</label>
-                            </div>
+                           
                         </div>
                       
     )

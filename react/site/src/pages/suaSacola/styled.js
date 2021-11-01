@@ -1,10 +1,9 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
-            height: 100vh;
+            min-height: 100%;
             background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
-            padding-bruno
             
         *{
             box-sizing: border-box;
@@ -151,6 +150,9 @@ const Container = styled.div`
         td{
            height: 1em;
            text-align: center;
+        }
+        th{
+            padding-left: 50px;
         }
 
 `
