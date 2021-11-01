@@ -350,7 +350,19 @@ app.get('/pedido', async (req, resp) => {
         }}
     );
 })
+// pegando informação  dos  clientes 
 
+app.get('/infoA', async (req, resp) => {
 
+    try{
+        var r = await db.infoc_tdv_adm.findAll();
+        resp.send(r);
+    }catch(e){
+        resp.send({erro : e.toString()});
+    }
+    
+    
+
+})
 
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`));

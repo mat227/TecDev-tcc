@@ -3,8 +3,19 @@ import Cabecalho  from '../../components/Common/parteCima/componente'
 import Rodape from '../../components/Common/rodape/redape'
 import Barralat from '../../components/Common/barra_lateal_perfi';
 import { Link } from 'react-router-dom';
+import Api  from '../../service/api';
+import { useState } from 'react';
+
+const api = new Api();
 
 export default function perfilAdm(){
+
+    const [infoa, setInfoa] = useState([]);
+
+    const infoA = async () => {
+        let r = await api.infoA();
+        setInfoa(r);
+    }
    return(
        <div>
           <Cabecalho />
@@ -17,7 +28,7 @@ export default function perfilAdm(){
                             <div class="perfil_img"><img src="./assets/images/profilee (1).svg" alt='' /></div>
                             <div class="perfil"> Suas Informações </div>
 
-                            <div class="ed_info"> Editar <br /> informações </div>
+                            <div class="ed_info" > Editar <br /> informações </div>
                         </div>
                         <div class="input_g">
                             <div class="agp_input">
@@ -48,14 +59,6 @@ export default function perfilAdm(){
                                         <input id="n_email" name="n_email" required="required" type="email"/>
                                         </div>
                                     </div>
-        
-                                    <div class="senha">
-                                        <div class="n_senha"> Senha </div>
-                                        <div class="nome_senha">
-                                        <input id="n_senha" name="n_senha" required="required" type="password"/>
-                                        </div>
-                                    </div>
-        
                                 </div>
         
                                 <div class="agrp_input3">
