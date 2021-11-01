@@ -126,4 +126,9 @@ export default class Api {
         var r = await api.post(`/addCupom`, cont);
         return r.data;
     }
+    // infomaçoes do adm v1
+    async infoA() {
+        let r = await api.get(`infoA`);
+        return r.data;
+    }
 }
