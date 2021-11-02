@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { useState } from "react";
-import {useHistory}  from "react-router-dom";
+// import axios from 'axios';
+// import { useState } from "react";
+// import {useHistory}  from "react-router-dom";
 
 export default function Recuperacao() { 
     // const [email, setEmail] = useState('');
@@ -17,12 +17,7 @@ export default function Recuperacao() {
 
 
     return (        
-        <div className="redef-nico">
-            <h1>recuperação de senha</h1>
-            <div>
-                email: <input type="text" value={email} onChange={e => setEmail(e.target.value)}/>
-            </div>
-            <button onClick={recuperar}>enviar codigo</button>
+        <div className="nicorec">
         </div>
     )
 };
