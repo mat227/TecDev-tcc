@@ -9,7 +9,7 @@ import { useEffect } from 'react'
 
 export default function SuaSacola (props){
     const [livro, setLivro] = useState([]);
-    console.log(livro);
+
 
     useEffect(carregarCarrinho, []);
 
@@ -21,6 +21,10 @@ export default function SuaSacola (props){
                   : [];
     setLivro(carrinho);
   }
+  
+  
+
+
     return(
         <Container>
             <ParteCima/>
@@ -55,7 +59,7 @@ export default function SuaSacola (props){
                         <td><label>{item.vl_para}</label></td>   
                         <td><button className="bimg">+</button>5<button className="bimg">-</button></td>  
                         <td><label>R$125,00</label></td>  
-                        <td><button className="brem"><img src='./assets/images/remove.svg' alt=' ' /></button></td>  
+                        <td><button className="brem"><img  src='./assets/images/remove.svg' alt=' ' /></button></td>  
                         </tr>
         )}
 

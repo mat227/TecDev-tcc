@@ -43,7 +43,7 @@ export default function DescConteudo(props) {
     
         
        
-        if (favorito.some(item => item.id === livro.id) === false)
+        if (favorito.some(item => item.id_livro === item.id_livro) === false)
         favorito.push({...livro, qtd: 1 });
      
         
