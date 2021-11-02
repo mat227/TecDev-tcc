@@ -56,8 +56,20 @@ const Container = styled.div`
             border-radius: 0.5em;
             background: #7CC3DF;
             border: none;
-            margin-right: 8em;
         
+        }
+
+        .inputcupom input{
+            height: 2em;
+            width: 15em;
+            border-radius: 0.5em;
+            background: #7CC3DF;
+            border: none;
+        }
+
+        .inputcupom{
+            margin-left: -2em;
+
         }
         .bimg{
             width: 1.5em;
@@ -151,10 +163,7 @@ const Container = styled.div`
            height: 1em;
            text-align: center;
         }
-        th{
-            padding-left: 50px;
-        }
-
+      
 `
 
 export {Container}

@@ -7,7 +7,7 @@ const ContainerDesconto = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Rowdies";
-
+   
 
 
 * {
@@ -25,7 +25,11 @@ const ContainerDesconto = styled.div`
     color: white;
   }
   
- 
+ .desconto{
+  min-height: 100%;
+            background-image: url('/assets/images/bacckground.svg');
+            background-color: #125375;
+ }
 
 
      

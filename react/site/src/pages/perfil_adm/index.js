@@ -10,11 +10,11 @@ const api = new Api();
 
 export default function perfilAdm(){
 
-    const [infoa, setInfoa] = useState([]);
+  //  const [infoa, setInfoa] = useState([]);
 
     const infoA = async () => {
         let r = await api.infoA();
-        setInfoa(r);
+      //  setInfoa(r);
     }
    return(
        <div>

@@ -4,7 +4,6 @@ import { Buttom } from '../../components/buttons/indexStyled'
 import { Link } from 'react-router-dom'
 import Rodape from '../../components/Common/rodape/redape'
 import { useState } from 'react'
-import Carrinho from './carrinhoItem/carrinho'
 import Cookie from 'js-cookie';
 import { useEffect } from 'react'
 
@@ -33,19 +32,38 @@ export default function SuaSacola (props){
                     <div className="container-cont">
 
                     <div className="itens">
-                    <thead>
+                   
+      
+          
+                <div className="tabela">
+                <table>
+                <thead>
                                     <tr>
                                         <th className="1"></th>
                                         <th className="2">Produto</th>
                                         <th className="3">Preço</th>
                                         <th className="4">Quantidade</th>
                                         <th className="5">Total</th>
+                                        <th className="espaco"> </th>
                                     </tr>
                                 </thead>
-        {livro.map((item) => 
-            <Carrinho key={item.id_livro} 
-                info={item} />
+                    <tbody>
+                {livro.map((item) => 
+                    <tr> 
+                        <td><input type="checkbox" className="imputcheck" /></td>
+                        <td><img src="" alt="" /> <label>Descrição</label></td>   
+                        <td><label>{item.vl_para}</label></td>   
+                        <td><button className="bimg">+</button>5<button className="bimg">-</button></td>  
+                        <td><label>R$125,00</label></td>  
+                        <td><button className="brem"><img src='./assets/images/remove.svg' alt=' ' /></button></td>  
+                        </tr>
         )}
+
+                    </tbody>
+                </table>
+               
+            </div>
+          
          <div className="inputC">
                                 <input type="checkbox" id='studo' className="imputcheck" />
                                 <label for="studo" style={{'margin-right': '1em'}}> Seleciona tudo</label>
@@ -56,7 +74,7 @@ export default function SuaSacola (props){
                         <div className="cupom">
                             <div className="quadc">
                                 <div className="th2"><h2>cupom</h2></div>
-                                <div className="input"><input type="text" id="cupom" /></div>
+                                <div className="inputcupom"><input type="text" id="cupom" /></div>
                                 <div className="btns">
                                     <button className="btnss" >Remover</button>
                                     <button className="btnss" >Aplicar</button>
