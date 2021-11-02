@@ -365,4 +365,8 @@ app.get('/infoA', async (req, resp) => {
 
 })
 
+// esqueci a senha :)
+
+
+
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`));
