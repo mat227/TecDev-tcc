@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import crypto from 'crypto-js';
 import db from '../src/db.js';
+import enviarEmail from './email.js';
 
 
 
@@ -367,6 +368,36 @@ app.get('/infoA', async (req, resp) => {
 
 // esqueci a senha :)
 
+// app.post('/esqueciASenha', async (req, resp) => {
+
+//     const usuario = await db.infoc_tdv_cliente.findOne({
+//         where: {
+//             ds_email: req.body.email
+//         }
+//     });
+
+//     if(!usuario) {
+//         resp.send({ status: 'erro', mensagem: 'E-mail Inválido' });
+//     }
+
+//     let code = getRandomInteger(1000, 9999);
+//     await db.infoc_tdv_cliente.update({
+//         ds_codigo_rec: code 
+//     }, {
+//         where: { id_cliente: usuario.id_cliente }
+//     })
+
+//     enviarEmail(usuario.ds_email, 'Recuperação de Senha', `
+//     <h1>eis seu codigo de recuperacao</h1>
+//     <p>codigo: ${code} pra continuar</p>
+//     `)
+
+//     resp.send({ status: 'ok' });
+
+//     function getRandomInteger(min, max) {
+//         return Math.floor(Math.random() * (max - min) + min);
+//     }
+// })
 
 
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`));

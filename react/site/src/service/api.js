@@ -131,4 +131,14 @@ export default class Api {
         let r = await api.get(`infoA`);
         return r.data;
     }
+
+    // /// teste nico
+    // async esquecisenha(email){
+    //     let x = {
+    //         email: email
+    //     }
+
+    //  var r = await api.post(`/redefinir`, x);
+    //  return r.data;
+    // }
 }

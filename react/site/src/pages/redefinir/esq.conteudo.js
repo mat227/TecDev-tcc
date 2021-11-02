@@ -1,3 +1,5 @@
+// import { useState } from "react";
+// import Api from "../../service/api";
 import { ContainerEsqueceu } from "./esq.styled";
 
 // import { Popup } from './esq.styled';
@@ -5,6 +7,25 @@ import { ContainerEsqueceu } from "./esq.styled";
 //import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css 
 
 export default function EsqConteudo() { 
+//   const api = new Api();
+
+//     const [email, setEmail]= useState('');
+//     const [codigo, setCodigo]= useState();
+
+//     const InserirEmail = async () =>{
+//         let r = await api.esquecisenha(email);
+//         if (r.erro) {
+//             alert('deu ruim')
+//         } else {
+//             alert('deu bom')
+//         }
+//     }
+
+//     const Codigo = async() => {
+        
+//     }  
+
+
     return (        
 
         <ContainerEsqueceu>
@@ -19,7 +40,7 @@ export default function EsqConteudo() {
                         </div>
                         <div className="inputs-1">
                             <label style={{fontSize: 1.3 + "em"}}>Insira seu e-mail:</label>
-                                <input type="email"/>
+                                <input type="email" />
                                 <button type="submit">Enviar código</button>
                         </div>
                         <div className="inputs-2">
