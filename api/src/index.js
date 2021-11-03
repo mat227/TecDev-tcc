@@ -471,10 +471,16 @@ app.put ('/reset', async (req, resp) => {
 
     resp.send({ status: 'ok', mensagem: 'senha alterada'});
 })
-
-
-
-
+// alterando o dados do  adm
+app.put('/altdadosA/:id', async (req, resp) =>{
+    let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } =req.body(); 
+    try{
+        var r =  await db.infoc_tdv_adm.update({where : {id_adm : req.params.id} },
+            {})
+    }catch(e){
+        resp.send({erro : e.toString()});
+    }
+})
 
 
 function numeroaletaorio(min, max) {
