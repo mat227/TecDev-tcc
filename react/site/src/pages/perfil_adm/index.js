@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const api = new Api();
 
-export default function perfilAdm(){
+export default function PerfilAdm(){
 
     const [infoa, setInfoa] = useState([]);
 
@@ -49,10 +49,7 @@ export default function perfilAdm(){
                                     </div>
                                     
                                 </div>
-        
-        
                                 <div class="agrp_input2">
-        
                                     <div class="email">
                                         <div class="n_email"> Email: </div>
                                         <div class="nome_email">
@@ -60,9 +57,7 @@ export default function perfilAdm(){
                                         </div>
                                     </div>
                                 </div>
-        
                                 <div class="agrp_input3">
-        
                                     <div class="endereco">
                                         <div class="n_endereco"> Endereço: </div>
                                         <div class="nome_endereco">
@@ -78,31 +73,22 @@ export default function perfilAdm(){
                                     </div>
         
                                 </div>
-
-                                
                                 <div class="agrp_input4">
-        
                                     <div class="bairro">
                                         <div class="n_bairro"> Bairro: </div>
                                         <div class="nome_bairro">
                                         <input id="n_bairro" name="n_bairro" required="required" type="email"/>
                                         </div>
                                     </div>
-        
                                 </div>
-
-                                
                                 <div class="agrp_input5">
-        
                                     <div class="telefone">
                                         <div class="n_telefone"> Telefone: </div>
                                         <div class="nome_telefone">
                                         <input id="n_telefone" name="n_telefone" required="required" type="tel"/>
                                         </div>
                                     </div>
-        
                                 </div>
-        
                             </div>
                         </div> 
                     </div> 

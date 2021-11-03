@@ -364,5 +364,15 @@ app.get('/infoA', async (req, resp) => {
     
 
 })
+// alterando o dados do  adm
+app.put('/altdadosA/:id', async (req, resp) =>{
+    let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } =req.body(); 
+    try{
+        var r =  await db.infoc_tdv_adm.update({where : {id_adm : req.params.id} },
+            {})
+    }catch(e){
+        resp.send({erro : e.toString()});
+    }
+})
 
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`));
