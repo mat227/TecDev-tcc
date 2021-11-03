@@ -420,7 +420,7 @@ app.put ('/reset', async (req, resp) => {
     if (!usuario) {
         resp.send({ status: 'erro', mensagem: 'E-mail inválido'});
     }
-
+    
     if (usuario.ds_codigo_rec !== req.body.codigo || usuario.ds_codigo_rec === ''){
         resp.send({ status: 'erro', mensagem: 'Código Inválido'});
     }

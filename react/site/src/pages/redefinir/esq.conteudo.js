@@ -1,31 +1,29 @@
-// import { useState } from "react";
-// import Api from "../../service/api";
+import axios from 'axios';
+import { useState } from "react";
 import { ContainerEsqueceu } from "./esq.styled";
 
-// import { Popup } from './esq.styled';
-// import { confirmAlert } from 'react-confirm-alert'; // Import
-//import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css 
+import { useHistory } from "react-router";
+import Api from '../../service/api';
+
+const api = new Api();
+
+
+
+
 
 export default function EsqConteudo() { 
-//   const api = new Api();
 
-//     const [email, setEmail]= useState('');
-//     const [codigo, setCodigo]= useState();
+    const [email, setEmail] = useState('');
 
-//     const InserirEmail = async () =>{
-//         let r = await api.esquecisenha(email);
-//         if (r.erro) {
-//             alert('deu ruim')
-//         } else {
-//             alert('deu bom')
-//         }
-//     }
+    const nav = useHistory();
 
-//     const Codigo = async() => {
-        
-//     }  
-
-
+    async function recuperar() {
+        let x = await api.recuperar()
+        if ( x === 'ok') {
+            nav.push('/reset');
+        }
+        return;
+    }
     return (        
 
         <ContainerEsqueceu>
@@ -34,19 +32,13 @@ export default function EsqConteudo() {
                             <div className="titulo">
                                 <h1>REDEFINIR SENHA</h1>
                             </div>
-                            <div className="subtitulo">
-                                <h3>Como gostaria de redefinir sua senha?</h3>
-                            </div>
                         </div>
                         <div className="inputs-1">
                             <label style={{fontSize: 1.3 + "em"}}>Insira seu e-mail:</label>
-                                <input type="email" />
-                                <button type="submit">Enviar código</button>
+                                <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                                <button type="submit" onClick={recuperar}>Enviar código</button>
                         </div>
-                        <div className="inputs-2">
-                            Ao receber o código, coloque-o aqui:
-                            <div className="row"><input type="text" /><input type="text" /><input type="text" /><input type="text" /></div>
-                        </div>
+
                     
                         <div className="logo">
                             <img src="/assets/images/redef.logo atual(1).svg" alt =""/>

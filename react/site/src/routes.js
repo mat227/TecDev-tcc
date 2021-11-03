@@ -2,8 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Login from './pages/login/conteudo'
 import Redefinir from './pages/redefinir/esq.conteudo'
-// import Recuperacao from './pages/redefinir/recuperacao'
-// import Reseta from './pages/redefinir/reset'
+import Recuperar from './pages/redefinir/reset'
 import Descontos from './pages/Desconto/desconto'
 import Descricoes from './pages/descricao/desc.conteudo'
 import Homepage from './pages/Homepage1/home.js'
@@ -35,9 +34,10 @@ export default function Routes() {
             <Switch>
                 <Route path="/" exact={true} component={Homepageslogin} />
                 <Route path="/homepage" exact={true} component={Homepage} />
-                <Route path="/redefinir" exact={true} component={Redefinir} />
-                {/* <Route path="/redefinir/rec" exact={true} component={Recuperacao} />
-                <Route path="/redefinir/reset" exact={true} component={Reseta} /> */}
+
+                <Route path="/redefinir" exact={true} component={Redefinir} />                
+                <Route path="/reset" exact={true} component={Recuperar} />
+
                 <Route path="/desconto" exact={true} component={Descontos} />
                 <Route path="/descricao" exact={true} component={Descricoes} />
                 <Route path="/login" exact={true} component={Login} />

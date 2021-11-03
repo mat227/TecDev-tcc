@@ -133,12 +133,11 @@ export default class Api {
     }
 
     // /// teste nico
-    // async esquecisenha(email){
-    //     let x = {
-    //         email: email
-    //     }
-
-    //  var r = await api.post(`/redefinir`, x);
-    //  return r.data;
-    // }
+     async recuperar(email) {
+        let a = {
+            email: email
+        }
+        let r = await api.post(`/redefinir`, a);
+         return r.data;
+    }
 }
