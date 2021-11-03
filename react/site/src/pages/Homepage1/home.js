@@ -22,7 +22,6 @@ export default function Homepage() {
 
         let a = await api.listarLivro();
         setLivro(a);
-        console.log(livro)
 
       }
 

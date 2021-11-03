@@ -28,6 +28,8 @@ import Adm_pedido from './pages/Adm_pedidos/Adm_pedidos.js'
 import PerfilADM from './pages/perfil_adm'
 import Adm_livro from './pages/Adm_Livro'
 import Homepageslogin from  './pages/homepageslogin/homepages'
+import Busca from './pages/Busca/conteudo';
+
 export default function Routes() {
     return (
         <BrowserRouter>
