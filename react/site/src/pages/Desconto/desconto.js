@@ -10,9 +10,10 @@ export default function Homepage() {
           <Partecima/>
 
           <div class="oferta-da-semana">
-            <Trio/>
 
             <div class="desconto">
+            <Trio/>
+
                 <div class="tldescontoori">
                     <div class="tldesconto1">
                         Seleção de livros com <br/> até 50% de desconto

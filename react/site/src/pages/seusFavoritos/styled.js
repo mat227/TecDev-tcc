@@ -163,7 +163,8 @@ flex-direction: column;
     
 
     width: 70em;
-    height: 50em;
+    height: 30em;
+    min-height: 100%;
 
     padding: 1.3em;
 
@@ -289,6 +290,7 @@ color: white;
 font-size: 20px;
 margin-left: 2em;
 margin-top: 3.5em;
+cursor: pointer;
 }
 
 

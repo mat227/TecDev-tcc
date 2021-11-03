@@ -65,14 +65,19 @@ export default class Api {
         return r.data
     }
 
-    async cadastro(email, senha,telefone, nome, cpf, datanas) {
+    async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,bairro,complemento) {
         let cadastroJson = {
             email: email,
             senha: senha,
             telefone:telefone,
             nome: nome,
             cpf: cpf,
-            datanas: datanas
+            datanas: datanas,
+            nomerua:nomerua,
+            cep:cep,
+            numerocasa:numerocasa,
+            bairro:bairro,
+            complemento:complemento
             
         }
 
@@ -125,5 +130,14 @@ export default class Api {
     async infoA() {
         let r = await api.get(`infoA`);
         return r.data;
+    }
+
+    // /// teste nico
+     async recuperar(email) {
+        let a = {
+            email: email
+        }
+        let r = await api.post(`/redefinir`, a);
+         return r.data;
     }
 }

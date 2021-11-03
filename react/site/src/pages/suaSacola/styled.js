@@ -1,10 +1,9 @@
 import styled  from "styled-components";
 
 const Container = styled.div`
-            height: 100vh;
+            min-height: 100%;
             background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
-            padding-bruno
             
         *{
             box-sizing: border-box;
@@ -57,8 +56,20 @@ const Container = styled.div`
             border-radius: 0.5em;
             background: #7CC3DF;
             border: none;
-            margin-right: 8em;
         
+        }
+
+        .inputcupom input{
+            height: 2em;
+            width: 15em;
+            border-radius: 0.5em;
+            background: #7CC3DF;
+            border: none;
+        }
+
+        .inputcupom{
+            margin-left: -2em;
+
         }
         .bimg{
             width: 1.5em;
@@ -152,7 +163,7 @@ const Container = styled.div`
            height: 1em;
            text-align: center;
         }
-
+      
 `
 
 export {Container}

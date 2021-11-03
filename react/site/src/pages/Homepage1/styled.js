@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 
 const ContainerHome = styled.div`
-  
+     min-height: 100%;
+            background-image: url('/assets/images/bacckground.svg');
+            background-color: #125375;
 
   a, a:link, a:visited {
     text-decoration: none;
@@ -16,8 +18,7 @@ const ContainerHome = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Rowdies";
-    background-image: url('/assets/images/bacckground.svg');
-    background-color: #125375;
+   
 
     
 }

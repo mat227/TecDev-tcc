@@ -2,8 +2,44 @@ import {ContainerFav} from './styled';
 import ParteCima from '../../components/Common/parteCima/componente';
 import Rodape from '../../components/Common/rodape/redape'
 import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import Cookie from 'js-cookie';
+import { useEffect } from 'react';
 
-export default function favoritos(){
+export default function Favoritos(){
+
+    const [livro, setLivro] = useState([]);
+
+    useEffect(carregarFavoritos, []);
+
+  function carregarFavoritos() {
+    
+    let favorito = Cookie.get('favorito');
+    favorito = favorito !== undefined 
+                  ? JSON.parse(favorito) 
+                  : [];
+    setLivro(favorito);
+  }
+
+  function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+}
+function marcarTodos(marcar){
+    var itens = document.querySelectorAll("input");
+
+    var i = 0;
+    for(i=0; i<itens.length;i++){
+        itens[i].checked = marcar;
+    }
+}
+
    return(
       <ContainerFav>
           <ParteCima/>
@@ -19,54 +55,35 @@ export default function favoritos(){
             <div class="box-mae">
 
                         <div class="selecao-livro">
+                        {livro.map((item) => 
+                           
 
                             <div class="box-livros">
-                              
                                 <div class="exemplo-radio">     <input type="checkbox" value="0"
                                     name="campo-checkbox" id="campo-checkbox" style={{accentColor: "blue"}}/> 
                                        <label for="campo-checkbox" ></label></div>
                                     <div class="imgl">
                                         <img src="/assets/images/COMÉDIA 1.svg" alt=""/>
                                         <div class="tllivro">
-                                            A Divina Comédia Inferno - Dante Alighieri
+                                           {item.nm_livro}
                                         </div>
                                         <div class="preco">
-                                            R$ 49,90
+                                            {item.vl_para}
                                         </div>
                                         <div class="botao-preco">
-                                            <Link to="/descricao"><button>Ver produto</button></Link>
+                                        <Link to={{pathname:"/descricao",state:item.id_livro}}><button>Ver produto</button></Link>
                                         </div>
                                     </div>
                                     <hr/> 
 
-
                             </div>
-                            <div class="box-livros2">
-                              
-                                <div class="exemplo-radio">     <input type="checkbox" value="0"
-                                    name="campo-checkbox" id="campo-checkbox" style={{accentColor: "blue"}}/>    <label
-                                    for="campo-checkbox" ></label></div>
-                                    <div class="imgl">
-                                        <img src="/assets/images/COMÉDIA 1.svg" alt=""/>
-                                        <div class="tllivro">
-                                            A Divina Comédia Inferno - Dante Alighieri
-                                        </div>
-                                        <div class="preco">
-                                            R$ 49,90
-                                        </div>
-                                        <div class="botao-preco">
-                                            <Link to="descricao"><button>Ver produto</button></Link>
-                                        </div>
-                                    </div>
-                                    <hr/> 
+ )}
 
-
-                            </div>
                             <div class="excluir">
-                                <div class="exemplo-radio">     <input type="checkbox" value="0"
+                                <div class="exemplo-radio">     <input onClick={marcarTodos} type="checkbox" value="0"
                                     name="campo-checkbox" id="campo-checkbox"style={{accentColor: "blue"}}/>    <label
                                     for="campo-checkbox" ></label></div>
-                                    <div class="tllivro2">
+                                    <div onClick={deleteAllCookies} class="tllivro2">
                                         Excluir favoritos       
                                         <div class="tllivro3">
                                             Favoritos 1 - 2 de 2
