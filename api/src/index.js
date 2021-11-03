@@ -370,37 +370,87 @@ app.get('/infoA', async (req, resp) => {
 
 
 app.post ('/redefinir', async (req, resp) => {
-const usuario = await db.infoc_tdv_cliente.findOne({
-    where: {
-        ds_email: req.body.email
-    }
-});
+    const usuario = await db.infoc_tdv_cliente.findOne({
+        where: {
+            ds_email: req.body.email
+        }
+    });
     if (!usuario) {
         resp.send({ status: 'erro', mensagem: 'E-mail inválido'});
     }
 
-    let codigo = numeroaletaorio(1000, 9999);
+    let code = getRandomInteger(1000, 9999);
     await db.infoc_tdv_cliente.update({
         ds_codigo_rec: code
     }, {
         where: { id_cliente: usuario.id_cliente}
     })
 
-    enviarEmail(usuario.ds_email, 'Recuperação de senha')
+    enviarEmail(usuario.ds_email, 'Recuperação de senha', `
+    <h1>Recuperação de Senha</h1>
+    <p>Você solicitou a recuperação de senha da sua conta.</p>
+    <p>Entre com o código ${code} para prosseguir com a recuperação</p>
+    `)
+
+    resp.send( {status: 'ok'});
 })
 
 app.post ('/validar', async (req, resp) => {
-    
+    const usuario = await db.infoc_tdv_cliente.findOne({
+        where: {
+            ds_email: req.body.email
+        }
+    });
+    if (!usuario) {
+        resp.send({ status: 'erro', mensagem: 'E-mail inválido'});
+    }
+
+    if (usuario.ds_codigo_rec !== req.body.codigo){
+        resp.send({ status: 'erro', mensagem: 'Código Inválido'});
+    }
+    resp.send({ status: 'ok', mensagem: 'Código validado'});
 })
 
 app.put ('/reset', async (req, resp) => {
+    const usuario = await db.infoc_tdv_cliente.findOne({
+        where: {
+            ds_email: req.body.email
+        }
+    });
+    if (!usuario) {
+        resp.send({ status: 'erro', mensagem: 'E-mail inválido'});
+    }
+
+    if (usuario.ds_codigo_rec !== req.body.codigo || usuario.ds_codigo_rec === ''){
+        resp.send({ status: 'erro', mensagem: 'Código Inválido'});
+    }
     
+    await db.infoc_tdv_cliente.update({
+        ds_senha: req.body.novaSenha,
+        ds_codigo_rec:''
+    }, {
+       where: { id_cliente: usuario.id_cliente}
+    });
+
+    resp.send({ status: 'ok', mensagem: 'senha alterada'});
 })
 
 
 
-function numeroaletaorio(min, max) {
-    return Math.floor(Math.random() * max (max - min)) + min;
-}
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
+
+app.get ('/redefinir', async (req, resp) => {
+    try {
+    let x = await db.infoc_tdv_cliente.findAll()
+    resp.send(x);
+    } catch(e) {
+              resp.send({ erro:e.toString() })
+    }
+    })
+
 
 app.listen(process.env.PORT, x => console.log(`Server up at port ${process.env.PORT}`));
+
+
