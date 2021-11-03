@@ -3,9 +3,8 @@ import express from 'express';
 import cors from 'cors';
 import crypto from 'crypto-js';
 import db from '../src/db.js';
-
-
-
+import  Sequelize  from 'sequelize';
+const {Op} = Sequelize;
 
 const app = express();
 app.use(cors());
@@ -298,6 +297,22 @@ app.get('/addlivro', async (req,resp ) =>{
 })
 
 
+app.get('/generos', async (req, resp)=> {
+
+    try{
+        let generos=req.query.id;
+        let r = await db.infoc_tdv_genero.findAll({
+            where:
+            {
+                id_genero: generos
+            }
+        });
+        resp.send(r);
+    }catch(e){
+        resp.send({erro : e.toString()});
+    }
+})
+
 app.delete('/dellivro/:id', async (req, resp) => {
     try {
         let r = await db.infoc_tdv_livro.destroy({ where: { id_livro: req.params.id} });
@@ -365,7 +380,28 @@ app.get('/infoA', async (req, resp) => {
     
 
 })
+// Busca
 
+app.get('/busca', async (req,resp) => {
+    try {
+        let search = req.query.search;
+        let r = await db.infoc_tdv_livro.findAll( 
+            { where: {
+                [Op.or]: [
+                    { 'nm_livro': {[Op.like]: `%${search}%` }},
+                    { 'ds_descricao': {[Op.like]: `%${search}%` }},
+                    { 'ds_autora': {[Op.like]: `%${search}%` }},
+                    { 'ds_editora': {[Op.like]: `%${search}%` }}
+                ],
+
+            },
+         });
+        resp.send(r);
+
+    } catch(e) {
+        resp.send({ erro: e.toString()})
+    }
+})
 // esqueci a  senha :)
 
 
@@ -396,6 +432,9 @@ app.post ('/validar', async (req, resp) => {
 app.put ('/reset', async (req, resp) => {
     
 })
+
+
+
 
 
 

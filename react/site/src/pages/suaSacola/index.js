@@ -22,7 +22,14 @@ export default function SuaSacola (props){
     setLivro(carrinho);
   }
   
-  
+  function marcarTodos(marcar){
+    var itens = document.querySelectorAll("input");
+
+    var i = 0;
+    for(i=0; i<itens.length;i++){
+        itens[i].checked = marcar;
+    }
+}
 
 
     return(
@@ -69,10 +76,9 @@ export default function SuaSacola (props){
             </div>
           
          <div className="inputC">
-                                <input type="checkbox" id='studo' className="imputcheck" />
-                                <label for="studo" style={{'margin-right': '1em'}}> Seleciona tudo</label>
-                                <input type="checkbox" id='dtudo' className="imputcheck" />
-                                <label for="dtudo"> Desmarca tudo</label>
+                                <input onClick={marcarTodos} type="checkbox" id='studo' className="imputcheck" />
+                                <label  for="studo" style={{'margin-right': '1em'}}> Seleciona tudo</label>
+                            
                             </div>
       </div>
                         <div className="cupom">

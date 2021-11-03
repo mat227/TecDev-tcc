@@ -141,4 +141,10 @@ export default class Api {
     //  var r = await api.post(`/redefinir`, x);
     //  return r.data;
     // }
+
+// Busca
+    async busca (search) {
+        let r = await api.get(`/busca?search=${search}`)
+        return r.data;
+    }
 }

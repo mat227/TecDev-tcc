@@ -29,12 +29,16 @@ import Adm_pedido from './pages/Adm_pedidos/Adm_pedidos.js'
 import PerfilADM from './pages/perfil_adm'
 import Adm_livro from './pages/Adm_Livro'
 import Homepageslogin from  './pages/homepageslogin/homepages'
+import Busca from './pages/Busca/conteudo';
+
 export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact={true} component={Homepageslogin} />
                 <Route path="/homepage" exact={true} component={Homepage} />
+                <Route path="/busca" exact={true} component={Busca} />
+
                 <Route path="/redefinir" exact={true} component={Redefinir} />
                 {/* <Route path="/redefinir/rec" exact={true} component={Recuperacao} />
                 <Route path="/redefinir/reset" exact={true} component={Reseta} /> */}
