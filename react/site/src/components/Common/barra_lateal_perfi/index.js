@@ -6,8 +6,7 @@ export default function Barralat(){
         <Container>
             <div className="informacao">
                 <div className="botao_e"><button>< Link to='/adm_livro'>Livros</Link></button></div>
-                <div className="botao_e"> <button>< Link to='/perfil_adm_c'>Cupons </Link></button> </div> 
-                <div className="botao_e"><button>< Link to='/perfil_adm'>Suas informações</Link></button></div>
+                <div className="botao_e"> <button>< Link to='/perfil_adm_c'>Cupons </Link></button> </div>
                 <div className="botao_e"><button><Link to='/adm_pedido'>Pedidos</Link></button></div>
             </div>
     </Container>

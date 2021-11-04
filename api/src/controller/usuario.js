@@ -31,4 +31,20 @@ app.post('/addEndereco', async (req, resp) =>{
     }
 })
 
+
+// alterando o dados do  usuario
+app.put('/altdadosA/:id', async (req, resp) =>{
+    var idend = await  db.tb_endereco.findOne(
+        {where : {id_cliente : req.params.id}},
+        
+        );
+    let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } = req.body(); 
+    try{
+        var r =  await db.infoc_tdv_cliente.update({where : {id_cliente : req.params.id} },
+            {nm_cliente : nome, ds_cpf : cpf, dt_nascimento : dataNasc, ds_email : email });
+        var r1 = await db.infoc_tdv_endereco.update({where: {id_endereco : idend}},{ nm_rua : nomerua, ds_cep : cep, ds_numero : nrcasa, ds_bairro: bairro , ds_complemento : complemento});
+    }catch(e){
+        resp.send({erro : e.toString()});
+    }
+})
 export default app;

@@ -43,9 +43,7 @@ export default function SuaSacola (props){
                     <div className="container-cont">
 
                     <div className="itens">
-                   
-      
-          
+   
                 <div className="tabela">
                 <table>
                 <thead>

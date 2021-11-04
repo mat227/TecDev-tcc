@@ -3,7 +3,7 @@ import ParteCima from "../../components/Common/parteCima/componente.js";
 import {Buttom} from '../../components/buttons/indexStyled.js'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Api from '../../service/apiUsuario'
+import Api from '../../service/apiUsuario.js'
 
 const api = new Api();
 
@@ -19,6 +19,7 @@ export default function SuaInfo(){
     const ListInfoC = async ()  => {
         let r = await api.infoC();
         console.log(infoc);
+
         setInfoC(r);
     }
 
