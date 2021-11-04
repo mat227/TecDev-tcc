@@ -30,7 +30,7 @@ background-color: #125375;
             padding: 2em;
             background-color:rgba(16, 42, 69, 0.6);
             border-radius: 2em;
-        }*/
+        }
         background-color: #135578;
         background-image: url('./assets/imagens/fundo.svg');
         padding: 6.4em 2em 3em 2em;

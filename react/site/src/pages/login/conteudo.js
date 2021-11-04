@@ -2,9 +2,8 @@ import { ContainerLogin } from "./styled"
 import { useState, useRef } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import LoadingBar from 'react-top-loading-bar'
 
-import Api from '../../service/api'
+import Api from '../../service/apiLogin'
 import { useHistory } from 'react-router-dom';
 
 import Cookies from 'js-cookie';

@@ -4,10 +4,8 @@ import { useState, useRef } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Api from '../../service/api'
-import { useHistory } from 'react-router-dom';
+import Api from '../../service/apiLogin'
 
-import Cookies from 'js-cookie';
 
 const api = new Api();
 

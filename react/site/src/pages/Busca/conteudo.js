@@ -1,10 +1,10 @@
 import { Container } from './styled'
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import Livros from '../Buscapt2/conteudo'
 import Partecima  from "../../components/Common/parteCima/componente"
 import Rodape  from "../../components/Common/rodape/redape"
 
-import Api from '../../service/api'
+import Api from '../../service/apiLivro'
 const api = new Api ();
 
 

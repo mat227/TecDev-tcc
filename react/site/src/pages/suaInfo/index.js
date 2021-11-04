@@ -3,7 +3,7 @@ import ParteCima from "../../components/Common/parteCima/componente.js";
 import {Buttom} from '../../components/buttons/indexStyled.js'
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Api from '../../service/api.js'
+import Api from '../../service/apiUsuario'
 
 const api = new Api();
 

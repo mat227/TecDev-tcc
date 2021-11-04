@@ -3,7 +3,7 @@ import Cabecalho  from '../../components/Common/parteCima/componente'
 import Rodape from '../../components/Common/rodape/redape'
 import Barralat from '../../components/Common/barra_lateal_perfi';
 import { Link } from 'react-router-dom';
-import Api  from '../../service/api';
+import Api  from '../../service/apiAdm';
 import { useState } from 'react';
 
 const api = new Api();

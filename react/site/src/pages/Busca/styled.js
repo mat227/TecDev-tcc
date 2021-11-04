@@ -29,6 +29,7 @@ const Container = styled.div`
        flex-direction: row;
        flex-wrap: wrap;
 justify-content:center;
+
 margin-bottom:6em;
    }
 `

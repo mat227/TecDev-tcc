@@ -1,9 +1,8 @@
-import axios from 'axios';
 import { useState } from "react";
 import { ContainerEsqueceu } from "./esq.styled";
 
 import { useHistory } from "react-router";
-import Api from '../../service/api';
+import Api from '../../service/apiLogin';
 
 const api = new Api();
 

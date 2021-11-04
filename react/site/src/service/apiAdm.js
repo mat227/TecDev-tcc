@@ -1,6 +1,6 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:3030'
+    baseURL: 'http://localhost:3030/adiministrador'
 })
 
 
@@ -8,16 +8,8 @@ const api = axios.create({
 export default class Api {
     
 
-    async login(email, senha) {
-        let a = {email,senha}
-        let r = await api.post(`/login`, a);
-        return r.data;
-    }
-    //Função de informaçoes do Cliente
-    async infoC(){
-        let r = await api.get(`/suaInfo`);
-        return r.data;
-    }
+   
+    
     // lista livros pagina do adm
     async listaLivroAdm(){
         let r = await api.get(`/listaLivro`);
@@ -50,41 +42,9 @@ export default class Api {
         return r.data;
     }
     //parte adm 
-    async cadastrarCartao(nrcartao, titular, sobrenome, vencimento, parcelas, cvv) {
-        let cadastroJson = {
-            nrcartao: nrcartao,
-            titular: titular,
-            sobrenome: sobrenome,
-            vencimento: vencimento,
-            parcelas: parcelas,
-            cvv: cvv
-            
-        }
+   
 
-        let r = await api.post(`/pagamento`, cadastroJson );
-        return r.data
-    }
-
-    async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,bairro,complemento) {
-        let cadastroJson = {
-            email: email,
-            senha: senha,
-            telefone:telefone,
-            nome: nome,
-            cpf: cpf,
-            datanas: datanas,
-            nomerua:nomerua,
-            cep:cep,
-            numerocasa:numerocasa,
-            bairro:bairro,
-            complemento:complemento
-            
-        }
-
-        let r = await api.post(`/cadastro`, cadastroJson );
-        return r.data
-    }
-
+   
     async cadastrarLivro(livro, descricao, vpara, vde,datac, autor, editora, genero, disponivel,qtd,imagem,brochura,promocao) {
         let naomexa = {
             livro: livro,
@@ -132,12 +92,7 @@ export default class Api {
         return r.data;
     }
 
-    // /// teste nico
-     async recuperar(email) {
-        let a = {
-            email: email
-        }
-        let r = await api.post(`/redefinir`, a);
-         return r.data;
-    }
+   
+
+   
 }

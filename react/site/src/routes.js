@@ -39,6 +39,7 @@ export default function Routes() {
 
                 <Route path="/redefinir" exact={true} component={Redefinir} />                
                 <Route path="/reset" exact={true} component={Recuperar} />
+                <Route path="/busca" exact={true} component={Busca} />
 
                 <Route path="/desconto" exact={true} component={Descontos} />
                 <Route path="/descricao" exact={true} component={Descricoes} />

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Api from "../../service/api";
 import { Container } from "./styled";
-const api = new Api();
 
 export default function Livros(props) {
   const [livro, setLivro] = useState(props.info);

@@ -1,0 +1,45 @@
+import axios from "axios";
+
+const api = axios.create ({
+    baseURL: 'http://localhost:3030/login'
+})
+
+export default class Api {
+
+async login(email, senha) {
+    let a = {email,senha}
+    let r = await api.post(`/logar`, a);
+    return r.data;
+}
+
+
+async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,bairro,complemento) {
+    let cadastroJson = {
+        email: email,
+        senha: senha,
+        telefone:telefone,
+        nome: nome,
+        cpf: cpf,
+        datanas: datanas,
+        nomerua:nomerua,
+        cep:cep,
+        numerocasa:numerocasa,
+        bairro:bairro,
+        complemento:complemento
+        
+    }
+
+    let r = await api.post(`/cadastro`, cadastroJson );
+    return r.data
+}
+
+
+ // /// teste nico
+ async recuperar(email) {
+    let a = {
+        email: email
+    }
+    let r = await api.post(`/redefinir`, a);
+     return r.data;
+}
+}
