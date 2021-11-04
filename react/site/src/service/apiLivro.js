@@ -27,8 +27,5 @@ export default class Api {
         return r.data;
     }
 
-    async listarLivro() {
-        let r = await api.get(`/addlivro/`);
-        return r.data;
-    }
+    
 }

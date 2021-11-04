@@ -6,7 +6,7 @@ import Partecima  from "../../components/Common/parteCima/componente"
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
 import Trio from "../../components/Common/trio/trio"
-import Api from '../../service/apiLivro'
+import Api from '../../service/apiAdm'
 const api = new Api();
 
 
