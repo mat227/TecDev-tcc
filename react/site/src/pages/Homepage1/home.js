@@ -2,9 +2,6 @@ import { ContainerHome } from "./styled"
 import { useState ,useEffect} from 'react'
 import Partecima  from "../../components/Common/parteCima/componente"
 
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import { useHistory } from 'react-router-dom';
 
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
@@ -16,7 +13,6 @@ const api = new Api();
 export default function Homepage() {
     const [livro, setLivro] = useState([]);
 
-    const navig = useHistory();
 
     async function listar() {
 
@@ -132,8 +128,8 @@ export default function Homepage() {
                 </div>
                 
                 <div class="prevNext">
-                  <div><a href="#s4"></a><a href="#s2"></a></div>
-                  <div><a href="#s1"></a><a href="#s3"></a></div>
+                  <div><a href="#s1"></a><a href="#s2"></a></div>
+                  <div><a href="#s1"></a><a href="#s2"></a></div>
                 
                 </div>
               

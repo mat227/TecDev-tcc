@@ -300,8 +300,8 @@ flex-direction: column;
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 
-#s1:target ~ .slider {transform: translateX(   -100vh); -webkit-transform: translateX(   -11vh);}
-#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-217vh);}
+#s1:target ~ .slider {transform: translateX(   -100vh); -webkit-transform: translateX(   -13vh);}
+#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-170vh);}
 
 
 
@@ -344,7 +344,7 @@ flex-direction: column;
     color: white;
     display: table-cell;
   height: 50vh;
-  width: 40vw;
+  width: 30vw;
   padding-top: 3.5em;
   padding-left: -10em;
   }

@@ -1,5 +1,5 @@
 import { ContainerLogin } from "./styled"
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -16,7 +16,6 @@ export default function Conteudo() {
     const [senha, setSenha] = useState('');
 
     const navig = useHistory();
-    const loading = useRef(null);
 
     const logar = async () => {
         

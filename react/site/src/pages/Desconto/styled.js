@@ -135,7 +135,7 @@ padding-top: 1em;
     display: flex;
     flex-direction: column;
     background-color: rgba(97, 169, 212, 0.5);	
-    height: 16.5vw;
+    height: 17.4vw;
     width: 15vw;
   
     border-radius: 5px;
@@ -169,8 +169,8 @@ padding-top: 1em;
   
   .descontolivro{
       position: absolute;
-      margin-left: -13em;
-      margin-top: 7.5em;
+      margin-left: -2.5em;
+      margin-top:-3.25em;
   }
   
   .preco-descontotr{

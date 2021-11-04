@@ -19,6 +19,8 @@ export default function Homepageslogin() {
 
       }
 
+      
+
 
       useEffect(() => {
         listar();
@@ -126,8 +128,8 @@ export default function Homepageslogin() {
                 </div>
                 
                 <div class="prevNext">
-                  <div><a href="#s4"></a><a href="#s2"></a></div>
-                  <div><a href="#s1"></a><a href="#s3"></a></div>
+                  <div><a href="#s1"></a><a href="#s2"></a></div>
+                  <div><a href="#s1"></a><a href="#s2"></a></div>
                 
                 </div>
               
