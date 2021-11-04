@@ -34,9 +34,9 @@ app.post('/addEndereco', async (req, resp) =>{
 
 // alterando o dados do  usuario
 app.put('/altdadosA/:id', async (req, resp) =>{
-    var idend = await  db.tb_endereco.findOne(
-        {where : {id_cliente : req.params.id}},
-        
+    var idend = await  db.tb_endereco.findOne({
+        attributes: getFields(),
+        where : {id_cliente : req.params.id}}
         );
     let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } = req.body(); 
     try{
@@ -47,4 +47,9 @@ app.put('/altdadosA/:id', async (req, resp) =>{
         resp.send({erro : e.toString()});
     }
 })
+function getFields(){
+    return [
+        ['id_endereco' , 'id']
+    ]
+}
 export default app;

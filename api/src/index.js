@@ -1,14 +1,9 @@
 
 import adm from './controller/adm.js'
-<<<<<<< HEAD
 import livros from './controller/adm.js'
 import login from './controller/adm.js'
-=======
 import livros from './controller/livros.js'
-import login from './controller/login.js'
->>>>>>> 13be1acac1f939c3bf86064730aa364c51402db8
 import usuario from './controller/usuario.js'
-
 import express from 'express'
 import cors from 'cors'
 
