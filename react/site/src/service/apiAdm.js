@@ -1,6 +1,6 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:3030/adiministrador'
+    baseURL: 'https://tecdevtcc.herokuapp.com/adiministrador'
 })
 
 
