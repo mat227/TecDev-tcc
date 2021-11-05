@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom"
 
 import Api from '../../service/apiLogin'
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import Cookies from 'js-cookie';
 
