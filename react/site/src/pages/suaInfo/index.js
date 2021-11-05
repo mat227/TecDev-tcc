@@ -20,7 +20,7 @@ export default function SuaInfo(){
         setInfoC(r);
     }
     useEffect(()=>{
-    },[ListInfoC()])
+    },[ ListInfoC()])
 
     return(
         <div>

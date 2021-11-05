@@ -15,12 +15,10 @@ export default function Homepageslogin() {
     async function listar() {
         let a = await api.listarLivro();
         setLivro(a);
-        console.log(livro)
       }
 
       useEffect(() => {
-        listar();
-      }, []);
+      }, [listar()]);
 
       
     return (
