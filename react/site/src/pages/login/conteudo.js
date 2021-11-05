@@ -2,9 +2,10 @@ import { ContainerLogin } from "./styled"
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom"
 
 import Api from '../../service/apiLogin'
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Cookies from 'js-cookie';
 
@@ -63,11 +64,11 @@ export default function Conteudo() {
 
         </div>
         <div class="pt-baixo">
-      <a href="/redefinir">  <div class="esqueceu-senha">Esqueceu a senha?        </div>
-</a>
-        <a href="/cadastro"><div class="criar-conta">
+      <Link to="/redefinir">  <div class="esqueceu-senha">Esqueceu a senha?        </div>
+</Link>
+        <Link to="/cadastro"><div class="criar-conta">
            Criar conta
-        </div></a>
+        </div></Link>
     </div>
 
             <div class="botao">

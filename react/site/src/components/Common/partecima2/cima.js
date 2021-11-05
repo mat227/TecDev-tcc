@@ -68,6 +68,7 @@ export default function ParteCima2(props) {
                     </div>
                 </div>
                 </Link>
+                <div><Link to='/adm_livro'><button>Adm</button></Link></div>
             </div>
         </div>
             </ContainerPartecima>
