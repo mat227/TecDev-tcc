@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { ContainerAdm_pedidos } from "./adm_pedido.styled"
-import Cabecalho from "../../components/Common/cabecalho perfil/nav";
+import Cabecalho from "../../components/Common/cabecalhoperfil/nav";
 import Rodape  from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi";
 

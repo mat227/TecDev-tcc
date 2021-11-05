@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Container } from "./styled"
 import ParteCima from "../../components/Common/parteCima/componente";
 import Rodape from "../../components/Common/rodape/redape";
@@ -42,7 +41,7 @@ export default function Adm_livro() {
                 listaLivro();
                 LimpaCampos();
               }
-            return;
+            return r;
         }else{
             let r = await api.cadastrarLivro( livro, descricao,vpara,vde,datac,autor,editora,genero,disponivel,qtd,imagem,brochura,promocao);
             if (r.erro) {
@@ -51,7 +50,7 @@ export default function Adm_livro() {
                 alert('Livro inserido');
                 listaLivro();
             }
-            return;
+            return r;
 
         }
         
@@ -68,7 +67,7 @@ export default function Adm_livro() {
         var r = await api.deletaLivro(id_l);
         alert('Livro removido')
         listaLivro();
-        return ;
+        return r;
     }
     function LimpaCampos(){
         setLivro('');

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ContainerCadastro } from "./cadas.styled"
-import { useState, useRef } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import { useState } from 'react'
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Api from '../../service/apiLogin'

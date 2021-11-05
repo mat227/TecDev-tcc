@@ -2,18 +2,19 @@ import {Container} from './styled';
 import Cabecalho  from '../../components/Common/parteCima/componente'
 import Rodape from '../../components/Common/rodape/redape'
 import Barralat from '../../components/Common/barra_lateal_perfi';
-import Api  from '../../service/apiAdm';
+// import Api  from '../../service/apiAdm';
+// import {useState } from 'react';
 
-const api = new Api();
+// const api = new Api();
 
 export default function PerfilAdm(){
 
-  //  const [infoa, setInfoa] = useState([]);
+//   const [infoa, setInfoa] = useState([]);
 
-    const infoA = async () => {
-        let r = await api.infoA();
-      //  setInfoa(r);
-    }
+//     const infoA = async () => {
+//         let r = await api.infoA();
+//       setInfoa(r);
+//     }
    return(
        <div>
           <Cabecalho />

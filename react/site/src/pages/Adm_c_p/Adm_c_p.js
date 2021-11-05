@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import { ContainerAdm_c_p } from "./adm_c_p.styled"
-import Cabecalho  from "../../components/Common/cabecalho perfil/nav";
+import Cabecalho  from "../../components/Common/cabecalhoperfil/nav";
 import Rodape from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi";
 import { Buttom } from "../../components/buttons/indexStyled";
@@ -30,7 +29,6 @@ export default function Adm_c_p() {
             alert("cupom adicionado");
             return r.data;
         }
-        return
     }
     const listaCupom =  async () =>{
         var data = await api.listaCupom();
@@ -38,10 +36,10 @@ export default function Adm_c_p() {
     }
     return (
         <ContainerAdm_c_p>
-            <Cabecalho />
+            <Cabecalho/>
             <div className="conteudo">
                     <div className="box_g">
-                        <Barralat />
+                        <Barralat/>
                         <div className="conteudo_direito">
                             <div className="box">
                                 <div className="titulo">
@@ -120,7 +118,7 @@ export default function Adm_c_p() {
                         </div>
                     </div>
              </div>
-            <Rodape />
+            <Rodape/>
          </ContainerAdm_c_p>
     )
 }       

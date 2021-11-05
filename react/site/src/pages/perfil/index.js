@@ -1,28 +1,28 @@
  import { Container } from  './indexSyled.js';
- import Nav from '../../components/Common/cabecalho perfil/nav.js';
+ import Nav from '../../components/Common/cabecalhoperfil/nav.js';
  import { ContainerPartecima } from '../../components/Common/parteCima/styled.js';
  import Api  from '../../service/apiUsuario.js';
  import { useEffect, useState } from 'react';
  import { Link } from 'react-router-dom';
  import Rodape from '../../components/Common/rodape/redape.js';
- import ParteCima from '../../components/Common/parteCima/componente.js';
+ // import ParteCima from '../../components/Common/parteCima/componente.js';
 
  const api = new Api();
- const popupS = require('popups');
+ //const popupS = require('popups');
  export default function Login(){
      useEffect(()=>{
          console.log('Just one time');
          ListInfo();
      },[])
-    const [nome, setNome]  = useState('');
-    const [email, setEmail] = useState('');
-    const [danasc, setData] =  useState('');
-    const [cpf, setCpf ]= useState('');
-    const [numero, setNumero] = useState('');    
-    const [mud, setMud] = useState(false);
-    const [rua , setRua ] = useState('');
-    const [complemento, setComplemento] = useState('');
-    const [bairro , setBairro] = useState('');
+   // const [nome, setNome]  = useState('');
+   // const [email, setEmail] = useState('');
+   // const [danasc, setData] =  useState('');
+   // const [cpf, setCpf ]= useState('');
+   // const [numero, setNumero] = useState('');    
+   // const [mud, setMud] = useState(false);
+   // const [rua , setRua ] = useState('');
+   // const [complemento, setComplemento] = useState('');
+   // const [bairro , setBairro] = useState('');
 
 
 
@@ -71,13 +71,13 @@
                                       <label class="test" for="">CPF: {x.ds_cpf}</label>
                                   </div>
                              )}
-                            {infoc.map(x =>{
+                            {infoc.map((x) =>(
                                 <div class="contato">
                                      <h2>Telefone</h2>
                                      <label for="" class="tell">{x.nr_contato/*.substring(0,2)*/}</label>
                                      <label for="" class="tell">{x.nr_contato/*.substring(2,4)*/} - {x.nr_contato/*.substring(4,8)*/}</label>
                              </div>
-                            })}
+                            ))}
                          </div>         
                  </div>
              </Container>
