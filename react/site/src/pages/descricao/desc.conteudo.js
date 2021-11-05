@@ -11,7 +11,7 @@ import Cookie from 'js-cookie';
 
 export default function DescConteudo(props) {
 
-    const [livro, setLivro] = useState(props.location.state);
+    const [livro] = useState(props.location.state);
     const navigation = useHistory();
 
 
@@ -43,7 +43,7 @@ export default function DescConteudo(props) {
     
         
        
-        if (favorito.some(item => item.id_livro === item.id_livro) === false)
+        if (favorito.some(item => item.id_livro === item.id) === false)
         favorito.push({...livro, qtd: 1 });
      
         

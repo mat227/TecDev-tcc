@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-const ContainerAdm_pedidos = styled.div`
+const ContainerAdmpedidos = styled.div`
     margin: 0em;
     background-color: #1e4f63;
     background-image: url("./assets/images/fundo.svg");
@@ -264,4 +264,4 @@ button img {
 }
 
 `
-export { ContainerAdm_pedidos }
+export { ContainerAdmpedidos }

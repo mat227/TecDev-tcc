@@ -22,7 +22,7 @@ export default function Adm_livro() {
     const [autor, setAutor] = useState('');
     const [editora, setEditora] = useState('');
     const [genero, setGenero] = useState('');
-    const [disponivel, setDisponivel] = useState(0);
+    const [disponivel] = useState(0);
     const [qtd, setQtd] = useState(0);
     const [imagem, setImagem] = useState('');
     const [promocao, setPromocao] = useState(0);

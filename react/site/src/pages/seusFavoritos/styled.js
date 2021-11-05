@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 const ContainerFav = styled.div`
+
     @font-face {
     font-family: "Rowdies";
     src: url('../RedefinirSenha/assets/fonts/Rowdies-Bold.ttf');
@@ -19,6 +20,8 @@ const ContainerFav = styled.div`
 .fav-container {
     background-color: #135578;
     background-image: url('/assets/images/bacckground.svg');
+    min-height: 30em;
+
 }
 
 @font-face {
@@ -163,7 +166,6 @@ flex-direction: column;
     
 
     width: 70em;
-    height: 30em;
     min-height: 100%;
 
     padding: 1.3em;

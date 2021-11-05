@@ -1,4 +1,4 @@
-import { ContainerAdm_pedidos } from "./adm_pedido.styled"
+import { ContainerAdmpedidos } from "./adm_pedido.styled"
 import Cabecalho from "../../components/Common/cabecalhoperfil/nav";
 import Rodape  from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi";
@@ -6,7 +6,7 @@ import Barralat from "../../components/Common/barra_lateal_perfi";
 
 export default function Adm_pedidos() {
     return (
-        <ContainerAdm_pedidos> 
+        <ContainerAdmpedidos> 
                     <Cabecalho />                    
                     <div className="conteudo">
                         <div className="box_g">
@@ -64,5 +64,5 @@ export default function Adm_pedidos() {
                         </div>
                     </div>
                     <Rodape />
-    </ContainerAdm_pedidos>
+    </ContainerAdmpedidos>
 )}

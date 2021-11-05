@@ -1,4 +1,4 @@
-import { ContainerAdm_c_p } from "./adm_c_p.styled"
+import { ContainerAdmcp } from "./adm_c_p.styled"
 import Cabecalho  from "../../components/Common/cabecalhoperfil/nav";
 import Rodape from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi";
@@ -35,7 +35,7 @@ export default function Adm_c_p() {
         setCupom(data);   
     }
     return (
-        <ContainerAdm_c_p>
+        <ContainerAdmcp>
             <Cabecalho/>
             <div className="conteudo">
                     <div className="box_g">
@@ -119,6 +119,6 @@ export default function Adm_c_p() {
                     </div>
              </div>
             <Rodape/>
-         </ContainerAdm_c_p>
+         </ContainerAdmcp>
     )
 }       

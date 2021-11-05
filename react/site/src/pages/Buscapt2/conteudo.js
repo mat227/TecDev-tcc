@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container } from "./styled";
 
 export default function Livros(props) {
-  const [livro, setLivro] = useState(props.info);
+  const [livro] = useState(props.info);
 
   return (
     <Container>

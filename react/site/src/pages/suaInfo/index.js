@@ -8,10 +8,7 @@ import Api from '../../service/apiUsuario.js'
 const api = new Api();
 
 export default function SuaInfo(){
-    useEffect(()=>{
-        console.log('Just one time');
-        ListInfoC();
-    },[])
+  
 
     //test zone up
     const [infoc,setInfoC] = useState([]);
@@ -22,6 +19,8 @@ export default function SuaInfo(){
 
         setInfoC(r);
     }
+    useEffect(()=>{
+    },[ListInfoC()])
 
     return(
         <div>

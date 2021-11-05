@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-const ContainerAdm_c_p = styled.div`
+const ContainerAdmcp = styled.div`
         margin: 0;
         background-color: #1e4f63;
         background-image: url("./assets/images/fundo.svg");
@@ -235,4 +235,4 @@ input[type=number] {
 
 `
 
-export { ContainerAdm_c_p }
+export { ContainerAdmcp }

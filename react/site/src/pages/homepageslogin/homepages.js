@@ -1,5 +1,5 @@
 import { ContainerHome } from "./styled"
-import { useState ,useEffect} from 'react'
+import { useState,useEffect } from 'react'
 import ParteCima2 from "../../components/Common/partecima2/cima"
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
@@ -16,15 +16,13 @@ export default function Homepageslogin() {
         let a = await api.listarLivro();
         setLivro(a);
         console.log(livro)
-
       }
-
-      
-
 
       useEffect(() => {
         listar();
       }, []);
+
+      
     return (
     <ContainerHome>
           <ParteCima2/>
