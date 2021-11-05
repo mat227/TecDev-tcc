@@ -44,7 +44,7 @@ export default function ParteCima2(props) {
                     </div>
                 </div>
                 </Link>
-                <Link to="/adm_livro">
+                <Link to="/login">
                 <div class="menu-item">
                     <div class="imagem">
                     <img src="/assets/images/coracaoo.svg" alt="" />
