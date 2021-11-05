@@ -19,7 +19,7 @@ export default function Conteudo() {
 
     const logar = async () => {
         
-        let resp = await api.login(email, senha);
+        let resp = await api.loginn(email, senha);
         if (resp.erro) {
             toast.error(`${resp.erro}`);
         } else {

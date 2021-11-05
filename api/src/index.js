@@ -1,7 +1,6 @@
 
 import adm from './controller/adm.js'
-import livros from './controller/adm.js'
-import login from './controller/adm.js'
+import login from './controller/login.js'
 import livros from './controller/livros.js'
 import usuario from './controller/usuario.js'
 import express from 'express'

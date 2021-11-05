@@ -16,22 +16,11 @@ const ContainerHome = styled.div`
 
   .conteiner-homepage1{
     display: flex;
+    min-height: 150vh;
+
     flex-direction: column;
     font-family: "Rowdies";
-   
-
-    
-}
-
-
-
-     
-.oferta-da-semana{
-  display: flex;
-  flex-direction: column;
-  height: 250vh;
-  opacity: 100%;
-}
+  }
 
 .trio{
   padding-left:27em;
@@ -51,10 +40,6 @@ align-self: center;
   cursor: pointer;
 }
 
-.desc{
-  padding: 0.2em;
-}
-
 
 .trio2{
   display: flex;
@@ -68,18 +53,6 @@ align-self: center;
 .titilo-trio1, .titilo-trio2,.titilo-trio3{
   display: flex;
   padding-left: 4.5em;
-}
-
-.hp1-titulo{
-display: flex;
-justify-content: center;
-color: white;
-font-size: 30px;
--webkit-text-stroke-width: 1.5px;
--webkit-text-stroke-color: #00B6FF;
-text-decoration: underline white;
-padding-top: 1em;
-
 }
 
 
@@ -343,127 +316,6 @@ margin-right:6em
 
 
 
-
-
-
-
-
-.CSSgal {
-	position: relative;
-	overflow: hidden;
-	height:40vw;
-}
-
-
-.CSSgal .slider {
-	height: 100%;
-	white-space: nowrap;
-	font-size: 0;
-	transition: 0.8s;
-}
-
-
-.CSSgal .slider > * {
-	font-size: 1rem;
-	display: inline-block;
-	white-space: normal;
-	vertical-align: middle;
-	background-size: cover;
-}
-
-
-.CSSgal .prevNext {
-	position: absolute;
-	z-index: 1;
-	top: 50%;
-	width: 100vw;
-	height: 0;
-}
-
-.CSSgal .prevNext > div+div {
-	visibility: hidden;
-}
-
-.CSSgal .prevNext a {
-	background: #fff;
-	position: absolute;
-	width:       60px;
-	height:      60px;
-	line-height: 60px; 
-	text-align: center;
-	opacity: 0.7;
-	-webkit-transition: 0.3s;
-					transition: 0.3s;
-	-webkit-transform: translateY(-50%);
-					transform: translateY(-50%);
-	left: 0;
-}
-.CSSgal .prevNext a:hover {
-	opacity: 1;
-}
-.CSSgal .prevNext a+a {
-	left: auto;
-	right: 0;
-}
-
-
-.CSSgal .bullets {
-	position: absolute;
-	z-index: 2;
-	bottom: 0;
-	padding: 10px 0;
-	width: 100vw;
-	text-align: center;
-}
-.CSSgal .bullets > a {
-	display: inline-block;
-	width:       30px;
-	height:      30px;
-	line-height: 30px;
-	text-decoration: none;
-	text-align: center;
-	background: rgba(255, 255, 255, 1);
-	-webkit-transition: 0.3s;
-					transition: 0.3s;
-}
-.CSSgal .bullets > a+a {
-	background: rgba(255, 255, 255, 0.5); 
-}
-.CSSgal .bullets > a:hover {
-	background: rgba(255, 255, 255, 0.7) !important;
-}
-
-
-.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
-#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
-#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
-
-.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
-#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
-#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
-
-
-#s1:target ~ .slider {transform: translateX(   -0vh); -webkit-transform: translateX(   -9vh);}
-#s2:target ~ .slider {transform: translateX(-100vh); -webkit-transform: translateX(-164vh);}
-
-
-
-.CSSgal{
-	color: #fff;	
-	text-align: center;
-}
-.CSSgal .slider h2 {
-	margin-top: 10vh;
-	font-weight: 200;
-	letter-spacing: -0.06em;
-	font-size: 3em;
-}
-
-.CSSgal a {
-	border-radius: 50%;
-	margin: 0 3px;
-	color: rgba(0,0,0,0.8);
-}
 `
 
 export { ContainerHome }

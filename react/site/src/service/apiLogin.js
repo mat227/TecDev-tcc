@@ -6,9 +6,9 @@ const api = axios.create ({
 
 export default class Api {
 
-async login(email, senha) {
+async loginn(email, senha) {
     let a = {email,senha}
-    let r = await api.post(`/logar`, a);
+    let r = await api.post(`/login`, a);
     return r.data;
 }
 
