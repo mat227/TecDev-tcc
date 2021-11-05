@@ -29,6 +29,7 @@ export default function BuscaDireta(props) {
 
 
     useEffect(() => {
+              // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [listar()])
 
     return (

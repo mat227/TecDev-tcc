@@ -20,6 +20,7 @@ export default function SuaInfo(){
         setInfoC(r);
     }
     useEffect(()=>{
+              // eslint-disable-next-line react-hooks/exhaustive-deps
     },[ ListInfoC()])
 
     return(
