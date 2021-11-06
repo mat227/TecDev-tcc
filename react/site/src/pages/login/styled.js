@@ -156,7 +156,14 @@ button:hover {
     }
     
     .logo{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
 
+      padding: 0px;
+      margin: 0px;
+      width: 100%;
     } 
     .inputs-login{ 
         padding: 2em;
