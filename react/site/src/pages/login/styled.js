@@ -197,8 +197,8 @@ button:hover {
     }
 
     .esqueceu-senha{ 
-       margin-left: 1em; 
-       padding: 3em;
+       margin-left: 0em; 
+       padding: 1em;
     }
 
     .criar-conta{ 
