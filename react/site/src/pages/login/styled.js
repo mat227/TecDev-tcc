@@ -179,7 +179,7 @@ button:hover {
      height: 50%;
     }
     
-    .botao{ 
+    .botao button{ 
      justify-content: center;
      align-items: center;
     }
