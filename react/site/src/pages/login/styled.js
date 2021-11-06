@@ -149,6 +149,7 @@ button:hover {
 @media (max-width : 1024px) {
     .logo2.svg{ 
         display: none;
+        width: 0%;
     }
 
     .logoLivro{
