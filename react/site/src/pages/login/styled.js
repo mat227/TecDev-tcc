@@ -148,7 +148,7 @@ button:hover {
 
 @media (max-width : 1024px) {
     
-    .logo2.svg{ 
+    .logo2{ 
         display: block;
         display: none;
         width: 0%;
@@ -187,6 +187,7 @@ button:hover {
        padding: .0em 0em;
        padding-left: 0em;
        padding-top: 0em;
+
        
     }
 
