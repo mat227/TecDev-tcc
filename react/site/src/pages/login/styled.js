@@ -200,13 +200,14 @@ button:hover {
 
     .esqueceu-senha{ 
         margin-top: 0em;
-       margin-left: 1.5em; 
+       margin-left: 2em; 
        padding: 0em;
     }
 
     .criar-conta{ 
-        margin-left: 4em; 
+        margin-left: 7em; 
        padding: 0em;
+       width: 30%;
     }
 
     
