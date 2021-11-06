@@ -2,19 +2,7 @@ import styled from 'styled-components'
 
 
 const ContainerLogin = styled.div`
-    @media (max-width : 1024px) {
-      .titulo{ 
-        font-size: 2.5em;
-      }
-        .login {
-      width: 100%;
-      }
-
-      .login-em{ 
-        flex-direction: column;
-        width: 100%; 
-      }
-    }
+  
 
     display: flex;
     flex-direction: row;
@@ -157,6 +145,25 @@ button {
 button:hover {
     background-color: #0E9FE2;
 }
+
+@media (max-width : 1024px) {
+     .inputs-login{ 
+        padding: 2em;
+
+     }
+     .titulo{ 
+        font-size: 2.5em;
+        color:red;
+      }
+        .login {
+      width: 100%;
+      }
+
+      .login-em{ 
+        flex-direction: column;
+        width: 100%; 
+      }
+    }
 `
 
 export { ContainerLogin }
