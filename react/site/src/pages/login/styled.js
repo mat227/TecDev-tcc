@@ -181,9 +181,9 @@ button:hover {
     }
     
     .botao button{ 
-        margin-left: 7em; 
+       margin-left: 2em; 
        padding: 0em;
-       width: 50%;
+       width: 70%;
 
     }
     .login-em input{
