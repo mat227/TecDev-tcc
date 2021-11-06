@@ -193,6 +193,16 @@ button:hover {
      flex-direction: column;
      width: 50%;  
     }
+
+    .esqueceu-senha{ 
+       margin: 0em; 
+       padding: 0em;
+    }
+
+    .criar-conta{ 
+        margin: 0em; 
+       padding: 0em;
+    }
 }
 `
 
