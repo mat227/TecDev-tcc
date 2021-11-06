@@ -159,7 +159,7 @@ button:hover {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
+      
 
       padding: 0px;
       margin: 0px;
