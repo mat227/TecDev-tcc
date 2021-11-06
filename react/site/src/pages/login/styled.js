@@ -186,12 +186,14 @@ button:hover {
      width: 70%;
 
     }
-    .login-em input{ 
+    .login-em input{
+     margin-top: 0em;
      flex-direction: column;
-      width: 50%;
+     width: 50%;
     }
 
     .login-sn input{
+     margin-top: 0em;
      flex-direction: column;
      width: 50%;  
     }
