@@ -207,7 +207,7 @@ button:hover {
     .criar-conta{ 
         margin-left: 7em; 
        padding: 0em;
-       width: 30%;
+       width: 50%;
     }
 
     
