@@ -185,12 +185,10 @@ button:hover {
        padding-left: 0em;
        padding-top: 0em;
        margin: 2em;
-       width: 0%;
     }
 
     .button{ 
-        padding: 0em;
-        margin: 0em;
+        
 
     }
 
