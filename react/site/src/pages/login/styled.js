@@ -183,7 +183,7 @@ button:hover {
     .botao button{ 
      justify-content: center;
      align-items: center;
-     width: 50%;
+     width: 70%;
 
     }
     .login-em input{ 
