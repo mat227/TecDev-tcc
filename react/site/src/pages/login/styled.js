@@ -197,6 +197,7 @@ button:hover {
     }
 
     .esqueceu-senha{ 
+        margin-top: 0em;
        margin-left: 0em; 
        padding: 0em;
     }
