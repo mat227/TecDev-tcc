@@ -183,9 +183,9 @@ button:hover {
      justify-content: center;
      align-items: center;
     }
-    .login-em{ 
+    .login-em input{ 
      flex-direction: column;
-     width: 50%;
+     width: 30%;
     }
 }
 `
