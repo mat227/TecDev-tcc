@@ -150,6 +150,10 @@ button:hover {
     .logo2.svg{ 
         display: none;
     }
+
+    .logoLivro{
+        display: none;
+    }
     
     .logo{
 
