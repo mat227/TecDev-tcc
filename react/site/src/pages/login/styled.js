@@ -3,10 +3,16 @@ import styled from 'styled-components'
 
 const ContainerLogin = styled.div`
     @media (max-width : 1024px) {
-      .login {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+      .titulo{ 
+        font-size: 2.5em;
+      }
+        .login {
+      width: 100%;
+      }
+
+      .login-em{ 
+        flex-direction: column;
+        width: 100%; 
       }
     }
 
