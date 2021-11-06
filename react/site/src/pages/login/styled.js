@@ -182,6 +182,7 @@ button:hover {
     
     .botao button{ 
        flex-direction: column;
+       padding: 0em;
 
     }
     .login-em input{
