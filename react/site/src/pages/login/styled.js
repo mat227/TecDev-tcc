@@ -2,7 +2,13 @@ import styled from 'styled-components'
 
 
 const ContainerLogin = styled.div`
-
+    @media (max-width : 1024px) {
+      .login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+      }
+    }
 
     display: flex;
     flex-direction: row;
