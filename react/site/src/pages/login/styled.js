@@ -169,17 +169,17 @@ button:hover {
         padding: 2em;
     }
     .titulo{ 
-    font-size: 2.5em;
-    color: white;
+     font-size: 2.5em;
+     color: white;
     }
     .login {
      width: 100%;
     }
 
     .login-em{ 
-         flex-direction: column;
-         width: 100%;
-     }
+     flex-direction: column;
+     width: 50%;
+    }
 }
 `
 
