@@ -185,7 +185,7 @@ button:hover {
     }
     .login-em input{ 
      flex-direction: column;
-     width: 5%;
+     width: 20%;
     }
 }
 `
