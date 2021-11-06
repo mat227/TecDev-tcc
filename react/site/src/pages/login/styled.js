@@ -184,11 +184,11 @@ button:hover {
      align-items: center;
     }
     .login-em input{ 
-     width: 70%;
+     width: 40%;
     }
 
-    .login-sn{
-     width: 70%;  
+    .login-sn input{
+     width: 40%;  
     }
 }
 `
