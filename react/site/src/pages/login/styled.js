@@ -202,8 +202,8 @@ button:hover {
     }
 
     .criar-conta{ 
-        margin-left: 3em; 
-       padding: 3em;
+        margin-left: 2em; 
+       padding: 1em;
     }
 
     
