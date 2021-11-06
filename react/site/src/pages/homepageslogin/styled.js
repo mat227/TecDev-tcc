@@ -314,6 +314,10 @@ margin-right:6em
 
 
 
+@media (max-width : 1024px) {
+
+}
+
 `
 
 export { ContainerHome }
