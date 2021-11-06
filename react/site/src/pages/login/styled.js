@@ -199,13 +199,13 @@ button:hover {
     .login-em input{
      margin-top: 0em;
      flex-direction: column;
-     width: 60%;
+     width: 70%;
     }
 
     .login-sn input{
      margin-top: 0em;
      flex-direction: column;
-     width: 60%;  
+     width: 70%;  
     }
 
     .esqueceu-senha{ 
