@@ -180,7 +180,7 @@ button:hover {
      height: 50%;
     }
     
-    .botao button{ 
+    .botao { 
        flex-direction: column;
        padding: .0em 0em;
        padding-left: 0em;
