@@ -184,8 +184,11 @@ button:hover {
      align-items: center;
     }
     .login-em input{ 
-     flex-direction: column;
      width: 70%;
+    }
+
+    .login-sn{
+     width: 70%;  
     }
 }
 `
