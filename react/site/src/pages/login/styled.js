@@ -185,12 +185,12 @@ button:hover {
     }
     .login-em input{ 
      flex-direction: column;
-      width: 40%;
+      width: 50%;
     }
 
     .login-sn input{
      flex-direction: column;
-     width: 40%;  
+     width: 50%;  
     }
 }
 `
