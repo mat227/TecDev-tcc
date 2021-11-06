@@ -147,7 +147,9 @@ button:hover {
 }
 
 @media (max-width : 1024px) {
+    
     .logo2.svg{ 
+        display: block;
         display: none;
         width: 0%;
     }
@@ -212,7 +214,7 @@ button:hover {
     }
 
     .criar-conta{ 
-        margin-left: 7em; 
+        margin-left: 5em; 
        padding: 0em;
        width: 50%;
     }
