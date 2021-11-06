@@ -183,6 +183,8 @@ button:hover {
     .botao button{ 
      justify-content: center;
      align-items: center;
+     width: 100% !important;
+
     }
     .login-em input{ 
      flex-direction: column;
@@ -203,6 +205,8 @@ button:hover {
         margin: 0em; 
        padding: 0em;
     }
+
+    
 }
 `
 
