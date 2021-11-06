@@ -178,7 +178,11 @@ button:hover {
      padding: 0em;
      height: 50%;
     }
-
+    
+    .botao{ 
+     justify-content: center;
+     align-items: center;
+    }
     .login-em{ 
      flex-direction: column;
      width: 50%;
