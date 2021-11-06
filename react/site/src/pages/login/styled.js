@@ -197,13 +197,13 @@ button:hover {
     }
 
     .esqueceu-senha{ 
-       margin-left: 5em; 
-       padding: 5em;
+       margin-left: 1em; 
+       padding: 3em;
     }
 
     .criar-conta{ 
-        margin-left: 5em; 
-       padding: 5em;
+        margin-left: 3em; 
+       padding: 3em;
     }
 
     
