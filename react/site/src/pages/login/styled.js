@@ -147,8 +147,11 @@ button:hover {
 }
 
 @media (max-width : 1024px) {
-    .logo2.svg{ 
+    
+    .logo2{ 
+        display: block;
         display: none;
+        width: 0%;
     }
 
     .logoLivro{
@@ -184,6 +187,7 @@ button:hover {
        padding: .0em 0em;
        padding-left: 0em;
        padding-top: 0em;
+       margin: 3em;
        
     }
 
@@ -195,13 +199,13 @@ button:hover {
     .login-em input{
      margin-top: 0em;
      flex-direction: column;
-     width: 50%;
+     width: 70%;
     }
 
     .login-sn input{
      margin-top: 0em;
      flex-direction: column;
-     width: 50%;  
+     width: 70%;  
     }
 
     .esqueceu-senha{ 
@@ -211,9 +215,9 @@ button:hover {
     }
 
     .criar-conta{ 
-        margin-left: 7em; 
+        margin-left: 5em; 
        padding: 0em;
-       width: 50%;
+       width: 55%;
     }
 
     
