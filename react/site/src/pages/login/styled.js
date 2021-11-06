@@ -184,10 +184,12 @@ button:hover {
      align-items: center;
     }
     .login-em input{ 
-     width: 40%;
+     flex-direction: column;
+      width: 40%;
     }
 
     .login-sn input{
+     flex-direction: column;
      width: 40%;  
     }
 }
