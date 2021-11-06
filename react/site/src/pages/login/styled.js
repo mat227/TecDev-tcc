@@ -147,13 +147,19 @@ button:hover {
 }
 
 @media (max-width : 1024px) {
-     .inputs-login{ 
+    .logo2.svg{ 
+        display: none;
+    }
+    
+    .logo{
+
+    } 
+    .inputs-login{ 
         padding: 2em;
 
      }
      .titulo{ 
         font-size: 2.5em;
-        color:red;
       }
         .login {
       width: 100%;
