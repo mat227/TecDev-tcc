@@ -164,6 +164,7 @@ button:hover {
      }
      .titulo{ 
         font-size: 2.5em;
+        color: white;
       }
         .login {
       width: 100%;
