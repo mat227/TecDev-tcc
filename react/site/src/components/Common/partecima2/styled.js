@@ -56,10 +56,10 @@ const ContainerPartecima= styled.div`
       
       .divBusca button{
         margin-top: 0.2em;
-border: none;
-background-color: #84D1DD;
-border-radius: 20px;
-cursor: pointer;
+        border: none;
+        background-color: #84D1DD;
+        border-radius: 20px;
+        cursor: pointer;
 }
 
      
@@ -72,8 +72,8 @@ cursor: pointer;
         border:none;
         height:32px;
         font-family: "Rowdies";
-    font-weight: 400;
-    width: 35.5em;
+      font-weight: 400;
+      width: 35.5em;
       }
 
 
@@ -96,5 +96,17 @@ cursor: pointer;
 a:Link, a:visited {
   text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+  margin: 0px;
+
+  width: 100% !important;
+
+.hp1-buscap {
+  display: none;
+}
+
+}
+
 `
  export { ContainerPartecima }

@@ -307,7 +307,7 @@ margin-right:6em
 .preco-queridinhas{
   font-size: 25px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color:black;
+  -webkit-text-stroke-color: black;
   text-decoration: underline black;
 
 }
@@ -316,6 +316,11 @@ margin-right:6em
 
 @media (max-width : 1024px) {
 
+
+  margin: 0px;
+  
+
+  
 }
 
 

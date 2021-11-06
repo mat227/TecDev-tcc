@@ -15,7 +15,7 @@ const ContainerTrio= styled.div`
   border: none;
   border-radius: 150px;
   font-family: "Rowdies";
-align-self: center;
+  align-self: center;
 
   padding: 1.2em;
   margin: 3em 3em 0.5em 3em;
@@ -47,6 +47,26 @@ align-self: center;
     text-decoration: none;
     color: white;
     
+  }
+
+
+  @media (max-width: 1024px) {
+      box-sizing: border-box;
+    
+      margin: 0px !important;
+      padding: 0px !important;
+      width: 100vw !important;
+      height: 100vh !important;
+
+      display: flex;
+      flex-direction: column;
+
+
+    .trio {
+
+      padding-right: 105em !important;
+
+    }
   }
 `
  export { ContainerTrio }
