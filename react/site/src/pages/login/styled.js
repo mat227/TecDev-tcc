@@ -198,7 +198,7 @@ button:hover {
 
     .esqueceu-senha{ 
         margin-top: 0em;
-       margin-left: 0em; 
+       margin-left: 1.5em; 
        padding: 0em;
     }
 
