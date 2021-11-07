@@ -98,13 +98,60 @@ a:Link, a:visited {
 }
 
 @media (max-width: 1024px) {
+  
   margin: 0px;
-
   width: 100% !important;
 
-.hp1-buscap {
-  display: none;
-}
+  border-radius: none;
+
+  #txtBusca{
+    border-radius: none;
+  }
+  
+  .hp1-buscap {
+    height: 4em;
+
+    justify-content: space-between;
+  }
+
+  .hp1-nome {
+    display: none;
+  }
+
+  .hp1-logo img {
+    margin-left: -1.5em;
+    height: 2.5em;
+  }
+  
+  .menu-item {
+    display: none;
+
+  }
+
+
+
+  .divBusca input {
+    width: 10em !important;
+  }
+
+
+  /// barra
+  .divBusca {
+    width: auto;
+    height: 1.5em;
+
+    border: none;
+
+    align-items: center;
+  }
+
+  #btnBusca button, img{
+    height: 1em;
+  }
+
+  #btnBusca img {
+    padding-top: 1.2em;
+  }
 
 }
 

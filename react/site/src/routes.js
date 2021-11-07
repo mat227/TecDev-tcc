@@ -1,5 +1,8 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+
+import partecima2 from './components/Common/partecima2/cima'
+import Trio from './components/Common/trio/trio'
 import Login from './pages/login/conteudo'
 import Redefinir from './pages/redefinir/esq.conteudo'
 import Recuperar from './pages/redefinir/reset'
@@ -29,6 +32,7 @@ import PerfilADM from './pages/perfil_adm'
 import Adm_livro from './pages/Adm_Livro'
 import Homepageslogin from  './pages/homepageslogin/homepages'
 import Busca from './pages/Busca/conteudo';
+
 
 export default function Routes() {
     return (
@@ -66,6 +70,9 @@ export default function Routes() {
                 <Route path="/seus_pedidos" exact={true} component={SeusPedidos} /> 
                 <Route path="/perfil" exact={true} component={Perfilusu} /> 
 
+
+                <Route path="/partecima2" exact={true} component={partecima2} />
+                <Route path="/trio" exact={true} component={Trio} />
             </Switch>
         </BrowserRouter>
     )

@@ -29,7 +29,7 @@ export default function ParteCima2(props) {
             <div class="hp1-busca">
                 <div class="divBusca">
                     <input type="text" id="txtBusca" placeholder="Buscar..." value={search} onChange={ e => setSearch(e.target.value) } onKeyPress={keyPress}/>
-                    <button><img src="/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
+                    <button><img src="/assets/images/lupa-arredondada.png" id="btnBusca" alt="Buscar" /></button>
                 </div>
             </div>
 
