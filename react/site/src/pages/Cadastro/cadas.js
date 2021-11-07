@@ -110,8 +110,7 @@ export default function Cadastro() {
                     </div>
                     <div class="data_cadastrar">Telefone</div>
                     <div class="cadastrar-sn">
-                        <input 
-                        value={telefone}
+                        <input value={telefone}
                         onChange={(r) => setTelefone(r.target.value)}
                         id="telefone" name="telefone"  required="required"  />
                     </div>
