@@ -147,6 +147,8 @@ a:Link, a:visited {
 
   #btnBusca button, img{
     height: 1em;
+
+    content: img('/assets/images/lupa-arredondada.png');
   }
 
   #btnBusca img {
