@@ -28,6 +28,21 @@ app.post ('/generos', async (req, resp) => {
 
 
 
+    
+app.get ('/livrospromocao', async (req, resp) => {
+    try {
+
+        let x = await db.infoc_tdv_livro.findAll({
+            where: {
+                ds_promocao: true
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
+    }
+})
+
 
 app.get('/pagamento', async (req, resp) => {
     try {

@@ -27,5 +27,9 @@ export default class Api {
         return r.data;
     }
 
+    async promocao () {
+        let r = await api.get(`/livrospromocao`)
+        return r.data;
+    }
     
 }

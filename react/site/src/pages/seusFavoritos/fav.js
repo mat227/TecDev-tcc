@@ -35,14 +35,8 @@ export default function Favoritos(){
 
     carregarFavoritos()
 }
-function marcarTodos(marcar){
-    var itens = document.querySelectorAll("input");
 
-    var i = 0;
-    for(i=0; i<itens.length;i++){
-        itens[i].checked = marcar;
-    }
-}
+
 
 
    return(
@@ -64,16 +58,13 @@ function marcarTodos(marcar){
                            
 
                             <div class="box-livros">
-                                <div class="exemplo-radio">     <input type="checkbox" value="0"
-                                    name="campo-checkbox" id="campo-checkbox" style={{accentColor: "blue"}}/> 
-                                       <label for="campo-checkbox" ></label></div>
                                     <div class="imgl">
                                         <img src={item.ds_imagen}alt=""  style={{ height: "150px", width: "140px" }}/>
                                         <div class="tllivro">
                                            {item.nm_livro}
                                         </div>
                                         <div class="preco">
-                                            {item.vl_para}
+                                            R$ {item.vl_para}
                                         </div>
                                         <div class="botao-preco">
                                         <Link to={{pathname:"/descricao",state:item}}><button>Ver produto</button></Link>
@@ -85,15 +76,9 @@ function marcarTodos(marcar){
  )}
 
                             <div class="excluir">
-                                <div class="exemplo-radio">     <input onClick={marcarTodos} type="checkbox" value="0"
-                                    name="campo-checkbox" id="campo-checkbox"style={{accentColor: "blue"}}/>    <label
-                                    for="campo-checkbox" ></label></div>
+                              
                                     <div onClick={deleteAllCookies} class="tllivro2">
-                                        Excluir favoritos       
-                                        <div class="tllivro3">
-                                            Favoritos 1 - 2 de 2
-            
-                                        </div>
+                                        Excluir todos favoritos       
                                     
                                     </div>
                             </div>

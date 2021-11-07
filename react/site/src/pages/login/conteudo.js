@@ -30,6 +30,10 @@ export default function Conteudo() {
 
     }
 
+  
+  
+
+
     return (
 
 <ContainerLogin>
@@ -72,7 +76,7 @@ export default function Conteudo() {
     </div>
 
             <div class="botao">
-                <button  onClick={logar}>Entrar</button>
+                <button  onClick={() => logar()}>Entrar</button>
                 </div>
     </div>
 

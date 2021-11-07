@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react'
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
 import Trio from "../../components/Common/trio/trio"
-import Api from '../../service/apiAdm'
+import Api from '../../service/apiLivro'
 const api = new Api();
 
 
@@ -14,9 +14,9 @@ export default function Homepage() {
 
     async function listar() {
 
-        let a = await api.listarLivro();
+        let a = await api.promocao();
         setLivro(a);
-
+console.log(a)
       }
 
 
