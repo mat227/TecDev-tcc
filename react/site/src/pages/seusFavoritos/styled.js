@@ -188,7 +188,9 @@ flex-direction: column;
 }
 
 
-
+.box-livros{
+    padding:2em;
+}
 .selecao-livro{
     display: flex;
     flex-direction: column ;
@@ -206,18 +208,18 @@ width: 4em;
       }
     
 
-    .tllivro{
+      .tllivro{
         font-family: 'Rowdies';
 color: white;
 font-size: 20px;
-margin-left: 16em;
+margin-left: 10em;
 margin-top: -8em;
     }
     .preco{
         font-family: 'Rowdies';
 color: white;
 font-size: 20px;
-margin-left: 16em;
+margin-left: 10em;
 margin-top: 3em;
 text-decoration: underline;
     }
@@ -240,13 +242,11 @@ text-decoration: underline;
   
   .botao-preco{
       padding-left: 50em;
-      margin-top: -8em;
+      margin-top: -6em;
 
   }
 
-  .box-livros2{
-      padding-top: 8em;
-  }
+  
 
   hr {
     color: #123455;

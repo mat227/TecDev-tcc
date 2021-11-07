@@ -4,14 +4,25 @@
  import Api  from '../../service/apiUsuario.js';
  import { useEffect, useState } from 'react';
  import { Link } from 'react-router-dom';
+ import Cookies from 'js-cookie';
+import { useHistory } from 'react-router';
  import Rodape from '../../components/Common/rodape/redape.js';
- // import ParteCima from '../../components/Common/parteCima/componente.js';
+ import ParteCima from '../../components/Common/parteCima/componente.js';
+
+ 
+ function lerUsuarioLogado (navigation) {
+    let logado = Cookies.get('usuario-logado')
+    if (logado == null) {
+        navigation.push('/')
+        return null;
+    }
+    let usuarioLogado = JSON.parse(logado);
+    return usuarioLogado; 
+}
 
  const api = new Api();
- //const popupS = require('popups');
  export default function Login(){
      useEffect(()=>{
-         console.log('Just one time');
          ListInfo();
      },[])
    // const [nome, setNome]  = useState('');
@@ -23,27 +34,33 @@
    // const [rua , setRua ] = useState('');
    // const [complemento, setComplemento] = useState('');
    // const [bairro , setBairro] = useState('');
+   const nav = useHistory();
 
+   const usuarioLogado = lerUsuarioLogado(nav) || {};
 
-
-    const [infoc,setInfoC] = useState([]);
+   const [info, setInfo] = useState(JSON.parse(Cookies.get('usuario-logado')))
+console.log(info);
 
     const ListInfo = async ()  => {
          let r = await api.infoC();
          console.log(r);
-         setInfoC(r);
+         setInfo(r);
      }
 
      const altInfo = async () => {
      
      }
-    
 
-
+     const deslogar = () => {
+        Cookies.remove('usuario-logado');
+    }
      return(
          <div>
-             <Nav nome='Usuario' />
-             <Container >
+            <ParteCima/>
+            <Nav nome='Usuario' />
+
+            <Container >
+
                  <ContainerPartecima/>
                  <div class="faixaUm">
                      <div class="colunas especial"><Link to='/suas_infomacoes' ><label>Suas informaçoes</label></Link></div>
@@ -59,25 +76,19 @@
                                      <div class="btnE"><button onClick={altInfo()}>Editar <br/>informações</button></div>
                                  </div>
                              </div>
-                             {infoc.map( x => 
                                  <div class="labels">
-                                      <label class="test">Nome: {x.nm_cliente.substring(0,10)}</label>
-                                      <label class="test">Sobrenome:  {x.nm_cliente.substring(10,20)}</label>
-                                      <label class="test" >Email: {x.ds_email}</label>
-                                      <label class="test" for="">Endereço : {x.infoc_tdv_enderecos[0].nm_rua}</label>
-                                      <label class="test" for="">Complemento : {x.infoc_tdv_enderecos[0].ds_complemento}</label>
-                                      <label class="test" for="">Bairro: {x.infoc_tdv_enderecos[0].ds_bairro}</label>
-                                      <label class="test" for="">Data de nascimento: {x.dt_nascimento.substring(0,10)}</label>
-                                      <label class="test" for="">CPF: {x.ds_cpf}</label>
+                                      <label class="test">Nome: {info.nm_cliente.substring(0,10)}</label>
+                                      <label class="test" >Email: {info.ds_email}</label>
+                                      <label class="test" for="">Endereço : {info.nm_rua}</label>
+                                      <label class="test" for="">Complemento : {info.ds_complemento}</label>
+                                      <label class="test" for="">Bairro: {info.ds_bairro}</label>
+                                      <label class="test" for="">Data de nascimento: {info.dt_nascimento.substring(0,10)}</label>
+                                      <label class="test" for="">CPF: {info.ds_cpf}</label>
                                   </div>
-                             )}
-                            {infoc.map((x) =>(
                                 <div class="contato">
                                      <h2>Telefone</h2>
-                                     <label for="" class="tell">{x.nr_contato/*.substring(0,2)*/}</label>
-                                     <label for="" class="tell">{x.nr_contato/*.substring(2,4)*/} - {x.nr_contato/*.substring(4,8)*/}</label>
+                                     <label for="" class="tell">{info.nr_contato}</label>
                              </div>
-                            ))}
                          </div>         
                  </div>
              </Container>

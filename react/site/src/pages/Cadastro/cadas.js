@@ -71,10 +71,7 @@ export default function Cadastro() {
                         onChange={(r) => setNome(r.target.value)}
                         id="nome_cadastrar" name="nome_cadastrar" required="required" type="text" />
                     </div>
-                    <div class="Nome_cadastrar">Sobrenome</div>
-                    <div class="cadastrar-sn">
-                        <input id="nome_cadastrar" name="nome_cadastrar" required="required" type="text" />
-                    </div>
+                  
                     <div class="cpf_cadastrar">C.P.F</div>
                     <div class="cadastrar-sn">
                         <input 
