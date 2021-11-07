@@ -60,10 +60,10 @@ export default function SuaSacola (props){
                 {livro.map((item) => 
                     <tr> 
                         <td><input type="checkbox" className="imputcheck" /></td>
-                        <td><img src="" alt="" /> <label>Descrição</label></td>   
-                        <td><label>{item.vl_para}</label></td>   
+                        <td><img src="" alt="" /> <label><img src={item.ds_imagen} alt=""     style={{ height: "100px", width: "100" }}/></label></td>   
+                        <td><label>R$ {item.vl_para}</label></td>   
                         <td><button className="bimg">+</button>5<button className="bimg">-</button></td>  
-                        <td><label>R$125,00</label></td>  
+                        <td><label>{item.vl_para}</label></td>  
                         <td><button className="brem"><img  src='./assets/images/remove.svg' alt=' ' /></button></td>  
                         </tr>
         )}
@@ -75,19 +75,11 @@ export default function SuaSacola (props){
           
          <div className="inputC">
                                 <input onClick={marcarTodos} type="checkbox" id='studo' className="imputcheck" />
-                                <label  for="studo" style={{'margin-right': '1em'}}> Seleciona tudo</label>
                             
                             </div>
       </div>
                         <div className="cupom">
-                            <div className="quadc">
-                                <div className="th2"><h2>cupom</h2></div>
-                                <div className="inputcupom"><input type="text" id="cupom" /></div>
-                                <div className="btns">
-                                    <button className="btnss" >Remover</button>
-                                    <button className="btnss" >Aplicar</button>
-                                </div>
-                            </div>
+                       
                             <div className="quadb">
                                 <Buttom className="btnf"><Link to='/suas_infomacoes'>Proximo passo</Link></Buttom>
                                 <Buttom className="btnf"><Link to='/' >Continuar Comprando</Link></Buttom>

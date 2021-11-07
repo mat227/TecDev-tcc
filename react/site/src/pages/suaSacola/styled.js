@@ -4,6 +4,7 @@ const Container = styled.div`
             min-height: 100%;
             background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
+            font-family: "Rowdies";
             
         *{
             box-sizing: border-box;
@@ -148,9 +149,12 @@ const Container = styled.div`
             color: white;
         
         }
+        tr{
+            font-size: 20px;
+
+        }
         thead{
             border-bottom:  2px solid white;
-        
             color: white;
             margin: 1em;
         

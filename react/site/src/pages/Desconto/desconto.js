@@ -26,7 +26,6 @@ export default function Homepage() {
                    <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg" alt=""/>
                         </div>
                         <div class="box-informacoes-livros">
                             <div class="nome-livro-desconto">
@@ -40,7 +39,7 @@ export default function Homepage() {
                                 De:R$ 49,90
                               </div>
                               <div class="preco-desconto">
-                                  Por:R$ 30,90
+                                  Por:R$ 24,95
                                 </div>
 
                         </div>
@@ -49,7 +48,7 @@ export default function Homepage() {
                   <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                            
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -64,7 +63,7 @@ export default function Homepage() {
                                 De:R$ 49,90
                               </div>
                               <div class="preco-desconto">
-                                  Por:R$ 30,90
+                                  Por:R$ 24,95
                                 </div>
 
                         </div>
@@ -73,7 +72,7 @@ export default function Homepage() {
                   <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                    
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -88,7 +87,7 @@ export default function Homepage() {
                               De:R$ 49,90
                             </div>
                             <div class="preco-desconto">
-                                Por:R$ 30,90
+                                Por:R$ 24,95
                               </div>
 
                         </div>
@@ -100,7 +99,7 @@ export default function Homepage() {
                   <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                            
                         </div>
                         <div class="box-informacoes-livros">
                             <div class="nome-livro-desconto">
@@ -114,7 +113,7 @@ export default function Homepage() {
                                 De:R$ 49,90
                               </div>
                               <div class="preco-desconto">
-                                  Por:R$ 30,90
+                                  Por:R$ 24,95
                                 </div>
 
                         </div>
@@ -123,7 +122,7 @@ export default function Homepage() {
                       <a href="/descricao"> <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                            
                         </div>
                         <div class="box-informacoes-livros">
                             <div class="nome-livro-desconto">
@@ -137,7 +136,7 @@ export default function Homepage() {
                                 De:R$ 49,90
                               </div>
                               <div class="preco-desconto">
-                                  Por:R$ 30,90
+                                  Por:R$ 24,95
                                 </div>
 
                         </div>
@@ -146,7 +145,7 @@ export default function Homepage() {
                   <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                            
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -161,7 +160,7 @@ export default function Homepage() {
                               De:R$ 49,90
                             </div>
                             <div class="preco-desconto">
-                                Por:R$ 30,90
+                                Por:R$ 24,95
                               </div>
 
                         </div>
@@ -172,7 +171,7 @@ export default function Homepage() {
                     <a href="/descricao">  <div class="box-livro">
                         <div class="img-livro-queridinha">
                             <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                            <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                            
 
                         </div>
                         <div class="box-informacoes-livros">
@@ -187,7 +186,7 @@ export default function Homepage() {
                               De:R$ 49,90
                             </div>
                             <div class="preco-desconto">
-                                Por:R$ 30,90
+                                Por:R$ 24,95
                               </div>
 
                         </div>
@@ -196,7 +195,7 @@ export default function Homepage() {
                 <a href="/descricao">  <div class="box-livro">
                     <div class="img-livro-queridinha">
                         <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                        <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                        
 
                     </div>
                     <div class="box-informacoes-livros">
@@ -211,7 +210,7 @@ export default function Homepage() {
                           De:R$ 49,90
                         </div>
                         <div class="preco-desconto">
-                            Por:R$ 30,90
+                            Por:R$ 24,95
                           </div>
 
                     </div>
@@ -220,7 +219,7 @@ export default function Homepage() {
             <a href="/descricao">  <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                    <img class="descontolivro"src="/assets/images/Frame 1.svg"alt=""/>
+                    
 
                 </div>
                 <div class="box-informacoes-livros">
@@ -235,7 +234,7 @@ export default function Homepage() {
                       De:R$ 49,90
                     </div>
                     <div class="preco-desconto">
-                        Por:R$ 30,90
+                        Por:R$ 24,95
                       </div>
 
                 </div>

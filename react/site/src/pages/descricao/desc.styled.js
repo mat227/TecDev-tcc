@@ -153,7 +153,7 @@ margin-right:1em;
 .box-filha hr {
     width: 75em;
     color: white;
-    margin-left: -28.4em;
+    margin-left: -27.4em;
     margin-top: 2em;
     margin-bottom: -2em;
 }

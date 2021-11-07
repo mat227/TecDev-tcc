@@ -14,6 +14,7 @@ export default function DescConteudo(props) {
     const [livro] = useState(props.location.state);
     const navigation = useHistory();
 
+    console.log(livro);
 
     function comprar() {
         
@@ -53,18 +54,19 @@ export default function DescConteudo(props) {
         navigation.push('/favoritos');
       }
 
+  
     return (
         <ContainerDesc>
             <Partecima/>
         <div class="box-mae">
             <div class="box-filha">
-                <div class="livro"><img src="/assets/images/o que o sol faz com as flores (1).svg"alt=""/></div>
+                <div class="livro"><img src={livro.ds_imagen}alt=""/></div>
                 <div class="box1">
                     <div class="titulo">{livro.nm_livro}<img onClick={favorito} src="./assets/images/favorito.svg"  alt="" style={{height: "2em"}}/></div>
                     <div class="pagamentos">
-                        <div class="preco">{livro.vl_para}</div>
-                        <div class="item"><img src="/assets/images/boleto.svg" alt="boleto" class="boleto"/> <p><u>Boleto Bancário:</u>{livro.vl_para} <br/> Em até 3x de R$ 14,30</p></div>
-                        <div class="item"><img src="/assets/images/cartao.svg" alt="cartao" class="cartao"/> <p><u>Cartão de Crédito</u> {livro.vl_para} <br/> Em até 3x de R$ 14,30</p></div>
+                        <div class="preco">R${livro.vl_para}</div>
+                        <div class="item"><img src="/assets/images/boleto.svg" alt="boleto" class="boleto"/> <p><u>Boleto Bancário:</u>{livro.vl_para} <br/> Em até 2x de R$ {livro.vl_para/2}</p></div>
+                        <div class="item"><img src="/assets/images/cartao.svg" alt="cartao" class="cartao"/> <p><u>Cartão de Crédito</u> {livro.vl_para} <br/> Em até 2x de R$ {livro.vl_para/2}</p></div>
                     </div>
                     <div class="botoes">
                       <Link to="/pagamento"><button>COMPRAR</button></Link>
@@ -79,10 +81,10 @@ export default function DescConteudo(props) {
                         <div class="caracteristicas">
                             <div class="titulocarac">CARACTERÍSTICAS:</div>
                             <div class="menu">
-                                <div class="itemc">Autor:<p>&nbsp;{livro.vl_para}</p></div>
-                                <div class="itemc">Gêneros:<p>&nbsp;{livro.ds_genero}</p></div>
-                                <div class="itemc">Editora:<p>&nbsp;{livro.vl_para}</p></div>
-                                <div class="itemc">Ano da edição:<p>&nbsp;{livro.vl_para}</p></div>
+                                <div class="itemc">Autor:<p>&nbsp;{livro.ds_autora}</p></div>
+                                <div class="itemc">Gêneros:<p>&nbsp;{livro.id_genero}</p></div>
+                                <div class="itemc">Editora:<p>&nbsp;{livro.ds_editora}</p></div>
+                                <div class="itemc">Ano da edição:<p>&nbsp;{livro.dt_lancamento}</p></div>
                             </div>
                         </div>
                     </div>
