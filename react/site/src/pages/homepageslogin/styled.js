@@ -26,7 +26,7 @@ const ContainerHome = styled.div`
   padding-left:27em;
 }
 .trio button {
-  font-weight: 700;
+    font-weight: 700;
     background: white;
   
   border: none;
@@ -313,6 +313,22 @@ margin-right:6em
 }
 
 
+
+@media (max-width: 1024px) {
+  width: 100%;
+  height: 100%;
+
+
+  .queridinhas {
+    background-color:red; 
+
+    text-align: center;
+
+    margin: 1em;
+  }
+
+  
+}
 
 `
 
