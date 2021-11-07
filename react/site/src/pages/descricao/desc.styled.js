@@ -69,6 +69,7 @@ background-color: #135578;
 
 .livro img {
     height: 20em;
+    width: 13.3em;
     margin-right: 2em;
 }
 
@@ -100,7 +101,6 @@ background-color: #135578;
     display: flex;
     flex-direction: column;
     
-    width: 20em;
     margin-top: 1em;
 margin-right:1em;
     font-family: Rowdies;
@@ -153,7 +153,7 @@ margin-right:1em;
 .box-filha hr {
     width: 75em;
     color: white;
-    margin-left: -27.4em;
+    margin-left: -27.35em;
     margin-top: 2em;
     margin-bottom: -2em;
 }

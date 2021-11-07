@@ -26,10 +26,6 @@ export default class infod_ssc_pedido extends Model {
         key: 'id_item'
       }
     },
-    vl_pedido: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
     dt_pedido: {
       type: DataTypes.DATE,
       allowNull: true
@@ -44,6 +40,10 @@ export default class infod_ssc_pedido extends Model {
     },
     ds_preparando: {
       type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    vl_pedido: {
+      type: DataTypes.DECIMAL(10,2),
       allowNull: true
     }
   }, {

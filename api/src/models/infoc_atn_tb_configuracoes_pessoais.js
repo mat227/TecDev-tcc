@@ -5,12 +5,10 @@ export default class infoc_atn_tb_configuracoes_pessoais extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_pessoal: {
+      autoIncrement: true,
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoc_atn_tb_pessoal',
-        key: 'id_pessoal'
-      }
+      allowNull: false,
+      primaryKey: true
     },
     ds_sobre: {
       type: DataTypes.STRING(100),
@@ -66,11 +64,7 @@ export default class infoc_atn_tb_configuracoes_pessoais extends Model {
     },
     id_curriculo: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoc_atn_tb_curriculo',
-        key: 'id_curriculo'
-      }
+      allowNull: true
     }
   }, {
     sequelize,
@@ -78,17 +72,18 @@ export default class infoc_atn_tb_configuracoes_pessoais extends Model {
     timestamps: false,
     indexes: [
       {
+        name: "PRIMARY",
+        unique: true,
+        using: "BTREE",
+        fields: [
+          { name: "id_pessoal" },
+        ]
+      },
+      {
         name: "id_curriculo",
         using: "BTREE",
         fields: [
           { name: "id_curriculo" },
-        ]
-      },
-      {
-        name: "id_pessoal",
-        using: "BTREE",
-        fields: [
-          { name: "id_pessoal" },
         ]
       },
     ]

@@ -4,30 +4,42 @@ const { Model, Sequelize } = _sequelize;
 export default class infoa_sti_endereco extends Model {
   static init(sequelize, DataTypes) {
   super.init({
+    id_cliente: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_cliente',
+        key: 'id_cliente'
+      }
+    },
     id_endereco: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    ds_cep: {
-      type: DataTypes.STRING(100),
-      allowNull: true
-    },
     ds_endereco: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nr_endereco: {
+    ds_cep: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    nr_numero: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
+    ds_cpf: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     ds_complemento: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_cidade: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
@@ -41,6 +53,13 @@ export default class infoa_sti_endereco extends Model {
         using: "BTREE",
         fields: [
           { name: "id_endereco" },
+        ]
+      },
+      {
+        name: "id_cliente",
+        using: "BTREE",
+        fields: [
+          { name: "id_cliente" },
         ]
       },
     ]

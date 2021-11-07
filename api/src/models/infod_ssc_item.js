@@ -18,12 +18,12 @@ export default class infod_ssc_item extends Model {
         key: 'id_produto'
       }
     },
-    vl_item: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
     qtd_produto: {
       type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    vl_item: {
+      type: DataTypes.DECIMAL(10,2),
       allowNull: true
     }
   }, {

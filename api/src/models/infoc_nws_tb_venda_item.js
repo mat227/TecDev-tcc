@@ -18,17 +18,17 @@ export default class infoc_nws_tb_venda_item extends Model {
         key: 'id_venda'
       }
     },
-    id_evento: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoc_nws_tb_evento',
-        key: 'id_evento'
-      }
-    },
     ds_qrcode: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    id_calendario_item: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_nws_tb_calendario_item',
+        key: 'id_calendario_item'
+      }
     }
   }, {
     sequelize,
@@ -51,10 +51,10 @@ export default class infoc_nws_tb_venda_item extends Model {
         ]
       },
       {
-        name: "id_evento",
+        name: "FK_calendario_item",
         using: "BTREE",
         fields: [
-          { name: "id_evento" },
+          { name: "id_calendario_item" },
         ]
       },
     ]

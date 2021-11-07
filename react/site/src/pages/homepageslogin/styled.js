@@ -227,7 +227,9 @@ padding-top: 1em;
 
 
 
-
+.img-livro-queridinha{
+  padding-left:10px;
+}
 
 
 .tlqueridinhas1{

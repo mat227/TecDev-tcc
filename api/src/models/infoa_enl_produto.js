@@ -43,7 +43,7 @@ export default class infoa_enl_produto extends Model {
       allowNull: false
     },
     nm_produto: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(16),
       allowNull: false
     },
     vl_preco: {

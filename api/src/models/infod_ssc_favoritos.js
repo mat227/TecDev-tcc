@@ -1,26 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_amigos extends Model {
+export default class infod_ssc_favoritos extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_amigo: {
+    id_favorito: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario_solicitou: {
+    id_cliente: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_cliente',
+        key: 'id_cliente'
+      }
     },
-    id_usuario_aceitou: {
+    id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infod_ssc_produto',
+        key: 'id_produto'
+      }
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_amigos',
+    tableName: 'infod_ssc_favoritos',
     timestamps: false,
     indexes: [
       {
@@ -28,25 +36,25 @@ export default class infod_tif_amigos extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_amigo" },
+          { name: "id_favorito" },
         ]
       },
       {
-        name: "id_usuario_solicitou",
+        name: "id_cliente",
         using: "BTREE",
         fields: [
-          { name: "id_usuario_solicitou" },
+          { name: "id_cliente" },
         ]
       },
       {
-        name: "id_usuario_aceitou",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_usuario_aceitou" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infod_tif_amigos;
+  return infod_ssc_favoritos;
   }
 }

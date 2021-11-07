@@ -15,19 +15,19 @@ export default class infoc_tct_endereco extends Model {
       allowNull: true
     },
     ds_estado: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(50),
       allowNull: true
     },
     nm_cidade: {
-      type: DataTypes.STRING(40),
+      type: DataTypes.STRING(50),
       allowNull: true
     },
     nm_rua: {
-      type: DataTypes.STRING(60),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_numero: {
-      type: DataTypes.STRING(5),
+      type: DataTypes.STRING(10),
       allowNull: true
     },
     ds_complemento: {
@@ -35,7 +35,7 @@ export default class infoc_tct_endereco extends Model {
       allowNull: true
     },
     nm_ponto_referencia: {
-      type: DataTypes.STRING(40),
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {

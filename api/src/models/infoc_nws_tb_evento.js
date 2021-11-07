@@ -51,7 +51,7 @@ export default class infoc_nws_tb_evento extends Model {
       allowNull: true
     },
     ds_evento: {
-      type: DataTypes.STRING(500),
+      type: DataTypes.STRING(1000),
       allowNull: true
     },
     img_capa: {

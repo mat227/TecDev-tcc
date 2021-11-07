@@ -10,14 +10,6 @@ export default class infoc_nws_tb_cartao extends Model {
       allowNull: false,
       primaryKey: true
     },
-    id_venda: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoc_nws_tb_venda',
-        key: 'id_venda'
-      }
-    },
     nr_cartao: {
       type: DataTypes.STRING(255),
       allowNull: true
@@ -49,13 +41,6 @@ export default class infoc_nws_tb_cartao extends Model {
         using: "BTREE",
         fields: [
           { name: "id_cartao" },
-        ]
-      },
-      {
-        name: "id_venda",
-        using: "BTREE",
-        fields: [
-          { name: "id_venda" },
         ]
       },
     ]

@@ -8,8 +8,8 @@ const api = axios.create ({
 export default class Api {
 
 //Função de informaçoes do Cliente
-async infoC(){
-    let r = await api.get(`/suaInfo`);
+async infoC(id){
+    let r = await api.get(`/suaInfo/`+ id);
     return r.data;
 }
 

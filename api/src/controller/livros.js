@@ -10,23 +10,12 @@ const app = express.Router();
 
 
 
-app.get ('/generos', async (req, resp) => {
-    try {
     
-    let generos = await db.infoc_tdv_genero.findAll
-        ({ 
-            order: [['id_genero', 'desc']]
-         })
-    resp.send(generos);
-    } catch(e) {
-              resp.send({ erro:e.toString() })
-    }
-    })
 app.post ('/generos', async (req, resp) => {
     try {
         const descricao = req.body.descricao;
 
-        let x = await db.infoc_tdv_genero.findAll({
+        let x = await db.infoc_tdv_livro.findAll({
             where: {
                 ds_genero: descricao
             }

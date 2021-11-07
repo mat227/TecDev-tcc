@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_vendas extends Model {
+export default class infoc_tct_pedido extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_vendas: {
+    id_pedido: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -14,29 +14,33 @@ export default class infoa_sti_vendas extends Model {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoa_sti_cliente',
+        model: 'infoc_tct_cliente',
         key: 'id_cliente'
       }
     },
-    id_produto: {
+    id_endereco: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'infoa_sti_produto',
-        key: 'id_produto'
+        model: 'infoc_tct_endereco',
+        key: 'id_endereco'
       }
     },
-    ds_codigo: {
-      type: DataTypes.STRING(10),
-      allowNull: true
+    id_compra: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_tct_compra',
+        key: 'id_compra'
+      }
     },
-    dt_vendas: {
-      type: DataTypes.DATEONLY,
+    bt_status: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_vendas',
+    tableName: 'infoc_tct_pedido',
     timestamps: false,
     indexes: [
       {
@@ -44,7 +48,7 @@ export default class infoa_sti_vendas extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_vendas" },
+          { name: "id_pedido" },
         ]
       },
       {
@@ -55,14 +59,21 @@ export default class infoa_sti_vendas extends Model {
         ]
       },
       {
-        name: "id_produto",
+        name: "id_endereco",
         using: "BTREE",
         fields: [
-          { name: "id_produto" },
+          { name: "id_endereco" },
+        ]
+      },
+      {
+        name: "id_compra",
+        using: "BTREE",
+        fields: [
+          { name: "id_compra" },
         ]
       },
     ]
   });
-  return infoa_sti_vendas;
+  return infoc_tct_pedido;
   }
 }

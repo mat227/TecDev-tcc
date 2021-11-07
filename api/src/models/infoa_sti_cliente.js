@@ -11,40 +11,36 @@ export default class infoa_sti_cliente extends Model {
       primaryKey: true
     },
     nm_nome: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     nm_sobrenome: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_sexo: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_cpf: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     dt_nascimento: {
       type: DataTypes.DATEONLY,
       allowNull: true
     },
+    ds_telefone: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
     ds_email: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     ds_senha: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
-    },
-    id_endereco: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_endereco',
-        key: 'id_endereco'
-      }
     }
   }, {
     sequelize,
@@ -57,13 +53,6 @@ export default class infoa_sti_cliente extends Model {
         using: "BTREE",
         fields: [
           { name: "id_cliente" },
-        ]
-      },
-      {
-        name: "id_endereco",
-        using: "BTREE",
-        fields: [
-          { name: "id_endereco" },
         ]
       },
     ]

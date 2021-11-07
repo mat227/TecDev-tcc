@@ -41,6 +41,14 @@ export default class infoa_dtn_tb_produto extends Model {
     img_imagem: {
       type: DataTypes.STRING(800),
       allowNull: true
+    },
+    ds_genero: {
+      type: DataTypes.STRING(30),
+      allowNull: false
+    },
+    ds_time: {
+      type: DataTypes.STRING(100),
+      allowNull: false
     }
   }, {
     sequelize,

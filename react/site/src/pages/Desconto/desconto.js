@@ -1,10 +1,28 @@
 import { ContainerDesconto } from "./styled"
 import Partecima  from "../../components/Common/parteCima/componente"
-import Trio from "../../components/Common/trio/trio"
+import { useState,useEffect } from 'react'
+import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"
+import Trio from "../../components/Common/trio/trio"
+import Api from '../../service/apiAdm'
+const api = new Api();
 
 
 export default function Homepage() {
+    const [livro, setLivro] = useState([]);
+
+
+    async function listar() {
+
+        let a = await api.listarLivro();
+        setLivro(a);
+
+      }
+
+
+      useEffect(() => {
+        listar();
+      }, []);
     return (
     <ContainerDesconto>
           <Partecima/>
@@ -23,230 +41,47 @@ export default function Homepage() {
                 </div>
 
                 <div class="livros-desconto">
-                   <a href="/descricao"> <div class="box-livro">
+
+                    {livro.map((item)=>(
+                  
+                  <Link to={{pathname:"/descricao",state:item}}>
+
+                        <div class="box-livro">
                         <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt="" />
+                        <img        
+                      src={item.ds_imagen}
+                       alt=""
+                       style={{ height: "190px", width: "185px" }}
+                       />
                         </div>
                         <div class="box-informacoes-livros">
                             <div class="nome-livro-desconto">
-                                VERMELHO, BRANCO E SANGUE AZUL
+                               {item.nm_livro}
 
                             </div>
                             <div class="autor-desconto">
-                                Casey Mcquiston
+                            { item.ds_autora}   
+
                             </div>
                             <div class="preco-descontotr">
-                                De:R$ 49,90
+                            R$ { item.vl_de}   
+
                               </div>
                               <div class="preco-desconto">
-                                  Por:R$ 24,95
+                              R$ { item.vl_para}   
+
                                 </div>
 
                         </div>
                     </div>
-                </a>
-                  <a href="/descricao">  <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                            
 
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-desconto">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-desconto">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-descontotr">
-                                De:R$ 49,90
-                              </div>
-                              <div class="preco-desconto">
-                                  Por:R$ 24,95
-                                </div>
-
-                        </div>
-                    </div>
-                </a>
-                  <a href="/descricao">  <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                    
-
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-desconto">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-desconto">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-descontotr">
-                              De:R$ 49,90
-                            </div>
-                            <div class="preco-desconto">
-                                Por:R$ 24,95
-                              </div>
-
-                        </div>
-                    </div>
-                </a>
-
-                </div>
-                <div class="livros-desconto2">
-                  <a href="/descricao"> <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                            
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-desconto">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-desconto">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-descontotr">
-                                De:R$ 49,90
-                              </div>
-                              <div class="preco-desconto">
-                                  Por:R$ 24,95
-                                </div>
-
-                        </div>
-                    </div>
-                </a>
-                      <a href="/descricao"> <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                            
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-desconto">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-desconto">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-descontotr">
-                                De:R$ 49,90
-                              </div>
-                              <div class="preco-desconto">
-                                  Por:R$ 24,95
-                                </div>
-
-                        </div>
-                    </div>
-                </a>
-                  <a href="/descricao">  <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                            
-
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-desconto">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-desconto">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-descontotr">
-                              De:R$ 49,90
-                            </div>
-                            <div class="preco-desconto">
-                                Por:R$ 24,95
-                              </div>
-
-                        </div>
-                    </div>
-                </a>
-                </div>
-                <div class="livros-desconto2">
-                    <a href="/descricao">  <div class="box-livro">
-                        <div class="img-livro-queridinha">
-                            <img src="/assets/images/vermelho, branco e sangue azul.svg"alt="" />
-                            
-
-                        </div>
-                        <div class="box-informacoes-livros">
-                            <div class="nome-livro-desconto">
-                                VERMELHO, BRANCO E SANGUE AZUL
-
-                            </div>
-                            <div class="autor-desconto">
-                                Casey Mcquiston
-                            </div>
-                            <div class="preco-descontotr">
-                              De:R$ 49,90
-                            </div>
-                            <div class="preco-desconto">
-                                Por:R$ 24,95
-                              </div>
-
-                        </div>
-                    </div>
-                </a>
-                <a href="/descricao">  <div class="box-livro">
-                    <div class="img-livro-queridinha">
-                        <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                        
-
-                    </div>
-                    <div class="box-informacoes-livros">
-                        <div class="nome-livro-desconto">
-                            VERMELHO, BRANCO E SANGUE AZUL
-
-                        </div>
-                        <div class="autor-desconto">
-                            Casey Mcquiston
-                        </div>
-                        <div class="preco-descontotr">
-                          De:R$ 49,90
-                        </div>
-                        <div class="preco-desconto">
-                            Por:R$ 24,95
-                          </div>
-
-                    </div>
-                </div>
-            </a>
-            <a href="/descricao">  <div class="box-livro">
-                <div class="img-livro-queridinha">
-                    <img src="/assets/images/vermelho, branco e sangue azul.svg" alt=""/>
-                    
-
-                </div>
-                <div class="box-informacoes-livros">
-                    <div class="nome-livro-desconto">
-                        VERMELHO, BRANCO E SANGUE AZUL
-
-                    </div>
-                    <div class="autor-desconto">
-                        Casey Mcquiston
-                    </div>
-                    <div class="preco-descontotr">
-                      De:R$ 49,90
-                    </div>
-                    <div class="preco-desconto">
-                        Por:R$ 24,95
-                      </div>
-
-                </div>
-            </div>
-        </a>
-                </div>
-               
-                </div>
+                </Link>
+                    ))}
                 
-              
         </div>
-      
+        </div>
+        </div>
+
         <Rodape />
 
     </ContainerDesconto>

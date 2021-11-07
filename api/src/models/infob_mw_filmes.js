@@ -1,62 +1,62 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_omn_candidato extends Model {
+export default class infob_mw_filmes extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_candidato: {
+    id_filme: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_candidato: {
+    nm_filme: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_email: {
+    ds_genero: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_senha: {
+    ano_lancamento: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_sexo: {
+    nm_diretor: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    img_candidato: {
-      type: DataTypes.STRING(255),
+    ds_sinopse: {
+      type: DataTypes.STRING(800),
       allowNull: true
     },
-    ds_nacionalidade: {
-      type: DataTypes.STRING(255),
+    ds_avaliacao: {
+      type: DataTypes.DECIMAL(10,2),
       allowNull: true
     },
-    ds_telefone: {
-      type: DataTypes.STRING(255),
+    ds_descricao: {
+      type: DataTypes.STRING(800),
       allowNull: true
     },
-    dt_nascimento: {
-      type: DataTypes.DATE,
+    ds_plataforma: {
+      type: DataTypes.STRING(500),
       allowNull: true
     },
-    ds_estado_civil: {
-      type: DataTypes.STRING(255),
+    img_capa_maior: {
+      type: DataTypes.STRING(1000),
       allowNull: true
     },
-    ds_localidade: {
-      type: DataTypes.STRING(255),
+    img_capa_menor: {
+      type: DataTypes.STRING(1000),
       allowNull: true
     },
-    id_curriculo: {
-      type: DataTypes.INTEGER,
+    qtd_likes: {
+      type: DataTypes.TEXT,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_omn_candidato',
+    tableName: 'infob_mw_filmes',
     timestamps: false,
     indexes: [
       {
@@ -64,18 +64,11 @@ export default class infod_omn_candidato extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_candidato" },
-        ]
-      },
-      {
-        name: "id_curriculo",
-        using: "BTREE",
-        fields: [
-          { name: "id_curriculo" },
+          { name: "id_filme" },
         ]
       },
     ]
   });
-  return infod_omn_candidato;
+  return infob_mw_filmes;
   }
 }

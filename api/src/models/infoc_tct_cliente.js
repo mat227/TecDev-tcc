@@ -53,6 +53,10 @@ export default class infoc_tct_cliente extends Model {
     ds_cpf: {
       type: DataTypes.STRING(14),
       allowNull: true
+    },
+    bt_administrador: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
     }
   }, {
     sequelize,

@@ -7,17 +7,17 @@ import Api from '../../service/apiUsuario.js'
 
 const api = new Api();
 
-export default function SuaInfo(){
+export default function SuaInfo(props){
   
-
+console.log(props)
     //test zone up
-    const [infoc,setInfoC] = useState([]);
-    console.log(infoc);
+    const [usuario,setUsuario] = useState(props.location.state);
+    console.log(usuario);
     const ListInfoC = async ()  => {
         let r = await api.infoC();
-        console.log(infoc);
+        console.log(usuario);
 
-        setInfoC(r);
+        setUsuario(r);
     }
     useEffect(()=>{
               // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -34,10 +34,9 @@ export default function SuaInfo(){
                             </div>
                             <div class="auxi">
                                 <div class="box1">
-                                        {infoc.map(x =>
+                                        {usuario.map((x) =>
                                                  <div class="labels">
                                                     <label class="test">Nome: {x.nm_cliente.substring(0,10)}</label>
-                                                    <label class="test">Sobrenome:{x.nm_cliente}</label>
                                                     <label class="test" >Email: {x.ds_email}</label>                                        
                                                     <label class="test" for="">Endereço: {x.infoc_tdv_enderecos[0].nm_rua}</label>
                                                     <label class="test" for="">Complemento:{x.infoc_tdv_enderecos[0].ds_complemento}</label>
@@ -45,7 +44,7 @@ export default function SuaInfo(){
                                                 </div>
                                             )}
                                             <div style={{"color":"white" ,"text-decoretion":"none" , 'margin-left':'1em' }}><a href='google.com'> Alterar endereço</a></div>
-                                        {infoc.map(x =>
+                                        {usuario.map((x) =>
                                                 <div class="contato">
                                                     <h2>Telefone</h2>
                                                     <label for="" class="tell">{x.nr_contato/*.substring(0,2)*/}</label>

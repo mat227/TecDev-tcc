@@ -25,6 +25,18 @@ export default class infoc_nws_tb_venda extends Model {
     tp_pagamento: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    id_cartao: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_nws_tb_cartao',
+        key: 'id_cartao'
+      }
+    },
+    dt_inclusao: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
     }
   }, {
     sequelize,
@@ -44,6 +56,13 @@ export default class infoc_nws_tb_venda extends Model {
         using: "BTREE",
         fields: [
           { name: "id_usuario" },
+        ]
+      },
+      {
+        name: "id_cartao",
+        using: "BTREE",
+        fields: [
+          { name: "id_cartao" },
         ]
       },
     ]

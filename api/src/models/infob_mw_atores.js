@@ -1,7 +1,7 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_ator extends Model {
+export default class infob_mw_atores extends Model {
   static init(sequelize, DataTypes) {
   super.init({
     id_ator: {
@@ -17,10 +17,14 @@ export default class infob_mw_ator extends Model {
     nm_ator: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    ds_princ_atores: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_ator',
+    tableName: 'infob_mw_atores',
     timestamps: false,
     indexes: [
       {
@@ -40,6 +44,6 @@ export default class infob_mw_ator extends Model {
       },
     ]
   });
-  return infob_mw_ator;
+  return infob_mw_atores;
   }
 }

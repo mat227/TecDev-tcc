@@ -12,14 +12,14 @@ export default class infoc_tht_usuario extends Model {
     },
     id_cartao: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tht_cartao',
+        key: 'id_cartao'
+      }
     },
     nm_usuraio: {
       type: DataTypes.STRING(30),
-      allowNull: true
-    },
-    nm_nick: {
-      type: DataTypes.STRING(10),
       allowNull: true
     },
     ds_email: {

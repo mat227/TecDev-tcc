@@ -17,6 +17,10 @@ export default class infod_ssc_adm extends Model {
     ds_senha: {
       type: DataTypes.STRING(50),
       allowNull: true
+    },
+    ds_codigo_adm: {
+      type: DataTypes.STRING(15),
+      allowNull: true
     }
   }, {
     sequelize,

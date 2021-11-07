@@ -1,58 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_filme extends Model {
+export default class infoc_jdf_produto extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_filme: {
+    id_produto: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_filme: {
+    nm_produto: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_genero: {
+    vl_produto: {
+      type: DataTypes.DECIMAL(15,2),
+      allowNull: true
+    },
+    ds_produto: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ano_lancamento: {
+    ds_categoria: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_diretor: {
+    ds_imagem: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    ds_sinopse: {
-      type: DataTypes.STRING(800),
+    bt_maisVendidos: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
-    ds_avaliacao: {
-      type: DataTypes.DECIMAL(10,2),
-      allowNull: true
-    },
-    ds_descricao: {
-      type: DataTypes.STRING(800),
-      allowNull: true
-    },
-    ds_plataforma: {
-      type: DataTypes.STRING(500),
-      allowNull: true
-    },
-    img_capa_maior: {
-      type: DataTypes.STRING(1000),
-      allowNull: true
-    },
-    img_capa_menor: {
-      type: DataTypes.STRING(1000),
+    nr_codigo: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_filme',
+    tableName: 'infoc_jdf_produto',
     timestamps: false,
     indexes: [
       {
@@ -60,11 +48,11 @@ export default class infob_mw_filme extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_filme" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infob_mw_filme;
+  return infoc_jdf_produto;
   }
 }

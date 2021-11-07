@@ -19,7 +19,7 @@ export default class infoc_ntc_denuncia extends Model {
       }
     },
     ds_depoimento: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(2000),
       allowNull: true
     },
     dt_cadastro: {

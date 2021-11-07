@@ -54,7 +54,9 @@ export default function Homepageslogin() {
                 <div class="img-livro-queridinha">
                     <img        
                       src={item.ds_imagen}
-                       alt=""/>
+                       alt=""
+                       style={{ height: "190px", width: "185px" }}
+                       />
                 </div>
                 <div class="box-informacoes-livros">
                     <div class="nome-livro-queridinhas">
@@ -64,7 +66,7 @@ export default function Homepageslogin() {
 { item.ds_autora}   
                  </div>
                     <div class="preco-queridinhas">
-                        {item.vl_para}
+                       R$ {item.vl_para}
                     </div>
 
                 </div>

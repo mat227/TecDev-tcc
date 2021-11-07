@@ -10,14 +10,6 @@ export default class infoc_tcc_produto extends Model {
       allowNull: false,
       primaryKey: true
     },
-    tp_peca: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    vl_preco_fb: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
     ds_genero: {
       type: DataTypes.STRING(255),
       allowNull: true
@@ -48,6 +40,46 @@ export default class infoc_tcc_produto extends Model {
     },
     qtd_pedidos: {
       type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    nm_produto: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_categoria: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    vl_preco_de: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    vl_preco_por: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    vl_avaliacao: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    img_produto: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    img_produto_primaria: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    img_produto_secundaria: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    img_produto_terciaria: {
+      type: DataTypes.STRING(200),
+      allowNull: true
+    },
+    img_produto_quarta: {
+      type: DataTypes.STRING(200),
       allowNull: true
     }
   }, {

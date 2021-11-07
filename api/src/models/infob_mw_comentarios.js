@@ -1,38 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comentario_post extends Model {
+export default class infob_mw_comentarios extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comentario_post: {
+    id_cometario: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
+    id_filme: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    id_comunidade: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    ds_comentario: {
-      type: DataTypes.STRING(255),
-      allowNull: false
+    ds_mensagem: {
+      type: DataTypes.STRING(300),
+      allowNull: true
     },
     dt_comentario: {
-      type: DataTypes.DATE,
-      allowNull: false
+      type: DataTypes.DATEONLY,
+      allowNull: true
     },
-    id_like: {
+    ds_curtidas: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
+    },
+    qtd_curtidas: {
+      type: DataTypes.TEXT,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comentario_post',
+    tableName: 'infob_mw_comentarios',
     timestamps: false,
     indexes: [
       {
@@ -40,7 +44,14 @@ export default class infod_tif_comentario_post extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comentario_post" },
+          { name: "id_cometario" },
+        ]
+      },
+      {
+        name: "id_filme",
+        using: "BTREE",
+        fields: [
+          { name: "id_filme" },
         ]
       },
       {
@@ -50,22 +61,8 @@ export default class infod_tif_comentario_post extends Model {
           { name: "id_usuario" },
         ]
       },
-      {
-        name: "id_comunidade",
-        using: "BTREE",
-        fields: [
-          { name: "id_comunidade" },
-        ]
-      },
-      {
-        name: "id_like",
-        using: "BTREE",
-        fields: [
-          { name: "id_like" },
-        ]
-      },
     ]
   });
-  return infod_tif_comentario_post;
+  return infob_mw_comentarios;
   }
 }

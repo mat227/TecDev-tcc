@@ -68,7 +68,7 @@ function marcarTodos(marcar){
                                     name="campo-checkbox" id="campo-checkbox" style={{accentColor: "blue"}}/> 
                                        <label for="campo-checkbox" ></label></div>
                                     <div class="imgl">
-                                        <img src="/assets/images/COMÉDIA 1.svg" alt=""/>
+                                        <img src={item.ds_imagen}alt=""  style={{ height: "150px", width: "140px" }}/>
                                         <div class="tllivro">
                                            {item.nm_livro}
                                         </div>
@@ -76,7 +76,7 @@ function marcarTodos(marcar){
                                             {item.vl_para}
                                         </div>
                                         <div class="botao-preco">
-                                        <Link to={{pathname:"/descricao",state:item.id_livro}}><button>Ver produto</button></Link>
+                                        <Link to={{pathname:"/descricao",state:item}}><button>Ver produto</button></Link>
                                         </div>
                                     </div>
                                     <hr/> 

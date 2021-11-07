@@ -7,7 +7,9 @@ const ContainerDesconto = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Rowdies";
-   
+    background-image: url('/assets/images/bacckground.svg');
+    background-color: #125375;
+ 
 
 
 * {
@@ -25,21 +27,15 @@ const ContainerDesconto = styled.div`
     color: white;
   }
   
- .desconto{
-  min-height: 100%;
-            background-image: url('/assets/images/bacckground.svg');
-            background-color: #125375;
- }
 
 
      
 .oferta-da-semana{
   display: flex;
   flex-direction: column;
-  background-color: #125375 ;
-  background-size: 210vh;
-  height: 250vh;
   opacity: 100%;
+  min-height: 150vh;
+
 }
 
 
@@ -117,33 +113,31 @@ padding-top: 1em;
   
   .livros-desconto{
     display: flex;
-    justify-content: space-evenly;
-    color: white;
+flex-wrap: wrap;
+flex-direction:row;
+  color: white;
+  height: 20vh;
+  max-width:100% ;
+  margin-left:6em;
   
   }
   
-  .livros-desconto2{
-    display: flex;
-    justify-content: space-evenly;
-    color: white;
-    padding-top:10em ;
-  
-  }
+ 
   
   
   .box-livro{
     display: flex;
     flex-direction: column;
     background-color: rgba(97, 169, 212, 0.5);	
-    height: 17.4vw;
     width: 15vw;
-  
+  margin-left: 6em;
     border-radius: 5px;
   margin-top: 5em;
   }
   
   .img-livro-queridinha{
     padding-top: 15px;
+    padding-left: 10px;
   }
   
   

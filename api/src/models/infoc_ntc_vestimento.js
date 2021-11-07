@@ -10,10 +10,6 @@ export default class infoc_ntc_vestimento extends Model {
       allowNull: false,
       primaryKey: true
     },
-    tp_vestimento: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
     ds_inferior: {
       type: DataTypes.STRING(255),
       allowNull: true

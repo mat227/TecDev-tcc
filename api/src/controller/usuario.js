@@ -9,10 +9,10 @@ const app = express.Router();
 
 
 
-app.get('/suaInfo', async (req, resp)=>{
+app.get('/suaInfo/:id', async (req, resp)=>{
     try{
-        
-        let cont = await db.infoc_tdv_cliente.findAll({where : {id_cliente : 1}, include: {model: db.infoc_tdv_endereco, as :'infoc_tdv_enderecos'}});
+        let id= req.params.id
+        let cont = await db.infoc_tdv_cliente.findAll({where : {id_cliente :id}, include: {model: db.infoc_tdv_endereco, as :'infoc_tdv_enderecos'}});
         resp.send(cont);
     }catch(e){
         resp.send({erro: e.toString()});

@@ -12,11 +12,19 @@ export default class infoc_tht_compra extends Model {
     },
     id_pacote: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tht_pacote',
+        key: 'id_pacote'
+      }
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'infoc_tht_usuario',
+        key: 'id_usuario'
+      }
     },
     ds_aprovacao: {
       type: DataTypes.BOOLEAN,

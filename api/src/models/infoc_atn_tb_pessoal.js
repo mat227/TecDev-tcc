@@ -23,7 +23,7 @@ export default class infoc_atn_tb_pessoal extends Model {
       allowNull: true
     },
     nr_telefone: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.INTEGER,
       allowNull: true
     },
     ds_estado_cidade: {
@@ -38,8 +38,16 @@ export default class infoc_atn_tb_pessoal extends Model {
       type: DataTypes.STRING(100),
       allowNull: true
     },
+    ds_confirmar_senha: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_codigo_rec: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
     bl_assinatura: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.TINYINT,
       allowNull: true
     }
   }, {

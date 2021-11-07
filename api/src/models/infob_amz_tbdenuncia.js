@@ -49,6 +49,10 @@ export default class infob_amz_tbdenuncia extends Model {
     ds_tipo_denuncia: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    ds_geohash: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     sequelize,

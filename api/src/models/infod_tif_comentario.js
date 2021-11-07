@@ -25,10 +25,6 @@ export default class infod_tif_comentario extends Model {
     dt_comentario: {
       type: DataTypes.DATE,
       allowNull: false
-    },
-    id_like: {
-      type: DataTypes.INTEGER,
-      allowNull: false
     }
   }, {
     sequelize,

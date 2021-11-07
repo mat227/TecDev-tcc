@@ -14,10 +14,6 @@ export default class infod_ssc_produto extends Model {
       type: DataTypes.STRING(50),
       allowNull: true
     },
-    vl_produto: {
-      type: DataTypes.DECIMAL(10,0),
-      allowNull: true
-    },
     nm_categoria: {
       type: DataTypes.STRING(255),
       allowNull: true
@@ -36,6 +32,10 @@ export default class infod_ssc_produto extends Model {
     },
     ds_imagem: {
       type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    vl_produto: {
+      type: DataTypes.DECIMAL(10,2),
       allowNull: true
     }
   }, {

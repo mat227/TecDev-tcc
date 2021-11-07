@@ -10,14 +10,6 @@ export default class infoa_enl_usuario extends Model {
       allowNull: false,
       primaryKey: true
     },
-    id_login: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'infoa_enl_login',
-        key: 'id_login'
-      }
-    },
     nm_nome: {
       type: DataTypes.STRING(100),
       allowNull: false
@@ -85,6 +77,10 @@ export default class infoa_enl_usuario extends Model {
     bt_ativo: {
       type: DataTypes.TINYINT,
       allowNull: false
+    },
+    dt_ult_login: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     sequelize,
@@ -97,13 +93,6 @@ export default class infoa_enl_usuario extends Model {
         using: "BTREE",
         fields: [
           { name: "id_usuario" },
-        ]
-      },
-      {
-        name: "id_login",
-        using: "BTREE",
-        fields: [
-          { name: "id_login" },
         ]
       },
     ]

@@ -48,6 +48,8 @@ export default function DescConteudo(props) {
         favorito.push({...livro, qtd: 1 });
      
         
+        
+        
         Cookie.set('favorito', JSON.stringify(favorito));
         
         

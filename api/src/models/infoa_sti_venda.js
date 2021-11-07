@@ -1,42 +1,42 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_enl_reg_plano extends Model {
+export default class infoa_sti_venda extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_reg_plano: {
+    id_venda: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_plano: {
+    id_endereco: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_plano',
-        key: 'id_plano'
+        model: 'infoa_sti_endereco',
+        key: 'id_endereco'
       }
     },
-    id_usuario: {
+    id_produto: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
-        model: 'infoa_enl_usuario',
-        key: 'id_usuario'
+        model: 'infoa_sti_produto',
+        key: 'id_produto'
       }
     },
-    dt_aquisicao: {
-      type: DataTypes.DATE,
-      allowNull: false
+    ds_codigo: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     },
-    dt_expiracao: {
-      type: DataTypes.DATE,
-      allowNull: false
+    dt_venda: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_enl_reg_plano',
+    tableName: 'infoa_sti_venda',
     timestamps: false,
     indexes: [
       {
@@ -44,25 +44,25 @@ export default class infoa_enl_reg_plano extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_reg_plano" },
+          { name: "id_venda" },
         ]
       },
       {
-        name: "id_plano",
+        name: "id_endereco",
         using: "BTREE",
         fields: [
-          { name: "id_plano" },
+          { name: "id_endereco" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_produto",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_produto" },
         ]
       },
     ]
   });
-  return infoa_enl_reg_plano;
+  return infoa_sti_venda;
   }
 }

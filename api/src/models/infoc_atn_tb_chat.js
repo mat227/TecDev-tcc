@@ -12,11 +12,7 @@ export default class infoc_atn_tb_chat extends Model {
     },
     id_sala: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoc_atn_tb_sala',
-        key: 'id_sala'
-      }
+      allowNull: true
     },
     ds_mensagem: {
       type: DataTypes.STRING(255),

@@ -23,7 +23,7 @@ export default class infob_hdm_cadastro extends Model {
       allowNull: true
     },
     nr_HDM_celular: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.DECIMAL(10,0),
       allowNull: true
     },
     nm_HDM_email: {
@@ -32,10 +32,6 @@ export default class infob_hdm_cadastro extends Model {
     },
     nm_HDM_senha: {
       type: DataTypes.STRING(50),
-      allowNull: true
-    },
-    bt_HDM_entrar: {
-      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {

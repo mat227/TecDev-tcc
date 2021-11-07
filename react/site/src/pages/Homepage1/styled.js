@@ -250,11 +250,6 @@ padding-top: 1em;
   justify-content: center;
 }
 
-
-.img-livro-queridinha{
-  padding-left: 10px;
-}
-
 .livros-queridinhas{
   display: flex;
 flex-wrap: wrap;
@@ -262,7 +257,7 @@ flex-direction:row;
   color: white;
   height: 20vh;
   max-width:100% ;
-  margin-left:6em
+  margin-left:6em;
 }
 
 
@@ -281,6 +276,7 @@ margin-right:6em
 }
 
 .img-livro-queridinha{
+  padding-left: 10px;
   padding-top: 15px;
 }
 
