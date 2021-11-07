@@ -129,6 +129,43 @@ button {
 button:hover {
   background-color: #2FAEC8;
 }
+
+
+@media (max-width : 1024px) {
+
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+
+  .titulo{
+    margin-left: -3em;
+    font-size: 2em;
+  }
+
+  .img-logo img{
+    height: 2.5em; 
+    margin-left: 3em;
+  }
+
+  .cadastrar{
+    font-size: 1em;
+  }
+
+  input{
+    margin-top: 1em;
+   
+  }
+
+  .vincular-conta{
+    height: 1.5em;
+    margin-right: 1em;
+  }
+
+  botao{
+ 
+    margin-right: 1em;
+  }
+}
 `
 
 
