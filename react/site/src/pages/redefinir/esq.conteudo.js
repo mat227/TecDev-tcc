@@ -4,7 +4,7 @@ import { ContainerEsqueceu } from "./esq.styled";
 import { useHistory } from "react-router";
 import Api from '../../service/apiLogin';
 
-import axios from "axios";
+
 
 const api = new Api();
 
@@ -18,13 +18,16 @@ export default function EsqConteudo() {
 
     const nav = useHistory();
 
-    async function recuperar() {
-        const r = await axios.post(`/redefinir`, { email: email });
-        if ( r === 'ok') {
-            nav.push('/reset');
+    const recuperar = async () => {
+        
+        const r = await api.recuperar(email);
+        if (r.status === 'ok') {
+            nav.push('/reset', {email: email});
+        } else {
+            alert(r.mensagem);
         }
+
     }
-    
     return (        
 
         <ContainerEsqueceu>

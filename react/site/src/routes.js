@@ -4,8 +4,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import partecima2 from './components/Common/partecima2/cima'
 import Trio from './components/Common/trio/trio'
 import Login from './pages/login/conteudo'
+
 import Redefinir from './pages/redefinir/esq.conteudo'
-import Recuperar from './pages/redefinir/reset'
+import Reset from './pages/redefinir/reset'
+
 import Descontos from './pages/Desconto/desconto'
 import Descricoes from './pages/descricao/desc.conteudo'
 import Homepage from './pages/Homepage1/home.js'
@@ -42,7 +44,9 @@ export default function Routes() {
                 <Route path="/homepage" exact={true} component={Homepage} />
 
                 <Route path="/redefinir" exact={true} component={Redefinir} />                
-                <Route path="/reset" exact={true} component={Recuperar} />
+                <Route path="/reset" exact={true} component={Reset} />
+                
+                
                 <Route path="/busca" exact={true} component={Busca} />
 
                 <Route path="/desconto" exact={true} component={Descontos} />

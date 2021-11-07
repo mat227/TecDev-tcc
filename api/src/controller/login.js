@@ -127,9 +127,10 @@ const app = express.Router();
  app.post ('/validar', async (req, resp) => {
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
-             ds_email: req.body.email
+             ds_email: req.body.email       
          }
      });
+
      if (!usuario) {
          resp.send({ status: 'erro', mensagem: 'E-mail inválido'});
      }
@@ -140,6 +141,8 @@ const app = express.Router();
      resp.send({ status: 'ok', mensagem: 'Código validado'});
  })
 
+
+ 
  app.put ('/reset', async (req, resp) => {
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
@@ -182,7 +185,8 @@ const app = express.Router();
      } catch(e) {
                resp.send({ erro:e.toString() })
      }
-     })
+    
+});
 
 
 export default app;
