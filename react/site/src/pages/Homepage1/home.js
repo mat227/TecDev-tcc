@@ -52,7 +52,7 @@ export default function Homepage() {
                 <div class="livros-queridinhas">
 
                     
-             {livro.map ((item)=>(
+             {livro.map ((item)=>
 <Link to={{pathname:"/descricao",state:item}}>
       <div class="box-livro">
                 <div class="img-livro-queridinha">
@@ -78,7 +78,7 @@ export default function Homepage() {
 
             </div>
             </Link>
-              ))}
+              )}
                 </div>
             </div>
       

@@ -11,12 +11,12 @@ const api = new Api();
 export default function Homepage() {
     const [livro, setLivro] = useState([]);
 
-
     async function listar() {
 
         let a = await api.promocao();
         setLivro(a);
-console.log(a)
+        console.log(a)
+
       }
 
 
@@ -42,7 +42,7 @@ console.log(a)
 
                 <div class="livros-desconto">
 
-                    {livro.map((item)=>(
+                    {livro.map((item)=>
                   
                   <Link to={{pathname:"/descricao",state:item}}>
 
@@ -76,7 +76,7 @@ console.log(a)
                     </div>
 
                 </Link>
-                    ))}
+                    )}
                 
         </div>
         </div>
