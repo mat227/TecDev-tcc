@@ -31,7 +31,7 @@ app.post('/addlivro', async (req, resp) =>{
         if( info.disponivel == null ||  info.disponivel == undefined ||  info.disponivel < 0)
             return    resp.send({erro :"o campo disponivel esta errado só é permitido sim(1) ou nao(0)"});
         if( info.qtd == null ||  info.qtd == undefined ||  info.qtd <=  0)
-            return    resp.send({erro :"o campo quantidade colocou um numero abaixo de zero "});
+            return    resp.send({erro :"o campo quantidade esta incorreto, voce colocou um numero abaixo de zero "});
         if(info.imagem == null ||  info.imagem== undefined || info.imagem == '' )
             return    resp.send({erro :"o campo da brochura está vazio, por favor insira um numero"});
         if( info.brochura == null ||  info.brochura == undefined ||  info.brochura < 0 )

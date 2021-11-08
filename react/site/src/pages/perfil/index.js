@@ -38,6 +38,8 @@ console.log(usuarioLogado)
    const [info] = useState(JSON.parse(Cookies.get('usuario-logado')))
 console.log(info);
 
+  
+
     //const ListInfo = async ()  => {
         // let r = await api.infoC();
   //       console.log(r);
@@ -73,12 +75,12 @@ console.log(info);
                                  </div>
                              </div>
                                  <div class="labels">
-                                      <label class="test">Nome: {info.nm_cliente.substring(0,10)}</label>
+                                      <label class="test">Nome: {info.nm_cliente}</label>
                                       <label class="test" >Email: {info.ds_email}</label>
                                       <label class="test" for="">Endereço : {info.nm_rua}</label>
                                       <label class="test" for="">Complemento : {info.ds_complemento}</label>
                                       <label class="test" for="">Bairro: {info.ds_bairro}</label>
-                                      <label class="test" for="">Data de nascimento: {info.dt_nascimento.substring(0,10)}</label>
+                                      <label class="test" for="">Data de nascimento: {info.dt_nascimento}</label>
                                       <label class="test" for="">CPF: {info.ds_cpf}</label>
                                   </div>
                                 <div class="contato">

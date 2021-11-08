@@ -36,7 +36,7 @@ console.log(props)
                                 <div class="box1">
                                         {usuario.map((x) =>
                                                  <div class="labels">
-                                                    <label class="test">Nome: {x.nm_cliente.substring(0,10)}</label>
+                                                    <label class="test">Nome: {x.nm_cliente}</label>
                                                     <label class="test" >Email: {x.ds_email}</label>                                        
                                                     <label class="test" for="">Endereço: {x.infoc_tdv_enderecos[0].nm_rua}</label>
                                                     <label class="test" for="">Complemento:{x.infoc_tdv_enderecos[0].ds_complemento}</label>
