@@ -127,10 +127,9 @@ const app = express.Router();
  app.post ('/validar', async (req, resp) => {
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
-             ds_email: req.body.email       
+             ds_email: req.body.email
          }
      });
-
      if (!usuario) {
          resp.send({ status: 'erro', mensagem: 'E-mail inválido'});
      }
@@ -169,11 +168,6 @@ const app = express.Router();
 
 
 
-
-
- function numeroaletaorio(min, max) {
-     return Math.floor(Math.random() * max (max - min)) + min;
- }
  function getRandomInteger(min, max) {
      return Math.floor(Math.random() * (max - min) ) + min;
    }

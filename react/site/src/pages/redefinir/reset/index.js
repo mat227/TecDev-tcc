@@ -4,26 +4,31 @@ import Api from '../../../service/apiLogin'
 
 
 const api = new Api();
+
 export default function Reset(props) {
   const [validado, setValidado] = useState(false);
   const [codigo, setCodigo] = useState('');
 
 
   /// validar codigo
-
   async function validarCodigo() {
-    const r = await api.validarCodig({email:props.location.state.email, codigo: codigo});
-    console.log( 'passou pela api')
-
-    if(r === 'ok') {
-        setValidado(true);
-        alert('validou')
-    } else {  
-        alert('nao validou')
-    }
+    const r = await api.validarCodig({
+       email: props.location.state.email,
+       codigo: codigo
+    });
+  
+    if (r.status === 'ok') {
+      setValidado(true);
+      alert('validado true');
+    } else {
+      setValidado(false);
+      alert('validado false');
+    } 
   }
 
-  
+
+
+
 
   return (
     <div className="oi">
