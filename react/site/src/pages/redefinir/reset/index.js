@@ -18,10 +18,13 @@ export default function Reset(props) {
     });
   
     if (r.status === 'ok') {
+      console.log('passou pelo if')
       setValidado(true);
       alert('validado true');
     } else {
+      console.log('inicio else')
       setValidado(false);
+      
       alert('validado false');
     } 
   }

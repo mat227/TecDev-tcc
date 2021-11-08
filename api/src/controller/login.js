@@ -125,6 +125,7 @@ const app = express.Router();
  })
 
  app.post ('/validar', async (req, resp) => {
+     console.log('api')
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
              ds_email: req.body.email
@@ -166,6 +167,8 @@ const app = express.Router();
      resp.send({ status: 'ok', mensagem: 'senha alterada'});
  })
 
+ 
+
 
 
  function getRandomInteger(min, max) {
@@ -179,7 +182,6 @@ const app = express.Router();
      } catch(e) {
                resp.send({ erro:e.toString() })
      }
-    
 });
 
 
