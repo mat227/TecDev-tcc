@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create ({
-    baseURL: 'http://localhost:3030/livros'
+    baseURL: 'https://tecdevtcc.herokuapp.com/livros'
 })
 
 
@@ -31,5 +31,27 @@ export default class Api {
         let r = await api.get(`/livrospromocao`)
         return r.data;
     }
+
+    async livroterror () {
+        let r = await api.get(`/livroterror`)
+        return r.data;
+    }
+
+    async livrocomedia () {
+        let r = await api.get(`/livrocomedia`)
+        return r.data;
+    }
+
+    async livroromance () {
+        let r = await api.get(`/livroromance`)
+        return r.data;
+    }
+
+    async livrobiografia () {
+        let r = await api.get(`/livrobiografia`)
+        return r.data;
+    }
+
+
     
 }

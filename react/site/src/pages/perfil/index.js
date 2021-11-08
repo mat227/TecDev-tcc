@@ -20,11 +20,10 @@ import { useHistory } from 'react-router';
     return usuarioLogado; 
 }
 
+
  const api = new Api();
  export default function Login(){
-     useEffect(()=>{
-         ListInfo();
-     },[])
+   
    // const [nome, setNome]  = useState('');
    // const [email, setEmail] = useState('');
    // const [danasc, setData] =  useState('');
@@ -41,11 +40,12 @@ import { useHistory } from 'react-router';
    const [info, setInfo] = useState(JSON.parse(Cookies.get('usuario-logado')))
 console.log(info);
 
-    const ListInfo = async ()  => {
-         let r = await api.infoC();
-         console.log(r);
-         setInfo(r);
-     }
+    //const ListInfo = async ()  => {
+        // let r = await api.infoC();
+  //       console.log(r);
+  //       setInfo(r);
+     //}
+
 
      const altInfo = async () => {
      
