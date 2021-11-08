@@ -1,101 +1,63 @@
-import { ContainerGeneros } from "./type.styled"
-import ParteCima from "../../../components/Common/parteCima/componente"
-import Rodape from "../../../components/Common/rodape/redape"
-import { Link } from "react-router-dom"
+import ParteCima from "../../../components/Common/parteCima/componente";
+import { ContainerGeneros } from "./type.styled";
+import Rodape from "../../../components/Common/rodape/redape";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Api from "../../../service/apiLivro";
+const api = new Api();
+export default function GenerosTerror() {
+  const [livro, setLivro] = useState([]);
 
-export default function GenerosBiografia() { 
-    return (        
-        <ContainerGeneros>
-            <ParteCima />
-            <div class="titulo">
-            <div class="quadrado" style={{marginRight: 0.5 + "em"}}></div>
-                <p>BIOGRAFIA <br /><Link to="/genero"><div className="back"><img src="/assets/images/nicoseta.svg" alt=""/>voltar</div></Link></p>
-            <div class="quadrado" style={{marginLeft: 0.5 + "em"}}></div>
+  async function listar() {
+    let a = await api.livrobiografia();
+    setLivro(a);
+    console.log(a);
+  }
+
+  useEffect(() => {
+    listar();
+  }, []);
+  return (
+    <ContainerGeneros>
+      <div className="conteiner">
+        <ParteCima />
+        <div className="titulo">
+          <div className="quadrado" style={{ marginRight: 0.5 + "em" }}></div>
+          <p>
+            Biografia <br />
+            <Link to="/genero">
+              <div className="back">
+                <img src="/assets/images/nicoseta.svg" alt="" />
+                voltar
+              </div>
+            </Link>
+          </p>
+
+          <div className="quadrado" style={{ marginLeft: 0.5 + "em" }}></div>
         </div>
 
-        <div class="boxes">
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src="/assets/images/ANNE.svg" alt="" />
-                <div class="infobox">
-                    <h3 style={{fontSize: 1 + "em"}}>O DIÁRIO DE ANNE FRANK</h3>
-                    <p>Anne Frank</p>
-                    <h2>R$ 49,90</h2>
+        <div className="boxes">
+          {livro.map((item) => (
+            <Link to={{ pathname: "/descricao", state: item }}>
+              <div class="box-livro">
+                <div class="img-livro-queridinha">
+                  <img
+                    src={item.ds_imagen}
+                    alt=""
+                    style={{ height: "190px", width: "185px" }}
+                  />
                 </div>
-                </Link>
-            </div>
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src="/assets/images/MICHELLE.svg" alt="" />
-                <div class="infobox">
-                    <h3>MINHA HISTÓRIA</h3>
-                    <p>Michelle Obama</p>
-                    <h2>R$ 29,90</h2>
+                <div class="box-informacoes-livros">
+                  <div class="nome-livro-desconto">{item.nm_livro}</div>
+                  <div class="autor-desconto">{item.ds_autora}</div>
+                  <div class="preco-descontotr">R$ {item.vl_de}</div>
                 </div>
-                </Link>
-            </div>
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src=" /assets/images/STEVE JOBS.svg" alt=""/>
-                <div class="infobox">
-                    <h3>STEVE JOBS</h3>
-                    <p>Walter Isaacson</p>
-                    <h2>R$ 48,29</h2>
-                </div>
-                </Link>
-            </div>
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src="/assets/images/FRIDAsdsa.svg" alt=""/>
-                <div class="infobox">
-                    <h3 style={{fontSize: 1 + "em"}}>FRIDA - A BIOGRAFIA</h3>
-                    <p>Hayden Herrera</p>
-                    <h2>R$ 52,90</h2>
-                </div>
-                </Link>
-            </div>
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src="/assets/images/FERNANDA.svg" alt="" />
-                <div class="infobox">
-                    <h3 style={{fontSize: 0.9 + "em"}}>PRÓLOGO, ATO, EPÍLOGO: MEMÓRIAS</h3>
-                    <p>Fernanda Montenegro</p>
-                    <h2>R$ 28,87</h2>
-                </div>
-                </Link>
-            </div>
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src="/assets/images/FREDDIE.svg" alt="" />
-                <div class="infobox">
-                    <h3 style={{fontSize: 1 + "em"}}>O MENINO QUE VIROU CHUVA</h3>
-                    <p>Yuri de Francco e Renato Moriconi</p>
-                    <h2>R$ 40,48</h2>
-                </div>
-                </Link>
-            </div>
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src="/assets/images/NELSON.svg" alt="" />
-                <div class="infobox" style={{lineHeight: 2.4 + "em"}}>
-                    <h3 style={{fontSize: 1 + "em"}}>LONG WALK TO FREEDOM</h3>
-                    <p>Nelson Mandela</p>
-                    <h2>R$ 95,18</h2>
-                </div>
-                </Link>
-            </div>
-            <div class="box">
-                <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                <img src="/assets/images/STEPHEN.svg" alt="" />
-                <div class="infobox" style={{lineHeight: 2.4 + "em"}}>
-                    <h3 style={{fontSize: 0.9 + "em", lineHeight: 1.2 + "em"}}>STEPHEN HAWKING: A BIOGRAPHY (GREENWOOD BIOGRAPHIES)</h3>
-                    <p>Kristine m. Larsen</p>
-                    <h2>R$ 388,51</h2>
-                </div>
-                </Link>
-            </div>
+              </div>
+            </Link>
+          ))}
         </div>
-            <Rodape />
-        </ContainerGeneros>
-    )
-};
+      </div>
+      <Rodape />
+    </ContainerGeneros>
+  );
+}

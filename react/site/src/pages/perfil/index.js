@@ -1,8 +1,7 @@
  import { Container } from  './indexSyled.js';
  import Nav from '../../components/Common/cabecalhoperfil/nav.js';
  import { ContainerPartecima } from '../../components/Common/parteCima/styled.js';
- import Api  from '../../service/apiUsuario.js';
- import { useEffect, useState } from 'react';
+ import {  useState } from 'react';
  import { Link } from 'react-router-dom';
  import Cookies from 'js-cookie';
 import { useHistory } from 'react-router';
@@ -21,7 +20,6 @@ import { useHistory } from 'react-router';
 }
 
 
- const api = new Api();
  export default function Login(){
    
    // const [nome, setNome]  = useState('');
@@ -36,8 +34,8 @@ import { useHistory } from 'react-router';
    const nav = useHistory();
 
    const usuarioLogado = lerUsuarioLogado(nav) || {};
-
-   const [info, setInfo] = useState(JSON.parse(Cookies.get('usuario-logado')))
+console.log(usuarioLogado)
+   const [info] = useState(JSON.parse(Cookies.get('usuario-logado')))
 console.log(info);
 
     //const ListInfo = async ()  => {
@@ -51,9 +49,7 @@ console.log(info);
      
      }
 
-     const deslogar = () => {
-        Cookies.remove('usuario-logado');
-    }
+    
      return(
          <div>
             <ParteCima/>

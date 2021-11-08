@@ -1,113 +1,63 @@
-import ParteCima from "../../../components/Common/parteCima/componente"
-import { ContainerGeneros } from "./type.styled"
-import Rodape from "../../../components/Common/rodape/redape"
-import { Link } from "react-router-dom"
+import ParteCima from "../../../components/Common/parteCima/componente";
+import { ContainerGeneros } from "./type.styled";
+import Rodape from "../../../components/Common/rodape/redape";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Api from "../../../service/apiLivro";
+const api = new Api();
+export default function GenerosTerror() {
+  const [livro, setLivro] = useState([]);
 
-export default function GenerosTerror() { 
-    return (        
+  async function listar() {
+    let a = await api.livroterror();
+    setLivro(a);
+    console.log(a);
+  }
 
-        <ContainerGeneros>
-           <div className="conteiner">
-                <ParteCima />
-                <div className="titulo">
-                    <div className="quadrado" style={{marginRight: 0.5 + "em"}}></div>
-                        <p>TERROR <br /><Link to="/genero"><div className="back"><img src="/assets/images/nicoseta.svg" alt=""/>voltar</div></Link></p>
-                        
-                    <div className="quadrado" style={{marginLeft: 0.5 + "em"}}></div>
+  useEffect(() => {
+    listar();
+  }, []);
+  return (
+    <ContainerGeneros>
+      <div className="conteiner">
+        <ParteCima />
+        <div className="titulo">
+          <div className="quadrado" style={{ marginRight: 0.5 + "em" }}></div>
+          <p>
+            TERROR <br />
+            <Link to="/genero">
+              <div className="back">
+                <img src="/assets/images/nicoseta.svg" alt="" />
+                voltar
+              </div>
+            </Link>
+          </p>
+
+          <div className="quadrado" style={{ marginLeft: 0.5 + "em" }}></div>
+        </div>
+
+        <div className="boxes">
+          {livro.map((item) => (
+            <Link to={{ pathname: "/descricao", state: item }}>
+              <div class="box-livro">
+                <div class="img-livro-queridinha">
+                  <img
+                    src={item.ds_imagen}
+                    alt=""
+                    style={{ height: "190px", width: "185px" }}
+                  />
                 </div>
-
-                <div className="boxes">
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/frankenstein.svg" alt="" />
-                        <div className="infobox">
-                            <h3>FRANKENSTEIN</h3>
-                            <p>Mary Shelley</p>
-                            <h2>R$ 24,90</h2>
-                        </div>
-                        </Link>
-                    </div>
-
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/dracula.svg" alt="" />
-                        <div className="infobox">
-                            <h3>DRÁCULA</h3>
-                            <p>Bram Stoker</p>
-                            <h2>R$ 34,90</h2>
-                        </div>
-                        </Link>
-                    </div>
-
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/it a coisa.svg"alt="" />
-                        <div className="infobox">
-                            <h3>IT - A COISA</h3>
-                            <p>Stephen King</p>
-                            <h2>R$ 92,90</h2>
-                        </div>
-                        </Link>
-                    </div>
-
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/asylumoo.svg" alt="" />
-                        <div className="infobox">
-                            <h3>ASYLUM</h3>
-                            <p>Madeleine Roux</p>
-                            <h2>R$ 38,17</h2>
-                        </div>
-                        </Link>
-                    </div>
-
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/exorcistaa-removebg-preview 1.svg" alt="" />
-                        <div className="infobox">
-                            <h3>EXORCISTA</h3>
-                            <p>William Peter Blatty</p>
-                            <h2>R$ 59,90</h2>
-                        </div>
-                        </Link>
-                    </div>
-
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/o coração revelador (1).svg" alt=""/>
-                        <div className="infobox">
-                            <h3>O CORAÇÃO REVELADOR</h3>
-                            <p>Edgar Allan Poe</p>
-                            <h2>R$ 59,90</h2>
-                        </div>
-                        </Link>
-                    </div>
-
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/sub-removebg-preview 1.svg" alt="" />
-                        <div className="infobox">
-                            <h3 style={{fontSize:"small"}}>A MENINA SUBMERSA - MEMÓRIAS</h3>
-                            <p>Caitlín R. Kiernan</p>
-                            <h2>R$39,90</h2>
-                        </div>
-                        </Link>
-                    </div>
-
-                    <div className="box">
-                        <Link to="/descricao" class="href" style={{color: "white", textDecoration: "none"}}>
-                        <img src="/assets/images/saasa-removebg-preview 1.svg" alt=""/>
-                        <div className="infobox">
-                            <h3>OUTSIDER</h3>
-                            <p>Stephen King</p>
-                            <h2>R$ 59,90</h2>
-                        </div>
-                        </Link>
-                    </div>
-
+                <div class="box-informacoes-livros">
+                  <div class="nome-livro-desconto">{item.nm_livro}</div>
+                  <div class="autor-desconto">{item.ds_autora}</div>
+                  <div class="preco-descontotr">R$ {item.vl_de}</div>
                 </div>
-            </div>      
-            <Rodape />
-        </ContainerGeneros>
-    )
-};
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+      <Rodape />
+    </ContainerGeneros>
+  );
+}
