@@ -71,28 +71,11 @@ export default class Api {
     }
 
    
-    // cupom
-    async listaCupom(){
-        let r  = await api.get(`cupom`);
-        return r.data;
-    }
-    async addCupom(nome, datac, porce ,regra){
-        let cont = {
-            nome:nome,
-            dataduracao : datac,
-            porce : porce,
-            regra : regra
-        }
-        var r = await api.post(`/addCupom`, cont);
-        return r.data;
-    }
     // infomaçoes do adm v1
     async infoA() {
         let r = await api.get(`infoA`);
         return r.data;
     }
 
-   
 
-   
 }

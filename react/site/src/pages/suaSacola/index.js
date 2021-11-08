@@ -21,15 +21,15 @@ export default function SuaSacola (props){
                   : [];
     setLivro(carrinho);
   }
-  
-  function marcarTodos(marcar){
+
+  /*function marcarTodos(marcar){
     var itens = document.querySelectorAll("input");
 
     var i = 0;
     for(i=0; i<itens.length;i++){
         itens[i].checked = marcar;
     }
-}
+}*/
 
 
     return(
@@ -72,11 +72,6 @@ export default function SuaSacola (props){
                 </table>
                
             </div>
-          
-         <div className="inputC">
-                                <input onClick={marcarTodos} type="checkbox" id='studo' className="imputcheck" />
-                            
-                            </div>
       </div>
                         <div className="cupom">
                        
