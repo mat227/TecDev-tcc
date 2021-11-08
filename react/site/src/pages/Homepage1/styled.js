@@ -9,14 +9,14 @@ const ContainerHome = styled.div`
   a, a:link, a:visited {
     text-decoration: none;
     color: white;
-    
+    padding-bottom: 3em;
   }
   
   
 
   .conteiner-homepage1{
     display: flex;
-    min-height: 150vh;
+   min-height:550vh;
 
     flex-direction: column;
     font-family: "Rowdies";
@@ -40,6 +40,11 @@ align-self: center;
   cursor: pointer;
 }
 
+.hp1-seus{
+      
+        margin-bottom: -3em;;
+    }
+    
 
 .trio2{
   display: flex;
@@ -76,6 +81,7 @@ margin-left: 8em;
 height: 50vh;
 width: 40vw;
 padding-top: 3.5em;
+padding-top: 5em;
 padding-left: none;
 text-align: center;
 }

@@ -44,6 +44,54 @@ app.get ('/livrospromocao', async (req, resp) => {
 })
 
 
+    
+app.get ('/livroterror', async (req, resp) => {
+    try {
+
+        let x = await db.infoc_tdv_livro.findAll({
+            where: {
+                id_genero: "Terror" || "terror"
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
+    }
+})
+
+
+    
+app.get ('/livropoesia', async (req, resp) => {
+    try {
+
+        let x = await db.infoc_tdv_livro.findAll({
+            where: {
+                id_genero: "Poesia" || "poesia"
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
+    }
+})
+
+
+    
+app.get ('/livrocomedia', async (req, resp) => {
+    try {
+
+        let x = await db.infoc_tdv_livro.findAll({
+            where: {
+                id_genero: "comedia" || "Comedia"
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
+    }
+})
+
+
 app.get('/pagamento', async (req, resp) => {
     try {
         let pagamento = await db.infoc_tdv_forma_pagamento.findAll();
@@ -53,6 +101,36 @@ app.get('/pagamento', async (req, resp) => {
     }
 })
 
+
+  
+app.get ('/livroromance', async (req, resp) => {
+    try {
+
+        let x = await db.infoc_tdv_livro.findAll({
+            where: {
+                id_genero: "Romance" || "romance"
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
+    }
+})
+
+
+app.get ('/livrobiografia', async (req, resp) => {
+    try {
+
+        let x = await db.infoc_tdv_livro.findAll({
+            where: {
+                id_genero: "Biografia" || "biografia"
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
+    }
+})
 app.post('/pagamento', async (req, resp) => {
     try {
         let usuParam = req.body;

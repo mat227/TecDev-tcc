@@ -125,6 +125,7 @@ const app = express.Router();
  })
 
  app.post ('/validar', async (req, resp) => {
+     console.log('api')
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
              ds_email: req.body.email
@@ -140,6 +141,8 @@ const app = express.Router();
      resp.send({ status: 'ok', mensagem: 'Código validado'});
  })
 
+
+ 
  app.put ('/reset', async (req, resp) => {
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
@@ -164,13 +167,10 @@ const app = express.Router();
      resp.send({ status: 'ok', mensagem: 'senha alterada'});
  })
 
+ 
 
 
 
-
- function numeroaletaorio(min, max) {
-     return Math.floor(Math.random() * max (max - min)) + min;
- }
  function getRandomInteger(min, max) {
      return Math.floor(Math.random() * (max - min) ) + min;
    }
@@ -182,7 +182,7 @@ const app = express.Router();
      } catch(e) {
                resp.send({ erro:e.toString() })
      }
-     })
+});
 
 
 export default app;

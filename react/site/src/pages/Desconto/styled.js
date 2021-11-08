@@ -34,7 +34,7 @@ const ContainerDesconto = styled.div`
   display: flex;
   flex-direction: column;
   opacity: 100%;
-  min-height: 150vh;
+  min-height: 250vh;
 
 }
 
@@ -117,8 +117,6 @@ flex-wrap: wrap;
 flex-direction:row;
   color: white;
   height: 20vh;
-  max-width:100% ;
-  margin-left:6em;
   
   }
   
@@ -130,8 +128,9 @@ flex-direction:row;
     flex-direction: column;
     background-color: rgba(97, 169, 212, 0.5);	
     width: 15vw;
-  margin-left: 6em;
+  margin-left: 0em;
     border-radius: 5px;
+    margin-left: 7em;
   margin-top: 5em;
   }
   

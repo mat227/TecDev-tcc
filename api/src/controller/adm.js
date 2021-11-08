@@ -106,14 +106,21 @@ app.put('/alterandoLivro/:id', async (req,resp)=> {
 })
 // Lista livros na tela do adm
 
-app.get('/listaLivro', async (req, resp)=> {
-    try{
-        let r = await db.infoc_tdv_livro.findAll();
-        resp.send(r);
-    }catch(e){
-        resp.send({erro : e.toString()});
+    
+app.get ('/listaLivro', async (req, resp) => {
+    try {
+
+        let x = await db.infoc_tdv_livro.findAll({
+            where: {
+                ds_promocao: false
+            }
+        })
+        resp.send(x);
+    }catch (e){
+        resp.send({ erro: e.toString() })
     }
 })
+
 
 app.get('/addlivro', async (req,resp ) =>{
     

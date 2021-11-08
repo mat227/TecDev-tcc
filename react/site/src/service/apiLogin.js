@@ -35,11 +35,15 @@ async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,
 
 
  // /// teste nico
- async recuperar(email) {
-    let a = {
-        email: email
+    async recuperar(email) {
+        let a = {email}
+        let r = await api.post(`/redefinir`, a);
+        return r.data;
     }
-    let r = await api.post(`/redefinir`, a);
-     return r.data;
-}
+
+    async validarCodig(email, codigo) {
+        let r = await api.post(`/validar`, (email, codigo));
+        return r.data;
+    }
+
 }
