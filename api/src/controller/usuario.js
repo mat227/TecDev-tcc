@@ -34,22 +34,36 @@ app.post('/addEndereco', async (req, resp) =>{
 
 // alterando o dados do  usuario
 app.put('/altdadosA/:id', async (req, resp) =>{
-    var idend = await  db.tb_endereco.findOne({
-        attributes: getFields(),
-        where : {id_cliente : req.params.id}}
-        );
-    let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } = req.body(); 
     try{
-        var r =  await db.infoc_tdv_cliente.update({where : {id_cliente : req.params.id} },
+        let idend = await  db.infoc_tdv_endereco.findOne({
+            attributes: getFields(),
+            where : {id_cliente : req.params.id}},
+            );
+        let id  = idend.getDataValue('id');
+        console.log(id);
+        let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } = req.body; 
+        let r =  await db.infoc_tdv_cliente.update({where : {id_cliente : req.params.id} },
             {nm_cliente : nome, ds_cpf : cpf, dt_nascimento : dataNasc, ds_email : email });
-        var r1 = await db.infoc_tdv_endereco.update({where: {id_endereco : idend}},{ nm_rua : nomerua, ds_cep : cep, ds_numero : nrcasa, ds_bairro: bairro , ds_complemento : complemento});
+        let r1 = await db.infoc_tdv_endereco.update({where: {id_endereco :id }},
+        { nm_rua : nomerua, ds_cep : cep, ds_numero : nrcasa, ds_bairro: bairro , ds_complemento : complemento});
+        resp.send(r);
+    }catch(e){
+        resp.send({erro : e.toString()});
+    }
+})
+//post do pedido
+
+app.pedido('/addpedido', async (req, resp) => {
+    try{
+        let {idc, idp } = req.body;
+        let r = await db.infoc_tdv_pedido.create({id_cliente : idc})
     }catch(e){
         resp.send({erro : e.toString()});
     }
 })
 function getFields(){
     return [
-        ['id_endereco' , 'id']
+        ['id_endereco', 'id']
     ]
 }
 export default app;

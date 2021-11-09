@@ -82,7 +82,7 @@ import { useHistory } from 'react-router';
                                       <label class="test" for="">Endereço : {info.nm_rua}</label>
                                       <label class="test" for="">Complemento : {info.ds_complemento}</label>
                                       <label class="test" for="">Bairro: {info.ds_bairro}</label>
-                                      <label class="test" for="">Data de nascimento: {info.dt_nascimento}</label>
+                                      <label class="test" for="">Data de nascimento: {info.dt_nascimento.substring(0,10)}</label>
                                       <label class="test" for="">CPF: {info.ds_cpf}</label>
                                   </div>
                                 <div class="contato">

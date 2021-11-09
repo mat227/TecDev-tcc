@@ -20,8 +20,8 @@ console.log(props)
         setUsuario(r);
     }
     useEffect(()=>{
-              // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[ ListInfoC()])
+        ListInfoC();// eslint-disable-next-line react-hooks/exhaustive-deps
+    },[ ])
 
     return(
         <div>
