@@ -1,8 +1,9 @@
-import { ContainerPartecima } from './styled'
-import { Link } from 'react-router-dom'
-import { useHistory } from 'react-router'
-import { useState } from 'react';
 
+
+import { useState } from 'react';
+import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
+import $ from 'jquery';
 
 
  
@@ -17,60 +18,85 @@ export default function ParteCima2(props) {
         }
     }
 
+    $(function () {
+        
+        $(".button-collapse").sideNav();
+      });
+
     return (
-            <ContainerPartecima>
-            <div class="hp1-buscap">
-           <Link to="/"> <div class="hp1-logo">
-                <img src="/assets/images/nice library png 1.svg" alt=""/>
-                <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
+            <div className="oi">
 
-            </div></Link>
 
-            <div class="hp1-busca">
-                <div class="divBusca">
-                    <input type="text" id="txtBusca" placeholder="Buscar..." value={search} onChange={ e => setSearch(e.target.value) } onKeyPress={keyPress}/>
-                    <button><img src="/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
-                </div>
-            </div>
-
-            <div class="hp1-seus"> 
-            <Link to="/login">
-              <div class="menu-item">
-                    <div class="imagem">
-                    <img src="/assets/images/bag.svg" alt="" />
-                    </div>
-                    <div class="descricao">
-                    <p>Sua sacola</p>
-                    </div>
-                </div>
+        
+            <nav>
+              <div class="nav-wrapper">
+                <Link to="#" class="brand-logo" style={{alignItems: "center!important"}}>
+                  <img src="/assets/images/nice library png 1.svg" alt="" style={{height: 1 + "em"}} />
+                  <img src="/assets/images/Bookly.svg" alt="" style={{height: 1 + "em"}} />
                 </Link>
+                <Link to="#" data-activates="menu-mobile" class="button-collapse">
+                  <i class="material-icons" style={{margin: 0.1 + "em" -0.22 + "em"}}
+                    ><img src="/assets/images/botao de menu.png" alt=""
+                  /></i>
+                </Link>
+
+                <ul class="right hide-on-med-and-down">
                 <Link to="/login">
-                <div class="menu-item">
-                    <div class="imagem">
-                    <img src="/assets/images/coracaoo.svg" alt="" />
-                    </div>
-                    <div class="descricao">
-                    <p>Seus Favoritos</p>
-                    </div>
-                </div>
-                </Link>
-                <Link to="/login">
-                <div class="menu-item">
-                    <div class="imagem">
-                    <img
-                        src="/assets/images/profilee (1).svg"
-                        alt=""
-                        style={{height: 2.8 + "em"}}
-                    />
-                    </div>
-                    <div class="descricao">
-                    <p>Login</p>
-                    </div>
-                </div>
-                </Link>
-                <div><Link to='/adm_livro'><button>Adm</button></Link></div>
-            </div>
+                        <li style={{ display: "flex", flexDirection: "row !important", alignItems: "center", margin: 1 + "em" }}>
+                             <img src="/assets/images/profilee (1).svg" alt="" style={{height: 2 + "em"}}/>
+                            <p style={{color: "red", marginTop: -1 + "em"}}>Login</p>
+                        </li>
+                  </Link>
+                  <Link to="/login">
+                        <li style={{ display: "flex", flexDirection: "row !important", alignItems: "center", margin: 1 + "em" }}>
+                            <img src="/assets/images/profilee (1).svg" alt="" style={{height: 2 + "em"}}/>
+                            <p style={{color: "red", marginTop: -1 + "em"}}>Login</p>
+                        </li>
+                  </Link>
+                  <Link to="/login">
+                        <li style={{ display: "flex", flexDirection: "row !important", alignItems: "center", margin: 1 + "em" }}>
+                            <img src="/assets/images/profilee (1).svg" alt="" style={{height: 2 + "em"}}/>
+                            <p style={{color: "red", marginTop: -1 + "em"}}>Login</p>
+                        </li>
+                  </Link>
+                  <Link to="/adm_livro">
+                        <li style={{ display: "flex", flexDirection: "row !important", alignItems: "center",margin: 1 + "em" }}>
+                            <button style={{background: "skyblue", color: "black"}}>
+                                ADM
+                            </button>
+                        </li>
+                  </Link>
+                </ul>
+
+                <ul class="side-nav" id="menu-mobile" style={{width: 30 + "vh"}}>
+                  <li
+                    style={{ display: "flex", flexDirection: "row !important", alignItems: "center", margin: 1 + "em" }} >
+                    <a href="#"><img src="/assets/images/bag.svg" style={{height: 2 + "em"}} /></a>
+                    <p style={{color: "red", marginTop: -1 + "em"}}>Sua sacola</p>
+                  </li>
+                  <Link to="/login">
+                        <li style={{ display: "flex", flexDirection: "row !important", alignItems: "center", margin: 1 + "em" }}>
+                            <img src="/assets/images/coracaoo.svg" alt="" style={{height: 2 + "em"}}/>
+                            <p style={{color: "red", marginTop: -1 + "em"}}>Seus Favoritos </p>
+                        </li>
+                  </Link>
+                  <Link to="/login">
+                        <li style={{ display: "flex", flexDirection: "row !important", alignItems: "center", margin: 1 + "em" }}>
+                            <img src="/assets/images/profilee (1).svg" alt="" style={{height: 2 + "em"}}/>
+                            <p style={{color: "red", marginTop: -1 + "em"}}>Login</p>
+                        </li>
+                  </Link>
+                  <Link to="/adm_livro">
+                        <li style={{ display: "flex", flexDirection: "row !important", alignItems: "center",margin: 1 + "em" }}>
+                            <button style={{background: "skyblue", color: "black"}}>
+                                ADM
+                            </button>
+                        </li>
+                  </Link>
+                </ul>
+              </div>
+            </nav>
         </div>
-            </ContainerPartecima>
+        
     )
 }
