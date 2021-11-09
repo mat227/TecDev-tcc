@@ -53,10 +53,17 @@ app.put('/altdadosA/:id', async (req, resp) =>{
 })
 //post do pedido
 
-app.pedido('/addpedido', async (req, resp) => {
+app.post('/addpedido', async (req, resp) => {
     try{
-        let {idc, idp } = req.body;
-        let r = await db.infoc_tdv_pedido.create({id_cliente : idc})
+        let {idc, situacao , idp } = req.body;
+        
+        let pedido = await db.infoc_tdv_pedido.create({id_cliente : idc, ds_situacao_ped : situacao, dt_pedido : new Date()});
+        for(let pi of idp){
+            const { qtd ,livro} = pi;
+            
+            let pedido_item = await db.infoc_tdv_pedido_item.create({id_pedido : pedido.id_pedido , qtd_items : qtd , id_livro : livro });
+        }
+        resp.send("Pedido cadastrado com sucesso");
     }catch(e){
         resp.send({erro : e.toString()});
     }
