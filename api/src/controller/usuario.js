@@ -35,13 +35,14 @@ app.post('/addEndereco', async (req, resp) =>{
 // alterando o dados do  usuario
 app.put('/altdadosA/:id', async (req, resp) =>{
     try{
+        let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } = req.body; 
         let idend = await  db.infoc_tdv_endereco.findOne({
             attributes: getFields(),
             where : {id_cliente : req.params.id}},
             );
         let id  = idend.getDataValue('id');
         console.log(id);
-        let {nome, cpf, dataNasc, email, nomerua, cep, nrcasa, bairro, complemento } = req.body; 
+       
         let r =  await db.infoc_tdv_cliente.update({where : {id_cliente : req.params.id} },
             {nm_cliente : nome, ds_cpf : cpf, dt_nascimento : dataNasc, ds_email : email });
         let r1 = await db.infoc_tdv_endereco.update({where: {id_endereco :id }},
@@ -61,7 +62,7 @@ app.post('/addpedido', async (req, resp) => {
         for(let pi of idp){
             const { qtd ,livro} = pi;
             
-            let pedido_item = await db.infoc_tdv_pedido_item.create({id_pedido : pedido.id_pedido , qtd_items : qtd , id_livro : livro });
+            let pedido_item = await db.infoc_tdv_pedido_item.create({id_pedido : pedido.id_pedido , qtd_itens : qtd , id_livro : livro });
         }
         resp.send("Pedido cadastrado com sucesso");
     }catch(e){
