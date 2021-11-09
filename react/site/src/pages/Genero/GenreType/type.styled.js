@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 const ContainerGeneros = styled.div`
 
-    margin: 0px;
 
 
     background-color: #135578;
     background-image: url('../../assets/images/bacckground.svg');
- 
+ font-family: "Rowdies";
 
 
  .titulo {
@@ -23,9 +22,9 @@ const ContainerGeneros = styled.div`
   
   .titulo p {
     color:white;
-    font-family: Rowdies;
+    font-family: "Rowdies";
     font-size: 4em;
-    font-weight: 300;
+    font-weight: 600;
     text-shadow: 2px 3px black;
   
       -webkit-text-stroke-width: 0.5px; 
@@ -70,10 +69,10 @@ const ContainerGeneros = styled.div`
       margin: 1em;
 
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
 
-      font-family: Rowdies;
+      font-family: "Rowdies";
       text-align: center;
       color: white;
       line-height: 1.8em;
@@ -111,16 +110,88 @@ const ContainerGeneros = styled.div`
 
       margin-top: 2em;
       margin-bottom: 4em;
+      margin-right:5em;
   }
 
-a:hover {
-    cursor:pointer;
-}
+  a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  
+.livros-desconto{
+    display: flex;
+flex-wrap: wrap;
+flex-direction:row;
+  color: white;
+  height: 20vh;
+  
+  }
+  
+ 
+  
+  
+  .box-livro{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(97, 169, 212, 0.5);	
+    width: 15vw;
+  margin-left: 0em;
+    border-radius: 5px;
+    margin-left: 7em;
+  margin-top: 5em;
+  }
+  
+  .img-livro-queridinha{
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+  
+  
+  
+  .box-informacoes-livros{
+    padding: 0.5em;
+    border-radius: 5px;
+  
+    background-color: rgba(132,209,222, 0.8);	
+  }
+  
+  .nome-livro-desconto{
+    font-size: 13px;
+    padding-bottom: 7px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:black;
+  }
+  .autor-desconto{
+    font-size: 12px;
+    padding-bottom: 7px;
+  
+  }
+  
+  .descontolivro{
+      position: absolute;
+      margin-left: -2.5em;
+      margin-top:-3.25em;
+  }
+  
+  .preco-descontotr{
+    font-size: 20px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:black;
+    text-decoration: underline black;
+    text-decoration: line-through #00EAFF;
+  }
+  
 
-a:link {
-  text-decoration: none;
-}
-
+  .preco-desconto{
+    font-size: 25px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:black;
+    text-decoration: underline black;
+    
+    text-decoration:wavy;
+  }
+  
+  
 `
 
 export { ContainerGeneros }

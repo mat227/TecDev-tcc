@@ -11,7 +11,7 @@ export default class infoa_sti_produto extends Model {
       primaryKey: true
     },
     img_produto: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING(8000),
       allowNull: true
     },
     nm_produto: {

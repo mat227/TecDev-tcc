@@ -11,14 +11,14 @@ export default class infoc_tht_lugar extends Model {
       primaryKey: true
     },
     nm_lugar: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(80),
       allowNull: true
     },
     ds_avaliacao: {
       type: DataTypes.DECIMAL(10,5),
       allowNull: true
     },
-    ds_edereco: {
+    ds_endereco: {
       type: DataTypes.STRING(100),
       allowNull: true
     },
@@ -27,11 +27,11 @@ export default class infoc_tht_lugar extends Model {
       allowNull: true
     },
     ds_informacao: {
-      type: DataTypes.STRING(100),
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    dt_dias: {
-      type: DataTypes.DATE,
+    ds_dias: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     dt_horario: {

@@ -34,7 +34,7 @@ const ContainerDesconto = styled.div`
   display: flex;
   flex-direction: column;
   opacity: 100%;
-  min-height: 250vh;
+  min-height: 390vh;
 
 }
 

@@ -29,6 +29,10 @@ export default class infoc_tht_compra extends Model {
     ds_aprovacao: {
       type: DataTypes.BOOLEAN,
       allowNull: true
+    },
+    dt_compra: {
+      type: DataTypes.DATE,
+      allowNull: true
     }
   }, {
     sequelize,

@@ -52,6 +52,10 @@ export default class Api {
         return r.data;
     }
 
+    async livropoesia () {
+        let r = await api.get(`/livropoesia`)
+        return r.data;
+    }
 
     
 }
