@@ -28,11 +28,7 @@ export default class infod_tif_usuario extends Model {
     },
     dt_criacao: {
       type: DataTypes.DATE,
-      allowNull: false
-    },
-    bt_online: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
+      allowNull: true
     },
     ds_perfil: {
       type: DataTypes.STRING(255),

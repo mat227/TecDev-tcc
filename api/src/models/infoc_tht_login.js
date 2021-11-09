@@ -1,34 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comunidade extends Model {
+export default class infoc_tht_login extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comunidade: {
+    id_login: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    id_cadastro: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      references: {
+        model: 'infoc_tht_cadastro',
+        key: 'id_cadastro'
+      }
     },
-    ds_capa: {
-      type: DataTypes.STRING(1555),
-      allowNull: false
+    ds_email: {
+      type: DataTypes.STRING(20),
+      allowNull: true
     },
-    nm_comunidade: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_criacao: {
-      type: DataTypes.DATE,
-      allowNull: false
+    ds_senha: {
+      type: DataTypes.STRING(20),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comunidade',
+    tableName: 'infoc_tht_login',
     timestamps: false,
     indexes: [
       {
@@ -36,18 +36,18 @@ export default class infod_tif_comunidade extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comunidade" },
+          { name: "id_login" },
         ]
       },
       {
-        name: "id_usuario",
+        name: "id_cadastro",
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "id_cadastro" },
         ]
       },
     ]
   });
-  return infod_tif_comunidade;
+  return infoc_tht_login;
   }
 }

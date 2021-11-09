@@ -15,11 +15,11 @@ export default class infoc_tht_cartao extends Model {
       allowNull: true
     },
     nm_cartao: {
-      type: DataTypes.STRING(40),
+      type: DataTypes.STRING(60),
       allowNull: true
     },
-    nr_validade: {
-      type: DataTypes.INTEGER,
+    ds_validade: {
+      type: DataTypes.DATEONLY,
       allowNull: true
     },
     nr_cvv: {

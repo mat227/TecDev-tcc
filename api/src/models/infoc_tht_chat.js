@@ -18,7 +18,7 @@ export default class infoc_tht_chat extends Model {
       type: DataTypes.STRING(100),
       allowNull: true
     },
-    dt_messagem: {
+    dt_mensagem: {
       type: DataTypes.DATE,
       allowNull: true
     }

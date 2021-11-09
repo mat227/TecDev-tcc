@@ -1,22 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_chat_usuario extends Model {
+export default class infoc_tht_cadastro extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_chat_usuario: {
+    id_cadastro: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_usuario: {
+    ds_email: {
+      type: DataTypes.STRING(20),
+      allowNull: true
+    },
+    ds_senha: {
+      type: DataTypes.STRING(20),
+      allowNull: true
+    },
+    nr_celular: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
+    },
+    nm_nome: {
+      type: DataTypes.STRING(15),
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_chat_usuario',
+    tableName: 'infoc_tht_cadastro',
     timestamps: false,
     indexes: [
       {
@@ -24,18 +36,11 @@ export default class infod_tif_chat_usuario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_chat_usuario" },
-        ]
-      },
-      {
-        name: "id_usuario",
-        using: "BTREE",
-        fields: [
-          { name: "id_usuario" },
+          { name: "id_cadastro" },
         ]
       },
     ]
   });
-  return infod_tif_chat_usuario;
+  return infoc_tht_cadastro;
   }
 }

@@ -33,6 +33,10 @@ export default class infoa_sti_venda extends Model {
     dt_venda: {
       type: DataTypes.DATEONLY,
       allowNull: true
+    },
+    bt_situacao: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
     }
   }, {
     sequelize,

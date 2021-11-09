@@ -1,10 +1,10 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_comunidade extends Model {
+export default class infod_tif_favoritos extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_comunidade: {
+    id_favoritos: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -12,23 +12,15 @@ export default class infod_tif_comunidade extends Model {
     },
     id_usuario: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    ds_capa: {
-      type: DataTypes.STRING(1555),
-      allowNull: false
-    },
-    nm_comunidade: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    dt_criacao: {
-      type: DataTypes.DATE,
-      allowNull: false
+    id_anime: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_comunidade',
+    tableName: 'infod_tif_favoritos',
     timestamps: false,
     indexes: [
       {
@@ -36,7 +28,7 @@ export default class infod_tif_comunidade extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_comunidade" },
+          { name: "id_favoritos" },
         ]
       },
       {
@@ -46,8 +38,15 @@ export default class infod_tif_comunidade extends Model {
           { name: "id_usuario" },
         ]
       },
+      {
+        name: "id_anime",
+        using: "BTREE",
+        fields: [
+          { name: "id_anime" },
+        ]
+      },
     ]
   });
-  return infod_tif_comunidade;
+  return infod_tif_favoritos;
   }
 }
