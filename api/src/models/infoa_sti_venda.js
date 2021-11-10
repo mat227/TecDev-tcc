@@ -34,8 +34,12 @@ export default class infoa_sti_venda extends Model {
       type: DataTypes.DATEONLY,
       allowNull: true
     },
-    bt_situacao: {
-      type: DataTypes.BOOLEAN,
+    ds_forma_pagamento: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    ds_situacao: {
+      type: DataTypes.STRING(100),
       allowNull: true
     }
   }, {

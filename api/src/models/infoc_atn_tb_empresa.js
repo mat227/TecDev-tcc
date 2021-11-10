@@ -15,7 +15,7 @@ export default class infoc_atn_tb_empresa extends Model {
       allowNull: true
     },
     nr_cnpj: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: true
     },
     nm_ramo: {
@@ -23,7 +23,7 @@ export default class infoc_atn_tb_empresa extends Model {
       allowNull: true
     },
     nr_telefone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: true
     },
     ds_estado_cidade: {
@@ -35,7 +35,7 @@ export default class infoc_atn_tb_empresa extends Model {
       allowNull: true
     },
     ds_senha: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     ds_codigo_rec: {

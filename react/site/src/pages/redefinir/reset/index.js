@@ -1,12 +1,13 @@
 
 import { useState } from "react"
-import Api from '../../../service/apiLogin'
+import Api from '../../../service/apiRecebeCode'
 
 
 const api = new Api();
 
 export default function Reset(props) {
   const [validado, setValidado] = useState(false);
+  console.log(validado)
   const [codigo, setCodigo] = useState('');
 
 
@@ -16,6 +17,9 @@ export default function Reset(props) {
        email: props.location.state.email,
        codigo: codigo
     });
+
+    console.log(validarCodigo)
+
   
     if (r.status === 'ok') {
       console.log('passou pelo if')
@@ -28,8 +32,6 @@ export default function Reset(props) {
       alert('validado false');
     } 
   }
-
-
 
 
 

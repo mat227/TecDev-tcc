@@ -18,8 +18,16 @@ export default class infoa_sti_venda_item extends Model {
         key: 'id_venda'
       }
     },
-    ds_numero_pedido: {
-      type: DataTypes.STRING(255),
+    id_produto: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoa_sti_produto',
+        key: 'id_produto'
+      }
+    },
+    qtd_produto: {
+      type: DataTypes.INTEGER,
       allowNull: true
     }
   }, {
@@ -40,6 +48,13 @@ export default class infoa_sti_venda_item extends Model {
         using: "BTREE",
         fields: [
           { name: "id_venda" },
+        ]
+      },
+      {
+        name: "id_produto",
+        using: "BTREE",
+        fields: [
+          { name: "id_produto" },
         ]
       },
     ]

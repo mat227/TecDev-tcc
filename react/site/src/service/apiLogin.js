@@ -41,9 +41,5 @@ async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,
         return r.data;
     }
 
-    async validarCodig(email, codigo) {
-        let r = await api.post(`/validar`, (email, codigo));
-        return r.data;
-    }
-
+   
 }

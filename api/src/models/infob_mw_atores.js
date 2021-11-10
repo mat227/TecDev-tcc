@@ -17,10 +17,6 @@ export default class infob_mw_atores extends Model {
     nm_ator: {
       type: DataTypes.STRING(255),
       allowNull: true
-    },
-    ds_princ_atores: {
-      type: DataTypes.STRING(255),
-      allowNull: true
     }
   }, {
     sequelize,

@@ -30,6 +30,10 @@ export default class infod_tif_usuario extends Model {
       type: DataTypes.DATE,
       allowNull: true
     },
+    bt_adm: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
     ds_perfil: {
       type: DataTypes.STRING(255),
       allowNull: true
