@@ -16,7 +16,8 @@ const Container = styled.div`
             border-radius: 2em;
             padding: 1.5em;
             margin: 1.5em;
-            
+            min-height: 100%;
+
         }
         .titulo{
             display: flex;

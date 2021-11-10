@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     margin: 0em;
-    background-color: #1e4f63;
-    background-image: url("./assets/images/fundo.svg");
+    background-image: url('/assets/images/bacckground.svg');
+            background-color: #125375;
+            font-family: "Rowdies";
     * {
         box-sizing: border-box;
         padding:0;

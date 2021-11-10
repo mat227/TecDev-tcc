@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create ({
-    baseURL: 'https://tecdevtcc.herokuapp.com/login'
+    baseURL: 'http://localhost:3030/login'
 })
 
 export default class Api {

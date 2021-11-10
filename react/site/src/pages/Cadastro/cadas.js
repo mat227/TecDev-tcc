@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import { ContainerCadastro } from "./cadas.styled"
 import { useState } from 'react'
-import { toast } from 'react-toastify';
+import { toast,ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 import Api from '../../service/apiLogin'
 
@@ -11,7 +11,6 @@ const api = new Api();
 
 
 export default function Cadastro() {
-
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [nome, setNome] = useState("");
@@ -40,10 +39,11 @@ export default function Cadastro() {
             complemento      
           );
     
-          if (r.erro) {
-            toast.error(r.erro);
-          } else {
+          if (r.erro) toast.error(`${r.erro}`);
+
+          else {
             toast.success("✔️ Cadastro feito com sucesso!");
+
           }
           console.log(r)
         }
@@ -53,6 +53,7 @@ export default function Cadastro() {
     
     return (
         <ContainerCadastro>
+      <ToastContainer />
 
                     <div class="Conteiner-cadastrar">
 
@@ -94,10 +95,7 @@ export default function Cadastro() {
                          onChange={(r) => setSenha(r.target.value)}
                         id="senha_cadastrar" name="senha_cadastrar" required="required" type="password" />
                     </div>
-                    <div class="senha_cadastrar">Confirmar senha</div>
-                    <div class="cadastrar-sn">
-                        <input id="senha_cadastrar" name="senha_cadastrar" required="required" type="password" />
-                    </div>
+                   
                     <div class="data_cadastrar">Data de nascimento</div>
                     <div class="cadastrar-sn">
                         <input
@@ -154,7 +152,7 @@ export default function Cadastro() {
                             <img src="/assets/images/google.svg" alt="" />
                         </div>
                 
-                        <div class="botao"><Link to="/login"><button onClick={cadastroCliente}>Cadastrar</button></Link></div>
+                        <div class="botao"><Link to='/login'><button onClick={cadastroCliente}>Cadastrar</button></Link></div>
                     </div>
                 </div>
                 

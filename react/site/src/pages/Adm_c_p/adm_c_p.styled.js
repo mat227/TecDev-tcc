@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 const ContainerAdmcp = styled.div`
         margin: 0;
-        background-color: #1e4f63;
-        background-image: url("./assets/images/fundo.svg");
+        background-image: url('/assets/images/bacckground.svg');
+            background-color: #125375;
+            font-family: "Rowdies";
 @font-face {
     font-family: 'Baloo Thambi 2';
     src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');

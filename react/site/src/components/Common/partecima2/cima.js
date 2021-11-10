@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import $ from 'jquery';
+//import $ from 'jquery';
 
 
  
@@ -18,10 +18,10 @@ export default function ParteCima2(props) {
         }
     }
 
-    $(function () {
+   // $(function () {
         
-        $(".button-collapse").sideNav();
-      });
+    //    $(".button-collapse").sideNav();
+     // });
 
     return (
             <div className="oi">

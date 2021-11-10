@@ -1,11 +1,36 @@
 import { Link } from "react-router-dom";
 import  ContainerPartecima  from "../../components/Common/parteCima/componente";
 import { ContainerCompra } from "./comp.styled";
+import { useState } from "react";
+import Cookie from "js-cookie";
+import { useHistory } from "react-router-dom"
 
 import Rodape from "../../components/Common/rodape/redape";
 
 
+
+
+function lerUsuarioLogado (navigation) {
+    let logado = Cookie.get('usuario-logado')
+    if (logado == null) {
+        navigation.push('/')
+        return null;
+    }
+    let usuarioLogado = JSON.parse(logado);
+    return usuarioLogado; 
+}
+
 export default function CompraRealizada() {
+
+    const nav = useHistory();
+
+    const usuarioLogado = lerUsuarioLogado(nav) || {};
+
+    const [usuario] = useState(usuarioLogado);
+
+    console.log(usuario);
+   
+    
     return (   
         <ContainerCompra>
             <ContainerPartecima />
@@ -50,10 +75,11 @@ export default function CompraRealizada() {
                                 <div className="box-entrega">
                                     Entrega estimada em:&nbsp;&nbsp;<u style={{color:"#00EAFF"}}>5 dias úteis</u><br/><br/><br/><br/>
                                 </div>
+
                                 <div className="box-descricao">
                                     Seu pagamento está sendo processado!
                                     <br/><br/>
-                                    Um e-mail de confirmação foi enviada <br/> para <u style={{color:"#00EAFF"}}>seuemail@seuemail.com</u>, os <br />detalhes da sua compra estarão lá :)
+                                    Um e-mail de confirmação foi enviada <br/> para <u style={{color:"#00EAFF"}}> {usuario.ds_email}</u>, os <br />detalhes da sua compra estarão lá :)
                                 </div>
                             </div>
                             <div className="botoes">
