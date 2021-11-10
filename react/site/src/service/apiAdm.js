@@ -76,6 +76,7 @@ export default class Api {
         let r = await api.get(`infoA`);
         return r.data;
     }
-
+    // Lista  pedidos
+    
 
 }

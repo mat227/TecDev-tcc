@@ -158,7 +158,7 @@ app.get('/generos', async (req, resp)=> {
         resp.send({erro : e.toString()});
     }
 })
-
+// deletar livro
 app.delete('/dellivro/:id', async (req, resp) => {
     try {
         let r = await db.infoc_tdv_livro.destroy({ where: { id_livro: req.params.id} });
@@ -187,32 +187,25 @@ app.delete('/dellivro/:id', async (req, resp) => {
         }
     })
     
-    app.get('/cupom', async (req,resp ) =>{
-        
-        try{
-          let a  =  await db.infoc_tdv_cupom.findAll( );
-          resp.send(a);
-       }
-    
-       catch(e){
-          resp.send ( { erro : e.toString( ) } );
-       }
-    })
-    
-
     
 
 //  Pedidos
 app.get('/pedido', async (req, resp) => {
 
-    var r =  await db.infoc_tdv_pedido.findAll(
-       { include: {
-            model : db.infoc_tdv_cliente, as : 'id_cliente_infoc_tdv_cliente',
-            include : {
-                model : db.infoc_tdv_endereco, as : 'infoc_tdv_enderecos'
-            }
-        }}
-    );
+    try{
+        let r =  await db.infoc_tdv_pedido.findAll(
+            { include: {
+                model : db.infoc_tdv_cliente, as : 'id_cliente_infoc_tdv_cliente',
+                include : {
+                    model : db.infoc_tdv_endereco, as : 'infoc_tdv_enderecos'
+                }
+            }}
+         );
+         resp.send(r);
+         console.log("cheguei aqui");
+    }catch(e){
+        resp.send({erro:e.toString()});
+    }
 })
 
 
