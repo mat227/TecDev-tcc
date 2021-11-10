@@ -14,36 +14,68 @@ const app = express.Router();
 
  app.post('/cadastro', async (req, resp) => {
      try {
-         let usuParam = req.body;
-
-         let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: usuParam.email, ds_senha: usuParam.senha,nr_contato:usuParam.telefone ,nm_cliente: usuParam.nome ,ds_cpf:usuParam.cpf , dt_nascimento:usuParam.datanas} });
-         if (u != null)
-             return resp.send({ erro: 'Todos os campos são obrigatorios' });
+         let {email, senha, telefone,nome,cpf, datanas,nomerua,cep,numerocasa,bairro,complemento} = req.body;
+         let u = await db.infoc_tdv_cliente.findOne({ where: { ds_email: email, ds_senha: senha,nr_contato:telefone ,nm_cliente: nome ,ds_cpf:cpf , dt_nascimento:datanas} });
+         if( nome == "") {
+            return resp.send({erro: 'O campo Nome é obrigatório'})
+        }
+        if( cpf == "") {
+            return resp.send({erro: 'O campo C.P.F é obrigatório'})
+        }
+         if( email == "") {
+            return resp.send({erro: 'O campo Email é obrigatório'})
+        }
+        if( senha == "") {
+            return resp.send({erro: 'O campo Senha é obrigatório'})
+        }
+        if( datanas == "") {
+            return resp.send({erro: 'O campo Data de Nascimento é obrigatório ou está inválido'})
+        }
+        if( telefone == "") {
+            return resp.send({erro: 'O campo Telefone é obrigatório'})
+        }
+        if( cep == "") {
+            return resp.send({erro: 'O campo CEP é obrigatório'})
+        }
+     
+        if( nomerua == "") {
+            return resp.send({erro: 'O campo Endereço é obrigatório'})
+        }
+     
+        if( numerocasa == "") {
+            return resp.send({erro: 'O campo Número é obrigatório'})
+        }
+        if( complemento == "") {
+            return resp.send({erro: 'O campo Complemento é obrigatório'})
+        }
+        if( bairro == "") {
+            return resp.send({erro: 'O campo Bairro é obrigatório'})
+        }
 
         
-         let b = await db.infoc_tdv_endereco.findOne({ where: { nm_rua: usuParam.nomerua, ds_cep: usuParam.cep,ds_numero:usuParam.numerocasa ,ds_bairro: usuParam.bairro ,ds_complemento:usuParam.complemento} });
-         if (b != null)
-          return resp.send({ erro: 'Todos os campos são obrigatorios' });
+         let b = await db.infoc_tdv_endereco.findOne({ where: { nm_rua: nomerua, ds_cep: cep,ds_numero:numerocasa ,ds_bairro: bairro ,ds_complemento:complemento} });
+      
+
 
          const informacoes = await db.infoc_tdv_cliente.create({
-             ds_email: usuParam.email,
-             ds_senha: crypto.SHA256(usuParam.senha).toString(crypto.enc.Base64),
-             nr_contato: usuParam.telefone,
-             nm_cliente: usuParam.nome,
-             ds_cpf: usuParam.cpf,
-             dt_nascimento:usuParam.datanas
+             ds_email: email,
+             ds_senha: crypto.SHA256(senha).toString(crypto.enc.Base64),
+             nr_contato: telefone,
+             nm_cliente: nome,
+             ds_cpf: cpf,
+             dt_nascimento:datanas
           
          })
          const endereco = await db.infoc_tdv_endereco.create({
              id_cliente: informacoes.id_cliente,
-             nm_rua:usuParam.nomerua,
-             ds_cep: usuParam.cep,
-             ds_numero: usuParam.numerocasa,
-             ds_bairro: usuParam.bairro,
-             ds_complemento:usuParam.complemento
+             nm_rua:nomerua,
+             ds_cep: cep,
+             ds_numero: numerocasa,
+             ds_bairro: bairro,
+             ds_complemento:complemento
           
          })
-         resp.send({mensagem:"Cadastrado com sucesso"});
+        resp.send(informacoes);
 
      } catch (e) {
          resp.send({ erro: 'Ocorreu um erro!' })

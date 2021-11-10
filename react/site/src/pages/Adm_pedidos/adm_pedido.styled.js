@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 const ContainerAdmpedidos = styled.div`
     margin: 0em;
-    background-color: #1e4f63;
-    background-image: url("./assets/images/fundo.svg");
+    background-image: url('/assets/images/bacckground.svg');
+            background-color: #125375;
+            font-family: "Rowdies";
     padding: 0em;
 @font-face {
     font-family: 'Baloo Thambi 2';
