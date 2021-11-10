@@ -2,7 +2,7 @@ import { ContainerCadastro } from "./cadas.styled"
 import { useState } from 'react'
 import { toast,ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import Api from '../../service/apiLogin'
 
@@ -22,6 +22,7 @@ export default function Cadastro() {
   const [numerocasa, setNumerocasa] = useState("");
   const [bairro, setBairro] = useState("");
   const [complemento, setComplemento] = useState("");
+  const navig = useHistory();
 
 
     async function cadastroCliente() {    
@@ -43,6 +44,7 @@ export default function Cadastro() {
 
           else {
             toast.success("✔️ Cadastro feito com sucesso!");
+            navig.push('/login');
 
           }
           console.log(r)
@@ -152,7 +154,7 @@ export default function Cadastro() {
                             <img src="/assets/images/google.svg" alt="" />
                         </div>
                 
-                        <div class="botao"><Link to='/login'><button onClick={cadastroCliente}>Cadastrar</button></Link></div>
+                        <div class="botao"><button onClick={cadastroCliente}>Cadastrar</button></div>
                     </div>
                 </div>
                 
