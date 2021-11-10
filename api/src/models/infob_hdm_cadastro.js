@@ -23,7 +23,7 @@ export default class infob_hdm_cadastro extends Model {
       allowNull: true
     },
     nr_HDM_celular: {
-      type: DataTypes.DECIMAL(10,0),
+      type: DataTypes.STRING(100),
       allowNull: true
     },
     nm_HDM_email: {

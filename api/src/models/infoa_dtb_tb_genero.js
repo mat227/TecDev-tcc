@@ -1,26 +1,26 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_atores extends Model {
+export default class infoa_dtb_tb_genero extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_ator: {
+    ID_GENERO: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_filme: {
-      type: DataTypes.INTEGER,
+    DS_GENERO: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_ator: {
-      type: DataTypes.STRING(255),
+    BT_ATIVO: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_atores',
+    tableName: 'infoa_dtb_tb_genero',
     timestamps: false,
     indexes: [
       {
@@ -28,18 +28,11 @@ export default class infob_mw_atores extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_ator" },
-        ]
-      },
-      {
-        name: "id_filme",
-        using: "BTREE",
-        fields: [
-          { name: "id_filme" },
+          { name: "ID_GENERO" },
         ]
       },
     ]
   });
-  return infob_mw_atores;
+  return infoa_dtb_tb_genero;
   }
 }

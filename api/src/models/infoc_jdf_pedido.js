@@ -1,26 +1,34 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infob_mw_atores extends Model {
+export default class infoc_jdf_pedido extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_ator: {
+    id_pedido: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_filme: {
+    id_cliente: {
       type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoc_jdf_cliente',
+        key: 'id_cliente'
+      }
+    },
+    ds_formaPagamento: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    nm_ator: {
+    ds_status: {
       type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infob_mw_atores',
+    tableName: 'infoc_jdf_pedido',
     timestamps: false,
     indexes: [
       {
@@ -28,18 +36,18 @@ export default class infob_mw_atores extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_ator" },
+          { name: "id_pedido" },
         ]
       },
       {
-        name: "id_filme",
+        name: "id_cliente",
         using: "BTREE",
         fields: [
-          { name: "id_filme" },
+          { name: "id_cliente" },
         ]
       },
     ]
   });
-  return infob_mw_atores;
+  return infoc_jdf_pedido;
   }
 }

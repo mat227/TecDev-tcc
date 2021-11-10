@@ -65,6 +65,10 @@ export default class infob_apn_tb_adocao extends Model {
     DT_ADOCAO: {
       type: DataTypes.DATE,
       allowNull: true
+    },
+    DS_CIDADE: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     sequelize,

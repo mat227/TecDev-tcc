@@ -1,46 +1,46 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infod_tif_usuario extends Model {
+export default class infoa_dtb_tb_cliente extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_usuario: {
+    ID_CLIENTE: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    nm_usuario: {
-      type: DataTypes.STRING(19),
-      allowNull: false
-    },
-    ds_email: {
+    NM_CLIENTE: {
       type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    ds_senha: {
-      type: DataTypes.STRING(10),
-      allowNull: false
-    },
-    ds_telefone: {
-      type: DataTypes.STRING(19),
       allowNull: true
     },
-    dt_criacao: {
-      type: DataTypes.DATE,
+    NR_CONTATO: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    bt_adm: {
+    DT_NASCIMENTO: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
+    },
+    NR_CPF: {
+      type: DataTypes.STRING(11),
+      allowNull: true
+    },
+    DS_ENDERECO: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    DS_EMAIL: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    BT_ATIVO: {
       type: DataTypes.BOOLEAN,
-      allowNull: true
-    },
-    ds_perfil: {
-      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infod_tif_usuario',
+    tableName: 'infoa_dtb_tb_cliente',
     timestamps: false,
     indexes: [
       {
@@ -48,11 +48,11 @@ export default class infod_tif_usuario extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_usuario" },
+          { name: "ID_CLIENTE" },
         ]
       },
     ]
   });
-  return infod_tif_usuario;
+  return infoa_dtb_tb_cliente;
   }
 }

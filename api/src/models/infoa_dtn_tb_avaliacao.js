@@ -25,6 +25,10 @@ export default class infoa_dtn_tb_avaliacao extends Model {
         model: 'infoa_dtn_tb_cliente',
         key: 'id_cliente'
       }
+    },
+    ds_descricao_avaliacao: {
+      type: DataTypes.STRING(350),
+      allowNull: true
     }
   }, {
     sequelize,

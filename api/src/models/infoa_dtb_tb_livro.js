@@ -1,50 +1,58 @@
 import _sequelize from 'sequelize';
 const { Model, Sequelize } = _sequelize;
 
-export default class infoa_sti_venda extends Model {
+export default class infoa_dtb_tb_livro extends Model {
   static init(sequelize, DataTypes) {
   super.init({
-    id_venda: {
+    ID_LIVRO: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    id_endereco: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_endereco',
-        key: 'id_endereco'
-      }
-    },
-    id_produto: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: 'infoa_sti_produto',
-        key: 'id_produto'
-      }
-    },
-    ds_codigo: {
+    NM_LIVRO: {
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    dt_venda: {
+    ID_GENERO: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'infoa_dtb_tb_genero',
+        key: 'ID_GENERO'
+      }
+    },
+    DS_CAPA: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    BT_DISPONIVEL: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    VL_PRECO: {
+      type: DataTypes.DECIMAL(15,2),
+      allowNull: true
+    },
+    NM_AUTOR: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    DT_LANCAMENTO: {
       type: DataTypes.DATEONLY,
       allowNull: true
     },
-    ds_forma_pagamento: {
-      type: DataTypes.STRING(100),
+    VL_AVALIACAO: {
+      type: DataTypes.DECIMAL(15,2),
       allowNull: true
     },
-    ds_situacao: {
-      type: DataTypes.STRING(100),
+    QTD_PAGINAS: {
+      type: DataTypes.INTEGER,
       allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'infoa_sti_venda',
+    tableName: 'infoa_dtb_tb_livro',
     timestamps: false,
     indexes: [
       {
@@ -52,25 +60,18 @@ export default class infoa_sti_venda extends Model {
         unique: true,
         using: "BTREE",
         fields: [
-          { name: "id_venda" },
+          { name: "ID_LIVRO" },
         ]
       },
       {
-        name: "id_endereco",
+        name: "ID_GENERO",
         using: "BTREE",
         fields: [
-          { name: "id_endereco" },
-        ]
-      },
-      {
-        name: "id_produto",
-        using: "BTREE",
-        fields: [
-          { name: "id_produto" },
+          { name: "ID_GENERO" },
         ]
       },
     ]
   });
-  return infoa_sti_venda;
+  return infoa_dtb_tb_livro;
   }
 }

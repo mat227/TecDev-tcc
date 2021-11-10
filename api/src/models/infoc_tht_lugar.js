@@ -35,7 +35,7 @@ export default class infoc_tht_lugar extends Model {
       allowNull: true
     },
     dt_horario: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING(40),
       allowNull: true
     }
   }, {
