@@ -15,7 +15,7 @@ server.use(express.json());
 
 
 // adm
-server.use('/adiministrador', adm);
+server.use('/administrador', adm);
 
 // livros
 server.use('/livros', livros);

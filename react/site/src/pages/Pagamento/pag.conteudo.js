@@ -2,8 +2,13 @@ import { Link } from "react-router-dom";
 import ParteCima from "../../components/Common/parteCima/componente";
 import Rodape from "../../components/Common/rodape/redape";
 import { ContainerPag } from "./pag.styled";
+import Api from "../../service/apiUsuario";
+const api = new Api();
 
 export default function Pagamentos() {
+    const  finalizarPedido =  async () =>{
+        var  data = await api.efetuarpedido(1,);
+      }
     return (    
         <ContainerPag>
             <ParteCima/>
@@ -20,9 +25,9 @@ export default function Pagamentos() {
                             <div className="formas" style={{ width:"94%", marginLeft:"0em", backgroundColor:"rgba(22, 118, 120, 0.4)", paddingLeft:"1em", margin:"0", height:"4.4em"}}>
                             <img src="/assets/images/cartaocreditocartao.svg" alt=""/> <Link to="/pagamento">Cartão de Crédito</Link>
                             </div>
-                            <div className="formas">
+                            {/*<div className="formas">
                             <img src="/assets/images/boleto(1).svg" alt=""/> <Link to="/pagamento_boleto">Boleto Bancário</Link>
-                            </div>
+    </div>}*/}
                         </aside>
                         <div className="box-info">
                             <div className="bandeiras">
@@ -81,7 +86,7 @@ export default function Pagamentos() {
                     </div>
                     <div className="botoes">
                         <Link to="/suas_infomacoes"><button type="button"   class="btn btn-default" style={{paddingLeft: 3.8 + "em", paddingRight: 3.8 + "em"}}>Voltar</button></Link>
-                        <Link to="/compra_realizada"><button type="submit" class="btn btn-primary">Próximo passo</button></Link>
+                        <Link to="/compra_realizada"><button type="submit" class="btn btn-primary">Finalizizar pedido</button></Link>
                     </div>
                 </div>
              <Rodape />

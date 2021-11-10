@@ -32,11 +32,11 @@ export default function Adm_pedidos() {
                                                 <th> ID </th>
                                                 <th> Cliente </th>
                                                 <th> Livro </th>
-                                                <th> Endereço </th>
-                                                <th> Valor </th>
-                                                <th> Frete </th>
+                                                <th> Endereço </th>                                            
                                                 <th> Total </th>
-                                                <th> Pagamento </th>
+                                                <th> Situação do Pedido </th>
+                                                <th className="a"> </th>
+                                                <th className="a"> </th>
                                                 <th className="a"> </th>
                                                 <th className="a"> </th>
                                             </tr>
@@ -52,7 +52,7 @@ export default function Adm_pedidos() {
                                                 <td > </td>
                                                 <td > </td>
                                                 <td > </td>
-                                                <td> <button> <img src="./assets/images/Correto.svg" alt="" /> </button> </td>
+                                                <td> <button> <img src="./assets/images/editar.svg" alt="" /> </button> </td>
                                                 <td className = "aa"> <button> <img src="./assets/images/Errado.svg" alt="" /> </button> </td>
                                             </tr>
                                             

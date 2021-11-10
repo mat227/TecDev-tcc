@@ -120,7 +120,16 @@ app.get ('/listaLivro', async (req, resp) => {
         resp.send({ erro: e.toString() })
     }
 })
+// List Pedido
 
+app.get('/listPedido', async (req, resp) =>{
+    try{
+        let data = await db.infoc_tdv_pedido.findAll();
+        resp.send(data);
+    }catch(e){
+        resp.send({erro : e.toString(e)});
+    }
+})
 
 app.get('/addlivro', async (req,resp ) =>{
     

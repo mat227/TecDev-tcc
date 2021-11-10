@@ -4,7 +4,7 @@ import Sequelize from 'sequelize';
 const { Op, col, fn } = Sequelize;
 
 
-import express from "express";
+import express, { response } from "express";
 const app = express.Router();
 
 
@@ -61,7 +61,9 @@ app.post('/addpedido', async (req, resp) => {
         let pedido = await db.infoc_tdv_pedido.create({id_cliente : idc, ds_situacao_ped : situacao, dt_pedido : new Date()});
         for(let pi of idp){
             const { qtd ,livro} = pi;
-            
+            let checklivro =  await  db.infoc_tdv_livro.findOne({where : {id_livro : livro }});
+            if(checklivro === null)
+                return response.send("Um dos livros não consta na nossa base de dados");
             let pedido_item = await db.infoc_tdv_pedido_item.create({id_pedido : pedido.id_pedido , qtd_itens : qtd , id_livro : livro });
         }
         resp.send("Pedido cadastrado com sucesso");
