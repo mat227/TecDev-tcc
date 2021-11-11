@@ -1,39 +1,43 @@
 
 import { useState } from "react"
-import Api from '../../../service/apiRecebeCode'
-
+import Api from '../../../service/apiRedefinir'
+import { useHistory } from 'react-router-dom'
 
 const api = new Api();
 
 export default function Reset(props) {
   const [validado, setValidado] = useState(false);
-  console.log(validado)
   const [codigo, setCodigo] = useState('');
+  const [novaSenha, setNovaSenha] = useState('');
 
+  const nav = useHistory();
 
   /// validar codigo
   async function validarCodigo() {
-    const r = await api.validarCodig({
-       email: props.location.state.email,
-       codigo: codigo
-    });
+    const r = await api.validarCodig(props.location.state.email, codigo);
 
     console.log(validarCodigo)
 
   
     if (r.status === 'ok') {
-      console.log('passou pelo if')
       setValidado(true);
-      alert('validado true');
     } else {
-      console.log('inicio else')
       setValidado(false);
-      
-      alert('validado false');
     } 
   }
 
+  async function alterarSenha(){
+    const r = await api.resetSenha(props.location.state.email, codigo, novaSenha);
+    
+    console.log(r)
 
+    if(r.status === 'ok') {
+      alert('senha alterada!!!!!!!!!!!!!!!!!!')
+      nav.push('/login');
+    } else {
+      alert(r.mensagem)
+    }
+  }
 
   return (
     <div className="oi">
@@ -54,9 +58,9 @@ export default function Reset(props) {
               <h3> Altere sua sua senha </h3>
 
               <div>
-                Nova senha: <input type="text" />
+                Nova senha: <input type="text" value={novaSenha} onChange={e => setNovaSenha(e.target.value)} />
                 <div>
-                  <button> Alterar </button>
+                  <button onClick={alterarSenha}> Alterar </button>
                 </div>
               </div>
               

@@ -4,7 +4,7 @@ import Sequelize from 'sequelize';
 const { Op, col, fn } = Sequelize;
 
 
-import express, { response } from "express";
+import express from "express";
 const app = express.Router();
 
 

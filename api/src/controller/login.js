@@ -157,7 +157,7 @@ const app = express.Router();
  })
 
  app.post ('/validar', async (req, resp) => {
-     console.log('api')
+     console.log(req.body)
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
              ds_email: req.body.email
@@ -176,6 +176,7 @@ const app = express.Router();
 
  
  app.put ('/reset', async (req, resp) => {
+    console.log(req.body)
      const usuario = await db.infoc_tdv_cliente.findOne({
          where: {
              ds_email: req.body.email
@@ -190,7 +191,7 @@ const app = express.Router();
      }
     
      await db.infoc_tdv_cliente.update({
-         ds_senha: req.body.novaSenha,
+         ds_senha: crypto.SHA256(req.body.novaSenha).toString(crypto.enc.Base64),
          ds_codigo_rec:''
      }, {
         where: { id_cliente: usuario.id_cliente}
