@@ -81,5 +81,10 @@ export default class Api {
         let r = await api.get('/pedido');
         return r.data;
     }
+    async deletePedido(id){
+        let r = await api.delete(`/delpedido/${id}`);
+        return r.data;
+    }
+
 
 }
