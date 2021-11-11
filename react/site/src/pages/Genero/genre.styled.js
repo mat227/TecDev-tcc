@@ -64,7 +64,7 @@ const ContainerGeneroP = styled.div`
     background-color: #12314e;
   
     width: 17vw;
-    height: 75vh;
+    min-height: 100%;
   
     padding: 0.8em;
   

@@ -40,10 +40,7 @@ export default function Pagamentos() {
               de Crédito
             </div>
             </Link>
-          <Link to="/pagamento_boleto">  <div className="formas">
-              <img src="/assets/images/boleto(1).svg" alt="" /> Boleto Bancário
-            </div>
-            </Link>
+          
           </aside>
 
           <div className="info-pagamento">

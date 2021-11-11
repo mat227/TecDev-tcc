@@ -102,7 +102,7 @@ background-color: #135578;
     flex-direction: column;
     
     margin-top: 1em;
-margin-right:1em;
+padding-right:5em;
     font-family: Rowdies;
 }
 
@@ -192,7 +192,6 @@ margin-right:1em;
 }
 
 .titulocarac{
-    margin-left: 1em;
     color: white;
     font-family: Rowdies;
     text-decoration: underline;
@@ -203,7 +202,7 @@ margin-right:1em;
 .menu {
     margin-top: -1em !important;
     line-height: 1.5em;
-    margin-bottom: 4.2em;
+    margin-bottom: auto;
 }
 
 .itemc {
@@ -214,7 +213,9 @@ margin-right:1em;
 
 .itemc p {
     font-family: Quicksand;
-    margin-bottom: -1em;
+    margin-bottom: -1em !important;
+    margin:0px;
+
 }
     
 `
