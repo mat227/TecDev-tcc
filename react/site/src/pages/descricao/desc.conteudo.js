@@ -83,10 +83,10 @@ export default function DescConteudo(props) {
                         <div class="caracteristicas">
                             <div class="titulocarac">CARACTERÍSTICAS:</div>
                             <div class="menu">
-                                <div class="itemc">Autor:<p>&nbsp;{livro.ds_autora}</p></div>
-                                <div class="itemc">Gêneros:<p>&nbsp;{livro.id_genero}</p></div>
-                                <div class="itemc">Editora:<p>&nbsp;{livro.ds_editora}</p></div>
-                                <div class="itemc">Ano da edição:<p>&nbsp;{livro.dt_lancamento}</p></div>
+                                <div class="itemc">Autor:&nbsp;{livro.ds_autora}</div>
+                                <div class="itemc">Gêneros:&nbsp;{livro.id_genero}</div>
+                                <div class="itemc">Editora:&nbsp;{livro.ds_editora}</div>
+                                <div class="itemc">Ano da edição:&nbsp;{livro.dt_lancamento.substring(0,10)}</div>
                             </div>
                         </div>
                     </div>
