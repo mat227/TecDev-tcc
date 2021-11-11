@@ -58,7 +58,7 @@ app.post('/addpedido', async (req, resp) => {
     try{
         let {idc, situacao , idp } = req.body;
         
-        let pedido = await db.infoc_tdv_pedido.create({id_cliente : idc, ds_situacao_ped : situacao, dt_pedido : new Date()});
+        let pedido = await db.infoc_tdv_pedido.create({id_cliente : idc, nr_pedido : Math.floor(Math.random() * 1000) , ds_situacao_ped : situacao, dt_pedido : new Date()});
         for(let pi of idp){
             const { qtd ,livro} = pi;
             let checklivro =  await  db.infoc_tdv_livro.findOne({where : {id_livro : livro }});

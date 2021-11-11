@@ -73,10 +73,13 @@ export default class Api {
    
     // infomaçoes do adm v1
     async infoA() {
-        let r = await api.get(`infoA`);
+        let r = await api.get(`/infoA`);
         return r.data;
     }
     // Lista  pedidos
-    
+    async listP(){
+        let r = await api.get('/pedido');
+        return r.data;
+    }
 
 }

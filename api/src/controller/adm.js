@@ -193,21 +193,44 @@ app.delete('/dellivro/:id', async (req, resp) => {
 app.get('/pedido', async (req, resp) => {
 
     try{
-        let r =  await db.infoc_tdv_pedido.findAll(
-            { include: {
-                model : db.infoc_tdv_cliente, as : 'id_cliente_infoc_tdv_cliente',
-                include : {
-                    model : db.infoc_tdv_endereco, as : 'infoc_tdv_enderecos'
-                }
+        let r =  await db.infoc_tdv_pedido_item.findAll(
+            { include : {
+                model : db.infoc_tdv_pedido, as :'id_pedido_infoc_tdv_pedido',
+                include: {
+                    model : db.infoc_tdv_cliente, as : 'id_cliente_infoc_tdv_cliente',
+                    include : {
+                        model : db.infoc_tdv_endereco, as : 'infoc_tdv_enderecos'
+                    }
+             }
             }}
          );
          resp.send(r);
-         console.log("cheguei aqui");
+         
     }catch(e){
         resp.send({erro:e.toString()});
     }
 })
 
+app.delete('/delpedido/:id', async (req, resp) => {
+    try{
+        let r = await db.infoc_tdv_pedido.destroy({where : {id_pedido : req.params.id}});
+        resp.send("Pedido removido");
+    }catch(e){
+        resp.send({erro: e.toString()});
+    }
+})
+
+app.put('/altsit/:id', async (req, resp)=>{
+    try{
+        let situacao = req.body;
+        let r = await db.infoc_tdv_pedido.update( {ds_situacao_ped : situacao},
+            {where : {id_pedido : req.params.id }}
+        )
+        resp.send("Produto alterado");
+    }catch(e){
+        resp.send({erro : e.toString()});
+    }
+})
 
 // pegando informação  dos  clientes 
 

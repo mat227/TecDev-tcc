@@ -2,9 +2,24 @@ import { ContainerAdmpedidos } from "./adm_pedido.styled"
 import Cabecalho from "../../components/Common/cabecalhoperfil/nav";
 import Rodape  from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi";
+import Api from "../../service/apiAdm";
+import { useEffect, useState } from "react";
 
+const api = new Api();
 
 export default function Adm_pedidos() {
+    const [data, setData] = useState([]);
+    useEffect(()=>{
+        console.log('Just one time');
+        listaPedido();
+        console.log(data);
+    },[]);
+    const listaPedido = async () =>{
+        let r = await api.listP();
+        setData(r);
+    }
+    
+
     return (
         <ContainerAdmpedidos> 
                     <Cabecalho />                    
@@ -41,23 +56,23 @@ export default function Adm_pedidos() {
                                                 <th className="a"> </th>
                                             </tr>
                                         </thead>
-                                
-                                        <tbody>
-                                            <tr >
-                                                <td> </td>
-                                                <td> </td>
-                                                <td> </td>
-                                                <td> </td>
-                                                <td > </td>
-                                                <td > </td>
-                                                <td > </td>
-                                                <td > </td>
-                                                <td> <button> <img src="./assets/images/editar.svg" alt="" /> </button> </td>
-                                                <td className = "aa"> <button> <img src="./assets/images/Errado.svg" alt="" /> </button> </td>
-                                            </tr>
-                                            
-                                        </tbody> 
-                    
+                                        {data.map(x =>
+                                             <tbody>
+                                                    <tr>
+                                                        <td>{x.id_pedido_infoc_tdv_pedido.id_pedido}</td>
+                                                        <td>{x.id_pedido_infoc_tdv_pedido.id_cliente_infoc_tdv_cliente.nm_cliente} </td>
+                                                        <td>{x.id_pedido_infoc_tdv_pedido.id_cliente_infoc_tdv_cliente.nfoc_tdv_enderecos[0].nm_rua} </td>
+                                                        <td>{}</td>
+                                                        <td >{} </td>
+                                                        <td >{x.id_pedido_infoc_tdv_pedido.ds_situacao_ped}</td>
+                                                        <td > </td>
+                                                        <td > </td>
+                                                        <td className = "aa"> <button> <img src="./assets/images/editar.svg" alt="" /> </button> </td>
+                                                        <td className = "aa"> <button> <img src="./assets/images/Errado.svg" alt="" /> </button> </td>
+                                                    </tr>
+                                                    
+                                                </tbody>   
+                                        )}                                       
                                     </table>
                                 </div>
                             </div> 
