@@ -71,6 +71,7 @@ const ContainerAdmpedidos = styled.div`
     height: 30em;
     margin-left: 1.5em;
     border-radius: 10px;
+    
 }
 
 .box {
@@ -170,6 +171,11 @@ thead {
 table {
    margin-top: 2em;
    border:solid 1px;
+   color : black;
+   border-collapse: collapse;
+   width:100%;
+   
+
 }
 
 
@@ -177,7 +183,8 @@ td {
    text-align: left;
    height: 1em;
    padding: 1em;
-   color: #6D6868;
+   color: white;
+   border-bottom: 1px solid  #6c819e; 
    font-weight: 600;
 
    font-family: 'Roboto', sans-serif;
@@ -195,10 +202,15 @@ th {
    font-weight: 800;
 
    font-family: 'Roboto', sans-serif;
-} 
-
+}
+tbdoy{
+   
+}
 .table-user {
-   border-collapse: collapse;
+  
+   overflow : hidden;
+    overflow-y : visible;
+   color : black;
 }
 
 .int {

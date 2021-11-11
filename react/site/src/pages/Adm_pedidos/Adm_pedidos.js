@@ -12,11 +12,19 @@ export default function Adm_pedidos() {
     useEffect(()=>{
         console.log('Just one time');
         listaPedido();
-        console.log(data);
+      
     },[]);
     const listaPedido = async () =>{
         let r = await api.listP();
+        console.log(r);
         setData(r);
+    }
+    const deletePedido = async (id) => {
+        let r = await api.deletePedido(id);
+        listaPedido();
+        alert("Pedido Excluido");
+        return r.data;
+        
     }
     
 
@@ -41,39 +49,41 @@ export default function Adm_pedidos() {
                                             </div>
                                         </div>
                                     </div>
-                                    <table className ="table-user">
-                                        <thead>
-                                            <tr>
-                                                <th> ID </th>
-                                                <th> Cliente </th>
-                                                <th> Livro </th>
-                                                <th> Endereço </th>                                            
-                                                <th> Total </th>
-                                                <th> Situação do Pedido </th>
-                                                <th className="a"> </th>
-                                                <th className="a"> </th>
-                                                <th className="a"> </th>
-                                                <th className="a"> </th>
-                                            </tr>
-                                        </thead>
-                                        {data.map(x =>
-                                             <tbody>
-                                                    <tr>
-                                                        <td>{x.id_pedido_infoc_tdv_pedido.id_pedido}</td>
-                                                        <td>{x.id_pedido_infoc_tdv_pedido.id_cliente_infoc_tdv_cliente.nm_cliente} </td>
-                                                        <td>{x.id_pedido_infoc_tdv_pedido.id_cliente_infoc_tdv_cliente.nfoc_tdv_enderecos[0].nm_rua} </td>
-                                                        <td>{}</td>
-                                                        <td >{} </td>
-                                                        <td >{x.id_pedido_infoc_tdv_pedido.ds_situacao_ped}</td>
-                                                        <td > </td>
-                                                        <td > </td>
-                                                        <td className = "aa"> <button> <img src="./assets/images/editar.svg" alt="" /> </button> </td>
-                                                        <td className = "aa"> <button> <img src="./assets/images/Errado.svg" alt="" /> </button> </td>
-                                                    </tr>
-                                                    
-                                                </tbody>   
-                                        )}                                       
-                                    </table>
+                                    <div className ="table-user" >
+                                        <table >
+                                            <thead>
+                                                <tr>
+                                                    <th> ID </th>
+                                                    <th> Cliente </th>
+                                                    <th> Livro </th>
+                                                    <th> Endereço </th>                                            
+                                                    <th> Total </th>
+                                                    <th> Situação do Pedido </th>
+                                                    <th className="a"> </th>
+                                                    <th className="a"> </th>
+                                                    <th className="a"> </th>
+                                                    <th className="a"> </th>
+                                                </tr>
+                                            </thead>
+                                            {data.map(x =>
+                                                <tbody>
+                                                        <tr>
+                                                            <td>{x.id_pedido_infoc_tdv_pedido.id_pedido}</td>
+                                                            <td>{} </td>
+                                                            <td>{} </td>
+                                                            <td>{x.id_pedido_item.id_livro}</td>
+                                                            <td >{} </td>
+                                                            <td >{x.id_pedido_infoc_tdv_pedido.ds_situacao_ped}</td>
+                                                            <td > </td>
+                                                            <td > </td>
+                                                            <td className = "aa"> <button> <img src="./assets/images/editar.svg" alt="" /> </button> </td>
+                                                            <td className = "aa"> <button> <img src="./assets/images/Errado.svg" onClick={ () => deletePedido(x.id_pedido_infoc_tdv_pedido.id_pedido)} alt="" /> </button> </td>
+                                                        </tr>
+                                                        
+                                                    </tbody>   
+                                            )}                                       
+                                        </table>
+                                    </div>
                                 </div>
                             </div> 
                         </div>
