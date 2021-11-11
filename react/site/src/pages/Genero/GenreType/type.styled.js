@@ -105,12 +105,10 @@ const ContainerGeneros = styled.div`
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
 
       margin-top: 2em;
       margin-bottom: 4em;
-      margin-right:5em;
   }
 
   a, a:link, a:visited {
@@ -178,7 +176,6 @@ flex-direction:row;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color:black;
     text-decoration: underline black;
-    text-decoration: line-through #00EAFF;
   }
   
 
