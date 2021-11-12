@@ -8,15 +8,26 @@ import { useHistory } from "react-router-dom";
 import Cookie from "js-cookie";
 import Api from "../../service/apiUsuario";
 const api = new Api();
-
+function lerUsuarioLogado (navigation) {
+  let logado = Cookie.get('usuario-logado')
+  if (logado == null) {
+      navigation.push('/')
+      return null;
+  }
+  let usuarioLogado = JSON.parse(logado);
+  return usuarioLogado; 
+}
 
 export default function Pagamentos() {
+  const navig = useHistory();
+  const usuarioLogado = lerUsuarioLogado(navig) || {};
+  console.log(usuarioLogado)
+     const [info] = useState(JSON.parse(Cookie.get('usuario-logado')))
+  console.log(info);
+
+    //zone test
     // const [pedidos] = useState([]);
-    // const  finalizarPedido =  async () =>{
-
-    //     var  data = await api.efetuarpedido(1,pedidos);
-
-    //   }
+    
   const [nrcartao, setNrcartao] = useState("");
   const [titular, setTitular] = useState("");
   const [sobrenome, setSobrenome] = useState("");
@@ -24,9 +35,11 @@ export default function Pagamentos() {
   const [parcelas, setParcelas] = useState("");
   const [cvv, setCvv] = useState("");
 
-  const navig = useHistory();
+  
+  //const [usuario,  setUsuario] = useState([]);
+
   const [livro, setLivro] = useState([]);
-console.log(nrcartao)
+
   useEffect(carregarCarrinho, []);
 
   function carregarCarrinho() {
@@ -35,7 +48,11 @@ console.log(nrcartao)
     setLivro(carrinho);
   }
   console.log(livro);
+  const  finalizarPedido =  async () =>{
 
+    var  data = await api.efetuarpedido(info.id_cliente,livro);
+    console.log(data);
+    }
   async function cadastrarCartao() {
     let r = await api.cadastrarCartao(
       nrcartao,
@@ -53,6 +70,13 @@ console.log(nrcartao)
     }
     console.log(r);
   }
+  const data = livro.map((x) =>{
+    console.log("-----------------");
+    console.log(x.id_livro);
+      let id_livro = x.id_livro
+      let qtd = x.qtd
+  } ); 
+  console.log(data);
 
   return (
     <ContainerPag>
@@ -180,7 +204,7 @@ console.log(nrcartao)
                   <br />
                   <input
                     value={cvv}
-                    onChange={(r) => setCvv(r.target.value)}
+                    onChange={r => setCvv(r.target.value)}
                     type="text"
                     id="right"
                     required="required"
@@ -194,7 +218,7 @@ console.log(nrcartao)
                 {livro.map((item, i) => (
                   <select
                     value={parcelas}
-                    onChange={(r) => setParcelas(r.target.value)}
+                    onChange={r => setParcelas(r.target.value)}
                     name="parcela"
                     id="parcela"
                   >
@@ -247,8 +271,8 @@ console.log(nrcartao)
               Voltar
             </button>
           </Link>
-          <button onClick={cadastrarCartao} class="btn btn-primary">
-            Finalizizar pedido
+          <button onClick={ () => cadastrarCartao()} onClick={() => finalizarPedido()} class="btn btn-primary">
+            Finalizar pedido
           </button>
         </div>
       </div>
