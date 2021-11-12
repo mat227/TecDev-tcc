@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-const ContainerEsqueceu = styled.div`
+const ContainerReset = styled.div`
+
 
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
@@ -9,6 +10,7 @@ const ContainerEsqueceu = styled.div`
     margin: 0px;
     width: 100vw;
     height: 100vh;
+
 
     background-color: #125172;
     background-image: url('/assets/images/bacckground.svg');
@@ -28,13 +30,13 @@ const ContainerEsqueceu = styled.div`
 }
 
 
-.inputs-1{
+.inputs-1, .inputs-2{
     display: flex;
     flex-direction: column;
 
     width: 500px;
 
-    margin: 5em auto;
+    margin: 2em auto;
 
     text-align: center;
 
@@ -55,7 +57,17 @@ const ContainerEsqueceu = styled.div`
     color: white;
 }
 
+.inputs-2 input {
+    background-color:  rgba(61, 168, 255, 0.7);
 
+    border: none;
+    border-radius: 0.5em;
+
+    padding: 0.8em;
+    margin: 0.5em; 
+
+    color: white;
+}
 
   
 
@@ -88,14 +100,6 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* img:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-} */
-
 
 .esq-logo {
     display: flex;
@@ -108,7 +112,7 @@ button:hover {
     justify-content: flex-center;
 
     margin-left: auto;
-    margin-top: 12em;
+    margin-top:2em;
 }
 
 
@@ -116,8 +120,11 @@ button:hover {
     margin-left: 1em;
 }
 
-
+.inputs-2 {
+    margin-top: -18em;
+}
 
 `
 
-export { ContainerEsqueceu }
+
+export {ContainerReset}
