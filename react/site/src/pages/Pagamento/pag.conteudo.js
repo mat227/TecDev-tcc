@@ -40,7 +40,8 @@ export default function Pagamentos() {
 
   const [livro, setLivro] = useState([]);
 
-  useEffect(carregarCarrinho, []);
+  useEffect(() =>{carregarCarrinho()}
+  , []);
 
   function carregarCarrinho() {
     let carrinho = Cookie.get("carrinho");
@@ -50,7 +51,7 @@ export default function Pagamentos() {
   console.log(livro);
   const  finalizarPedido =  async () =>{
 
-    var  data = await api.efetuarpedido(info.id_cliente,livro);
+    var  data = await api.efetuarpedido(info.id_cliente,data1);
     console.log(data);
     }
   async function cadastrarCartao() {
@@ -70,13 +71,14 @@ export default function Pagamentos() {
     }
     console.log(r);
   }
-  const data = livro.map((x) =>{
-    console.log("-----------------");
-    console.log(x.id_livro);
-      let id_livro = x.id_livro
-      let qtd = x.qtd
-  } ); 
-  console.log(data);
+
+  const data1 = livro.map((x) =>{
+    console.log("-------------------");
+    console.log(x);
+    return x;
+    } ); 
+    console.log("-------------------");
+  console.log(data1);
 
   return (
     <ContainerPag>

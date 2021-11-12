@@ -16,14 +16,20 @@ async infoC(id){
 
 async efetuarpedido(idCliente, pedidos){
     
-    let qtd = 0;
+    console.log("-------------")
+    console.log(pedidos)
+    const gambiarra = pedidos.map(x =>{
+        return x;
+    })
+    
     let livro = "";
     let  data = {
         idc : idCliente,
         situacao : "Transportadora",
-        idp : JSON.parse(pedidos)
+        idp :gambiarra
        
     }
+    
     console.log(`Cheguei aqui ${data.idp}`) ;
     let r =  await api.post(`/addpedido`, data);
         return r.data;
