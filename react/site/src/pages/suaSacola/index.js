@@ -6,7 +6,7 @@ import Rodape from "../../components/Common/rodape/redape";
 import { useState } from "react";
 import Cookie from "js-cookie";
 import { useEffect } from "react";
-import Contador from "./Ct/contador";
+// import Contador from "./Ct/contador";
 
 export default function SuaSacola() {
   const [livro, setLivro] = useState([]);

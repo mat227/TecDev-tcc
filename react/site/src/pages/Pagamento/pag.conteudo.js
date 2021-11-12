@@ -47,9 +47,9 @@ console.log(nrcartao)
     console.log(r);
   }
 
-  const finalizarPedido = async () => {
-    var data = await api.efetuarpedido(1);
-  };
+ //const finalizarPedido = async () => {
+    //var data = await api.efetuarpedido(1);
+ // }; 
   return (
     <ContainerPag>
       <ParteCima />

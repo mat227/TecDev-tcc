@@ -14,7 +14,7 @@ async infoC(id){
 }
 // Post pedido
 async efetuarpedido(idCliente, id_livro, quantidade){
-    
+    // eslint-disable-next-line
     let jsonT = {
         livro : id_livro,
         qtd : quantidade

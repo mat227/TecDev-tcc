@@ -62,8 +62,8 @@ export default function Adm_pedidos() {
                                     </div>
                                      
                                     <div className ="table-user" >
-                                      {alter != 0 ? <input type='text' value={situacao} onChange={e => setSituacao(e.target.value)} /> : ' '}
-                                        {alter != 0 ? <button onClick={() => alteraSituaca(alter, situacao) }>Enviar</button>: ''}
+                                      {alter !== 0 ? <input type='text' value={situacao} onChange={e => setSituacao(e.target.value)} /> : ' '}
+                                        {alter !== 0 ? <button onClick={() => alteraSituaca(alter, situacao) }>Enviar</button>: ''}
                                         <table >
                                             <thead>
                                                 <tr>
