@@ -35,7 +35,7 @@ export default class infoc_tdv_pedido extends Model {
       allowNull: true
     },
     ds_situacao_ped: {
-      type: DataTypes.JSON,
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     dt_lancamento: {

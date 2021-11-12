@@ -1,7 +1,7 @@
 import axios from 'axios'
 const api = axios.create({
-
-    baseURL: 'https://tecdevtcc.herokuapp.com/administrador'
+    baseURL : 'http://localhost:3030/administrador'
+    //baseURL: 'https://tecdevtcc.herokuapp.com/administrador'
 
 })
 
@@ -86,6 +86,13 @@ export default class Api {
     }
     async deletePedido(id){
         let r = await api.delete(`/delpedido/${id}`);
+        return r.data;
+    }
+    async alteraSituacao(id, sito){
+        let sit = {
+            situacao : sito
+        }
+        let r = await api.put(`/altsit/${id}`, sit);
         return r.data;
     }
 

@@ -73,7 +73,10 @@ const ContainerAdmpedidos = styled.div`
     border-radius: 10px;
     
 }
-
+.imagem-table{
+    height: 5em;
+    width : 5em;
+}
 .box {
     display: flex;
     flex-direction: column;
