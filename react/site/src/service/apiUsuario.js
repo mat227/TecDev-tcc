@@ -13,20 +13,18 @@ async infoC(id){
     return r.data;
 }
 // Post pedido
-async efetuarpedido(idCliente, id_livro, quantidade){
+async efetuarpedido(idCliente, pedidos){
     
-    let jsonT = {
-        livro : id_livro,
-        qtd : quantidade
-    }
+    let qtd = 0;
+    let livro = "";
     let  data = {
         idc : idCliente,
         situacao : "Transportadora",
         idp:[
-            {
-                livro : id_livro,
-                qtd : quantidade
-            }
+           // pedidos.map(x => {
+           //     qtd  : x.quantidade;
+           //     livro : x.idLivro
+           // })
         ]
 
     }
@@ -34,6 +32,6 @@ async efetuarpedido(idCliente, id_livro, quantidade){
         return r.data;
     
 }
-
+// update suas info
 
 }

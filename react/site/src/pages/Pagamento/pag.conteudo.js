@@ -3,11 +3,15 @@ import ParteCima from "../../components/Common/parteCima/componente";
 import Rodape from "../../components/Common/rodape/redape";
 import { ContainerPag } from "./pag.styled";
 import Api from "../../service/apiUsuario";
+import { useEffect, useState } from "react";
 const api = new Api();
 
+
 export default function Pagamentos() {
+    const [pedidos, setpedidos] = useState([]);
+
     const  finalizarPedido =  async () =>{
-        var  data = await api.efetuarpedido(1,);
+        var  data = await api.efetuarpedido(1,pedidos);
       }
     return (    
         <ContainerPag>

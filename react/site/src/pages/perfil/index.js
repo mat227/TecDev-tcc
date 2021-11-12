@@ -3,7 +3,7 @@
  import { ContainerPartecima } from '../../components/Common/parteCima/styled.js';
  import {  useState } from 'react';
  import { Link } from 'react-router-dom';
- import Cookies from 'js-cookie';
+ import Cookies, { set } from 'js-cookie';
 import { useHistory } from 'react-router';
  import Rodape from '../../components/Common/rodape/redape.js';
  import ParteCima from '../../components/Common/parteCima/componente.js';
@@ -21,16 +21,15 @@ import { useHistory } from 'react-router';
 
 
  export default function Login(){
-   
-   // const [nome, setNome]  = useState('');
-   // const [email, setEmail] = useState('');
-   // const [danasc, setData] =  useState('');
-   // const [cpf, setCpf ]= useState('');
-   // const [numero, setNumero] = useState('');    
-   // const [mud, setMud] = useState(false);
-   // const [rua , setRua ] = useState('');
-   // const [complemento, setComplemento] = useState('');
-   // const [bairro , setBairro] = useState('');
+   const [alt , setALt] = useState(0);
+   const [nome, setNome]  = useState('');
+   const [email, setEmail] = useState('');
+   const [danasc, setData] =  useState('');
+   const [cpf, setCpf ]= useState('');
+   const [numero, setNumero] = useState('');    
+   const [rua , setRua ] = useState('');
+   const [complemento, setComplemento] = useState('');
+   const [bairro , setBairro] = useState('');
    const nav = useHistory();
 
    const usuarioLogado = lerUsuarioLogado(nav) || {};
@@ -39,24 +38,15 @@ console.log(usuarioLogado)
 console.log(info);
 
   
-
-    //const ListInfo = async ()  => {
-        // let r = await api.infoC();
-  //       console.log(r);
-  //       setInfo(r);
-     //}
-
-
      const altInfo = async () => {
-     
+        console.log("chegamos aqui");
+        setALt(0);
      }
 
     
      return(
          <div>
             <ParteCima/>
-            <Nav nome='Usuario' />
-
             <Container >
 
                  <ContainerPartecima/>
@@ -71,21 +61,23 @@ console.log(info);
                              <div class="titulo">
                                  <h1>Suas informações</h1>
                                  <div class="btn">
-                                     <div class="btnE"><button onClick={altInfo()}>Editar <br/>informações</button></div>
+                                     <div class="btnE"><button onClick={() =>setALt(info.id_cliente)}>Editar <br/>informações</button></div>
                                  </div>
                              </div>
                                  <div class="labels">
-                                      <label class="test">Nome: {info.nm_cliente}</label>
-                                      <label class="test" >Email: {info.ds_email}</label>
-                                      <label class="test" for="">Endereço : {info.nm_rua}</label>
-                                      <label class="test" for="">Complemento : {info.ds_complemento}</label>
-                                      <label class="test" for="">Bairro: {info.ds_bairro}</label>
-                                      <label class="test" for="">Data de nascimento: {info.dt_nascimento.substring(0,10)}</label>
-                                      <label class="test" for="">CPF: {info.ds_cpf}</label>
+
+                                      {alt == 0 ?<label class="test">Nome: {info.nm_cliente}</label> :  <input class="test1" type='text' placeholder="informe seu nome" defaultValue={nome} onchange={e => setNome(e.target.value)} />}
+                                      {alt == 0 ?<label class="test" >Email: {info.ds_email}</label> :  <input class="test1" type='text' placeholder="informe seu Email" defaultValue={email} onchange={e => setEmail(e.target.value)}/>}
+                                      {alt == 0 ?<label class="test" for="">Data de nascimento: {info.dt_nascimento.substring(0,10)}</label> :  <input class="test1" type='date' placeholder="informe sua data de nascimento" defaultValue={danasc} onchange={(e) => setData(e.target.value)}/>}
+                                      {alt == 0 ?<label class="test" for="">CPF: {info.ds_cpf}</label> :  <input class="test1" type='text' placeholder="informe seu cpf" defaultValue={cpf} onchange={e => setCpf(e.target.value)}/>}
+                                      {alt == 0 ?<label class="test" for="">Endereço : {info.nm_rua}</label> :  <input class="test1" type='text' placeholder="informe sua rua" defaultValue={rua} onchange={e => setRua(e.target.value)}/>}
+                                      {alt == 0 ?<label class="test" for="">Complemento : {info.ds_complemento}</label> :  <input class="test1" type='text' placeholder="informe o complemento" defaultValue={complemento} onchange={e => setComplemento(e.target.value)}/>}
+                                      {alt == 0 ?<label class="test" for="">Bairro: {info.ds_bairro}</label> :  <input class="test1" type='text' placeholder="informe seu bairro" defaultValue={bairro} onchange={e => setBairro(e.target.value)}/>}                                       
                                   </div>
                                 <div class="contato">
                                      <h2>Telefone</h2>
-                                     <label for="" class="tell">{info.nr_contato}</label>
+                                     {alt == 0 ?<label for="" class="tell">{info.nr_contato}</label> :  <input class="test1" type='text' placeholder="informe seu numero" defaultValue={numero} onchange={e => setNumero(e.target.value)}/>}
+                                     {alt == 0 ?" " :  <button onClick={() => altInfo()}> enviar </button> } 
                              </div>
                          </div>         
                  </div>

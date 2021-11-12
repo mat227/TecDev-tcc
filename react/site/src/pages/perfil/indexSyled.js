@@ -31,6 +31,9 @@ const Container = styled.div`
             cursor : pointer;
             
         }
+        .test1{
+            margin : 1em;
+        }
         .especial{
             background-color: #298EEB;
             padding: 0.5em;
