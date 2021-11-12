@@ -11,14 +11,13 @@ const ContainerTrio= styled.div`
   border: none;
   border-radius: 150px;
   font-family: "Rowdies";
-align-items: center;
+  align-items: center;
 
   padding: 1.2em;
   margin: 3em 3em 0.5em 3em;
   font-weight: 400;
   cursor: pointer;
 }
-
 
 
 .trio2{

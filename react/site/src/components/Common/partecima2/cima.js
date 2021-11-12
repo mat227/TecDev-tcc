@@ -1,76 +1,57 @@
-import { ContainerPartecima } from './styled'
-import { Link } from 'react-router-dom'
-import { useHistory } from 'react-router'
-import { useState } from 'react';
+/* eslint-disable jsx-a11y/accessible-emoji */
+import React, { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
+import { Responsivo } from "./styled";
 
 
+export default function Header() {
+  const [isNavVisible, setNavVisibility] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
- 
-export default function ParteCima(props) {
-    const [search, setSearch] = useState();
-    const navig = useHistory();
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 700px)");
+    mediaQuery.addEventListener('change', handleMediaQueryChange)
+    handleMediaQueryChange(mediaQuery);
 
-    function keyPress(event) {
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
 
-        if(event.charCode === 13) {
-            navig.push(`/busca?search=${search}`);
-        }
+  const handleMediaQueryChange = mediaQuery => {
+    if (mediaQuery.matches) {
+      setIsSmallScreen(true);
+    } else {
+      setIsSmallScreen(false);
     }
+  };
 
-    return (
-            <ContainerPartecima>
-            <div class="hp1-buscap">
-           <Link to="/login"> <div class="hp1-logo">
-                <img src="/assets/images/nice library png 1.svg" alt=""/>
-                <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
+  const toggleNav = () => {
+    setNavVisibility(!isNavVisible);
+  };
 
-            </div></Link>
-
-            <div class="hp1-busca">
-                <div class="divBusca">
-                    <input type="text" id="txtBusca" placeholder="Buscar..."  value={search} onChange={ e => setSearch(e.target.value) } onKeyPress={keyPress} />
-                    <button><img src="/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
-                </div>
-            </div>
-
-            <div class="hp1-seus"> 
-            <Link to="/login">
-              <div class="menu-item">
-                    <div class="imagem">
-                    <img src="/assets/images/bag.svg" alt="" />
-                    </div>
-                    <div class="descricao">
-                    <p>Sua sacola</p>
-                    </div>
-                </div>
-                </Link>
-                <Link to="/login">
-                <div class="menu-item">
-                    <div class="imagem">
-                    <img src="/assets/images/coracaoo.svg" alt="" />
-                    </div>
-                    <div class="descricao">
-                    <p>Seus Favoritos</p>
-                    </div>
-                </div>
-                </Link>
-                <Link to="/login">
-                <div class="menu-item">
-                    <div class="imagem">
-                    <img
-                        src="/assets/images/profilee (1).svg"
-                        alt=""
-                        style={{height: 2.8 + "em"}}
-                    />
-                    </div>
-                    <div class="descricao">
-                    <p>Login</p>
-                    </div>
-                </div>
-                </Link>
-               
-            </div>
-        </div>
-            </ContainerPartecima>
-    )
-} 
+  return (
+      <Responsivo>
+        <header className="Header">
+        <img src='/assets/images/logoa.png' className="Logo" alt="logo" />
+        <CSSTransition
+            in={!isSmallScreen || isNavVisible}
+            timeout={350}
+            classNames="NavAnimation"
+            unmountOnExit
+        >
+            <nav className="Nav">
+            <a href="/">Home</a>
+            <a href="/">Articles</a>
+            <a href="/">About</a>
+            <button>Logout</button>
+            </nav>
+        </CSSTransition>
+        <button onClick={toggleNav} className="Burger">
+            🍔
+        </button>
+        </header>
+        </Responsivo>
+  );
+  
+}

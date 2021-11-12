@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const ContainerHome = styled.div`
-     min-height: 100%;
+            min-height: 100%;
             background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
 
