@@ -8,6 +8,8 @@ import Login from './pages/login/conteudo'
 import Redefinir from './pages/redefinir/esq.conteudo'
 import Reset from './pages/redefinir/reset/reset.conteudo'
 
+import Responsivo from  './components/Common/partecima2/cima'
+
 import Descontos from './pages/Desconto/desconto'
 import Descricoes from './pages/descricao/desc.conteudo'
 import Homepage from './pages/Homepage1/home.js'
@@ -45,6 +47,7 @@ export default function Routes() {
                 <Route path="/redefinir" exact={true} component={Redefinir} />                
                 <Route path="/reset" exact={true} component={Reset} />
                 
+                <Route path="/responsivo" exact={true} component={Responsivo} />
                 
                 <Route path="/busca" exact={true} component={Busca} />
 
