@@ -11,11 +11,12 @@ const api = new Api();
 
 
 export default function Pagamentos() {
-    const [pedidos, setpedidos] = useState([]);
+    // const [pedidos] = useState([]);
+    // const  finalizarPedido =  async () =>{
 
-    const  finalizarPedido =  async () =>{
-        var  data = await api.efetuarpedido(1,pedidos);
-      }
+    //     var  data = await api.efetuarpedido(1,pedidos);
+
+    //   }
   const [nrcartao, setNrcartao] = useState("");
   const [titular, setTitular] = useState("");
   const [sobrenome, setSobrenome] = useState("");

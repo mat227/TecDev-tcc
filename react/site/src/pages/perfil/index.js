@@ -1,9 +1,9 @@
  import { Container } from  './indexSyled.js';
- import Nav from '../../components/Common/cabecalhoperfil/nav.js';
+ //import Nav from '../../components/Common/cabecalhoperfil/nav.js';
  import { ContainerPartecima } from '../../components/Common/parteCima/styled.js';
  import {  useState } from 'react';
  import { Link } from 'react-router-dom';
- import Cookies, { set } from 'js-cookie';
+ import Cookies from 'js-cookie';
 import { useHistory } from 'react-router';
  import Rodape from '../../components/Common/rodape/redape.js';
  import ParteCima from '../../components/Common/parteCima/componente.js';
@@ -66,18 +66,18 @@ console.log(info);
                              </div>
                                  <div class="labels">
 
-                                      {alt == 0 ?<label class="test">Nome: {info.nm_cliente}</label> :  <input class="test1" type='text' placeholder="informe seu nome" defaultValue={nome} onchange={e => setNome(e.target.value)} />}
-                                      {alt == 0 ?<label class="test" >Email: {info.ds_email}</label> :  <input class="test1" type='text' placeholder="informe seu Email" defaultValue={email} onchange={e => setEmail(e.target.value)}/>}
-                                      {alt == 0 ?<label class="test" for="">Data de nascimento: {info.dt_nascimento.substring(0,10)}</label> :  <input class="test1" type='date' placeholder="informe sua data de nascimento" defaultValue={danasc} onchange={(e) => setData(e.target.value)}/>}
-                                      {alt == 0 ?<label class="test" for="">CPF: {info.ds_cpf}</label> :  <input class="test1" type='text' placeholder="informe seu cpf" defaultValue={cpf} onchange={e => setCpf(e.target.value)}/>}
-                                      {alt == 0 ?<label class="test" for="">Endereço : {info.nm_rua}</label> :  <input class="test1" type='text' placeholder="informe sua rua" defaultValue={rua} onchange={e => setRua(e.target.value)}/>}
-                                      {alt == 0 ?<label class="test" for="">Complemento : {info.ds_complemento}</label> :  <input class="test1" type='text' placeholder="informe o complemento" defaultValue={complemento} onchange={e => setComplemento(e.target.value)}/>}
-                                      {alt == 0 ?<label class="test" for="">Bairro: {info.ds_bairro}</label> :  <input class="test1" type='text' placeholder="informe seu bairro" defaultValue={bairro} onchange={e => setBairro(e.target.value)}/>}                                       
+                                      {alt === 0 ?<label class="test">Nome: {info.nm_cliente}</label> :  <input class="test1" type='text' placeholder="informe seu nome" defaultValue={nome} onchange={e => setNome(e.target.value)} />}
+                                      {alt === 0 ?<label class="test" >Email: {info.ds_email}</label> :  <input class="test1" type='text' placeholder="informe seu Email" defaultValue={email} onchange={e => setEmail(e.target.value)}/>}
+                                      {alt === 0 ?<label class="test" for="">Data de nascimento: {info.dt_nascimento.substring(0,10)}</label> :  <input class="test1" type='date' placeholder="informe sua data de nascimento" defaultValue={danasc} onchange={(e) => setData(e.target.value)}/>}
+                                      {alt === 0 ?<label class="test" for="">CPF: {info.ds_cpf}</label> :  <input class="test1" type='text' placeholder="informe seu cpf" defaultValue={cpf} onchange={e => setCpf(e.target.value)}/>}
+                                      {alt === 0 ?<label class="test" for="">Endereço : {info.nm_rua}</label> :  <input class="test1" type='text' placeholder="informe sua rua" defaultValue={rua} onchange={e => setRua(e.target.value)}/>}
+                                      {alt === 0 ?<label class="test" for="">Complemento : {info.ds_complemento}</label> :  <input class="test1" type='text' placeholder="informe o complemento" defaultValue={complemento} onchange={e => setComplemento(e.target.value)}/>}
+                                      {alt === 0 ?<label class="test" for="">Bairro: {info.ds_bairro}</label> :  <input class="test1" type='text' placeholder="informe seu bairro" defaultValue={bairro} onchange={e => setBairro(e.target.value)}/>}                                       
                                   </div>
                                 <div class="contato">
                                      <h2>Telefone</h2>
-                                     {alt == 0 ?<label for="" class="tell">{info.nr_contato}</label> :  <input class="test1" type='text' placeholder="informe seu numero" defaultValue={numero} onchange={e => setNumero(e.target.value)}/>}
-                                     {alt == 0 ?" " :  <button onClick={() => altInfo()}> enviar </button> } 
+                                     {alt === 0 ?<label for="" class="tell">{info.nr_contato}</label> :  <input class="test1" type='text' placeholder="informe seu numero" defaultValue={numero} onchange={e => setNumero(e.target.value)}/>}
+                                     {alt === 0 ?" " :  <button onClick={() => altInfo()}> enviar </button> } 
                              </div>
                          </div>         
                  </div>

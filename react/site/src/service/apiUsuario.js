@@ -16,8 +16,8 @@ async infoC(id){
 
 async efetuarpedido(idCliente, pedidos){
     
-    let qtd = 0;
-    let livro = "";
+   // let qtd = 0;
+  //  let livro = "";
     let  data = {
         idc : idCliente,
         situacao : "Transportadora",
