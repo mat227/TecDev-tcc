@@ -108,10 +108,10 @@ const app = express.Router();
      let email = req.body;
      const senha = req.body.senha;
      const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
-     if( email == "") {
+     if( email == "" || !email) {
         return resp.send({erro: 'O campo Email é obrigatório'})
     }
-    if( senha == "") {
+    if( senha == "" || !senha) {
         return resp.send({erro: 'O campo Senha é obrigatório'})
     }
     
