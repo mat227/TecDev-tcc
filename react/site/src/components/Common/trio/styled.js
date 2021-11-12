@@ -11,7 +11,7 @@ const ContainerTrio= styled.div`
   border: none;
   border-radius: 150px;
   font-family: "Rowdies";
-align-self: center;
+align-items: center;
 
   padding: 1.2em;
   margin: 3em 3em 0.5em 3em;
@@ -24,6 +24,7 @@ align-self: center;
 .trio2{
   display: flex;
   flex-direction: row;
+  align-items: center;
   color: white;
   font-family: "Rowdies";
   font-weight: 550;

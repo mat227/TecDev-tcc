@@ -35,5 +35,25 @@ async efetuarpedido(idCliente, id_livro, quantidade){
     
 }
 
+async cadastrarCartao(nrcartao, titular, sobrenome, vencimento, parcelas, cvv) {
+    let cadastroJson = {
+        nrcartao: nrcartao,
+        titular: titular,
+        sobrenome: sobrenome,
+        vencimento: vencimento,
+        parcelas: parcelas,
+        cvv: cvv
+        
+    }
+
+    let r = await api.post(`/addpagamento`, cadastroJson );
+    return r.data
+}
+
+async cartoes () {
+    let r = await api.get(`/pagamento`)
+    return r.data;
+}
+
 
 }

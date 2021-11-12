@@ -12,7 +12,11 @@ async loginn(email, senha) {
     return r.data;
 }
 
-
+async loginadm(email, senha) {
+    let a = {email,senha}
+    let r = await api.post(`/loginadnmm`, a);
+    return r.data;
+}
 async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,bairro,complemento) {
     let cadastroJson = {
         email: email,

@@ -92,15 +92,6 @@ app.get ('/livrocomedia', async (req, resp) => {
 })
 
 
-app.get('/pagamento', async (req, resp) => {
-    try {
-        let pagamento = await db.infoc_tdv_forma_pagamento.findAll();
-        resp.send(pagamento);
-    } catch (e) {
-        resp.send({ erro: 'Ocorreu um erro!' })
-    }
-})
-
 
   
 app.get ('/livroromance', async (req, resp) => {
@@ -131,28 +122,7 @@ app.get ('/livrobiografia', async (req, resp) => {
         resp.send({ erro: e.toString() })
     }
 })
-app.post('/pagamento', async (req, resp) => {
-    try {
-        let usuParam = req.body;
 
-        let u = await db.infoc_tdv_forma_pagamento.findOne({ where: {  nr_cartao: usuParam.nrcartao, nm_titular_cartao: usuParam.titular ,nm_sobrenome_cartao:usuParam.sobrenome , dt_vencimento:usuParam.vencimento, nr_parcelas: usuParam.parcelas, ds_cvv: usuParam.cvv} });
-        if (u != null)
-            return resp.send({ erro: 'Todos os campos são obrigatorios' });
-
-        let r = await db.infoc_tdv_forma_pagamento.create({
-            nr_cartao: crypto.SHA256(usuParam.nrcartao).toString(crypto.enc.Base64),
-            nm_titular_cartao: usuParam.titular,
-            nm_sobrenome_cartao: usuParam.sobrenome,
-            dt_vencimento:usuParam.vencimento,
-            nr_parcelas:usuParam.parcelas,
-            ds_cvv:usuParam.cvv
-          
-        })
-        resp.send(r);
-    } catch (e) {
-        resp.send({ erro: 'Ocorreu um erro!' })
-    }
-})
 
 
 // Busca

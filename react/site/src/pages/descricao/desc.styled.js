@@ -34,7 +34,7 @@ background-color: #135578;
     
 
     width: 75em;
-    height: 50em;
+    min-height: 50em;
 
     padding: 1.3em;
 
@@ -48,8 +48,8 @@ background-color: #135578;
 .box-filha {
     border: 1px solid white;
     border-radius: 2em;
-    width: 75em;
-    height: 50em;
+    min-width: 75em;
+    min-height: 50em;
 
     display: flex;
     flex-direction: row;

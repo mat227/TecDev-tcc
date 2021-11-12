@@ -5,7 +5,8 @@ const ContainerPix = styled.div `
 
 width: 100%;
 height: 100%;
-
+font-family: "Rowdies";
+font-weight: 400;
 background-color: #135578;
 background-image: url('/assets/images/bacckground.svg');
 
@@ -91,7 +92,6 @@ a, a:link, a:visited {
         display: flex;
         flex-direction: column;
         font-size: "Rowdies";
-        font-weight: 1000;
         background-color: #1A526D;
         align-items: center;
     }
