@@ -27,7 +27,7 @@ export default function Conteudo() {
             Cookies.set('usuario-logado', JSON.stringify(resp));
             navig.push('/homepage');
         }
-
+console.log(resp)
     }
 
     const logaradm = async () => {

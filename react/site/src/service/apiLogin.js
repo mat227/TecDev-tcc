@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create ({
-    baseURL: 'https://tecdevtcc.herokuapp.com/login'
+    baseURL: 'http://localhost:3030/login'
 })
 
 export default class Api {
@@ -14,7 +14,7 @@ async loginn(email, senha) {
 
 async loginadm(email, senha) {
     let a = {email,senha}
-    let r = await api.post(`/loginadnmm`, a);
+    let r = await api.post(`/loginadnm`, a);
     return r.data;
 }
 async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,bairro,complemento) {

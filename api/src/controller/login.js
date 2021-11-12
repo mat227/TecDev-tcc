@@ -109,9 +109,7 @@ const app = express.Router();
      const senha = req.body.senha;
      const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
 
-     if (u === "")
-     return resp.send({ erro: 'Credenciais inválidas!' });
-
+    
      let u = await db.infoc_tdv_cliente.findOne({
          where: {
              ds_email: email.email,
@@ -119,21 +117,23 @@ const app = express.Router();
          },
 
      });
-     
+     if (u == "")
+     return resp.send({ erro: 'Credenciais inválidas!' });
+
     
      resp.send(u);
  });
 
 
 
- app.post('/loginadmm', async (req, resp) => {
+ app.post('/loginadm', async (req, resp) => {
     let email = req.body;
     const senha = req.body.senha;
     const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
 
     let u = await db.infoc_tdv_cliente.findAll({
         where: {
-            ds_email: email === "Matheus@bookly.com.br" || "Nicoly@bookly.com.br" || "Thiago@bookly.com.br" || "Elias@bookly.com.br" || "Beatriz@bookly.com.br",
+            ds_email: email.email && email === "Matheus@bookly.com.br" || "Nicoly@bookly.com.br" || "Thiago@bookly.com.br" || "Elias@bookly.com.br" || "Beatriz@bookly.com.br",
             ds_senha: cryptoSenha
         },
 
