@@ -64,15 +64,11 @@ export default function ParteCima(props) {
                     />
                     </div>
                     <div class="descricao">
-                    <p>Minha Conta</p>
+                    <p>Login</p>
                     </div>
                 </div>
                 </Link>
-                <Link to="/adm_livro"> 
-                <button style={{background: "skyblue", color: "black"}}>
-                    ADM
-                </button>
-                </Link>
+               
             </div>
         </div>
             </ContainerPartecima>

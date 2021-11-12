@@ -71,7 +71,6 @@ export default function DescConteudo(props) {
                         <div class="item"><img src="/assets/images/cartao.svg" alt="cartao" class="cartao"/> <p><u>Cartão de Crédito</u> {livro.vl_para} <br/> Em até 2x de R$ {livro.vl_para/2}</p></div>
                     </div>
                     <div class="botoes">
-                      <Link to="/pagamento"><button>COMPRAR</button></Link>
                       <Link to="/suasacola"><button onClick={comprar}>ADICIONAR NA SACOLA</button></Link>
                     </div>
                     <hr/>

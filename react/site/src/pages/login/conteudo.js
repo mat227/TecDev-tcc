@@ -30,6 +30,18 @@ export default function Conteudo() {
 
     }
 
+    const logaradm = async () => {
+        
+        let resp = await api.loginn(email, senha);
+        if (resp.erro) {
+            toast.error(`${resp.erro}`);
+        } else {
+            Cookies.set('usuario-logado', JSON.stringify(resp));
+            navig.push('/adm_livro');
+        }
+
+    }
+
   
   
 
@@ -83,7 +95,7 @@ export default function Conteudo() {
 
 
     <div class="logo2">
-        <div class="logoLivro"><img src="/assets/images/logo2.svg" alt=""/></div>
+        <div class="logoLivro"><img onClick={logaradm}src="/assets/images/logo2.svg" alt=""/></div>
 
     </div>
 </ContainerLogin>   

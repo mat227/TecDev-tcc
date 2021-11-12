@@ -127,7 +127,16 @@ const Container = styled.div`
             margin-top: 9em;
             
         }
-
+        .tllivro2{
+      display: flex;
+      flex-direction: row;
+    font-family: 'Rowdies';
+color: white;
+font-size: 20px;
+margin-left: 2em;
+margin-top: 3.5em;
+cursor: pointer;
+}
         .btnf{
             border: #1FB5CD;
             background: #1FB5CD;

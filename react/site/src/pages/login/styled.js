@@ -93,7 +93,7 @@ a, a:link, a:visited {
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: 100%;
-    width: 40em;
+    min-width:55%;
    height: 100vh;
 }
 
@@ -102,7 +102,6 @@ a, a:link, a:visited {
     display: flex;
     justify-content: center;
     padding-top: 13em;
-    padding-left: 4em;
 
 }
 .logo img:hover{

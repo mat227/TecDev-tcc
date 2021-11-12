@@ -7,6 +7,45 @@ const { Op, col, fn } = Sequelize;
 import express from "express";
 const app = express.Router();
 
+// pagamento
+app.post('/addpagamento', async (req, resp) => {
+    try {
+        let usuParam = req.body;
+
+        let u = await db.infoc_tdv_forma_pagamento.findOne({ where: {  nr_cartao: usuParam.nrcartao, nm_titular_cartao: usuParam.titular ,nm_sobrenome_cartao:usuParam.sobrenome , dt_vencimento:usuParam.vencimento, nr_parcelas: usuParam.parcelas, ds_cvv: usuParam.cvv} });
+        if( u == "") {
+            return resp.send({erro: 'Todos os campo são obrigatórios'})
+        }
+        if( usuParam.nrcartao == "") {
+            return resp.send({erro: 'O campo Número do cartão é obrigatório'})
+        }
+        if( usuParam.titular == "") {
+            return resp.send({erro: 'O campo Titular é obrigatório'})
+        }
+        let r = await db.infoc_tdv_forma_pagamento.create({
+            nr_cartao:usuParam.nrcartao,
+            nm_titular_cartao: usuParam.titular,
+            nm_sobrenome_cartao: usuParam.sobrenome,
+            dt_vencimento:usuParam.vencimento,
+            nr_parcelas:usuParam.parcelas,
+            ds_cvv:usuParam.cvv
+          
+        })
+        resp.send(r);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
+
+
+app.get('/pagamento', async (req, resp) => {
+    try {
+        let pagamento = await db.infoc_tdv_forma_pagamento.findAll();
+        resp.send(pagamento);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
 
 
 app.get('/suaInfo/:id', async (req, resp)=>{
