@@ -6,7 +6,7 @@ import Trio from './components/Common/trio/trio'
 import Login from './pages/login/conteudo'
 
 import Redefinir from './pages/redefinir/esq.conteudo'
-import Reset from './pages/redefinir/reset'
+import Reset from './pages/redefinir/reset/reset.conteudo'
 
 import Descontos from './pages/Desconto/desconto'
 import Descricoes from './pages/descricao/desc.conteudo'

@@ -5,6 +5,9 @@ import { useHistory } from "react-router";
 import Api from '../../service/apiLogin';
 
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const api = new Api();
 
@@ -24,14 +27,15 @@ export default function EsqConteudo() {
         if (r.status === 'ok') {
             nav.push('/reset', {email: email});
         } else {
-            alert(r.mensagem);
+            toast.dark(r.mensagem);
         }
 
     }
     return (        
-
         <ContainerEsqueceu>
-                    <div className="conteiner">
+            <ToastContainer />
+                
+                        
                         <div className="box-1">
                             <div className="titulo">
                                 <h1>REDEFINIR SENHA</h1>
@@ -39,15 +43,18 @@ export default function EsqConteudo() {
                         </div>
                         <div className="inputs-1">
                             <label style={{fontSize: 1.3 + "em"}}>Insira seu e-mail:</label>
-                                <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                                   <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
                                 <button type="submit" onClick={recuperar}>Enviar código</button>
                         </div>
 
-                    
-                        <div className="logo">
-                            <img src="/assets/images/redef.logo atual(1).svg" alt =""/>
+
+                        <div className="esq-logo">
+                            <img src="/assets/images/nice library png 1.svg" alt="" />
+                            <img src="/assets/images/bookly.svg" alt="" />
                         </div>
-                    </div>
+                        
+
+                    
         </ContainerEsqueceu>
     )
 };
