@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-      min-height: 100vh;
             background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
             width: 100%;

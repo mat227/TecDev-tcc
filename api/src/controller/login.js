@@ -108,7 +108,12 @@ const app = express.Router();
      let email = req.body;
      const senha = req.body.senha;
      const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
-
+     if( email == "") {
+        return resp.send({erro: 'O campo Email é obrigatório'})
+    }
+    if( senha == "") {
+        return resp.send({erro: 'O campo Senha é obrigatório'})
+    }
     
      let u = await db.infoc_tdv_cliente.findOne({
          where: {
@@ -117,9 +122,9 @@ const app = express.Router();
          },
 
      });
-     if (u == "")
-     return resp.send({ erro: 'Credenciais inválidas!' });
-
+    
+     
+    
     
      resp.send(u);
  });

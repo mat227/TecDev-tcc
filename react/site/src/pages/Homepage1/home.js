@@ -59,7 +59,7 @@ export default function Homepage() {
                     <img        
                       src={item.ds_imagen}
                        alt=""
-                       style={{ height: "190px", width: "185px" }}
+                       style={{ height: "185px", width: "170px" }}
                        />
                       
                 </div>

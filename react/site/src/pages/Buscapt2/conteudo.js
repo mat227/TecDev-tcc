@@ -11,7 +11,9 @@ export default function Livros(props) {
         <Link to={{ pathname: "/descricao", state: livro }}>
           <div class="box-livro">
             <div class="img-livro-queridinha">
-              <img src={livro.ds_imagen} alt="" />
+              <img src={livro.ds_imagen} alt="" style={{ height: "185px", width: "170px" }}
+
+              />
             </div>
             <div class="box-informacoes-livros">
               <div class="nome-livro-queridinhas">{livro.nm_livro}</div>
