@@ -187,7 +187,7 @@ const Responsivo = styled.div`
     }
     .Nav {
 
-      grid-template-rows: repeat(4, 2.5em);
+      grid-template-rows: repeat(4, 1em);
       grid-template-columns: none;
       grid-row-gap: 1em;
 
@@ -222,10 +222,6 @@ const Responsivo = styled.div`
 
   .menu-item img {
     display: none;
-  }
-
-  .menu-item p {
-    
   }
 
   .menu-item {
