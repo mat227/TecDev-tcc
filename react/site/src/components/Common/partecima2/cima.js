@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useEffect } from "react";
-import { CSSTransition } from "react-transition-group";
+// import { CSSTransition } from "react-transition-group";
 import { Responsivo } from "./styled";
 import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
@@ -58,12 +58,12 @@ export default function Header(props) {
             <img src="/assets/images/nice library png 1.svg" className="Logo" alt="logo" />
             <img src="/assets/images/Bookly.svg" className="Logo" alt="logo" />
           </div>
-        <CSSTransition
-            in={!isSmallScreen || isNavVisible}
-            timeout={350}
+        {/* <CSSTransition
+          in={!isSmallScreen || isNavVisible}
+          timeout={350}
             classNames="NavAnimation"
             unmountOnExit
-        >
+        > */}
             
 
 
@@ -90,7 +90,7 @@ export default function Header(props) {
                 <button>ADM</button>
               </Link> 
             </nav>
-        </CSSTransition>
+       {/* </CSSTransition> */}
         <button onClick={toggleNav} className="Burger">
             🍔
         </button>

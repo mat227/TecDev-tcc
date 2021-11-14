@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import  ContainerPartecima  from "../../components/Common/parteCima/componente";
 import { ContainerCompra } from "./comp.styled";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import Cookie from "js-cookie";
 import { useHistory } from "react-router-dom"
 
@@ -20,16 +20,27 @@ function lerUsuarioLogado (navigation) {
     return usuarioLogado; 
 }
 
+
+
 export default function CompraRealizada() {
 
     const nav = useHistory();
 
     const usuarioLogado = lerUsuarioLogado(nav) || {};
+    const [livro, setLivro] = useState([]);
 
     const [usuario] = useState(usuarioLogado);
 
     console.log(usuario);
    
+    useEffect(() =>{carregarCarrinho()}
+    , []);
+  
+    function carregarCarrinho() {
+      let carrinho = Cookie.get("carrinho");
+      carrinho = carrinho !== undefined ? JSON.parse(carrinho) : [];
+      setLivro(carrinho);
+    }
     
     return (   
         <ContainerCompra>
@@ -40,8 +51,11 @@ export default function CompraRealizada() {
                             <div className="caminho"><h5>SUA SACOLA - SUAS INFORMAÇÕES - PAGAMENTO - <u style={{color:"#00EAFF"}}>FINALIZAÇÃO</u></h5></div>
                     </div>
                     <div className="big-box">
+
                         <aside>
                             <h3 className="titulo2">Você comprou os seguintes itens:</h3>
+                            {livro.map((item, i) => (
+
                             <table>
                                 <thead>
                                     <tr>
@@ -53,8 +67,8 @@ export default function CompraRealizada() {
                                 <tbody>
                                     <tr>
                                         <td className="livro">
-                                            <img src="/assets/images/o que o sol faz com as florescomprar(1).svg" alt="" style={{marginRight: 1 + "em"}}/>
-                                            <div>O QUE O SOL FAZ<br/>COM AS FLORES<br/><br style={{marginTop: 1 + "em"}}/>Rupi Kaur</div>
+                                            <img src={livro.ds_imagen} alt=""   style={{ height: "92px", width: "62px" }}/>
+                                            <div>{livro.nm_livro}<br style={{marginTop: 1 + "em"}}/>{ item.ds_autora}   </div>
                                         </td>   
                                     </tr>
                                     <tr style={{marginRight: 8.3 + "em"}}>
@@ -69,6 +83,7 @@ export default function CompraRealizada() {
                                     </tr>
                                 </tbody>
                             </table>
+                            ))}
                         </aside>
                         <div className="box-small">
                             <div className="box-confirmacao">

@@ -103,15 +103,14 @@ const app = express.Router();
  })
 
 
-
  app.post('/login', async (req, resp) => {
-     let email = req.body;
+     const email = req.body;
      const senha = req.body.senha;
      const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
-     if( email == "" || !email) {
+     if( email.email == "" || !email.email) {
         return resp.send({erro: 'O campo Email é obrigatório'})
     }
-    if( senha == "" || !senha) {
+    if( cryptoSenha == "" || !cryptoSenha) {
         return resp.send({erro: 'O campo Senha é obrigatório'})
     }
     
@@ -131,19 +130,46 @@ const app = express.Router();
 
 
 
+ app.post('/cadastroadm', async (req, resp) => {
+    try {
+    const email = req.body;
+    const login = req.body;
+    const senha = req.body.senha;
+    const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
+   const informacoes = await db.infoc_tdv_adm.create({
+    ds_login: login.login,
+    ds_email: email.email,
+    ds_senha: crypto.SHA256(senha).toString(crypto.enc.Base64)
+    
+})
+   
+    resp.send(informacoes);
+}catch{
+    resp.send({ erro: 'Ocorreu um erro!' })
+}
+});
+
+app.get('/getadm', async (req, resp) => {
+    try {
+        let endereco = await db.infoc_tdv_adm.findAll();
+        resp.send(endereco);
+    } catch (e) {
+        resp.send({ erro: 'Ocorreu um erro!' })
+    }
+})
+
  app.post('/loginadm', async (req, resp) => {
     let email = req.body;
     const senha = req.body.senha;
     const cryptoSenha = crypto.SHA256(senha).toString(crypto.enc.Base64);
 
-    let u = await db.infoc_tdv_cliente.findAll({
+    let u = await db.infoc_tdv_adm.findOne({
         where: {
-            ds_email: email.email && email === "Matheus@bookly.com.br" || "Nicoly@bookly.com.br" || "Thiago@bookly.com.br" || "Elias@bookly.com.br" || "Beatriz@bookly.com.br",
+            ds_email: email.email,
             ds_senha: cryptoSenha
         },
-
     });
-    if (u === null)
+    if (u == null)
      return resp.send({ erro: 'Credenciais inválidas!' });
    console.log(u);
     resp.send(u);

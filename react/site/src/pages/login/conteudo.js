@@ -32,7 +32,7 @@ console.log(resp)
 
     const logaradm = async () => {
         
-        let resp = await api.loginn(email, senha);
+        let resp = await api.loginadm(email, senha);
         if (resp.erro) {
             toast.error(`${resp.erro}`);
         } else {
