@@ -14,7 +14,9 @@ async loginn(email, senha) {
 
 async loginadm(email, senha) {
     let a = {email,senha}
-    let r = await api.post(`/loginadnm`, a);
+    console.log(email)
+    console.log(senha)
+    let r = await api.post(`/loginadm`, a);
     return r.data;
 }
 async cadastro(email, senha,telefone, nome, cpf, datanas,nomerua,cep,numerocasa,bairro,complemento) {

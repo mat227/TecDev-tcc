@@ -2,32 +2,32 @@ import { Link } from "react-router-dom";
 import ParteCima from "../../components/Common/parteCima/componente";
 import Rodape from "../../components/Common/rodape/redape";
 import { ContainerPag } from "./pag.styled";
-import { useState ,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { useHistory } from "react-router-dom";
 import Cookie from "js-cookie";
 import Api from "../../service/apiUsuario";
 const api = new Api();
-function lerUsuarioLogado (navigation) {
-  let logado = Cookie.get('usuario-logado')
+function lerUsuarioLogado(navigation) {
+  let logado = Cookie.get("usuario-logado");
   if (logado == null) {
-      navigation.push('/')
-      return null;
+    navigation.push("/");
+    return null;
   }
   let usuarioLogado = JSON.parse(logado);
-  return usuarioLogado; 
+  return usuarioLogado;
 }
 
 export default function Pagamentos() {
   const navig = useHistory();
   const usuarioLogado = lerUsuarioLogado(navig) || {};
-  console.log(usuarioLogado)
-     const [info] = useState(JSON.parse(Cookie.get('usuario-logado')))
+  console.log(usuarioLogado);
+  const [info] = useState(JSON.parse(Cookie.get("usuario-logado")));
   console.log(info);
 
-    //zone test
-    // const [pedidos] = useState([]);
-    
+  //zone test
+  // const [pedidos] = useState([]);
+
   const [nrcartao, setNrcartao] = useState("");
   const [titular, setTitular] = useState("");
   const [sobrenome, setSobrenome] = useState("");
@@ -35,13 +35,13 @@ export default function Pagamentos() {
   const [parcelas, setParcelas] = useState("");
   const [cvv, setCvv] = useState("");
 
-  
   //const [usuario,  setUsuario] = useState([]);
 
   const [livro, setLivro] = useState([]);
 
-  useEffect(() =>{carregarCarrinho()}
-  , []);
+  useEffect(() => {
+    carregarCarrinho();
+  }, []);
 
   function carregarCarrinho() {
     let carrinho = Cookie.get("carrinho");
@@ -49,11 +49,10 @@ export default function Pagamentos() {
     setLivro(carrinho);
   }
   console.log(livro);
-  const  finalizarPedido =  async () =>{
-
-    var  data = await api.efetuarpedido(info.id_cliente,data1);
+  const finalizarPedido = async () => {
+    var data = await api.efetuarpedido(info.id_cliente, data1);
     console.log(data);
-    }
+  };
   async function cadastrarCartao() {
     let r = await api.cadastrarCartao(
       nrcartao,
@@ -63,7 +62,7 @@ export default function Pagamentos() {
       parcelas,
       cvv
     );
-
+     finalizarPedido()
     if (r.erro) toast.error(`${r.erro}`);
     else {
       toast.success("✔️ Cartão cadastrado com sucesso!");
@@ -72,12 +71,12 @@ export default function Pagamentos() {
     console.log(r);
   }
 
-  const data1 = livro.map((x) =>{
+  const data1 = livro.map((x) => {
     console.log("-------------------");
     console.log(x);
     return x;
-    } ); 
-    console.log("-------------------");
+  });
+  console.log("-------------------");
   console.log(data1);
 
   return (
@@ -130,7 +129,6 @@ export default function Pagamentos() {
               <img src="/assets/images/hipercardformas.svg" alt="" />
 
               <div className="add">
-                
                 <img
                   src="assets/images/cartaoadd formas.svg"
                   alt=""
@@ -193,7 +191,7 @@ export default function Pagamentos() {
                     onChange={(r) => setVencimento(r.target.value)}
                     id="right"
                     required="required"
-                    type="data"
+                    type="date"
                     placeholder="Ex: 05/22"
                   />
                   <br />
@@ -206,7 +204,7 @@ export default function Pagamentos() {
                   <br />
                   <input
                     value={cvv}
-                    onChange={r => setCvv(r.target.value)}
+                    onChange={(r) => setCvv(r.target.value)}
                     type="text"
                     id="right"
                     required="required"
@@ -220,7 +218,7 @@ export default function Pagamentos() {
                 {livro.map((item, i) => (
                   <select
                     value={parcelas}
-                    onChange={r => setParcelas(r.target.value)}
+                    onChange={(r) => setParcelas(r.target.value)}
                     name="parcela"
                     id="parcela"
                   >
@@ -273,7 +271,7 @@ export default function Pagamentos() {
               Voltar
             </button>
           </Link>
-          <button onClick={ () => cadastrarCartao()} onClick={() => finalizarPedido()} class="btn btn-primary">
+          <button onClick={() => cadastrarCartao()} class="btn btn-primary">
             Finalizar pedido
           </button>
         </div>

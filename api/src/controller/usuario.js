@@ -22,6 +22,18 @@ app.post('/addpagamento', async (req, resp) => {
         if( usuParam.titular == "") {
             return resp.send({erro: 'O campo Titular é obrigatório'})
         }
+        if( usuParam.sobrenome == "") {
+            return resp.send({erro: 'O campo Sobrenome é obrigatório'})
+        }
+        if( usuParam.vencimento == "") {
+            return resp.send({erro: 'O campo Vencimento é obrigatório'})
+        }
+        if( usuParam.parcela == "") {
+            return resp.send({erro: 'O campo Parcela é obrigatório'})
+        }
+        if( usuParam.cvv == "") {
+            return resp.send({erro: 'O campo CVV é obrigatório'})
+        }
         let r = await db.infoc_tdv_forma_pagamento.create({
             nr_cartao:usuParam.nrcartao,
             nm_titular_cartao: usuParam.titular,
