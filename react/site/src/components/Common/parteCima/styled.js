@@ -4,11 +4,11 @@ import styled from 'styled-components'
 const ContainerPartecima= styled.div`
 
 
-
     .hp1-logo{
         display: flex;
         padding-left:3em ;
     }
+    
     .hp1-nome{
       padding-top: 0.7em;
     }
@@ -22,6 +22,7 @@ const ContainerPartecima= styled.div`
 
         justify-content: space-between;
     }
+
     .hp1-seus{
         display: flex;
         flex-direction: row;
@@ -48,8 +49,8 @@ const ContainerPartecima= styled.div`
     }
    
     .divBusca{
-      display: flex;
-      flex-direction: row;
+        display: flex;
+        flex-direction: row;
         background-color:#84D1DD;
         border:solid 1px;
         border-radius:10px;
@@ -60,11 +61,11 @@ const ContainerPartecima= styled.div`
       
       .divBusca button{
         margin-top: 0.2em;
-border: none;
-background-color: #84D1DD;
-border-radius: 20px;
-cursor: pointer;
-}
+        border: none;
+        background-color: #84D1DD;
+        border-radius: 20px;
+        cursor: pointer;
+      }
 
      
       #txtBusca{
@@ -76,8 +77,8 @@ cursor: pointer;
         border:none;
         height:32px;
         font-family: "Rowdies";
-    font-weight: 400;
-    width: 10em;
+        font-weight: 400;
+        width: 10em;
       }
 
 
