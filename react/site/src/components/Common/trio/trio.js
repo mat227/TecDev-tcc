@@ -3,18 +3,31 @@ import { Link } from "react-router-dom"
 
 export default function Trio() {
     return (
+
         <ContainerTrio>
-           <div class="trio">
-            <Link to="/genero">  <button><img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" /></button> </Link>
-             <Link to="/desconto">   <button><img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" /></button></Link>
 
-
+            <div className="duo">
+                <div className="duo-item">
+                    <Link to="/genero">
+                        <button pathname="/genero">
+                            <img src="/assets/images/triste-feliz.svg" id="btnBusca" alt="Buscar" />
+                        </button>
+                        <p>Gêneros</p>
+                    </Link>
+                </div>
+                
+                <div className="duo-item">
+                    <Link to="/desconto">
+                        <button pathname="/desconto" style={{marginLeft: 0.5 + "em"}}>
+                          <img src="/assets/images/caracoracao.svg" id="btnBusca" alt="Buscar" />
+                        </button>
+                        <p>Promoções</p>
+                    </Link>
+                </div>
             </div>
-            <div class="trio2">
-                <div class="titilo-trio1">GÊNEROS</div>
-                <div class="titilo-trio2">PROMOÇÕES</div>
-            </div>
-
+        
         </ContainerTrio>
+        
     )
 }
+

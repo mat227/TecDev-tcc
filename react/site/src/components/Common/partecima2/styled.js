@@ -97,101 +97,23 @@ const Responsivo = styled.div`
     transform: scale(1.2);
   }
 
-    .hp1-buscap{
-        display: flex;
-        flex-direction: row;
-        background-color: #12172B;
-        align-items: center;
-        justify-content: space-between;
-    }
+  
 
-    .logoo {
-        display: flex;
-      }
-
-        
-    .divBusca input{
-      border-top: 0px solid;
-      border-left: 0px solid;
-      border-right: 0px solid;
-      border-bottom: 0px solid;
-      outline: none;
-      color:white;
-    }
-
-    #txtBusca::placeholder{
-        color: white;
-        opacity: 50%;
-    }
-   
-    .divBusca{
-      display: flex;
-      flex-direction: row;
-        background-color:#84D1DD;
-        border:solid 1px;
-        border-radius:10px;
-        width:500px;
-        font-family: "Rowdies";
-        justify-content: space-between;
-      }
-      
-      .divBusca button{
-        margin-top: 0.2em;
-        border: none;
-        background-color: #84D1DD;
-        border-radius: 20px;
-        cursor: pointer;
-}
-
-     
-      #txtBusca{
-        float:left;
-        background-color:transparent;
-        padding-left:10px;
-        font-style:italic;
-        font-size:14px;
-        border:none;
-        height:32px;
-        font-family: "Rowdies";
-      font-weight: 400;
-      width: 35.5em;
-      }
-
-
-      .menu-item {
-        display: flex;
-        flex-direction: column;
-
-        text-align: center;
-
-        margin: 1em 0.5em;
-      }
-
-      
-
-      .descricao {
-        font-family: "Quicksand";
-        color: white;
-        font-size: 0.8em;
-        margin-top: -1em;
-      }
-
-
-      a:Link, a:visited {
-        text-decoration: none;
-      }
 
   @media (max-width: 1024px) {
     .Header {
       grid-template-areas: "logo burger" "nav nav";
     }
     .Nav {
-
       grid-template-rows: repeat(4, 1em);
       grid-template-columns: none;
       grid-row-gap: 1em;
 
-      padding: 2em 0 1em; 
+      padding: 2em 0 6em; 
+
+      border: dotted red;
+      position: relative;
+
       background: #12172B;  
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       border-bottom-left-radius: 10px;
@@ -226,6 +148,13 @@ const Responsivo = styled.div`
 
   .menu-item {
     margin-top: 1em;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-evenly;
   }
 }
  
