@@ -2,30 +2,12 @@
 import React, { useState, useEffect } from "react";
 // import { CSSTransition } from "react-transition-group";
 import { Responsivo } from "./styled";
-import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 
+// import BarraA  from './busca.conteudo.js'
 
 export default function Header(props) {
-  const [search, setSearch] = useState();
-  const navig = useHistory();
 
-  function keyPress(event) {
-
-    if(event.charCode === 13) {
-        navig.push(`/busca?search=${search}`);
-    }
-  }
-
-
-
-
-
-
-
-
-
-  /// meu
   const [isNavVisible, setNavVisibility] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -67,7 +49,7 @@ export default function Header(props) {
             unmountOnExit
         > */}
             
-
+           {/* <BarraA /> */}
 
             <nav className="Nav">
               <Link to="/login">

@@ -6,6 +6,8 @@ const Container = styled.div`
     background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
             font-family: "Rowdies";
+            font-family: "Quicksand";
+
     * {
         box-sizing: border-box;
         padding:0;
@@ -16,6 +18,7 @@ const Container = styled.div`
     {
         padding:1.5em;
     }
+
     .container {
         color: #fff;
     }
@@ -57,9 +60,10 @@ const Container = styled.div`
     }
 
     .livro {
-        font-family: 'Baloo Thambi 2';
+        font-family: "Rowdies";
         font-size: 1em;
         margin-left: 2em;
+        color: #fff;
     }
 
     .sub_titulo {
@@ -86,15 +90,17 @@ const Container = styled.div`
     }
 
     .botao {
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Quicksand';
         font-size: 12px;
+        color: #d3d3d3;
     }
 
     .input_g {
         display: flex;
         flex-direction: column;
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Quicksand';
         font-size: 12px;
+        color: #d3d3d3;
     }
 
     .agrp_input1, .agrp_input2, .agrp_input3 {
@@ -117,6 +123,7 @@ const Container = styled.div`
         margin-top: 0.5em;
         margin-left: 4em;
     }
+
     .editor{
         margin-left: 3.8em;
     }
@@ -164,7 +171,7 @@ const Container = styled.div`
 
     .botao1 button {
         background-color: #183c53;
-        font-family: 'Baloo Thambi 2';
+        font-family: "Quicksand";
         color: #fff;
         font-size: 16px;
 
@@ -208,7 +215,7 @@ const Container = styled.div`
     }
 
     .botao2 {
-        font-family: 'Quicksand', sans-serif;
+        font-family: 'Quicksand';
         font-size: 12px;
     }
 
@@ -229,41 +236,42 @@ const Container = styled.div`
 
 
     td {
-    text-align: left;
-    height: 1em;
-    padding: 7px;
-    color: #6D6868;
+        text-align: left;
+        height: 1em;
+        padding: 7px;
+        color: #6D6868;
 
-    font-weight: 1;
+        font-weight: 1;
 
-    font-family:  'Roboto', sans-serif;
+        font-size: 14px;
+        font-family: "Quicksand";
     }
 
     .white {
-    background-color: #21659f;
+      background-color: #21659f;
     }
 
     th {
-    height: 2em;
-    text-align: left;
-    padding: 7px;
+        height: 2em;
+        text-align: left;
+        padding: 7px;
 
-    font-weight: 1;
-    color: #ffff;
-    font-family:  'Roboto', sans-serif;
+        font-weight: 1;
+        color: #ffff;
+        font-family: "Rowdies";
     } 
+
     .tabela{
         overflow: hidden;
         overflow-y: auto;
     }
+
     .reload{
         display: flex;
         justify-content: right;   
         margin: 0 0.5em 0 0 ;  
     }
-    thead {
-                   
-    }
+    
     .table-user {
     border-collapse: collapse;
     width: 100%;
@@ -278,20 +286,30 @@ const Container = styled.div`
     width: .1em;
     }
 
+    a{
+        font-family: 'Rowdies';
+    }
+
     .botao2  button{
         cursor: pointer;
         border: none;
         background : #183c53;
     }
+
     .aa button {
         cursor: pointer;
         border: none;
         background-color: #21659f;
     }
+
+    .aa img {
+        height:1em;
+    }
   
     button img {
         height: 1.5em;
     }
+
     .table-corpo{
         overflow-y: visible;    
     }

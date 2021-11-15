@@ -5,7 +5,12 @@ const ContainerTrio= styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
+const ContainerTrio = styled.div`
 
+display: flex;
+align-self: center;
+
+margin: 1em;
 
 .trio button {
   font-weight: 700;
@@ -20,43 +25,44 @@ align-items: center;
   cursor: pointer;
 }
 
-
-.trio2{
+.duo {
   display: flex;
   flex-direction: row;
   color: white;
   font-family: "Rowdies";
   font-weight: 550;
+
+  height: 16vh;
+  width: auto;
 }
 
-.titilo-trio1, .titilo-trio2{
+.duo-item {
+  display: flex;
+  flex-direction: column;
+
+  margin: 1em;
+  text-align: center !important;
+}
+
+button {
+  background-color: white;
+
+  border-radius: 55%;
+  border: none;
+
+  padding: 1em;
+
+  justify-self: center;
+
   display: flex;
 }
-     
-  a, a:link, a:visited {
-    text-decoration: none;
-    color: white;
-    
-  }
+
+button:hover {
+  cursor: pointer;
+}
 
 
-  @media (max-width: 1024px) {
-      box-sizing: border-box;
-    
-      margin: 0px !important;
-      padding: 0px !important;
-      width: 100vw !important;
-      height: 100vh !important;
-
-      display: flex;
-      flex-direction: column;
 
 
-    .trio {
-
-      padding-right: 105em !important;
-
-    }
-  }
 `
  export { ContainerTrio }

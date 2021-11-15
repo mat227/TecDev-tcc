@@ -6,31 +6,16 @@ const ContainerAdmcp = styled.div`
         background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
             font-family: "Rowdies";
-@font-face {
-    font-family: 'Baloo Thambi 2';
-    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
-}
-
-
-@font-face {
-    font-family:  'Roboto', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-}
-
-
-@font-face {
-    font-family: 'Quicksand', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Quicksand:wght@300&display=swap');
-
-}
-
-
+            font-family: "Quicksand"
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
  
+.livro{
+    font-family: "Quicksand"
+}
 
 .box_g {
     display: flex;
@@ -41,7 +26,7 @@ const ContainerAdmcp = styled.div`
 
 
 .informacao {
-    font-family: 'Baloo Thambi 2';
+    font-family: "Quicksand"';
     display: flex;
     flex-direction: column;
 }
@@ -49,7 +34,7 @@ const ContainerAdmcp = styled.div`
 
 .botao1 button {
     background-color: #183c53;
-    font-family: 'Baloo Thambi 2';
+    font-family: "Quicksand";
     color: #fff;
     font-size: 16px;
 
@@ -66,7 +51,7 @@ const ContainerAdmcp = styled.div`
 
 .botao2 button {
     background-color: #183c53;
-    font-family: 'Baloo Thambi 2';
+    font-family: "Quicksand";
     color: #fff;
     font-size: 16px;
 
@@ -83,7 +68,7 @@ const ContainerAdmcp = styled.div`
 
 .botao3 button {
     background-color: #183c53;
-    font-family: 'Baloo Thambi 2';
+    font-family: "Quicksand";
     color: #fff;
     font-size: 16px;
 
@@ -97,11 +82,13 @@ const ContainerAdmcp = styled.div`
     margin-left: 0em;
     width: 10em;
 }
+
 .aux{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .conteudo_direito {
     background-color: #183c53;
     width: 65em;
@@ -109,6 +96,7 @@ const ContainerAdmcp = styled.div`
     margin-left: 1.5em;
     border-radius: 10px;
 }
+
 .tabelaCupom{
     border-radius: 1em;
     margin-right: 1.5em;
@@ -141,7 +129,7 @@ const ContainerAdmcp = styled.div`
 }
 
 .cupons {
-    font-family: 'Baloo Thambi 2';
+    font-family: "Quicksand"
     font-size: 1.5em;
     margin-left: 1em;
 }
@@ -159,18 +147,22 @@ const ContainerAdmcp = styled.div`
     flex-direction: column;
     margin: 2em;
 }
+
 .agrp_input1 {
     margin: 1em 4em 0 4em ;
 }
+
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
     
 }
+
 input[type=number] { 
     -moz-appearance: textfield;
     appearance: textfield;
  
  }
+
 .agrp_input2 {
     margin-top: 1em;
     margin: 0.5em 4em;
@@ -217,7 +209,7 @@ input[type=number] {
 }
 
 .botao {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand"
     font-size: 12px;
 }
 
