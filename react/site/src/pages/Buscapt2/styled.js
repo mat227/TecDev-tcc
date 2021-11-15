@@ -57,13 +57,14 @@ flex-direction:row;
   width: 15vw;
 
   border-radius: 5px;
-margin-top: 5em;
+margin-top: 8em;
 margin-right:6em
 
 }
 
 .img-livro-queridinha{
-  padding-top: 15px;
+display:flex;
+justify-content: center;
 }
 
 

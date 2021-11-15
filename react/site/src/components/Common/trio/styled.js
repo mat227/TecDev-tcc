@@ -5,7 +5,6 @@ const ContainerTrio= styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-const ContainerTrio = styled.div`
 
 display: flex;
 align-self: center;
