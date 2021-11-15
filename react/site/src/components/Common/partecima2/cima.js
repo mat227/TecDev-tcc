@@ -54,10 +54,12 @@ export default function Header(props) {
   return (
       <Responsivo>
         <header className="Header">
+          <Link to="/">
           <div className="logoo">
             <img src="/assets/images/nice library png 1.svg" className="Logo" alt="logo" />
             <img src="/assets/images/Bookly.svg" className="Logo" alt="logo" />
           </div>
+          </Link>
         {/* <CSSTransition
           in={!isSmallScreen || isNavVisible}
           timeout={350}
@@ -86,9 +88,7 @@ export default function Header(props) {
                   Login
                 </div>
               </Link>
-              <Link to="/adm_livro">
-                <button>ADM</button>
-              </Link> 
+           
             </nav>
        {/* </CSSTransition> */}
         <button onClick={toggleNav} className="Burger">

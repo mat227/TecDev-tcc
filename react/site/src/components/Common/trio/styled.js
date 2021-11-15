@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 
 const ContainerTrio= styled.div`
-
+display: flex;
+flex-direction: column;
+align-items: center;
 
 
 .trio button {
@@ -11,7 +13,6 @@ const ContainerTrio= styled.div`
   border: none;
   border-radius: 150px;
   font-family: "Rowdies";
-  align-items: center;
 
   padding: 1.2em;
   margin: 3em 3em 0.5em 3em;
@@ -23,7 +24,6 @@ const ContainerTrio= styled.div`
 .trio2{
   display: flex;
   flex-direction: row;
-  align-items: center;
   color: white;
   font-family: "Rowdies";
   font-weight: 550;

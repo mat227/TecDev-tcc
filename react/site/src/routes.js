@@ -35,6 +35,7 @@ import PerfilADM from './pages/perfil_adm'
 import Adm_livro from './pages/Adm_Livro'
 import Homepageslogin from  './pages/homepageslogin/homepages'
 import Busca from './pages/Busca/conteudo';
+import Descricaoslogin from './pages/descricaoslogin/des.js';
 
 
 export default function Routes() {
@@ -48,7 +49,8 @@ export default function Routes() {
                 <Route path="/reset" exact={true} component={Reset} />
                 
                 <Route path="/responsivo" exact={true} component={Responsivo} />
-                
+                <Route path="/descricaol" exact={true} component={Descricaoslogin} />
+
                 <Route path="/busca" exact={true} component={Busca} />
 
                 <Route path="/desconto" exact={true} component={Descontos} />

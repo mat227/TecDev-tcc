@@ -23,9 +23,6 @@ const ContainerHome = styled.div`
     font-family: "Rowdies";
   }
 
-.trio{
-  padding-left:27em;
-}
 .trio button {
     font-weight: 700;
     background: white;
@@ -48,12 +45,12 @@ align-self: center;
   color: white;
   font-family: "Rowdies";
   font-weight: 550;
-  padding-left: 25em;
+  margin-left: -2.5em;
 }
 
 .titilo-trio1, .titilo-trio2,.titilo-trio3{
   display: flex;
-  padding-left: 4.5em;
+  padding-left: 4em;
 }
 
 
@@ -74,8 +71,6 @@ margin-left: 8em;
   font-family: "Rowdies";
   color: white;
   display: table-cell;
-height: 50vh;
-width: 40vw;
 padding-top: 3.5em;
 padding-left: none;
 text-align: center;
@@ -96,7 +91,6 @@ margin-left: -6em;
   display: flex;
   flex-direction: row-reverse;
   font-family: "Rowdies";
-  margin-top: -15em;
   margin-right: 2em;
 }
 
@@ -154,8 +148,6 @@ padding: 2em;
   display: flex;
   flex-direction: row;
   background-color: #215F7B;
-  height: 50vh;
-width: 100vh;
   padding-left: 5em;
   margin-right: 15.46em;
   margin-left: 15em;
@@ -229,8 +221,9 @@ padding-top: 1em;
 
 
 .img-livro-queridinha{
-  padding-left:10px;
-}
+  display: flex;
+    justify-content: center;
+  }
 
 
 .tlqueridinhas1{
@@ -272,7 +265,6 @@ flex-direction:row;
   display: flex;
   flex-direction: column;
   background-color: rgba(97, 169, 212, 0.5);	
-  height: 16.5vw;
   width: 15vw;
 
   border-radius: 5px;

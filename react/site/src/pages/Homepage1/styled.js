@@ -2,31 +2,27 @@ import styled from 'styled-components'
 
 
 const ContainerHome = styled.div`
-     min-height: 100%;
             background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
 
   a, a:link, a:visited {
     text-decoration: none;
     color: white;
-    padding-bottom: 3em;
+
   }
   
   
 
   .conteiner-homepage1{
     display: flex;
-   min-height:280vh;
+    min-height: 280vh;
 
     flex-direction: column;
     font-family: "Rowdies";
   }
 
-.trio{
-  padding-left:27em;
-}
 .trio button {
-  font-weight: 700;
+    font-weight: 700;
     background: white;
   
   border: none;
@@ -40,11 +36,6 @@ align-self: center;
   cursor: pointer;
 }
 
-.hp1-seus{
-      
-        margin-bottom: -3em;;
-    }
-    
 
 .trio2{
   display: flex;
@@ -52,12 +43,12 @@ align-self: center;
   color: white;
   font-family: "Rowdies";
   font-weight: 550;
-  padding-left: 25em;
+  margin-left: -2.5em;
 }
 
 .titilo-trio1, .titilo-trio2,.titilo-trio3{
   display: flex;
-  padding-left: 4.5em;
+  padding-left: 4em;
 }
 
 
@@ -78,10 +69,7 @@ margin-left: 8em;
   font-family: "Rowdies";
   color: white;
   display: table-cell;
-height: 50vh;
-width: 40vw;
 padding-top: 3.5em;
-padding-top: 5em;
 padding-left: none;
 text-align: center;
 }
@@ -101,7 +89,6 @@ margin-left: -6em;
   display: flex;
   flex-direction: row-reverse;
   font-family: "Rowdies";
-  margin-top: -15em;
   margin-right: 2em;
 }
 
@@ -159,8 +146,6 @@ padding: 2em;
   display: flex;
   flex-direction: row;
   background-color: #215F7B;
-  height: 50vh;
-width: 100vh;
   padding-left: 5em;
   margin-right: 15.46em;
   margin-left: 15em;
@@ -233,7 +218,10 @@ padding-top: 1em;
 
 
 
-
+.img-livro-queridinha{
+  display: flex;
+    justify-content: center;
+  }
 
 
 .tlqueridinhas1{
@@ -256,6 +244,9 @@ padding-top: 1em;
   justify-content: center;
 }
 
+
+
+
 .livros-queridinhas{
   display: flex;
 flex-wrap: wrap;
@@ -263,7 +254,7 @@ flex-direction:row;
   color: white;
   height: 20vh;
   max-width:100% ;
-  margin-left:6em;
+  margin-left:6em
 }
 
 
@@ -272,7 +263,6 @@ flex-direction:row;
   display: flex;
   flex-direction: column;
   background-color: rgba(97, 169, 212, 0.5);	
-  height: 16.5vw;
   width: 15vw;
 
   border-radius: 5px;
@@ -282,7 +272,6 @@ margin-right:6em
 }
 
 .img-livro-queridinha{
-  padding-left: 10px;
   padding-top: 15px;
 }
 
@@ -311,18 +300,25 @@ margin-right:6em
 .preco-queridinhas{
   font-size: 25px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color:black;
   text-decoration: underline black;
 
 }
 
 
 
-@media (max-width : 1024px) {
+@media (max-width: 1024px) {
+  width: 100%;
+  height: 100%;
 
 
-  margin: 0px;
-  
+  .queridinhas {
+    background-color:red; 
+
+    text-align: center;
+
+    margin: 1em;
+  }
 
   
 }
