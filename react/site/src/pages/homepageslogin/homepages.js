@@ -49,7 +49,7 @@ export default function Homepageslogin() {
 
                     
              {livro.map ((item)=>(
-<Link to={{pathname:"/descricao",state:item}}>
+<Link to={{pathname:"/descricaol",state:item}}>
       <div class="box-livro">
                 <div class="img-livro-queridinha">
                     <img        
