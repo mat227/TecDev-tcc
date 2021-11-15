@@ -16,7 +16,9 @@ function lerUsuarioLogado(navigation) {
   }
   let usuarioLogado = JSON.parse(logado);
   return usuarioLogado;
+ 
 }
+
 
 export default function Pagamentos() {
   const navig = useHistory();
@@ -51,7 +53,7 @@ export default function Pagamentos() {
   console.log(livro);
   const finalizarPedido = async () => {
     var data = await api.efetuarpedido(info.id_cliente, data1);
-    console.log(data);
+    console.log(info.id_cliente);
   };
   async function cadastrarCartao() {
     let r = await api.cadastrarCartao(
@@ -72,8 +74,6 @@ export default function Pagamentos() {
   }
 
   const data1 = livro.map((x) => {
-    console.log("-------------------");
-    console.log(x);
     return x;
   });
   console.log("-------------------");

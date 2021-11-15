@@ -16,12 +16,19 @@ async infoC(id){
 
 async efetuarpedido(idCliente, pedidos){
     
-    console.log("-------------")
-    console.log(pedidos)
+    //console.log(pedidos)
     const gambiarra = pedidos.map(x =>{
-        return x;
+        let livro = 0;
+        let qtd = 0;
+        const test = {
+            livro : x.id_livro,
+             qtd : x.qtd
+        }
+        
+        return test;
     })
-    
+    //console.log('estou na gambi ');
+    //console.log(gambiarra);
     let livro = "";
     let  data = {
         idc : idCliente,
@@ -29,8 +36,8 @@ async efetuarpedido(idCliente, pedidos){
         idp :gambiarra
        
     }
-    
-    console.log(`Cheguei aqui ${data.idp}`) ;
+    console.log(data) ;    
+    console.log(`Cheguei aqui `) ;
     let r =  await api.post(`/addpedido`, data);
         return r.data;
     
