@@ -6,13 +6,13 @@ const ContainerAdmcp = styled.div`
         background-image: url('/assets/images/bacckground.svg');
             background-color: #125375;
             font-family: "Rowdies";
-            font-family: "Quicksand"
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
- 
+            font-family: "Quicksand";
+
+            * {
+        box-sizing: border-box;
+        padding:0;
+        margin: 0;
+    }
 .livro{
     font-family: "Quicksand"
 }
@@ -26,7 +26,7 @@ const ContainerAdmcp = styled.div`
 
 
 .informacao {
-    font-family: "Quicksand"';
+    font-family: "Quicksand";
     display: flex;
     flex-direction: column;
 }
@@ -129,7 +129,7 @@ const ContainerAdmcp = styled.div`
 }
 
 .cupons {
-    font-family: "Quicksand"
+    font-family: "Quicksand";
     font-size: 1.5em;
     margin-left: 1em;
 }
@@ -209,7 +209,7 @@ input[type=number] {
 }
 
 .botao {
-    font-family: "Quicksand"
+    font-family: "Quicksand";
     font-size: 12px;
 }
 

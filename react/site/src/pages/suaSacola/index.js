@@ -6,10 +6,10 @@ import Rodape from "../../components/Common/rodape/redape";
 import { useState } from "react";
 import Cookie from "js-cookie";
 import { useEffect } from "react";
+import CarrinhoItem from './carrinhoitem/item'
 
-// import Contador from "./Ct/contador";
 
-export default function SuaSacola() {
+export default function SuaSacola(props) {
   const [livro, setLivro] = useState([]);
 
   useEffect(carregarCarrinho, []);
@@ -19,27 +19,27 @@ export default function SuaSacola() {
     carrinho = carrinho !== undefined ? JSON.parse(carrinho) : [];
     setLivro(carrinho);
   }
-  function removerSacola() {
-    var cookies = document.cookie.split(";");
+ 
+  function removerProduto(id) {
+    let carrinho = livro.filter(item => item.id !== id);
+    
+    Cookie.set('carrinho', JSON.stringify(carrinho));
 
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i];
-      var eqPos = cookie.indexOf("=");
-      var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
-
-    carregarCarrinho();
+    setLivro([...carrinho]);
   }
 
-  /*function marcarTodos(marcar){
-    var itens = document.querySelectorAll("input");
 
-    var i = 0;
-    for(i=0; i<itens.length;i++){
-        itens[i].checked = marcar;
-    }
-}*/
+  function alterarProduto(id, qtd) {
+     let produtoAlterado = livro.filter(item => item.id === id)[0];
+     produtoAlterado.qtd = qtd;
+     Cookie.set('carrinho', JSON.stringify(livro));
+  }
+
+
+
+   
+
+   
 
   return (
     <Container>
@@ -58,50 +58,15 @@ export default function SuaSacola() {
         <div className="container-cont">
           <div className="itens">
             <div className="tabela">
-              <table>
-                <thead>
-                  <tr>
-                    <th className="2">Produto</th>
-                    <th className="3">Preço</th>
-                    <th className="4">Quantidade</th>
-                    <th className="5">Total</th>
-                    <th className="espaco"> </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {livro.map((item) => (
-                    <tr>
-                      <td>
-                        <img src="" alt="" />{" "}
-                        <label>
-                          <img
-                            src={item.ds_imagen}
-                            alt=""
-                            style={{ height: "100px", width: "100" }}
-                          />
-                        </label>
-                      </td>
-                      <td>
-                        <label>R$ {item.vl_para}</label>
-                      </td>
-                      <td>
-                        <button className="bimg">+</button>1
-                        <button className="bimg">-</button>
-                      </td>
-                      <td>
-                        <label>{item.vl_para}</label>
-                      </td>
-                    </tr>
+              
+            {livro.map((item) => (
+              
+                    <CarrinhoItem key={item.id_livro} 
+                    info={item} 
+                    onUpdate={alterarProduto} 
+                    onRemove={removerProduto} />
                   ))}
-                </tbody>
-              </table>
-              <div class="excluir">
-                              
-                              <div onClick={removerSacola} class="tllivro2">
-                                  Excluir todos os itens da sua sacola       
-                              
-                              </div>
-                      </div>
+            
                      
             </div>
           </div>

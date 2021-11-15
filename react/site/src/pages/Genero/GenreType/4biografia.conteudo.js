@@ -50,7 +50,7 @@ export default function GenerosTerror() {
                 <div class="box-informacoes-livros">
                   <div class="nome-livro-desconto">{item.nm_livro}</div>
                   <div class="autor-desconto">{item.ds_autora}</div>
-                  <div class="preco-descontotr">R$ {item.vl_de}</div>
+                  <div class="preco-descontotr">R$ {item.vl_para}</div>
                 </div>
               </div>
             </Link>

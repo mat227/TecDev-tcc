@@ -136,8 +136,9 @@ flex-direction:row;
   
   .img-livro-queridinha{
     padding-top: 15px;
-    padding-left: 10px;
-  }
+    display: flex;
+    justify-content: center;
+    }
   
   
   
