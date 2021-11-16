@@ -1,5 +1,5 @@
 import { Container } from "./styled"
-import ParteCima from "../../components/Common/parteCima/componente";
+import ParteCima from "../../components/Common/parteCimaADM/index";
 import Rodape from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi"; 
 import Api from "../../service/apiAdm";
