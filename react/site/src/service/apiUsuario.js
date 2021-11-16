@@ -33,7 +33,7 @@ async efetuarpedido(idCliente, pedidos){
     let livro = "";
     let  data = {
         idc : idCliente,
-        situacao : "Transportadora",
+        situacao : "Analisando",
         idp :gambiarra
        
     }

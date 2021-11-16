@@ -1,18 +1,32 @@
 import { ContainerHome } from "./styled"
 import { useState, useEffect } from 'react'
 import Partecima from "../../components/Common/parteCima/componente"
-
-
 import { Link } from "react-router-dom"
 import Rodape from "../../components/Common/rodape/redape"
 import Trio from "../../components/Common/trio/trio"
 import Api from '../../service/apiAdm'
-const api = new Api();
+import { useHistory } from 'react-router-dom';
+import Cookies from "js-cookie"
 
+function lerUsuarioLogado(navigation) {
+  let logado = Cookies.get('usuario-logado');
+  if (logado == null) {
+    navigation.push('/');
+    return null;
+  }
+  let usuarioLogado = JSON.parse(logado);
+  return usuarioLogado;
+}
+
+const api = new Api();
 
 export default function Homepage() {
   const [livro, setLivro] = useState([]);
-
+  const nav = useHistory();
+  const usuarioLogado = lerUsuarioLogado( nav) || {};
+  console.log(usuarioLogado);
+  const [info] = useState(JSON.parse(Cookies.get('usuario-logado')));
+  console.log(info)
 
   async function listar() {
 

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import Api from '../../service/apiLogin'
 import { useHistory } from 'react-router-dom';
 
-import Cookie from 'js-cookie';
+import Cookies from 'js-cookie';
 
 
 const api = new Api();
@@ -26,7 +26,7 @@ export default function Conteudo() {
         if (resp.erro) {
             toast.error(`${resp.erro}`);
         } else {
-            Cookie.set('usuario-logado', JSON.stringify(resp));
+            Cookies.set('usuario-logado', JSON.stringify(resp));
             navig.push('/homepage');
             
         }
@@ -39,7 +39,7 @@ export default function Conteudo() {
         if (resp.erro) {
             toast.error(`${resp.erro}`);
         } else {
-            Cookie.set('usuario-logado', JSON.stringify(resp));
+            Cookies.set('usuario-logado', JSON.stringify(resp));
             navig.push('/adm_livro');
         }
 

@@ -109,14 +109,17 @@ app.put('/altdadosA/:id', async (req, resp) =>{
 app.post('/addpedido', async (req, resp) => {
     try{
         let {idc, situacao , idp } = req.body;
-        
+        if(idc === null || idc === undefined || idc === "" || idc <= 0)
+            return resp.send({erro: "o cliente nao foi localizado, faça um login"})
+        if(idp === null || idp === undefined || idp === [])
+            return resp.send({erro: "onao da para fazer um pedido sem um livro "});
+
         let pedido = await db.infoc_tdv_pedido.create({id_cliente : idc, nr_pedido : Math.floor(Math.random() * 1000) , ds_situacao_ped : situacao, dt_pedido : new Date()});
-        
         for(let pi of idp){
             const { qtd ,livro} = pi;
             let checklivro =  await  db.infoc_tdv_livro.findOne({where : {id_livro : livro }});
             if(checklivro === null)
-                return response.send("Um dos livros não consta na nossa base de dados");
+                return response.send({erro: "Um dos livros não consta na nossa base de dados"});
             let pedido_item = await db.infoc_tdv_pedido_item.create({id_pedido : pedido.id_pedido , qtd_itens : qtd , id_livro : livro });
         }
         console.log("foi efetuado");
