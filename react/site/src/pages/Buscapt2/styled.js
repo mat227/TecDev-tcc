@@ -63,6 +63,8 @@ margin-right:6em
 }
 
 .img-livro-queridinha{
+  padding-top: 15px;
+
 display:flex;
 justify-content: center;
 }
