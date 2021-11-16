@@ -20,7 +20,7 @@ function lerUsuarioLogado(navigation) {
 }
 
 
-export default function Pagamentos() {
+export default function Pagamentos(props) {
   const navig = useHistory();
   const usuarioLogado = lerUsuarioLogado(navig) || {};
   console.log(usuarioLogado);
@@ -98,10 +98,7 @@ export default function Pagamentos() {
         </div>
         <div className="box-big">
           <aside>
-            <div className="formas">
-              <img src="/assets/images/pixpix.svg" alt="" />
-              <Link to="/pagamento_pix">Pix</Link>
-            </div>
+           
             <div
               className="formas"
               style={{
@@ -229,21 +226,21 @@ export default function Pagamentos() {
                         : item.nm_livro}
                       :
                     </option>
-                    <option value="ADS">1x de R$ {item.vl_para}</option>
-                    <option value="ADS">
-                      2x de R$ {item.vl_para.substring(0, 2) / 2}
+                    <option value="ADS">1x de R$ {item.qtd*item.vl_para}</option>
+                    <option value="ADS" value={parcelas}>
+                      2x de R$ {item.qtd*item.vl_para.substring(0, 2) / 2}
                     </option>
                     <option value="ADS">
-                      3x de R$ {item.vl_para.substring(0, 2) / 3}
+                      3x de R$ {item.qtd*item.vl_para.substring(0, 2) / 3}
                     </option>
                     <option value="ADS">
-                      4x de R$ {item.vl_para.substring(0, 2) / 4}
+                      4x de R$ {item.qtd*item.vl_para.substring(0, 2) / 4}
                     </option>
                     <option value="ADS">
-                      5x de R$ {item.vl_para.substring(0, 2) / 5}
+                      5x de R$ {item.qtd*item.vl_para.substring(0, 2) / 5}
                     </option>
                     <option value="ADS">
-                      6x de R$ {item.vl_para.substring(0, 2) / 6}
+                      6x de R$ {item.qtd*item.vl_para.substring(0, 2) / 6}
                     </option>
                   </select>
                 ))}
@@ -271,7 +268,7 @@ export default function Pagamentos() {
               Voltar
             </button>
           </Link>
-          <button onClick={() => cadastrarCartao()} class="btn btn-primary">
+          <button onClick={cadastrarCartao} class="btn btn-primary">
             Finalizar pedido
           </button>
         </div>

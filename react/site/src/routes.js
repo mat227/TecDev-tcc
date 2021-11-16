@@ -25,7 +25,6 @@ import Cadastro from './pages/Cadastro/cadas.js'
 import Cupons from './pages/Cupons/cup'
 import Pagamentos from './pages/Pagamento/pag.conteudo'
 import CompraRealizada from './pages/CompraRealizada/comp.conteudo'
-import Pix from './pages/Pagamento/pix/pix.conteudo'
 import SuaInfo from './pages/suaInfo'
 import SeusPedidos from './pages/SeusPedidos/pedi.conteudo'
 import Perfilusu from './pages/perfil/index'
@@ -69,7 +68,6 @@ export default function Routes() {
                 <Route path="/cadastro" exact={true} component={Cadastro} />
                 <Route path="/cupons" exact={true} component={Cupons} />
                 <Route path="/pagamento" exact={true} component={Pagamentos} />
-                <Route path="/pagamento_pix" exact={true} component={Pix} />
                 <Route path="/compra_realizada" exact={true} component={CompraRealizada} /> 
                 <Route path="/perfil_adm" exact={true} component={PerfilADM} /> 
                 <Route path="/perfil_adm_c" exact={true} component={Adm_c} />
