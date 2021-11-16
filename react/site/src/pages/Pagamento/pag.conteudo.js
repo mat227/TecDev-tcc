@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 import Cookie from "js-cookie";
 import Api from "../../service/apiUsuario";
 const api = new Api();
+
 function lerUsuarioLogado(navigation) {
   let logado = Cookie.get("usuario-logado");
   if (logado == null) {
@@ -23,9 +24,9 @@ function lerUsuarioLogado(navigation) {
 export default function Pagamentos() {
   const navig = useHistory();
   const usuarioLogado = lerUsuarioLogado(navig) || {};
-  console.log(usuarioLogado);
+  //console.log(usuarioLogado);
   const [info] = useState(JSON.parse(Cookie.get("usuario-logado")));
-  console.log(info);
+  //console.log(info);
 
   //zone test
   // const [pedidos] = useState([]);
@@ -50,10 +51,12 @@ export default function Pagamentos() {
     carrinho = carrinho !== undefined ? JSON.parse(carrinho) : [];
     setLivro(carrinho);
   }
-  console.log(livro);
+  //console.log(livro);
+  console.log(info.id_cliente);
   const finalizarPedido = async () => {
     var data = await api.efetuarpedido(info.id_cliente, data1);
-    console.log(info.id_cliente);
+    alert("pedido realizado");
+    
   };
   async function cadastrarCartao() {
     let r = await api.cadastrarCartao(
@@ -76,8 +79,8 @@ export default function Pagamentos() {
   const data1 = livro.map((x) => {
     return x;
   });
-  console.log("-------------------");
-  console.log(data1);
+  //console.log("-------------------");
+  //console.log(data1);
 
   return (
     <ContainerPag>

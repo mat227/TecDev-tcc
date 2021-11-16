@@ -118,7 +118,8 @@ app.post('/addpedido', async (req, resp) => {
                 return response.send("Um dos livros não consta na nossa base de dados");
             let pedido_item = await db.infoc_tdv_pedido_item.create({id_pedido : pedido.id_pedido , qtd_itens : qtd , id_livro : livro });
         }
-        resp.send(pedido);
+        console.log("foi efetuado");
+        resp.send("efetuado");
     }catch(e){
         resp.send({erro : e.toString()});
     }
