@@ -217,6 +217,11 @@ padding-right:5em;
     margin:0px;
 
 }
+a, a:link, a:visited {
+    text-decoration: none;
+    color: white;
+
+  }
     
 `
 
