@@ -109,7 +109,7 @@ font-size: 50px;
 
 
 button {
-  font-weight: 700;
+  font-weight: 710;
   
   color: #fff;
   background: #2FAEC8;
