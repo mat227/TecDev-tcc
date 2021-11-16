@@ -12,51 +12,7 @@ import Cookie from 'js-cookie';
 export default function DescConteudo(props) {
 
     const [livro] = useState(props.location.state);
-    const navigation = useHistory();
-
-    console.log(livro);
-
-    function comprar() {
-        
-        let carrinho = Cookie.get('carrinho');
-        carrinho = carrinho !== undefined 
-                    ? JSON.parse(carrinho) 
-                    : [];
-    
-        
-       
-        if (carrinho.some(item => item.id_livro === livro.id_livro) === false)
-            carrinho.push({...livro, qtd: 1 });
-     
-        
-        Cookie.set('carrinho', JSON.stringify(carrinho));
-        
-        
-        navigation.push('/login');
-      }
-    
-      function favorito() {
-        
-        let favorito = Cookie.get('favorito');
-        favorito = favorito !== undefined 
-                    ? JSON.parse(favorito) 
-                    : [];
-    
-        
-       
-        if (favorito.some(item => item.id_livro === item.id) === false)
-        favorito.push({...livro, qtd: 1 });
-     
-        
-        
-        
-        Cookie.set('favorito', JSON.stringify(favorito));
-        
-        
-        navigation.push('/login');
-      }
-
-  
+   
     return (
         <ContainerDesc>
             <ParteCima2/>
@@ -64,14 +20,16 @@ export default function DescConteudo(props) {
             <div class="box-filha">
                 <div class="livro"><img src={livro.ds_imagen}alt=""/></div>
                 <div class="box1">
-                    <div class="titulo">{livro.nm_livro}<img onClick={favorito} src="./assets/images/favorito.svg"  alt="" style={{height: "2em"}}/></div>
+                    <Link to="/login">
+                    <div class="titulo">{livro.nm_livro}<img  src="./assets/images/favorito.svg"  alt="" style={{height: "2em"}}/></div>
+                   </Link>
                     <div class="pagamentos">
                         <div class="preco">R${livro.vl_para}</div>
                         <div class="item"><img src="/assets/images/boleto.svg" alt="boleto" class="boleto"/> <p><u>Boleto Bancário:</u>{livro.vl_para} <br/> Em até 2x de R$ {livro.vl_para/2}</p></div>
                         <div class="item"><img src="/assets/images/cartao.svg" alt="cartao" class="cartao"/> <p><u>Cartão de Crédito</u> {livro.vl_para} <br/> Em até 2x de R$ {livro.vl_para/2}</p></div>
                     </div>
                     <div class="botoes">
-                      <Link to="/login"><button onClick={comprar}>ADICIONAR NA SACOLA</button></Link>
+                      <Link to="/login"><button >ADICIONAR NA SACOLA</button></Link>
                     </div>
                     <hr/>
                     <div class="box2">
