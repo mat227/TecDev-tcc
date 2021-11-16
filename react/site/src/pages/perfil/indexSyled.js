@@ -31,6 +31,17 @@ const Container = styled.div`
             cursor : pointer;
             
         }
+        .btadm{
+            border: #1FB5CD;
+            background: #1FB5CD;
+            padding: 0.5em;
+            color: white;
+            width: 5vw;
+            height: 3em;
+            text-align: center; 
+            margin-top: 1em;     
+            border-radius: 0.3em;
+        }
         .test1{
             margin : 1em;
         }

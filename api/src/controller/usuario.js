@@ -35,6 +35,7 @@ app.post('/addpagamento', async (req, resp) => {
             return resp.send({erro: 'O campo CVV é obrigatório'})
         }
         let r = await db.infoc_tdv_forma_pagamento.create({
+            id_cliente:cont.id_cliente,
             nr_cartao:usuParam.nrcartao,
             nm_titular_cartao: usuParam.titular,
             nm_sobrenome_cartao: usuParam.sobrenome,
@@ -63,7 +64,7 @@ app.get('/pagamento', async (req, resp) => {
 app.get('/suaInfo/:id', async (req, resp)=>{
     try{
         let id= req.params.id
-        let cont = await db.infoc_tdv_cliente.findAll({where : {id_cliente :id}, include: {model: db.infoc_tdv_endereco, as :'infoc_tdv_enderecos'}});
+        const cont = await db.infoc_tdv_cliente.findAll({where : {id_cliente :id}, include: {model: db.infoc_tdv_endereco, as :'infoc_tdv_enderecos'}});
         resp.send(cont);
     }catch(e){
         resp.send({erro: e.toString()});
