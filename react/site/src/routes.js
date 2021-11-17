@@ -2,6 +2,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
 import partecima2 from './components/Common/partecima2/cima'
+
+
 import Trio from './components/Common/trio/trio'
 import Login from './pages/login/conteudo'
 
@@ -9,6 +11,7 @@ import Redefinir from './pages/redefinir/esq.conteudo'
 import Reset from './pages/redefinir/reset/reset.conteudo'
 
 import Responsivo from  './components/Common/partecima2/cima'
+import Rodape from "./components/Common/rodape/redape";
 
 import Descontos from './pages/Desconto/desconto'
 import Descricoes from './pages/descricao/desc.conteudo'
@@ -80,6 +83,8 @@ export default function Routes() {
 
                 <Route path="/partecima2" exact={true} component={partecima2} />
                 <Route path="/trio" exact={true} component={Trio} />
+
+                <Route path="/rodape" exact={true} component={Rodape} />
             </Switch>
         </BrowserRouter>
     )
