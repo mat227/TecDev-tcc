@@ -35,7 +35,6 @@ app.post('/addpagamento', async (req, resp) => {
             return resp.send({erro: 'O campo CVV é obrigatório'})
         }
         let r = await db.infoc_tdv_forma_pagamento.create({
-            id_cliente:cont.id_cliente,
             nr_cartao:usuParam.nrcartao,
             nm_titular_cartao: usuParam.titular,
             nm_sobrenome_cartao: usuParam.sobrenome,
