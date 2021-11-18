@@ -1,75 +1,55 @@
-import { ContainerPartecima } from './styled'
+/* eslint-disable jsx-a11y/accessible-emoji */
+import React, { useState, useEffect } from "react";
+// import { CSSTransition } from "react-transition-group";
+import { ContainerPartecima } from './styled';
+import { Responsivo } from "./styled";
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router'
-import { useState } from 'react';
 
 
 
- 
-export default function ParteCima(props) {
-    const [search, setSearch] = useState();
-    const navig = useHistory();
+import Navbar from './Navbar';
+import SmallScreensNavbar from './SmallScreensNavbar';
+import { useWindowWidthAndHeight } from './CustomHooks';
 
-    function keyPress(event) {
 
-        if(event.charCode === 13) {
-            navig.push(`/busca?search=${search}`);
+export default function ParteCima2(props) {  
+    
+        const [search, setSearch] = useState();
+        const navig = useHistory();
+    
+        function keyPress(event) {
+    
+            if(event.charCode === 13) {
+                navig.push(`/busca?search=${search}`);
+            }
         }
-    }
+        
+    const [width, height] = useWindowWidthAndHeight();
+    return(
+        <ContainerPartecima>
+        
+          <header>
+              <div className="header-inner">
 
-    return (
-            <ContainerPartecima>
-            <div class="hp1-buscap">
-           <Link to="/homepage"> <div class="hp1-logo">
-                <img src="/assets/images/nice library png 1.svg" alt=""/>
-                <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
+                  <Link to="/"> 
+                      <div class="hp1-logo">
+                        <img src="/assets/images/nice library png 1.svg" alt=""/>
+                      </div>
+                  </Link>
 
-            </div></Link>
-
-            <div class="hp1-busca">
-                <div class="divBusca">
-                    <input type="text" id="txtBusca" placeholder="Buscar..."  value={search} onChange={ e => setSearch(e.target.value) } onKeyPress={keyPress} />
-                    <button><img src="/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
-                </div>
-            </div>
-
-            <div class="hp1-seus"> 
-            <Link to="/suasacola">
-              <div class="menu-item">
-                    <div class="imagem">
-                    <img src="/assets/images/bag.svg" alt="" />
-                    </div>
-                    <div class="descricao">
-                    <p>Sua sacola</p>
-                    </div>
-                </div>
-                </Link>
-                <Link to="/favoritos">
-                <div class="menu-item">
-                    <div class="imagem">
-                    <img src="/assets/images/coracaoo.svg" alt="" />
-                    </div>
-                    <div class="descricao">
-                    <p>Seus Favoritos</p>
-                    </div>
-                </div>
-                </Link>
-                <Link to="/perfil">
-                <div class="menu-item">
-                    <div class="imagem">
-                    <img
-                        src="/assets/images/profilee (1).svg"
-                        alt=""
-                        style={{height: 2.8 + "em"}}
+                  { width > 1000 ?
+                    <Navbar navClass="nav-big"
+                      linkClassName="nav-big-link"/>
+                    :
+                    <SmallScreensNavbar navClass="nav-small"
+                      linkClassName = "nav-small-link"
                     />
-                    </div>
-                    <div class="descricao">
-                    <p>Minha Conta</p>
-                    </div>
-                </div>
-                </Link>
-            </div>
-        </div>
-            </ContainerPartecima>
+                  } 
+              </div>
+          </header>
+
+        </ContainerPartecima>
     )
+
 }

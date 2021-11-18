@@ -12,7 +12,7 @@ app.post('/addpagamento', async (req, resp) => {
     try {
         let usuParam = req.body;
 
-        let u = await db.infoc_tdv_forma_pagamento.findOne({ where: {  nr_cartao: usuParam.nrcartao, nm_titular_cartao: usuParam.titular ,nm_sobrenome_cartao:usuParam.sobrenome , dt_vencimento:usuParam.vencimento, nr_parcelas: usuParam.parcelas, ds_cvv: usuParam.cvv} });
+        let u = await db.infoc_tdv_forma_pagamento.findOne({ where: {  nr_cartao: usuParam.nrcartao, nm_titular_cartao: usuParam.titular ,nm_sobrenome_cartao:usuParam.sobrenome , dt_vencimento:usuParam.vencimento, ds_cvv: usuParam.cvv} });
         if( u == "") {
             return resp.send({erro: 'Todos os campo são obrigatórios'})
         }
@@ -28,19 +28,18 @@ app.post('/addpagamento', async (req, resp) => {
         if( usuParam.vencimento == "") {
             return resp.send({erro: 'O campo Vencimento é obrigatório'})
         }
-        if( usuParam.parcela == "") {
-            return resp.send({erro: 'O campo Parcela é obrigatório'})
-        }
+    //    if( usuParam.parcela == "") {
+      //      return resp.send({erro: 'O campo Parcela é obrigatório'})
+      //  }
         if( usuParam.cvv == "") {
             return resp.send({erro: 'O campo CVV é obrigatório'})
         }
         let r = await db.infoc_tdv_forma_pagamento.create({
-            id_cliente:cont.id_cliente,
             nr_cartao:usuParam.nrcartao,
             nm_titular_cartao: usuParam.titular,
             nm_sobrenome_cartao: usuParam.sobrenome,
             dt_vencimento:usuParam.vencimento,
-            nr_parcelas:usuParam.parcelas,
+         //   nr_parcelas:usuParam.parcelas,
             ds_cvv:usuParam.cvv
           
         })

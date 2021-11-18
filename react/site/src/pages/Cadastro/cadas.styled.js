@@ -109,7 +109,7 @@ font-size: 50px;
 
 
 button {
-  font-weight: 700;
+  font-weight: 710;
   
   color: #fff;
   background: #2FAEC8;
@@ -139,7 +139,7 @@ button:hover {
 
   .titulo{
     margin-left: -3em;
-    font-size: 2em;
+    font-size: 2.1em;
   }
 
   .img-logo img{

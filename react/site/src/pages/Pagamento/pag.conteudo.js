@@ -67,9 +67,9 @@ export default function Pagamentos(props) {
       parcelas,
       cvv
     );
-     finalizarPedido()
     if (r.erro) toast.error(`${r.erro}`);
     else {
+      finalizarPedido()
       toast.success("✔️ Cartão cadastrado com sucesso!");
       navig.push("/compra_realizada");
     }
@@ -203,8 +203,8 @@ export default function Pagamentos(props) {
                   </label>
                   <br />
                   <input
-                    value={cvv}
-                    onChange={(r) => setCvv(r.target.value)}
+                  value={cvv}
+                  onChange={(r) => setCvv(r.target.value)}
                     type="text"
                     id="right"
                     required="required"
@@ -214,50 +214,7 @@ export default function Pagamentos(props) {
                   <small>Insira somente números!</small>
                 </div>
               </div>
-              <div className="form-group1" style={{ width: "91.5%" }}>
-                {livro.map((item, i) => (
-                  <select
-                    value={parcelas}
-                    onChange={(r) => setParcelas(r.target.value)}
-                    name="parcela"
-                    id="parcela"
-                  >
-                    <option value="" selected="">
-                      Selecionar parcelas para a compra do livro
-                      {item.nm_livro != null && item.nm_livro.length >= 20
-                        ? item.nm_livro.substr(0, 20) + "..."
-                        : item.nm_livro}
-                      :
-                    </option>
-                    <option value="ADS">1x de R$ {item.qtd*item.vl_para}</option>
-                    <option value="ADS" value={parcelas}>
-                      2x de R$ {item.qtd*item.vl_para.substring(0, 2) / 2}
-                    </option>
-                    <option value="ADS">
-                      3x de R$ {item.qtd*item.vl_para.substring(0, 2) / 3}
-                    </option>
-                    <option value="ADS">
-                      4x de R$ {item.qtd*item.vl_para.substring(0, 2) / 4}
-                    </option>
-                    <option value="ADS">
-                      5x de R$ {item.qtd*item.vl_para.substring(0, 2) / 5}
-                    </option>
-                    <option value="ADS">
-                      6x de R$ {item.qtd*item.vl_para.substring(0, 2) / 6}
-                    </option>
-                  </select>
-                ))}
-                <div
-                  style={{
-                    marginRight: "auto",
-                    marginLeft: 0.3 + "em",
-                    fontSize: 1.2 + "em",
-                    marginBottom: 1 + "em",
-                  }}
-                >
-                  *
-                </div>
-              </div>
+         
             </form>
           </div>
         </div>

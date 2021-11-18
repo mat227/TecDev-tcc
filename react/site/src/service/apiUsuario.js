@@ -51,7 +51,7 @@ async cadastrarCartao(nrcartao, titular, sobrenome, vencimento, parcelas, cvv) {
         titular: titular,
         sobrenome: sobrenome,
         vencimento: vencimento,
-        parcelas: parcelas,
+     //   parcelas: parcelas,
         cvv: cvv
         
     }
