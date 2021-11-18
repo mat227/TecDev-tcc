@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create ({
-    //baseURL: 'http://localhost:3030/login'
-    baseURL: 'https://tecdevtcc.herokuapp.com/login'
+    baseURL: 'http://localhost:3030/login'
+   // baseURL: 'https://tecdevtcc.herokuapp.com/login'
 })
 
 export default class Api {
@@ -15,8 +15,6 @@ async loginn(email, senha) {
 
 async loginadm(email, senha) {
     let a = {email,senha}
-    console.log(email)
-    console.log(senha)
     let r = await api.post(`/loginadm`, a);
     return r.data;
 }

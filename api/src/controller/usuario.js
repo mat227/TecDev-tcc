@@ -12,7 +12,7 @@ app.post('/addpagamento', async (req, resp) => {
     try {
         let usuParam = req.body;
 
-        let u = await db.infoc_tdv_forma_pagamento.findOne({ where: {  nr_cartao: usuParam.nrcartao, nm_titular_cartao: usuParam.titular ,nm_sobrenome_cartao:usuParam.sobrenome , dt_vencimento:usuParam.vencimento, nr_parcelas: usuParam.parcelas, ds_cvv: usuParam.cvv} });
+        let u = await db.infoc_tdv_forma_pagamento.findOne({ where: {  nr_cartao: usuParam.nrcartao, nm_titular_cartao: usuParam.titular ,nm_sobrenome_cartao:usuParam.sobrenome , dt_vencimento:usuParam.vencimento, ds_cvv: usuParam.cvv} });
         if( u == "") {
             return resp.send({erro: 'Todos os campo são obrigatórios'})
         }
@@ -28,19 +28,18 @@ app.post('/addpagamento', async (req, resp) => {
         if( usuParam.vencimento == "") {
             return resp.send({erro: 'O campo Vencimento é obrigatório'})
         }
-        if( usuParam.parcela == "") {
-            return resp.send({erro: 'O campo Parcela é obrigatório'})
-        }
+    //    if( usuParam.parcela == "") {
+      //      return resp.send({erro: 'O campo Parcela é obrigatório'})
+      //  }
         if( usuParam.cvv == "") {
             return resp.send({erro: 'O campo CVV é obrigatório'})
         }
         let r = await db.infoc_tdv_forma_pagamento.create({
-            id_cliente:cont.id_cliente,
             nr_cartao:usuParam.nrcartao,
             nm_titular_cartao: usuParam.titular,
             nm_sobrenome_cartao: usuParam.sobrenome,
             dt_vencimento:usuParam.vencimento,
-            nr_parcelas:usuParam.parcelas,
+         //   nr_parcelas:usuParam.parcelas,
             ds_cvv:usuParam.cvv
           
         })
@@ -127,6 +126,19 @@ app.post('/addpedido', async (req, resp) => {
     }catch(e){
         resp.send({erro : e.toString()});
     }
+})
+//  Meus pedidos 
+
+app.get('/meuspedidos/:id', async (req, resp) =>{
+   try{
+        let data = await db.infoc_tdv_pedido.findAll({where :{ id_cliente : req.params.id} ,
+            include: {model: db.infoc_tdv_pedido_item, as :'infoc_tdv_pedido_items',
+            include : {model : db.infoc_tdv_livro , as : 'id_livro_infoc_tdv_livro'}}
+    })
+    resp.send(data); 
+   }catch(e){
+       resp.send({erro :e.toString()});
+   }
 })
 function getFields(){
     return [
