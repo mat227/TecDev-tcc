@@ -139,7 +139,7 @@ button:hover {
 
   .titulo{
     margin-left: -3em;
-    font-size: 2em;
+    font-size: 2.1em;
   }
 
   .img-logo img{
