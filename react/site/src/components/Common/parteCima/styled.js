@@ -1,100 +1,104 @@
-
 import styled from 'styled-components'
 
 
-const ContainerPartecima = styled.div`
+const ContainerPartecima= styled.div`
 
-header{
-  
-  top: 0;
-  height: 70px;
-  background-color: rgb(197, 178, 178);
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  box-shadow: 1px 1px 1px 1px rgba(116, 110, 110, 0.199);
-  background-image: url("./assets/images/image 18.svg");
-}
 
-.header-inner{
-  width: 90%;
-  display: flex;
-  align-items: center !important;
-  justify-content: space-between;
+    .hp1-logo{
+        display: flex;
+        padding-left:3em ;
+    }
+    
+    .hp1-nome{
+      padding-top: 0.7em;
+    }
+    
+    .hp1-buscap{
+        display: flex;
+        flex-direction: row;
+        background-color: #12172B;
+        align-items: center;
+        height:15vh;
 
-}
+        justify-content: space-between;
+    }
 
-.hamburger-btn{
-  font-size: 1.3rem;
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 35px;
-  right: 30px;
-  outline: none;
-  background-color: #ddebf1;
-  color: black;
-}
+    .hp1-seus{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-.addTransiton{
-  transform: translateX(170px);
-  transition: transform 0.5s ease-in-out;
-}
+        margin-right: 1em;
+        margin-top: 0.2em;;
+    }
+    
+    
 
-.removeTransition{
-  transform: translateX(20px);
-  transition: transform 0.5s ease-in-out;
-}
+    .divBusca input{
+      border-top: 0px solid;
+      border-left: 0px solid;
+      border-right: 0px solid;
+      border-bottom: 0px solid;
+      outline: none;
+      color:white;
+    }
 
-#sidebar-list{
-  background-color: #ddebf1;
-  height: 90vh;
-  width: 170px;
-  position: absolute;
-  z-index: 2000;
-  right: 0;
-  top: 0;
-  margin-top: 70px;
-}
+    #txtBusca::placeholder{
+        color: white;
+        opacity: 50%;
+    }
+   
+    .divBusca{
+        display: flex;
+        flex-direction: row;
+        background-color:#84D1DD;
+        border:solid 1px;
+        border-radius:10px;
+        width:500px;
+        font-family: "Rowdies";
+        justify-content: space-between;
+      }
+      
+      .divBusca button{
+        margin-top: 0.2em;
+        border: none;
+        background-color: #84D1DD;
+        border-radius: 20px;
+        cursor: pointer;
+      }
 
-.nav-big{
-  list-style: none;
-  display: flex;
-  font-weight: bold;
+     
+      #txtBusca{
+        float:left;
+        background-color:transparent;
+        padding-left:10px;
+        font-style:italic;
+        font-size:14px;
+        border:none;
+        height:32px;
+        font-family: "Rowdies";
+        font-weight: 400;
+        width: 10em;
+      }
 
-  align-items: center;
-}
 
-.nav-big-link{
- cursor: pointer;
- color: white;
- text-decoration: none !important;
- margin-left: 3em;
- color: #30B9D1;
- margin: 1.5em;
-}
-
-.nav-small{
+.menu-item {
   display: flex;
   flex-direction: column;
+
   text-align: center;
-  justify-content: space-around;
-  margin: auto;
-  height: 40%;
-  margin-top: 50px;
-  width: 80%;
+
+  margin: 1em 0.5em;
 }
 
-.nav-small-link{
-  cursor: pointer;
-  color: #119fdc;
-  padding-bottom: 5px;
+.descricao {
+  font-family: "Quicksand";
+  color: white;
+  font-size: 0.8em;
 }
 
-.span {
-  color: black;
+a:Link, a:visited {
+  text-decoration: none;
 }
- 
 `
  export { ContainerPartecima }

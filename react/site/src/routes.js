@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
 import Partecima2 from './components/Common/partecima2/cima'
-import ParteCima from './components/Common/parteCima/componente'
+import ParteCima from './components/Common/index.js'
 
 
 import Trio from './components/Common/trio/trio'
