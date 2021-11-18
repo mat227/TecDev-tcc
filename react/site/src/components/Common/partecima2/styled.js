@@ -2,10 +2,10 @@
 import styled from 'styled-components'
 
 
-const Responsivo = styled.div`
+const ContainerPartecima = styled.div`
 
 header{
-  position: fixed;
+ 
   top: 0;
   height: 70px;
   background-color: rgb(197, 178, 178);
@@ -14,7 +14,7 @@ header{
   align-items: flex-end;
   justify-content: center;
   box-shadow: 1px 1px 1px 1px rgba(116, 110, 110, 0.199);
-  background-image: url("./assets/images/image 19.svg");
+  background-image: url("./assets/images/image 18.svg");
 }
 
 .header-inner{
@@ -97,4 +97,4 @@ header{
 }
  
 `
- export { Responsivo }
+ export { ContainerPartecima }

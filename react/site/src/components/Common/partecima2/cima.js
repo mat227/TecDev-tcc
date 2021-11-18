@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useEffect } from "react";
 // import { CSSTransition } from "react-transition-group";
+import { ContainerPartecima } from './styled';
 import { Responsivo } from "./styled";
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router'
@@ -26,7 +27,7 @@ export default function ParteCima2(props) {
         
     const [width, height] = useWindowWidthAndHeight();
     return(
-        <Responsivo>
+        <ContainerPartecima>
         
           <header>
               <div className="header-inner">
@@ -48,7 +49,7 @@ export default function ParteCima2(props) {
               </div>
           </header>
 
-        </Responsivo>
+        </ContainerPartecima>
     )
 
 }

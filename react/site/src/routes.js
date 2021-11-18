@@ -1,7 +1,8 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 
-import partecima2 from './components/Common/partecima2/cima'
+import Partecima2 from './components/Common/partecima2/cima'
+import ParteCima from './components/Common/parteCima/componente'
 
 
 import Trio from './components/Common/trio/trio'
@@ -10,7 +11,6 @@ import Login from './pages/login/conteudo'
 import Redefinir from './pages/redefinir/esq.conteudo'
 import Reset from './pages/redefinir/reset/reset.conteudo'
 
-import Responsivo from  './components/Common/partecima2/cima'
 import Rodape from "./components/Common/rodape/redape";
 
 import Descontos from './pages/Desconto/desconto'
@@ -51,7 +51,6 @@ export default function Routes() {
                 <Route path="/redefinir" exact={true} component={Redefinir} />                
                 <Route path="/reset" exact={true} component={Reset} />
                 
-                <Route path="/responsivo" exact={true} component={Responsivo} />
                 <Route path="/descricaol" exact={true} component={Descricaoslogin} />
 
                 <Route path="/busca" exact={true} component={Busca} />
@@ -81,10 +80,12 @@ export default function Routes() {
                 <Route path="/perfil" exact={true} component={Perfilusu} /> 
 
 
-                <Route path="/partecima2" exact={true} component={partecima2} />
+                <Route path="/partecima2" exact={true} component={Partecima2} />
                 <Route path="/trio" exact={true} component={Trio} />
 
                 <Route path="/rodape" exact={true} component={Rodape} />
+                <Route path="/ParteCima" exact={true} component={ParteCima}/>
+
             </Switch>
         </BrowserRouter>
     )
