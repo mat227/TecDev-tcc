@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ParteCima from "../../components/Common/parteCima/componente";
+import ParteCima from "../../components/Common/parteCima/index";
 import Rodape from "../../components/Common/rodape/redape";
 import { ContainerPag } from "./pag.styled";
 import { useState, useEffect } from "react";

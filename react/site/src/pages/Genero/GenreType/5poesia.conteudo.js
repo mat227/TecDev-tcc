@@ -1,4 +1,5 @@
-import ParteCima from "../../../components/Common/parteCima/componente";
+import ParteCima from "../../../components/Common/parteCima";
+
 import { ContainerGeneros } from "./type.styled";
 import Rodape from "../../../components/Common/rodape/redape";
 import { Link } from "react-router-dom";

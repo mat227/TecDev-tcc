@@ -1,7 +1,7 @@
 import { Container } from './styled'
 import React, { useEffect, useState } from 'react'
 import Livros from '../Buscapt2/conteudo'
-import Partecima  from "../../components/Common/parteCima/componente"
+import Partecima  from "../../components/Common/parteCima/index"
 import Rodape  from "../../components/Common/rodape/redape"
 
 import Api from '../../service/apiLivro'

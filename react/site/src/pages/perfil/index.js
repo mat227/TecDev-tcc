@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import { useHistory } from "react-router";
 import Rodape from "../../components/Common/rodape/redape.js";
-import ParteCima from "../../components/Common/parteCima/componente.js";
+import ParteCima from "../../components/Common/parteCima/index";
 
 function lerUsuarioLogado(navigation) {
   let logado = Cookies.get("usuario-logado");

@@ -1,6 +1,6 @@
 import { ContainerHome } from "./styled"
 import { useState, useEffect } from 'react'
-import Partecima from "../../components/Common/parteCima/componente"
+import Partecima from "../../components/Common/parteCima/index"
 import { Link } from "react-router-dom"
 import Rodape from "../../components/Common/rodape/redape"
 import Trio from "../../components/Common/trio/trio"
