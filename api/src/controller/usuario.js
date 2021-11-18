@@ -128,6 +128,19 @@ app.post('/addpedido', async (req, resp) => {
         resp.send({erro : e.toString()});
     }
 })
+//  Meus pedidos 
+
+app.get('/meuspedidos/:id', async (req, resp) =>{
+   try{
+        let data = await db.infoc_tdv_pedido.findAll({where :{ id_cliente : req.params.id} ,
+            include: {model: db.infoc_tdv_pedido_item, as :'infoc_tdv_pedido_items',
+            include : {model : db.infoc_tdv_livro , as : 'id_livro_infoc_tdv_livro'}}
+    })
+    resp.send(data); 
+   }catch(e){
+       resp.send({erro :e.toString()});
+   }
+})
 function getFields(){
     return [
         ['id_endereco', 'id']

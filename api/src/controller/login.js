@@ -114,17 +114,14 @@ const app = express.Router();
         return resp.send({erro: 'O campo Senha é obrigatório'})
     }
     
-     let u = await db.infoc_tdv_cliente.findOne({
+     let u = await db.infoc_tdv_cliente.findAll({
          where: {
              ds_email: email.email,
              ds_senha: cryptoSenha
          },
 
      });
-    
-     
-    
-    
+ 
      resp.send(u);
  });
 

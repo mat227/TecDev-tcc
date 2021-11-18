@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create ({
-        //baseURL : 'http://localhost:3030/usuario'
+    //baseURL : 'http://localhost:3030/usuario',
     baseURL: 'https://tecdevtcc.herokuapp.com/usuario'
 })
 
@@ -63,6 +63,10 @@ async cadastrarCartao(nrcartao, titular, sobrenome, vencimento, parcelas, cvv) {
 async cartoes () {
     let r = await api.get(`/pagamento`)
     return r.data;
+}
+async pedidos (id) {
+    let data = await api.get(`/meuspedidos${id}`)
+    return data.data;
 }
 
 

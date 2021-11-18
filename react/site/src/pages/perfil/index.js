@@ -32,7 +32,7 @@ export default function Login() {
 
   const usuarioLogado = lerUsuarioLogado(nav) || {};
   console.log(usuarioLogado);
-  const [info] = useState(JSON.parse(Cookies.get("usuario-logado")));
+  const [info] = useState(JSON.parse(Cookies.get("usuario-logadoc")));
   console.log(info);
 
   const altInfo = async () => {
