@@ -1,7 +1,9 @@
-import { ContainerPartecima } from './styled';
+import { ContainerPartecima } from './styled'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router'
 import { useState } from 'react';
+
+
 
  
 export default function ParteCima(props) {

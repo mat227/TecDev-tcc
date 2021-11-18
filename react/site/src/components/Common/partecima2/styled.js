@@ -1,7 +1,8 @@
-import styled from 'styled-components'
-
+import styled from "styled-components"
 
 const ContainerPartecima= styled.div`
+
+    
 
 
     .hp1-logo{
@@ -29,7 +30,8 @@ const ContainerPartecima= styled.div`
         justify-content: center;
 
         margin-right: 1em;
-        margin-top: 0.2em;;
+        margin-top: 0.2em;
+        align-items: center !important;
     }
     
     
@@ -82,14 +84,14 @@ const ContainerPartecima= styled.div`
       }
 
 
-.menu-item {
-  display: flex;
-  flex-direction: column;
+    .menu-item {
+      display: flex;
+      flex-direction: column;
 
-  text-align: center;
+      text-align: center;
 
-  margin: 1em 0.5em;
-}
+      margin: 2em 0.5em;
+    }
 
 .descricao {
   font-family: "Quicksand";
