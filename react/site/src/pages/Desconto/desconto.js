@@ -1,5 +1,5 @@
 import { ContainerDesconto } from "./styled"
-import Partecima  from "../../components/Common/parteCima/componente"
+import Partecima  from "../../components/Common/parteCima/index"
 import { useState,useEffect } from 'react'
 import { Link } from "react-router-dom"
 import Rodape  from "../../components/Common/rodape/redape"

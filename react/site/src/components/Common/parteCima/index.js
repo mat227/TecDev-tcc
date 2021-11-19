@@ -1,7 +1,9 @@
-import { ContainerPartecima } from './styled';
+import { ContainerPartecima } from './styled'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router'
 import { useState } from 'react';
+
+
 
  
 export default function ParteCima(props) {
@@ -24,6 +26,12 @@ export default function ParteCima(props) {
 
             </div></Link>
 
+            <div class="hp1-busca">
+                <div class="divBusca">
+                    <input type="text" id="txtBusca" placeholder="Buscar..."  value={search} onChange={ e => setSearch(e.target.value) } onKeyPress={keyPress} />
+                    <button><img src="/assets/images/lupa.svg" id="btnBusca" alt="Buscar" /></button>
+                </div>
+            </div>
 
             <div class="hp1-seus"> 
             <Link to="/suasacola">

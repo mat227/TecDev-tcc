@@ -1,5 +1,5 @@
 import { Container } from "./styled";
-import ParteCima from "../../components/Common/parteCima/componente";
+import ParteCima from "../../components/Common/parteCima/index";
 import { Buttom } from "../../components/buttons/indexStyled";
 import { Link } from "react-router-dom";
 import Rodape from "../../components/Common/rodape/redape";

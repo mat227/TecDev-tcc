@@ -1,6 +1,6 @@
 import { ContainerDesc } from "./desc.styled"
 
-import Partecima  from "../../components/Common/parteCima/componente"
+import Partecima  from "../../components/Common/parteCima/index"
 import { useState } from 'react'
 
 import Rodape  from "../../components/Common/rodape/redape"

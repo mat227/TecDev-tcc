@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import  ContainerPartecima  from "../../components/Common/parteCima/componente";
+import  ContainerPartecima  from "../../components/Common/parteCima/index";
 import { ContainerCompra } from "./comp.styled";
 import { useState ,useEffect } from "react";
 import Cookie from "js-cookie";

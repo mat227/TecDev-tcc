@@ -1,5 +1,5 @@
 import { ContainerGeneroP } from "./genre.styled";
-import ParteCima from "../../components/Common/parteCima/componente";
+import ParteCima from "../../components/Common/parteCima/index";
 import Rodape from "../../components/Common/rodape/redape";
 import { Link } from "react-router-dom";
 export default function GeneroPrincipal() { 

@@ -14,7 +14,9 @@ const ContainerRodape = styled.div`
   margin-right: 20em;
 }
 
-img
+img {
+  height: 2em;
+}
 
 `
  export { ContainerRodape }
