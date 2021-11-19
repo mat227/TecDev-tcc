@@ -24,7 +24,7 @@ export default function SeusPedidos() {
 
     const usuarioLogado = lerUsuarioLogado(nav) || {};
     console.log(usuarioLogado);
-    const [info] = useState(JSON.parse(Cookies.get("usuario-logadoc")));
+    const [info] = useState(JSON.parse(Cookies.get("usuario-logado")));
     console.log(info);
 
     const [pedidos , setPedidos] = useState();
