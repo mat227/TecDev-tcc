@@ -8,7 +8,7 @@ import { useHistory } from "react-router";
 
 const api = new Api();
 function lerUsuarioLogado(navigation) {
-    let logado = Cookies.get("usuario-logado");
+    let logado = Cookies.get("usuario-logadocli");
     if (logado == null) {
       navigation.push("/");
       return null;
@@ -24,7 +24,7 @@ export default function SeusPedidos() {
 
     const usuarioLogado = lerUsuarioLogado(nav) || {};
     console.log(usuarioLogado);
-    const [info] = useState(JSON.parse(Cookies.get("usuario-logadoc")));
+    const [info] = useState(JSON.parse(Cookies.get("usuario-logadocli")));
     console.log(info);
 
     const [pedidos , setPedidos] = useState();

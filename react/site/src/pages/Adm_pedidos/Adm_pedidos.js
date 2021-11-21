@@ -1,5 +1,5 @@
 import { ContainerAdmpedidos } from "./adm_pedido.styled"
-import Cabecalho from "../../components/Common/cabecalhoperfil/nav";
+import ParteCima from "../../components/Common/parteCimaADM/index";
 import Rodape  from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi";
 import Api from "../../service/apiAdm";
@@ -42,7 +42,7 @@ export default function Adm_pedidos() {
 
     return (
         <ContainerAdmpedidos> 
-                    <Cabecalho />                    
+                    <ParteCima />                    
                     <div className="conteudo">
                         <div className="box_g">
                         <Barralat />

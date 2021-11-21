@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import Cookies from "js-cookie"
 
 function lerUsuarioLogado(navigation) {
-  let logado = Cookies.get('usuario-logado');
+  let logado = Cookies.get('usuario-logadocli');
   if (logado == null) {
     navigation.push('/');
     return null;
@@ -25,7 +25,7 @@ export default function Homepage() {
   const nav = useHistory();
   const usuarioLogado = lerUsuarioLogado( nav) || {};
   console.log(usuarioLogado);
-  const [info] = useState(JSON.parse(Cookies.get('usuario-logado')));
+  const [info] = useState(JSON.parse(Cookies.get('usuario-logadocli')));
   console.log(info)
 
   async function listar() {

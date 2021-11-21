@@ -11,7 +11,7 @@ import Rodape from "../../components/Common/rodape/redape";
 
 
 function lerUsuarioLogado (navigation) {
-    let logado = Cookie.get('usuario-logado')
+    let logado = Cookie.get('usuario-logadocli')
     if (logado == null) {
         navigation.push('/')
         return null;
@@ -22,25 +22,19 @@ function lerUsuarioLogado (navigation) {
 
 
 
-export default function CompraRealizada() {
-
+export default function CompraRealizada(props) {
+    const [livro] = useState(props.location.state);
+console.log(livro)
     const nav = useHistory();
 
     const usuarioLogado = lerUsuarioLogado(nav) || {};
-    const [livro, setLivro] = useState([]);
 
     const [usuario] = useState(usuarioLogado);
 
     console.log(usuario);
    
-    useEffect(() =>{carregarCarrinho()}
-    , []);
+    
   
-    function carregarCarrinho() {
-      let carrinho = Cookie.get("carrinho");
-      carrinho = carrinho !== undefined ? JSON.parse(carrinho) : [];
-      setLivro(carrinho);
-    }
     
     return (   
         <ContainerCompra>
@@ -54,36 +48,32 @@ export default function CompraRealizada() {
 
                         <aside>
                             <h3 className="titulo2">Você comprou os seguintes itens:</h3>
-                            {livro.map((item, i) => (
 
                             <table>
                                 <thead>
                                     <tr>
-                                        <th style={{paddingRight: 12.3 + "vw"}}>Produto(s)</th>
-                                        <th style={{paddingRight: 7 + "vw"}}>Quantidade</th>
+                                        <th>Produto(s)</th>
+                                        <th>Quantidade</th>
                                         <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                {livro.map((item) => (
                                     <tr>
                                         <td className="livro">
-                                            <img src={livro.ds_imagen} alt=""   style={{ height: "92px", width: "62px" }}/>
-                                            <div>{livro.nm_livro}<br style={{marginTop: 1 + "em"}}/>{ item.ds_autora}   </div>
+                                            <img src={item.ds_imagen} alt=""   style={{ height: "92px", width: "62px" }}/>
+                                            <label> {item.nm_livro}<br/>{ item.ds_autora}   </label> 
                                         </td>   
-                                    </tr>
-                                    <tr style={{marginRight: 8.3 + "em"}}>
                                         <td>
-                                            2
+                                        <label>{item.qtd}  </label>
+                                        </td>
+                                        <td>
+                                        <label> R$ {item.qtd*item.vl_para},00  </label>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            R$ 85,80
-                                        </td>
-                                    </tr>
+                                ))}
                                 </tbody>
                             </table>
-                            ))}
                         </aside>
                         <div className="box-small">
                             <div className="box-confirmacao">
@@ -94,7 +84,7 @@ export default function CompraRealizada() {
                                 <div className="box-descricao">
                                     Seu pagamento está sendo processado!
                                     <br/><br/>
-                                    Um e-mail de confirmação foi enviada <br/> para <u style={{color:"#00EAFF"}}> {usuario.ds_email}</u>, os <br />detalhes da sua compra estarão lá :)
+                                    Um e-mail de confirmação foi enviada <br/> para <u style={{color:"#00EAFF"}}> {usuario[0].ds_email}</u>, os <br />detalhes da sua compra estarão lá :)
                                 </div>
                             </div>
                             <div className="botoes">

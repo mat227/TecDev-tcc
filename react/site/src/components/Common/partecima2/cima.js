@@ -18,7 +18,7 @@ export default function ParteCima(props) {
     return (
             <ContainerPartecima>
             <div class="hp1-buscap">
-           <Link to="/homepage"> <div class="hp1-logo">
+           <Link to="/"> <div class="hp1-logo">
                 <img src="/assets/images/nice library png 1.svg" alt=""/>
                 <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
 
@@ -26,7 +26,7 @@ export default function ParteCima(props) {
 
 
             <div class="hp1-seus"> 
-            <Link to="/suasacola">
+            <Link to="/login">
               <div class="menu-item">
                     <div class="imagem">
                     <img src="/assets/images/bag.svg" alt="" />
@@ -36,7 +36,7 @@ export default function ParteCima(props) {
                     </div>
                 </div>
                 </Link>
-                <Link to="/favoritos">
+                <Link to="/login">
                 <div class="menu-item">
                     <div class="imagem">
                     <img src="/assets/images/coracaoo.svg" alt="" />
@@ -46,7 +46,7 @@ export default function ParteCima(props) {
                     </div>
                 </div>
                 </Link>
-                <Link to="/perfil">
+                <Link to="/login">
                 <div class="menu-item">
                     <div class="imagem">
                     <img
@@ -56,7 +56,7 @@ export default function ParteCima(props) {
                     />
                     </div>
                     <div class="descricao">
-                    <p>Minha Conta</p>
+                    <p>Login</p>
                     </div>
                 </div>
                 </Link>
