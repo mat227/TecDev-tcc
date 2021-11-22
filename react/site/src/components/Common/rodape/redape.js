@@ -9,7 +9,7 @@ export default function Rodape() {
                         <img src="/assets/images/nice library png 1.svg" alt=""/>
                         <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
                     </div>
-                    <div className="ro-logonm">by: TecDev</div>
+                     <div className="ro-logonm">by: TecDev</div>
                 </div>
 
                 <div className="redes-sociais">

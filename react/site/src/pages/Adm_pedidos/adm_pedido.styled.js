@@ -7,23 +7,6 @@ const ContainerAdmpedidos = styled.div`
             background-color: #125375;
             font-family: "Rowdies";
     padding: 0em;
-@font-face {
-    font-family: 'Baloo Thambi 2';
-    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&display=swap');
-}
-
-
-@font-face {
-    font-family:  'Roboto', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-}
-
-
-@font-face {
-    font-family: 'Quicksand', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Quicksand:wght@300&display=swap');
-
-}
 
 * {
     box-sizing: border-box;
@@ -31,21 +14,6 @@ const ContainerAdmpedidos = styled.div`
     margin : 0;
   }
   
-.nome_adm {
-    display: flex;
-    flex-direction: column;
-
-    margin-left: 2em;
-
-    color: #fff;
-    font-family: 'Baloo Thambi 2';
-}
-
-.nome {
-    font-family: 'Baloo Thambi 2';
-    font-size: 40px;
-    margin-top: 0.5em;
-}
 
 
 .box_g {
@@ -53,18 +21,13 @@ const ContainerAdmpedidos = styled.div`
     flex-direction: row;
     padding: 1em;
 }
+
 .aux{
     display:flex;
     flex-direction: row;
     align-items: center;
 }
-.conteudo_esquerdo {
-    background-color: #183c53;
-    width: 10em;
-    height: 30em;
-    margin-left: 1.5em;
-    border-radius: 10px;
-}
+
 .conteudo_direito {
     background-color: #183c53;
     width: 65em;
@@ -73,10 +36,8 @@ const ContainerAdmpedidos = styled.div`
     border-radius: 10px;
     
 }
-.imagem-table{
-    height: 5em;
-    width : 5em;
-}
+
+
 .box {
     display: flex;
     flex-direction: column;
@@ -106,9 +67,10 @@ const ContainerAdmpedidos = styled.div`
 }
 
 .pedidos {
-    font-family: 'Baloo Thambi 2';
+    font-family: "Rowdies";
     font-size: 20px;
     margin-left: 1em;
+    color: #FFF;
 }
 
 
@@ -206,9 +168,7 @@ th {
 
    font-family: 'Roboto', sans-serif;
 }
-tbdoy{
-   
-}
+
 .table-user {
   
    overflow : hidden;
@@ -234,50 +194,6 @@ button img {
     height: 2em;
 }
 
-
-
-.redes {
-    display: flex;
-    flex-direction: row;
-
-    margin-top: 2em;
-    background-color: #12172b;
-
-    width: 79em;
-    height: 4.5em;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-
-  margin-left: 2em;
-  margin-top: 1em;
-}
-
-.img_logo img {
-  width: 6em;
-  
-}
-
-.redes_sociais {
-    display: flex;
-    flex-direction: row;
-    
-    margin-left: 65em;
-    margin-top: 1.5em;
-}
-
-.tecdev {
-    color:#9FD4EF;
-}
-
-.instagram img, .facebook img {
-    width: 1.5em;
-    height: 1.5em;
-    
-    margin-left: 1em;
-}
 
 `
 export { ContainerAdmpedidos }

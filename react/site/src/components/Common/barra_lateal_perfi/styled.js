@@ -10,7 +10,7 @@ const Container = styled.div`
 
 
 .informacao {
-    font-family: 'Baloo Thambi 2';
+    font-family: 'Rowdies';
 
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@ const Container = styled.div`
 .botao_e button {
     color: #fff;
     background : none;
-    font-family: 'Baloo Thambi 2';
+    font-family: 'Rowdies';
     font-size: 1em;
     
     border: none;
@@ -31,6 +31,7 @@ const Container = styled.div`
 
     width: 10em;
   }
+  
   .botao_e a, a:visited {
       color : white;
       text-decoration: none;
