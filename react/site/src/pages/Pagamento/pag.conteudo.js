@@ -10,7 +10,7 @@ import Api from "../../service/apiUsuario";
 const api = new Api();
 
 function lerUsuarioLogado(navigation) {
-  let logado = Cookie.get("usuario-logadocli");
+  let logado = Cookie.get("usuario-logado");
   if (logado == null) {
     navigation.push("/");
     return null;
@@ -54,10 +54,10 @@ export default function Pagamentos(props) {
     setLivro(carrinho);
   }
   //console.log(livro);
-  console.log(info[0].id_cliente);
+  
   const finalizarPedido = async () => {
-    var data = await api.efetuarpedido(info.id_cliente, data1);
-    alert("pedido realizado");
+    var data = await api.efetuarpedido(info[0].id_cliente, data1);
+    alert(data);
     
   };
   async function cadastrarCartao() {

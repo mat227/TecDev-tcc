@@ -8,7 +8,7 @@ import { useHistory } from "react-router";
 
 const api = new Api();
 function lerUsuarioLogado(navigation) {
-    let logado = Cookies.get("usuario-logadocli");
+    let logado = Cookies.get("usuario-logado");
     if (logado == null) {
       navigation.push("/");
       return null;
@@ -31,29 +31,30 @@ export default function SeusPedidos() {
     //console.log(info);
     let id = info[0].id_cliente;
    
-    const [pedidos , setPedidos] = useState();
-  
+    const [pedidos , setPedidos] = useState([]);
+    
     const pedido = async () => {
         
         let data =  await api.pedidos(id);
         setPedidos(data);
         console.log(data);
     }
+    console.log(pedidos)
     return (   
         <ContainerPedido>
             <ParteCima/>
             <div className="conteudo">
                 <div className="titulo"><h1>SEUS PEDIDOS</h1></div>
                 <div className="box">
-                   {pedidos != undefined ? pedidos.map(x => {
-                       console.log(x);
+                   {pedidos.map(x => 
+    
                         <div className="item">
-                        <div className="livro"><img src={x.infoc_tdv_pedido_items[0].ds_imagen} alt=""/></div>
+                        <div className="livro"><img src={x.infoc_tdv_pedido_items[0].id_livro_infoc_tdv_livro.ds_imagen} style={{width : "7em", height :"10em" }} alt=""/></div>
                         <div className="descricao">{x.infoc_tdv_pedido_items[0].ds_descricao}</div>
                         <div className="menu">
                             <div className="menu-item">
                                 <div className="imagem"><img src="/assets/images/caminhaoicone.svg" alt="" style={{marginLeft: 0.3 + "em"}}/></div>
-                                <div className="descricao">{x.ds_situacao == "aprovado" ? x.ds_situacao + "Transportadora" : "Analizando" }</div>
+                                <div className="descricao">{x.ds_situacao == "aprovado" ? x.ds_situacao + "Transportadora" : "Analisando" }</div>
                             </div>
                             <div className="quadrado" style={{marginLeft: -2 + "em", width: 5 + "em",marginRight: -2 + "em"}}></div>
                             <div className="menu-item">
@@ -77,7 +78,7 @@ export default function SeusPedidos() {
                             </div>
                         </div>
                     </div>
-                   }) : <h1> Voce nao fez nenhum Pedido</h1> }
+                   )}
                 </div>
             </div>
             <Rodape/>

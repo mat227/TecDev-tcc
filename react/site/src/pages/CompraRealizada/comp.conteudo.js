@@ -11,7 +11,7 @@ import Rodape from "../../components/Common/rodape/redape";
 
 
 function lerUsuarioLogado (navigation) {
-    let logado = Cookie.get('usuario-logadocli')
+    let logado = Cookie.get('usuario-logado')
     if (logado == null) {
         navigation.push('/')
         return null;

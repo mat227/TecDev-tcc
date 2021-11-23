@@ -28,6 +28,9 @@ font-family: "Rowdies";
 
         color: white;
     }
+    .livro{
+       
+    }
 
     .titulo {
         flex-grow: 1;

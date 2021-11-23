@@ -65,7 +65,7 @@ async cartoes () {
     return r.data;
 }
 async pedidos (id) {
-    let r = await api.get(`/meuspedidos/` + id);
+    let r = await api.get(`/meuspedidos/${id}` );
     return r.data;
 }
 
