@@ -299,6 +299,16 @@ const Container = styled.div`
     .aa img {
         height:1em;
     }
+
+    .aa > button {
+        visibility: hidden;
+    }
+
+    tr:hover {
+        .aa > button {
+            visibility: visible;
+        }
+    }
   
     button img {
         height: 1.5em;
