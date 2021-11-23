@@ -7,13 +7,35 @@ background-color: #12172B;
 
 .roda-mae {
   padding: 1em;
-  flex-direction: column !important;
+  display: flex;
+  flex-direction: row;
   margin-right: 20em;
 }
 
-img {
-  height: 2em;
+
+.logo{
+  display: flex;
+  flex-direction: row;
+
 }
+
+.ro-logonm{
+  color: #9FD4EF;
+  font-family: "Roman";
+}
+
+
+ img{
+  height:2em;
+  margin-right: 1em;
+
+}
+
+.redes{
+  display: flex;
+  margin-left: 60em;
+}
+
 
 `
  export { ContainerRodape }

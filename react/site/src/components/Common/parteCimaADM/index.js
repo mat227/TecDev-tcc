@@ -20,11 +20,11 @@ export default function ParteCima(props) {
     return (
             <ContainerPartecima>
             <div class="hp1-buscap">
-           <Link to="/homepage"> <div class="hp1-logo">
+      <div class="hp1-logo">
                 <img src="/assets/images/nice library png 1.svg" alt=""/>
                 <img class="hp1-nome" src="/assets/images/Bookly.svg" alt=""/>
 
-            </div></Link>
+            </div>
 
         
                 <Link to="/login">

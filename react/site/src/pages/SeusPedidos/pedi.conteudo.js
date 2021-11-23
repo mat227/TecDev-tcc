@@ -18,8 +18,9 @@ function lerUsuarioLogado(navigation) {
   }
   
 
-export default function SeusPedidos() {
-
+export default function SeusPedidos(props) {
+    const [livro,setLivro] = useState(props.location.state);
+console.log(livro)
     const nav = useHistory();
 
     const usuarioLogado = lerUsuarioLogado(nav) || {};
@@ -27,13 +28,10 @@ export default function SeusPedidos() {
     const [info] = useState(JSON.parse(Cookies.get("usuario-logadocli")));
     console.log(info);
 
-    const [pedidos , setPedidos] = useState();
-    useEffect(()=>{
-        pedido();
-    },[ ])
+ 
     const pedido = async (id) => {
         let data =  await api.pedidos(id);
-        setPedidos(data);
+        setLivro(data);
     }
     return (   
         <ContainerPedido>
@@ -41,7 +39,7 @@ export default function SeusPedidos() {
             <div className="conteudo">
                 <div className="titulo"><h1>SEUS PEDIDOS</h1></div>
                 <div className="box">
-                   {pedidos.map(x => {
+                   {livro.map((x) => {
                         <div className="item">
                         <div className="livro"><img src={x.infoc_tdv_pedido_items[0].ds_imagen} alt=""/></div>
                         <div className="descricao">{x.infoc_tdv_pedido_items[0].ds_descricao.substring(0,20)}</div>

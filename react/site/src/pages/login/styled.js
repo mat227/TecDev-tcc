@@ -93,7 +93,7 @@ a, a:link, a:visited {
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: 100%;
-    min-width:55%;
+    min-width:50%;
    height: 100vh;
 }
 

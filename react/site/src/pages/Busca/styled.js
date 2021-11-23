@@ -16,6 +16,7 @@ const Container = styled.div`
         margin-top: 2rem;
         margin-bottom: -5em;
         color: white;
+
     }
 
     .search div {
