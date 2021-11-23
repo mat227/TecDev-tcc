@@ -17,6 +17,8 @@ const Container = styled.div`
     .box_g
     {
         padding:1.5em;
+        min-height: 80vh;
+
     }
 
     .container {

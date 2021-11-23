@@ -7,7 +7,6 @@ const ContainerAdmpedidos = styled.div`
             background-color: #125375;
             font-family: "Rowdies";
     padding: 0em;
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -20,6 +19,8 @@ const ContainerAdmpedidos = styled.div`
     display: flex;
     flex-direction: row;
     padding: 1em;
+    min-height: 80vh;
+
 }
 
 .aux{

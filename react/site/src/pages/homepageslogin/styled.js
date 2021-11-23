@@ -16,8 +16,7 @@ const ContainerHome = styled.div`
 
   .conteiner-homepage1{
     display: flex;
-    min-height: 300vh;
-
+    min-height: 220vh;
     flex-direction: column;
     font-family: "Rowdies";
   }
