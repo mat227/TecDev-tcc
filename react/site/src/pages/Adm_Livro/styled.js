@@ -17,6 +17,8 @@ const Container = styled.div`
     .box_g
     {
         padding:1.5em;
+        min-height: 80vh;
+
     }
 
     .container {
@@ -156,17 +158,6 @@ const Container = styled.div`
         padding-left: 20px;
     }
 
-
-    .conteudo_esquerdo {
-        background-color: #183c53;
-        width: 10em;
-        height: 30em;
-
-        border-radius: 10px;
-    }
-
-   
-
    
 
     .botao1 button {
@@ -192,6 +183,7 @@ const Container = styled.div`
         flex-direction: row;
         background-color: #183c53;
         font-size: 12px;
+        
 
         width: 15em;
         height: 2em;
@@ -200,6 +192,10 @@ const Container = styled.div`
 
         align-items: center;
         border-radius: 5px;
+    }
+    
+    .sub_titulo2 button {
+        color: #FFF;
     }
 
     .img2 img {
@@ -304,6 +300,16 @@ const Container = styled.div`
 
     .aa img {
         height:1em;
+    }
+
+    .aa > button {
+        visibility: hidden;
+    }
+
+    tr:hover {
+        .aa > button {
+            visibility: visible;
+        }
     }
   
     button img {

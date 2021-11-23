@@ -16,7 +16,7 @@ const ContainerCompra= styled.div`
     .conteudo {
         background-color:  rgba(18, 23, 43, 0.5);
         
-        height: 85vh;
+        min-height: 85vh;
         width: 80vw;
         
         padding: 2em 3em;
@@ -54,7 +54,7 @@ const ContainerCompra= styled.div`
 
     aside {
         width: 38vw;
-        height: 68vh;
+        min-height: 30vw;
         
         padding:0.5em 1em;
         border-radius: 10px;
@@ -77,36 +77,41 @@ const ContainerCompra= styled.div`
         margin-bottom: 1em;
     }
 
-    thead {
-        background-color: #135578;
+  
 
-        display: flex;
-        flex-direction: row;
 
-        padding-left: -20em;
-        
+
+    table{
         width: 37.7vw;
-    }
-
-    tbody {
-        display: flex;
-
-        margin-top: 1em;
-
+            border-collapse: collapse;
+            border-spacing: 2em;
+            justify-content: center;
+            color: white;
+        
+        }
+        th {
         font-family: Rowdies;
         font-weight: 100;
     }
-
+        thead{
+            border-bottom:  2px solid white;
+            color: white;
+            margin: 1em;
+        
+        }
+      
+        td{
+           height: 1em;
+           text-align: center;
+           padding-bottom: 7em;
+        }
+      
     .livro {
         display: flex;
 
-        margin-right: 5em;
     }
 
-    th {
-        font-family: Rowdies;
-        font-weight: 100;
-    }
+   
 
 
 

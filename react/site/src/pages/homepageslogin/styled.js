@@ -9,7 +9,6 @@ const ContainerHome = styled.div`
   a, a:link, a:visited {
     text-decoration: none;
     color: white;
-    padding-bottom: 3em;
 
   }
   
@@ -17,8 +16,7 @@ const ContainerHome = styled.div`
 
   .conteiner-homepage1{
     display: flex;
-    min-height: 300vh;
-
+    min-height: 220vh;
     flex-direction: column;
     font-family: "Rowdies";
   }

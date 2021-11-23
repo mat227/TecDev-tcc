@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import CarrinhoItem from './carrinhoitem/item'
 
 
-export default function SuaSacola(props) {
+export default function SuaSacola() {
   const [livro, setLivro] = useState([]);
 
   useEffect(carregarCarrinho, []);
@@ -72,7 +72,7 @@ export default function SuaSacola(props) {
           <div className="cupom">
             <div className="quadb">
               <Buttom className="btnf">
-                <Link to="/pagamento">Proximo passo</Link>
+                <Link to={{pathname:"/pagamento" , state:livro}}>Proximo passo</Link>
               </Buttom>
               <Buttom className="btnf">
                 <Link to="/homepage">Continuar Comprando</Link>

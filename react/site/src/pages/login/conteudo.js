@@ -39,7 +39,6 @@ export default function Conteudo() {
         if (resp.erro) {
             toast.error(`${resp.erro}`);
         } else {
-            Cookies.set('usuario-logado', JSON.stringify(resp));
             navig.push('/adm_livro');
         }
 

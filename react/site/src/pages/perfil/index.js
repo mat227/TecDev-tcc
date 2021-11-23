@@ -9,7 +9,7 @@ import Rodape from "../../components/Common/rodape/redape.js";
 import ParteCima from "../../components/Common/parteCima/index";
 
 function lerUsuarioLogado(navigation) {
-  let logado = Cookies.get("usuario-logado");
+  let logado = Cookies.get("usuario-logadocli");
   if (logado == null) {
     navigation.push("/");
     return null;
@@ -32,7 +32,7 @@ export default function Login() {
 
   const usuarioLogado = lerUsuarioLogado(nav) || {};
   console.log(usuarioLogado);
-  const [info] = useState(JSON.parse(Cookies.get("usuario-logadoc")));
+  const [info] = useState(JSON.parse(Cookies.get("usuario-logadocli")));
   console.log(info);
 
   const altInfo = async () => {
@@ -40,6 +40,7 @@ export default function Login() {
     setALt(0);
   };
 
+ 
   return (
     <div>
       <ParteCima />
@@ -48,7 +49,7 @@ export default function Login() {
         <div class="faixaUm">
           <div class="colunas especial">
             <Link to="/suas_infomacoes">
-              <label>Suas informaçoes</label>
+              <label>Suas informações</label>
             </Link>
           </div>
           <div class="colunas">
@@ -73,7 +74,7 @@ export default function Login() {
               <h1>Suas informações</h1>
               <div class="btn">
                 <div class="btnE">
-                  <button onClick={() => setALt(info.id_cliente)}>
+                  <button onClick={() => setALt(info[0].id_cliente)}>
                     Editar <br />
                     informações
                   </button>
@@ -85,7 +86,7 @@ export default function Login() {
             </div>
             <div class="labels">
               {alt === 0 ? (
-                <label class="test">Nome: {info.nm_cliente}</label>
+                <label class="test">Nome: {info[0].nm_cliente}</label>
               ) : (
                 <input
                   class="test1"
@@ -96,7 +97,7 @@ export default function Login() {
                 />
               )}
               {alt === 0 ? (
-                <label class="test">Email: {info.ds_email}</label>
+                <label class="test">Email: {info[0].ds_email}</label>
               ) : (
                 <input
                   class="test1"
@@ -108,7 +109,7 @@ export default function Login() {
               )}
               {alt === 0 ? (
                 <label class="test" for="">
-                  Data de nascimento: {info.dt_nascimento.substring(0, 10)}
+                  Data de nascimento: {info[0].dt_nascimento.substring(0,10)}
                 </label>
               ) : (
                 <input
@@ -121,7 +122,7 @@ export default function Login() {
               )}
               {alt === 0 ? (
                 <label class="test" for="">
-                  CPF: {info.ds_cpf}
+                  CPF: {info[0].ds_cpf}
                 </label>
               ) : (
                 <input
@@ -134,7 +135,7 @@ export default function Login() {
               )}
               {alt === 0 ? (
                 <label class="test" for="">
-                  Endereço : {info.nm_rua}
+                  Endereço : {info[0].nm_rua}
                 </label>
               ) : (
                 <input
@@ -147,7 +148,7 @@ export default function Login() {
               )}
               {alt === 0 ? (
                 <label class="test" for="">
-                  Complemento : {info.ds_complemento}
+                  Complemento : {info[0].ds_complemento}
                 </label>
               ) : (
                 <input
@@ -160,7 +161,7 @@ export default function Login() {
               )}
               {alt === 0 ? (
                 <label class="test" for="">
-                  Bairro: {info.ds_bairro}
+                  Bairro: {info[0].ds_bairro}
                 </label>
               ) : (
                 <input
@@ -176,7 +177,7 @@ export default function Login() {
               <h2>Telefone</h2>
               {alt === 0 ? (
                 <label for="" class="tell">
-                  {info.nr_contato}
+                  {info[0].nr_contato}
                 </label>
               ) : (
                 <input

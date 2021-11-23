@@ -1,5 +1,5 @@
 import { ContainerAdmcp } from "./adm_c_p.styled"
-import Cabecalho  from "../../components/Common/cabecalhoperfil/nav";
+import ParteCima from "../../components/Common/parteCimaADM/index";
 import Rodape from "../../components/Common/rodape/redape";
 import Barralat from "../../components/Common/barra_lateal_perfi";
 import { Buttom } from "../../components/buttons/indexStyled";
@@ -36,7 +36,7 @@ export default function Adm_c_p() {
     }
     return (
         <ContainerAdmcp>
-            <Cabecalho/>
+            <ParteCima/>
             <div className="conteudo">
                     <div className="box_g">
                         <Barralat/>

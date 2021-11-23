@@ -2,13 +2,32 @@ import { Container  } from "./indexStyled.js";
 import ParteCima from "../../components/Common/parteCima/index";
 import {Buttom} from '../../components/buttons/indexStyled.js'
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
+import { useHistory } from "react-router";
+
 import { useEffect, useState } from "react";
 import Api from '../../service/apiUsuario.js'
 
 const api = new Api();
 
+function lerUsuarioLogado(navigation) {
+    let logado = Cookies.get("usuario-logado");
+    if (logado == null) {
+      navigation.push("/");
+      return null;
+    }
+    let usuarioLogado = JSON.parse(logado);
+    return usuarioLogado;
+  }
+
 export default function SuaInfo(props){
-  
+    const nav = useHistory();
+
+    const usuarioLogado = lerUsuarioLogado(nav) || {};
+  console.log(usuarioLogado);
+  const [info] = useState(JSON.parse(Cookies.get("usuario-logadoc")));
+  console.log(info);
+
 console.log(props)
     //test zone up
     const [usuario,setUsuario] = useState(props.location.state);

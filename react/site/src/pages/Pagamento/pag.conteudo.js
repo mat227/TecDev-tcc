@@ -10,7 +10,7 @@ import Api from "../../service/apiUsuario";
 const api = new Api();
 
 function lerUsuarioLogado(navigation) {
-  let logado = Cookie.get("usuario-logado");
+  let logado = Cookie.get("usuario-logadocli");
   if (logado == null) {
     navigation.push("/");
     return null;
@@ -22,6 +22,8 @@ function lerUsuarioLogado(navigation) {
 
 
 export default function Pagamentos(props) {
+  const [livros] = useState(props.location.state);
+
   const navig = useHistory();
   const usuarioLogado = lerUsuarioLogado(navig) || {};
   //console.log(usuarioLogado);
@@ -71,7 +73,6 @@ export default function Pagamentos(props) {
     else {
       finalizarPedido()
       toast.success("✔️ Cartão cadastrado com sucesso!");
-      navig.push("/compra_realizada");
     }
     console.log(r);
   }
@@ -228,9 +229,11 @@ export default function Pagamentos(props) {
               Voltar
             </button>
           </Link>
+          <Link to={{pathname:"/compra_realizada", state:livros}}>
           <button onClick={cadastrarCartao} class="btn btn-primary">
             Finalizar pedido
           </button>
+          </Link>
         </div>
       </div>
       <Rodape />

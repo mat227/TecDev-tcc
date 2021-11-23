@@ -123,8 +123,6 @@ app.get ('/livrobiografia', async (req, resp) => {
     }
 })
 
-
-
 // Busca
 
 app.get('/busca', async (req,resp) => {
@@ -147,4 +145,6 @@ app.get('/busca', async (req,resp) => {
         resp.send({ erro: e.toString()})
     }
 })
+
+
 export default app;
