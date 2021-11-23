@@ -19,21 +19,25 @@ function lerUsuarioLogado(navigation) {
   
 
 export default function SeusPedidos() {
+    useEffect(()=>{
+        pedido();
+    },[ ])
+    
 
     const nav = useHistory();
 
     const usuarioLogado = lerUsuarioLogado(nav) || {};
-    console.log(usuarioLogado);
     const [info] = useState(JSON.parse(Cookies.get("usuario-logado")));
-    console.log(info);
-
+    //console.log(info);
+    let id = info[0].id_cliente;
+   
     const [pedidos , setPedidos] = useState();
-    useEffect(()=>{
-        pedido();
-    },[ ])
-    const pedido = async (id) => {
+  
+    const pedido = async () => {
+        
         let data =  await api.pedidos(id);
         setPedidos(data);
+        console.log(data);
     }
     return (   
         <ContainerPedido>
@@ -41,10 +45,11 @@ export default function SeusPedidos() {
             <div className="conteudo">
                 <div className="titulo"><h1>SEUS PEDIDOS</h1></div>
                 <div className="box">
-                   {pedidos.map(x => {
+                   {pedidos != undefined ? pedidos.map(x => {
+                       console.log(x);
                         <div className="item">
                         <div className="livro"><img src={x.infoc_tdv_pedido_items[0].ds_imagen} alt=""/></div>
-                        <div className="descricao">{x.infoc_tdv_pedido_items[0].ds_descricao.substring(0,20)}</div>
+                        <div className="descricao">{x.infoc_tdv_pedido_items[0].ds_descricao}</div>
                         <div className="menu">
                             <div className="menu-item">
                                 <div className="imagem"><img src="/assets/images/caminhaoicone.svg" alt="" style={{marginLeft: 0.3 + "em"}}/></div>
@@ -72,7 +77,7 @@ export default function SeusPedidos() {
                             </div>
                         </div>
                     </div>
-                   })}
+                   }) : <h1> Voce nao fez nenhum Pedido</h1> }
                 </div>
             </div>
             <Rodape/>

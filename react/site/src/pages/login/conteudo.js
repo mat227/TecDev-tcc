@@ -28,7 +28,7 @@ export default function Conteudo() {
         } else {
             Cookies.set('usuario-logado', JSON.stringify(resp));
             navig.push('/homepage');
-            
+
         }
 
     }

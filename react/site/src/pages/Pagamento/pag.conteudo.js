@@ -25,8 +25,8 @@ export default function Pagamentos(props) {
   const navig = useHistory();
   const usuarioLogado = lerUsuarioLogado(navig) || {};
   //console.log(usuarioLogado);
-  const [info] = useState(JSON.parse(Cookie.get("usuario-logado")));
-  //console.log(info);
+  const [info] = useState(usuarioLogado);
+  console.log(info);
 
   //zone test
   // const [pedidos] = useState([]);
@@ -52,7 +52,7 @@ export default function Pagamentos(props) {
     setLivro(carrinho);
   }
   //console.log(livro);
-  console.log(info.id_cliente);
+  console.log(info[0].id_cliente);
   const finalizarPedido = async () => {
     var data = await api.efetuarpedido(info.id_cliente, data1);
     alert("pedido realizado");
@@ -94,7 +94,7 @@ export default function Pagamentos(props) {
           </div>
           <div className="caminho">
             <h5>
-              SUA SACOLA - SUAS INFORMAÇÕES -
+              SUA SACOLA -
               <u style={{ color: "#00EAFF" }}>PAGAMENTO</u> - FINALIZAÇÃO
             </h5>
           </div>

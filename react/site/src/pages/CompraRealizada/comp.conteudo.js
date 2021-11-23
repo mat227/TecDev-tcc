@@ -48,7 +48,7 @@ export default function CompraRealizada() {
                 <div className="conteudo">
                     <div className="box-texto">
                             <div className="titulo"><h1>COMPRA REALIZADA!</h1></div>
-                            <div className="caminho"><h5>SUA SACOLA - SUAS INFORMAÇÕES - PAGAMENTO - <u style={{color:"#00EAFF"}}>FINALIZAÇÃO</u></h5></div>
+                            <div className="caminho"><h5>SUA SACOLA - PAGAMENTO - <u style={{color:"#00EAFF"}}>FINALIZAÇÃO</u></h5></div>
                     </div>
                     <div className="big-box">
 

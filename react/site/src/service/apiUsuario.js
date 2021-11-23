@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create ({
-    //baseURL : 'http://localhost:3030/usuario',
-    baseURL: 'https://tecdevtcc.herokuapp.com/usuario'
+    baseURL : 'http://localhost:3030/usuario',
+   // baseURL: 'https://tecdevtcc.herokuapp.com/usuario'
 })
 
 
@@ -38,7 +38,7 @@ async efetuarpedido(idCliente, pedidos){
        
     }
     console.log(data) ;    
-    console.log(`Cheguei aqui `) ;
+    //console.log(`Cheguei aqui `) ;
     let r =  await api.post(`/addpedido`, data);
         return r.data;
     
@@ -65,8 +65,8 @@ async cartoes () {
     return r.data;
 }
 async pedidos (id) {
-    let data = await api.get(`/meuspedidos${id}`)
-    return data.data;
+    let r = await api.get(`/meuspedidos/` + id);
+    return r.data;
 }
 
 

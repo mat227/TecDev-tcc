@@ -50,8 +50,7 @@ export default function SuaSacola(props) {
             <h1>Sua Sacola</h1>
           </div>
           <div class="trilhaM">
-            <label style={{ color: "#00EAFF" }}>SUA SACOLA </label> -{" "}
-            <label> SUAS INFORMAÇÕES - </label> <label>PAGAMENTO - </label>{" "}
+            <label style={{ color: "#00EAFF" }}>SUA SACOLA </label> -{" "} <label>PAGAMENTO - </label>{" "}
             <label> FINALIZAÇÃO</label>
           </div>
         </div>

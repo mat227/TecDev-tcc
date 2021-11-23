@@ -118,10 +118,9 @@ const app = express.Router();
          where: {
              ds_email: email.email,
              ds_senha: cryptoSenha
+            
          },
-
      });
- 
      resp.send(u);
  });
 
