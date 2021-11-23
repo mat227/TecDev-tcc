@@ -214,8 +214,8 @@ export default function Adm_livro() {
                                         <th> Promoção </th>
                                         <th> Valor de </th>
                                         <th> Valor para </th>
-                                        <th class="a"> </th>
-                                        <th class="a"> </th>
+                                        <th class="aa"> </th>
+                                        <th class="aa"> </th>
                                     </tr>
                                 </thead>
                                 <tbody  className="tabela" >
@@ -228,8 +228,10 @@ export default function Adm_livro() {
                                         <td>{x.bt_disponivel}</td>
                                         <td>{x.vl_de}</td>
                                         <td>{x.vl_para}</td>
-                                        <td class = "aa">< img onClick={() => alterar(x)} style={{cursor: "pointer"}} src="./assets/images/editar.svg" alt=''  /></td>
-                                        <td class = "aa"> <img onClick={()=> removelivro(x.id_livro)} src="./assets/images/lixo.svg" style={{cursor: "pointer"}} alt=''/> </td>
+                                        <td class = "aa">< button onClick={() => alterar(x)}> <img src="./assets/images/editar.svg" alt=''  /></button> </td>
+                                        <td class = "aa"> <button onClick={()=> removelivro(x.id_livro)}> <img src="./assets/images/lixo.svg" style={{cursor: "pointer"}} alt=''/> </button> </td>
+                                   
+                               
                                     </tr>     
                                     )}       
                                 </tbody>             

@@ -33,7 +33,7 @@ background-color: #12172B;
 
 .redes{
   display: flex;
-  flex-direction: row;
+  margin-left: 60em;
 }
 
 
