@@ -9,7 +9,7 @@ import Rodape from "../../components/Common/rodape/redape.js";
 import ParteCima from "../../components/Common/parteCima/index";
 
 function lerUsuarioLogado(navigation) {
-  let logado = Cookies.get("usuario-logadocli");
+  let logado = Cookies.get("usuario-logado");
   if (logado == null) {
     navigation.push("/");
     return null;
@@ -32,7 +32,7 @@ export default function Login() {
 
   const usuarioLogado = lerUsuarioLogado(nav) || {};
   console.log(usuarioLogado);
-  const [info] = useState(JSON.parse(Cookies.get("usuario-logadocli")));
+  const [info] = useState(JSON.parse(Cookies.get("usuario-logado")));
   console.log(info);
 
   const altInfo = async () => {
@@ -74,7 +74,7 @@ export default function Login() {
               <h1>Suas informações</h1>
               <div class="btn">
                 <div class="btnE">
-                  <button onClick={() => setALt(info[0].id_cliente)}>
+                  <button onClick={() => setALt(info.id_cliente)}>
                     Editar <br />
                     informações
                   </button>
